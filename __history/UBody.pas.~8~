@@ -1,0 +1,285 @@
+unit UBody;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, OleCtrls, SHDocVw, ComCtrls, ToolWin, StdCtrls, ExtCtrls, shellapi, funcoes,
+  JvComponentBase, JvMail, JvHtmlParser;
+
+type
+  TFBody = class(TForm)
+    Panel1: TPanel;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    CBAttach: TComboBox;
+    CBCC: TComboBox;
+    Efrom: TEdit;
+    ETo: TEdit;
+    Esubject: TEdit;
+    Edate: TEdit;
+    ToolBar1: TToolBar;
+    ToolButton1: TToolButton;
+    WebBrowser1: TWebBrowser;
+    ToolButton2: TToolButton;
+    ToolButton3: TToolButton;
+    ToolButton4: TToolButton;
+    ToolButton5: TToolButton;
+    StatusBar1: TStatusBar;
+    JvMail1: TJvMail;
+    JvHTMLParser1: TJvHTMLParser;
+    procedure FormCreate(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure FormShow(Sender: TObject);
+    procedure CBAttachClick(Sender: TObject);
+    procedure ToolButton1Click(Sender: TObject);
+    procedure ToolButton5Click(Sender: TObject);
+    procedure ToolButton2Click(Sender: TObject);
+    procedure ToolButton3Click(Sender: TObject);
+    procedure WebBrowser1StatusTextChange(ASender: TObject;
+      const Text: WideString);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FBody: TFBody;
+
+implementation
+
+uses umain, udmserver;
+
+{$R *.dfm}
+
+procedure TFBody.CBAttachClick(Sender: TObject);
+var
+Monta : string;
+begin
+
+if CBAttach.ItemIndex >= 0 then
+   begin
+     monta := dm_server.Dire+'Anexos\A_'+inttostr(dm_server.cds_mensID.asinteger)+'_'+Cbattach.Items[Cbattach.itemindex];
+     shellexecute(handle, 'open',pchar(monta),nil,nil,SW_SHOWNORMAL);
+   end;
+
+
+
+end;
+
+procedure TFBody.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+ //dm_server.qbody.Active := false;
+end;
+
+procedure TFBody.FormCreate(Sender: TObject);
+begin
+
+
+{
+
+with dm_server do
+begin
+
+if qbody.Active then qbody.Active := false;
+  if BodyDB = 1  then
+    begin
+     qbody.SQL.Strings[1] := 'from messages';
+    end;
+  if BodyDB = 2  then
+    begin
+     qbody.SQL.Strings[1] := 'from all_messages';
+    end;
+
+  qbody.Params[0].AsInteger := BodyID;
+  qbody.Active := true;
+
+
+
+
+end;
+ }
+
+
+end;
+
+procedure TFBody.FormShow(Sender: TObject);
+var
+I : integer;
+CCMSG : TstringList;
+begin
+
+CCMSG := TstringList.Create;
+
+with dm_server do
+begin
+
+Efrom.Text      := cds_mensEmailFrom.AsString;
+ETo.Text        := ExtrairRegexp(EmailRegExp,cds_mensToOrig.AsString);
+Edate.Text      := cds_mensDataOrig.AsString;
+Esubject.Text   := cds_mensAssunto.AsString;
+
+CCMSG.text :=   DM_Server.cds_mensCCOrig.AsString;
+
+if  CCMSG.Count > 0 then
+begin
+  for I:= 0 to   CCMSG.Count - 1 do
+    begin
+      CBCC.Items.add(CCMSG.Strings[I]);
+    end;
+
+label5.Visible := true;
+CBCC.visible   := true;
+CBCC.ItemIndex := 0;
+CCMSG.Free;
+
+end;
+
+
+//Text := Fmain.MSG.CCList.Items.;
+
+{
+if CBCC.Items.count > 0 then
+begin
+  label5.Visible := true;
+  CBCC.visible   := true;
+  CBCC.ItemIndex := 0;
+end;
+ }
+
+if Bodyheader = 0  then
+begin
+
+
+
+CBAttach.Items.Text := cds_mensAnexosFiles.asstring;
+
+if CBAttach.Items.Count > 0 then
+   begin
+    label6.Visible       := true;
+    CBAttach.visible     := true;
+    CBAttach.ItemIndex := 0;
+   end;
+
+deletefile(dm_server.dire+'@EmCBody.txt');
+deletefile(dm_server.dire+'@EmCBody.html');
+
+
+
+if cds_mensContentType.asstring = 'text/plain' then
+begin
+cds_mensCorpo.SaveToFile(dm_server.dire+'@EmCBody.txt');
+WebBrowser1.Navigate('file:///'+dm_server.Dire+'@EmCBody.txt');
+end
+else
+begin
+cds_mensCorpo.SaveToFile(dm_server.dire+'@EmCBody.html');
+WebBrowser1.Navigate('file:///'+dm_server.Dire+'@EmCBody.html');
+end;
+
+
+end
+else
+begin
+  FBody.caption := 'mC-Message Header';
+  Fbody.Update;
+  Toolbutton3.Visible := false;
+  Toolbutton5.Visible := false;
+  ToolButton2Click(self);
+
+end;
+
+
+end;
+
+
+end;
+
+procedure TFBody.ToolButton1Click(Sender: TObject);
+var
+Monta, Mensa : string;
+Parse : TstringList;
+Arq   : TFileName;
+begin
+
+
+screen.cursor := crSqlWait;
+
+  JvMail1.Clear;
+  JvMail1.Recipient.AddRecipient(Efrom.text);
+//  if CcEdit.Text <> '' then JvMail1.CarbonCopy.AddRecipient(CcEdit.Text);
+  JvMail1.Subject := ESubject.text;
+
+
+  JvMail1.Body.Text := dm_server.Cds_MensCorpo.Asstring ;
+
+//  JvMail1.Attachment.Assign(AttachmentMemo.Lines);
+  JvMail1.SendMail;
+
+screen.cursor := crDefault;
+
+
+
+{
+Mensa := dm_server.Cds_MensCorpo.Asstring;
+Monta := 'MailTo:'+Efrom.text+'?Subject='+ESubject.text;//  +'&body='+Mensa;
+ShellExecute(handle, 'open', Pchar(Monta),nil, nil, SW_SHOW);
+ }
+end;
+
+procedure TFBody.ToolButton2Click(Sender: TObject);
+var
+Teste : TstringList;
+begin
+
+Teste := TstringList.Create;
+Teste.text := dm_server.Cds_MensCabec.asstring;
+teste.savetofile(dm_server.dire+'@EmCCabec.txt',TEncoding.unicode);
+Teste.Free;
+
+//dm_server.Cds_MensCabec.SaveToFile(dm_server.dire+'@EmCCabec.txt');
+WebBrowser1.Navigate('file:///'+dm_server.Dire+'@EmCCabec.txt');
+StatusBar1.Panels.Items[0].Text := 'Show Header';
+end;
+
+procedure TFBody.ToolButton3Click(Sender: TObject);
+var
+Arquivo : string;
+begin
+
+Arquivo := 'file:///'+dm_server.Dire+'Anexos/R_'+inttostr(dm_server.Cds_MensID.asinteger)+'.txt';
+WebBrowser1.Navigate(arquivo);
+StatusBar1.Panels.Items[0].Text := 'Show Source';
+
+end;
+
+procedure TFBody.ToolButton5Click(Sender: TObject);
+begin
+
+
+if dm_server.cds_mensContentType.asstring = 'text/plain' then
+begin
+WebBrowser1.Navigate('file:///'+dm_server.Dire+'@EmCBody.txt');
+end
+else
+begin
+WebBrowser1.Navigate('file:///'+dm_server.Dire+'@EmCBody.html');
+end;
+
+
+
+
+end;
+
+procedure TFBody.WebBrowser1StatusTextChange(ASender: TObject;
+  const Text: WideString);
+begin
+StatusBar1.Panels.Items[0].Text := Text;
+end;
+
+end.

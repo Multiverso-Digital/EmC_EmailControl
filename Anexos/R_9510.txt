@@ -1,0 +1,45 @@
+Received: from servidor.cenpec.org.br ([200.230.152.130]) by abreuretto.com with MailEnable ESMTP; Fri, 13 Feb 2009 11:00:34 -0800
+Received: by servidor.cenpec.org.br (Postfix, from userid 502)
+	id 76C7D154056; Fri, 13 Feb 2009 17:01:23 -0200 (BRST)
+Received: from [10.10.0.75] (unknown [10.10.0.75])
+	by servidor.cenpec.org.br (Postfix) with ESMTP id DDECB154050;
+	Fri, 13 Feb 2009 17:01:20 -0200 (BRST)
+Message-ID: <4995D101.7080809@cenpec.org.br>
+Date: Fri, 13 Feb 2009 16:58:57 -0300
+From: Tathyane Tudda <tatiane@cenpec.org.br>
+User-Agent: Thunderbird 2.0.0.19 (Windows/20081209)
+MIME-Version: 1.0
+To: Abreu Retto <abreu@abreuretto.com>,
+	Maria Tereza Antonia Cardia <mate@cenpec.org.br>,
+	Sonia Madi <soniamadi@cenpec.org.br>
+Subject: =?ISO-8859-1?Q?reuni=E3o_sobre_planejamento?=
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+X-Spam-Checker-Version: SpamAssassin 2.63-spambr_20030926 (2004-01-11) on 
+	servidor.cenpec.org.br
+X-Spam-Level: 
+X-Spam-Status: No, hits=0.0 required=7.7 tests=none autolearn=no 
+	version=2.63-spambr_20030926
+Content-Transfer-Encoding: quoted-printable
+Return-Path: <tatiane@cenpec.org.br>
+
+Abreu,
+
+Esta onfirmada nossa reuni=E3o sobre planejamento na segunda (16/02) =E0s=
+=20
+10hs no Cenpec.
+N=F3s relemos a proposta que voc=EA nos encaminhou e gostariamos de come=E7=
+ar=20
+a reuni=E3o discutindo esse documento.
+Ap=F3s "afinarmos" isso, ser=E1 elaborado um contrato de presta=E7=E3o de=
+=20
+servi=E7os (assessoria).
+Essa reuni=E3o da segunda, ser=E1, posteriormente incluida nesse contrato=
+=20
+para pagamento.
+Na segunda esclarecemos tudo sobre isso, e =E9 claro, come=E7amos o=20
+planejamento de 2010.
+
+Obrigada,
+Bjus,
+Tathy.
+

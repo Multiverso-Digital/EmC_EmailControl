@@ -1,0 +1,107 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Martin Harvey">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (WinNT; I) [Netscape]">
+   <title>Source21</title>
+</head>
+<body>
+<PRE><TT><B>unit</B> HandleForm;
+
+<B>interface</B>
+
+<B>uses</B>
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
+  StdCtrls;
+
+<B>type</B>
+  THandleFrm = <B>class</B>(TForm)
+    CreateBtn: TButton;
+    CloseOwnerBtn: TButton;
+    CloseNonOwnerBtn: TButton;
+    <B>procedure</B> CreateBtnClick(Sender: TObject);
+    <B>procedure</B> CloseOwnerBtnClick(Sender: TObject);
+    <B>procedure</B> CloseNonOwnerBtnClick(Sender: TObject);
+  <B>private</B>
+    <FONT COLOR=NAVY><I>{ Private declarations }</I></FONT>
+  <B>public</B>
+    <FONT COLOR=NAVY><I>{ Public declarations }</I></FONT>
+    Mutex: THandle;
+  <B>end</B>;
+
+<B>var</B>
+  HandleFrm: THandleFrm;
+
+<B>implementation</B>
+
+<B>uses</B> HandleThreads;
+
+<FONT COLOR=NAVY><I>{$R *.DFM}</I></FONT>
+
+<B>procedure</B> THandleFrm.CreateBtnClick(Sender: TObject);
+
+<B>var</B>
+  NewThread: THandleThread;
+
+<B>begin</B>
+  Mutex := CreateMutex(<B>nil</B>, false, <B>nil</B>);
+  WaitForSingleObject(Mutex, INFINITE);
+  NewThread := THandleThread.Create(false);
+  NewThread := THandleThread.Create(false);
+  ShowMessage(<FONT COLOR=BLUE>'Threads Created.'</FONT>);
+<B>end</B>;
+
+<B>procedure</B> THandleFrm.CloseOwnerBtnClick(Sender: TObject);
+<B>begin</B>
+  CloseHandle(Mutex);
+<B>end</B>;
+
+<B>procedure</B> THandleFrm.CloseNonOwnerBtnClick(Sender: TObject);
+<B>begin</B>
+  ReleaseMutex(Mutex);
+  CloseHandle(Mutex);
+<B>end</B>;
+
+<B>end.</B>
+
+<B>unit</B> HandleThreads;
+
+<B>interface</B>
+
+<B>uses</B>
+  Classes, Windows, SysUtils, Dialogs;
+
+<B>type</B>
+  THandleThread = <B>class</B>(TThread)
+  <B>private</B>
+    <FONT COLOR=NAVY><I>{ Private declarations }</I></FONT>
+  <B>protected</B>
+    <B>procedure</B> Execute; <B>override</B>;
+  <B>end</B>;
+
+<B>implementation</B>
+
+<B>uses</B> HandleForm;
+
+<B>procedure</B> THandleThread.Execute;
+
+<B>var</B>
+  RetVal: integer;
+
+<B>begin</B>
+  RetVal := WaitForSingleObject(HandleFrm.Mutex, INFINITE);
+  <B>case</B> RetVal <B>of</B>
+    WAIT_OBJECT_0: ShowMessage(<FONT COLOR=BLUE>'Unblocked: WAIT_OBJECT_0'</FONT>);
+    WAIT_ABANDONED: ShowMessage(<FONT COLOR=BLUE>'Unblocked: WAIT_ABANDONED'</FONT>);
+    WAIT_TIMEOUT: ShowMessage(<FONT COLOR=BLUE>'Unblocked: WAIT_TIMEOUT'</FONT>);
+  <B>else</B>
+    ShowMessage(<FONT COLOR=BLUE>'Unblocked. Unknown return code.'</FONT>);
+  <B>end</B>;
+<B>end</B>;
+
+<B>end.</B>
+
+</TT></PRE>
+</body>
+</html>

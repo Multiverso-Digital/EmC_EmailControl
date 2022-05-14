@@ -1,0 +1,54 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Martin Harvey">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (WinNT; I) [Netscape]">
+   <title>Source6</title>
+</head>
+<body>
+<PRE><TT><B>unit</B> PrimeThread;
+
+<B>interface</B>
+
+<B>uses</B>
+  Classes;
+
+<B>type</B>
+  TPrimeThrd = <B>class</B>(TThread)
+  <B>private</B>
+    FTestNumber: integer;
+    FResultString: <B>string</B>;
+  <B>protected</B>
+    <B>function</B> IsPrime: boolean;
+    <B>procedure</B> UpdateResults;
+    <B>procedure</B> Execute; <B>override</B>;
+  <B>public</B>
+    <B>property</B> TestNumber: integer <B>write</B> FTestNumber;
+  <B>end</B>;
+
+<B>implementation</B>
+
+<B>uses</B> SysUtils, Dialogs, PrimeForm;
+
+<B>procedure</B> TPrimeThrd.UpdateResults;
+<B>begin</B>
+  PrimeFrm.ResultsMemo.Lines.Add(FResultString);
+<B>end</B>;
+
+<B>function</B> TPrimeThrd.IsPrime: boolean; <FONT COLOR=NAVY><I>{omitted for brevity}</I></FONT>
+
+  <B>procedure</B> TPrimeThrd.Execute;
+  <B>begin</B>
+    <B>if</B> IsPrime <B>then</B>
+      FResultString := IntToStr(FTestNumber) + <FONT COLOR=BLUE>' is prime.'</FONT>
+    <B>else</B>
+      FResultString := IntToStr(FTestNumber) + <FONT COLOR=BLUE>' is not prime.'</FONT>;
+    Synchronize(UpdateResults);
+  <B>end</B>;
+
+<B>end.</B>
+
+</TT></PRE>
+</body>
+</html>

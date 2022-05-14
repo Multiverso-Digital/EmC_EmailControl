@@ -1,0 +1,25 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Martin Harvey">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (WinNT; I) [Netscape]">
+   <title>Source40</title>
+</head>
+<body>
+<PRE><TT><FONT COLOR=NAVY><I>{ Enforcing a mutual exclusion }</I></FONT>
+
+<B>var</B>
+  MyTurn: integer;
+  EC: TEventCount;
+  S: TSequencer; <FONT COLOR=NAVY><I>{ assume already created appropriately }</I></FONT>
+
+<B>begin</B>
+  MyTurn := S.Ticket;
+  EC.Await(MyTurn);
+    <FONT COLOR=NAVY><I>{  Critical operations }</I></FONT>
+  EC.Advance;
+<B>end</B>;
+</TT></PRE>
+</body>
+</html>

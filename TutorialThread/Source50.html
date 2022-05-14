@@ -1,0 +1,193 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Martin Harvey">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (WinNT; I) [Netscape]">
+   <title>Source50</title>
+</head>
+<body>
+<PRE><TT><B>library</B> GlobalData;
+
+<B>uses</B>
+  Windows,
+  GlobalHdr <B>in</B> <FONT COLOR=BLUE>'GlobalHdr.pas'</FONT>;
+
+<B>const</B>
+  GlobalMutexName = <FONT COLOR=BLUE>'MCHGlobalMutex - BBARAgAGBQI4r8mOAAoJEPwzBQsIT9FngEA'</FONT>;
+  GlobalMapName = <FONT COLOR=BLUE>'MCHGlobalMap   - AJ9Qfi3m4vqgUhKYA7qBfzrMDbkpbQtTWFy'</FONT>;
+
+<B>type</B>
+  TLocalInfo = <B>record</B>
+    LocalThreads: integer;
+  <B>end</B>;
+
+  TSyncHandles = <B>record</B>
+    LocalSection: TRTLCriticalSection;
+    GlobalMutex: THandle;
+  <B>end</B>;
+
+  PGlobalInfo = ^TGlobalInfo;
+
+  TGlobalHandles = <B>record</B>
+    FileMapping: THandle;
+    GlobalInfo: PGlobalInfo;
+  <B>end</B>;
+
+<B>var</B>
+  SyncHandles: TSyncHandles;
+  LocalInfo: TLocalInfo;
+  GlobalHandles: TGlobalHandles;
+
+<B>procedure</B> ReadInfo(<B>var</B> GlobalInfo: TGlobalInfo; <B>var</B> LocalThreads: integer); <B>stdcall</B>;
+<B>begin</B>
+  WaitForSingleObject(SyncHandles.GlobalMutex, INFINITE);
+  EnterCriticalSection(SyncHandles.LocalSection);
+  GlobalInfo := GlobalHandles.GlobalInfo^;
+  LocalThreads := LocalInfo.LocalThreads;
+  LeaveCriticalSection(SyncHandles.LocalSection);
+  ReleaseMutex(SyncHandles.GlobalMutex);
+<B>end</B>;
+
+<B>procedure</B> SetSharedInteger(NewValue: integer); <B>stdcall</B>;
+<B>begin</B>
+  WaitForSingleObject(SyncHandles.GlobalMutex, INFINITE);
+  GlobalHandles.GlobalInfo.SharedNumber := NewValue;
+  ReleaseMutex(SyncHandles.GlobalMutex);
+<B>end</B>;
+
+<B>procedure</B> IncSharedInteger; <B>stdcall</B>;
+<B>begin</B>
+  WaitForSingleObject(SyncHandles.GlobalMutex, INFINITE);
+  Inc(GlobalHandles.GlobalInfo.SharedNumber);
+  ReleaseMutex(SyncHandles.GlobalMutex);
+<B>end</B>;
+
+<B>procedure</B> DecSharedInteger; <B>stdcall</B>;
+<B>begin</B>
+  WaitForSingleObject(SyncHandles.GlobalMutex, INFINITE);
+  Dec(GlobalHandles.GlobalInfo.SharedNumber);
+  ReleaseMutex(SyncHandles.GlobalMutex);
+<B>end</B>;
+
+
+<B>function</B> AtomicIncThreadCount: integer;
+<FONT COLOR=NAVY><I>{returns number of local threads for Delphi Memory Manager}</I></FONT>
+<B>begin</B>
+  WaitForSingleObject(SyncHandles.GlobalMutex, INFINITE);
+  EnterCriticalSection(SyncHandles.LocalSection);
+  Inc(GlobalHandles.GlobalInfo.GlobalThreads);
+  Inc(LocalInfo.LocalThreads);
+  result := LocalInfo.LocalThreads;
+  LeaveCriticalSection(SyncHandles.LocalSection);
+  ReleaseMutex(SyncHandles.GlobalMutex);
+<B>end</B>;
+
+<B>procedure</B> AtomicDecThreadCount;
+<B>begin</B>
+  WaitForSingleObject(SyncHandles.GlobalMutex, INFINITE);
+  EnterCriticalSection(SyncHandles.LocalSection);
+  Dec(GlobalHandles.GlobalInfo.GlobalThreads);
+  Dec(LocalInfo.LocalThreads);
+  LeaveCriticalSection(SyncHandles.LocalSection);
+  ReleaseMutex(SyncHandles.GlobalMutex);
+<B>end</B>;
+
+<B>procedure</B> AtomicIncProcessCount;
+<B>begin</B>
+  WaitForSingleObject(SyncHandles.GlobalMutex, INFINITE);
+  Inc(GlobalHandles.GlobalInfo.GlobalProcesses);
+  ReleaseMutex(SyncHandles.GlobalMutex);
+<B>end</B>;
+
+<B>procedure</B> AtomicDecProcessCount;
+<B>begin</B>
+  WaitForSingleObject(SyncHandles.GlobalMutex, INFINITE);
+  Dec(GlobalHandles.GlobalInfo.GlobalProcesses);
+  ReleaseMutex(SyncHandles.GlobalMutex);
+<B>end</B>;
+
+<B>procedure</B> SetupSynchronisation;
+<B>begin</B>
+  <B>with</B> SyncHandles <B>do</B>
+  <B>begin</B>
+    InitializeCriticalSection(LocalSection);
+    GlobalMutex := CreateMutex(<B>nil</B>, false, GlobalMutexName);
+    Assert(GlobalMutex &lt&gt INVALID_HANDLE_VALUE);
+  <B>end</B>;
+<B>end</B>;
+
+<B>procedure</B> CloseSynchronisation;
+<B>begin</B>
+  <B>with</B> SyncHandles <B>do</B>
+  <B>begin</B>
+    DeleteCriticalSection(LocalSection);
+    CloseHandle(GlobalMutex);
+  <B>end</B>;
+<B>end</B>;
+
+<B>procedure</B> SetupGlobalInfo;
+
+<B>var</B>
+  FirstCaller: boolean;
+
+<B>begin</B>
+  <B>with</B> GlobalHandles <B>do</B>
+  <B>begin</B>
+    WaitForSingleObject(SyncHandles.GlobalMutex, INFINITE);
+    FileMapping := CreateFileMapping(High(Cardinal), <B>nil</B>, PAGE_READWRITE,
+      0, sizeof(TGlobalInfo), GlobalMapName);
+    Assert(FileMapping &lt&gt INVALID_HANDLE_VALUE);
+    FirstCaller := GetLastError &lt&gt ERROR_ALREADY_EXISTS;
+    GlobalInfo := MapViewOfFile(FileMapping, FILE_MAP_ALL_ACCESS, 0, 0, 0);
+    Assert(GlobalInfo &lt&gt <B>nil</B>);
+    <B>if</B> FirstCaller <B>then</B> FillMemory(GlobalInfo, sizeof(TGlobalInfo), 0);
+    ReleaseMutex(SyncHandles.GlobalMutex);
+  <B>end</B>;
+<B>end</B>;
+
+<B>procedure</B> CloseGlobalInfo;
+<B>begin</B>
+  <B>with</B> GlobalHandles <B>do</B>
+  <B>begin</B>
+    UnmapViewOfFile(GlobalInfo);
+    CloseHandle(FileMapping);
+  <B>end</B>;
+<B>end</B>;
+
+<B>procedure</B> DLLFinalisation;
+<B>begin</B>
+  AtomicDecThreadCount;
+  AtomicDecProcessCount;
+  CloseGlobalInfo;
+  CloseSynchronisation;
+<B>end</B>;
+
+<B>procedure</B> EntryPoint(Reason: integer);
+<B>begin</B>
+  <B>case</B> Reason <B>of</B>
+    DLL_THREAD_ATTACH: <B>if</B> AtomicIncThreadCount &gt 1 <B>then</B> IsMultiThread := true;
+    DLL_THREAD_DETACH: AtomicDecThreadCount;
+    DLL_PROCESS_DETACH: DLLFinalisation;
+  <B>else</B>
+    Assert(false);
+  <B>end</B>;
+<B>end</B>;
+
+<B>exports</B>
+  ReadInfo,
+  SetSharedInteger,
+  IncSharedInteger,
+  DecSharedInteger;
+
+<B>begin</B>
+  SetupSynchronisation;
+  SetupGlobalInfo;
+  AtomicIncProcessCount;
+  AtomicIncThreadCount;
+  DLLProc := @EntryPoint;
+<B>end.</B>
+
+</TT></PRE>
+</body>
+</html>

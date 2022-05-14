@@ -1,0 +1,307 @@
+unit UConectaPop;
+
+
+interface
+
+uses
+  UcriaObjetos, JvMTConsts, Windows, Messages, SysUtils, Variants, Classes,
+  Graphics, Controls, IdIOHandlerSocket,IdSSL,IdSSLOpenSSL,
+  IdMessage,
+  IdBaseComponent, IdComponent, IdTCPConnection,IdTCPClient,
+  IdExplicitTLSClientServerBase,
+  IdMessageClient, IdPOP3, myaccess, DBClient;
+
+Function CriaPOP(conta:integer;Ticket:TmtTicket):Tpop;
+Procedure PegaMensPop(Popwork:Tpop);
+Procedure SeparaUIDPop(PopWork:Tpop);
+Function inicializaPop(Conta:integer):Tpop;
+
+
+
+implementation
+
+
+
+Uses Udmserver, Umain;
+
+
+Procedure PegaMensPop(Popwork:Tpop);
+var
+  I,achou : Integer;
+  tabMens : TClientDataSet;
+begin
+  With DM_Server do
+  begin
+
+
+
+    tabMens := TClientDataSet.create(nil);
+    tabMens.CloneCursor(dm_server.cds_Mens,false,false);
+    tabMens.IndexFieldNames := 'ID_Conta';
+    tabmens.filter := 'ID_conta = '+inttostr(Popwork.IDConta);
+    tabmens.Filtered := true;
+    {tabMens.SQL.text := 'Select * from messages where ID_conta = '+inttostr(Popwork.IDConta);
+    tabMens.SQLInsert := cds_Mens.SQLInsert;
+    tabMens.SQLDelete := cds_Mens.SQLDelete;
+    tabMens.SQLUpdate := cds_Mens.SQLUpdate;
+    tabMens.SQLRefresh := cds_Mens.SQLRefresh;
+    tabMens.Connection := cds_Mens.Connection;
+    tabMens.open;}
+
+
+
+    tabMens.First;
+
+
+
+    while not tabMens.Eof do
+    //for I := 0 to Popwork.UIDOK.Count - 1 do
+    begin
+      achou := Popwork.UIDOK.Indexof(tabMens.FieldByName('UID').asString);
+      if achou >= 0 then
+      begin
+        Popwork.UIDOK.BeginUpdate;
+        Popwork.UIDOK.Delete(achou);
+        Popwork.UIDOK.EndUpdate;
+
+        Popwork.UIDNUM.BeginUpdate;
+        Popwork.UIDNUM.Delete(achou);
+        Popwork.UIDNUM.EndUpdate;
+      end
+      else
+      begin
+      {
+
+        Fmain.GuardaMens.Items[i].Excluida := 1;
+        Fmain.GuardaMens.Items[i].Filtrada := 130;
+        Fmain.GuardaMens.Items[i].Selecionada := 0;
+
+        }
+
+
+        tabMens.edit;
+        tabMens.FieldByName('Excluida').AsInteger    := 1;
+        tabMens.FieldByName('Filtrada').AsInteger    := 130;
+        tabMens.FieldByName('selecionada').AsInteger := 0;
+        tabMens.Post;
+       // tabMens.applyupdates;
+        //dm_server.cds_Mens.RefreshRecord;}
+      end;
+      tabMens.Next;
+    end;
+
+
+
+  end;
+end;
+
+
+
+Procedure SeparaUIDPop(PopWork:Tpop);
+var
+I, achou : integer;
+Monta, Num, UIDT    : string;
+begin
+
+PopWork.UIDOK.Clear;
+PopWork.UIDNUM.Clear;
+PopWork.UIDOKLida.Clear;
+PopWork.UIDNUMLida.Clear;
+
+for I := 0 to PopWork.UIDs.Count - 1 do
+   begin
+     monta :=  stringreplace(PopWork.UIDs.Strings[i],#13#10,'',[]);
+     achou := pos(' ',monta);
+     Num   := copy(monta,1,achou-1);
+     UIDT  := copy(monta,achou+1,length(monta)-(achou));
+     PopWork.UIDOK.Add(UIDT);
+     PopWork.UIDNUM.Add(Num);
+     PopWork.UIDOKlida.Add(UIDT);
+     PopWork.UIDNUMLida.Add(Num);
+   end;
+end;
+
+
+
+
+
+
+
+
+function inicializaPop(conta:integer):Tpop;
+            function existeListaPop(conta:integer):Tpop;
+            var
+              i : Integer;
+            begin
+              result:=nil;
+              for i := 0 to Fmain.ListaPop.count - 1 do
+              begin
+                if Fmain.ListaPop.Items[i].IDConta = conta then
+                begin
+                  result:= Fmain.ListaPop.Items[i];
+                  break;
+                end;
+              end;
+
+            end;
+var
+  POPT : TPOP;
+  SSLT : TIdSSLIOHandlerSocketOpenSSL;
+
+begin
+
+  if DM_Server.PegaContasPOP(Conta) then
+  begin
+    With dm_Server do
+    begin
+      Popt := existeListaPop(Conta);
+
+
+      if Popt = nil then
+      begin
+
+
+        POPT := Tpop.Create;
+        SSLT := TIdSSLIOHandlerSocketOpenSSL.Create(POPT);
+
+        POPT.Host      :=  QContasCon.FieldByName('POP').AsString;
+        POPT.Password  :=  QContasCon.FieldByName('Senha').AsString;
+        POPT.Port      :=  QContasCon.FieldByName('Porta').AsInteger;
+        POPT.Username  :=  QContasCon.FieldByName('Usuario').AsString;
+        POPT.IDConta   :=  Conta;
+        POPT.NomeConta :=  QContasCon.FieldByName('Nome').AsString;
+
+        if POPT.Port <> 110 then
+        begin
+          POPT.IOHandler := SSLT;
+          POPT.UseTLS    := utUseImplicitTLS;
+        end
+        else
+        begin
+          POPT.IOHandler := nil;
+          POPT.UseTLS    := utNoTLSSupport;
+        end;
+        POPT.ConnectTimeout := 3000;
+        try
+          POPT.Connect;
+        except
+          result := nil;
+          POPT.Free;
+          exit;
+        end;
+        result := Popt;
+
+
+      end;
+    end;
+
+
+
+
+
+
+
+
+
+
+
+end;
+
+
+
+
+
+Function CriaPOP(conta:integer;Ticket:TmtTicket):Tpop;
+            function existeListaPop(conta:integer):Tpop;
+            var
+              i : Integer;
+            begin
+              result:=nil;
+              for i := 0 to Fmain.ListaPop.count - 1 do
+              begin
+                if Fmain.ListaPop.Items[i].IDConta = conta then
+                begin
+                  result:= Fmain.ListaPop.Items[i];
+                  break;
+                end;
+              end;
+
+            end;
+
+var
+  POPT : TPOP;
+  SSLT : TIdSSLIOHandlerSocketOpenSSL;
+begin
+
+//  POPT := Tpop.Create;
+//  SSLT := TIdSSLIOHandlerSocketOpenSSL.Create(POPT);
+
+
+
+  if DM_Server.PegaContasPOP(Conta) then
+  begin
+
+    With dm_Server do
+    begin
+      Popt := existeListaPop(Conta);
+
+
+      if Popt = nil then
+      begin
+
+
+        POPT := Tpop.Create;
+        SSLT := TIdSSLIOHandlerSocketOpenSSL.Create(POPT);
+
+        POPT.Host      :=  QContasCon.FieldByName('POP').AsString;
+        POPT.Password  :=  QContasCon.FieldByName('Senha').AsString;
+        POPT.Port      :=  QContasCon.FieldByName('Porta').AsInteger;
+        POPT.Username  :=  QContasCon.FieldByName('Usuario').AsString;
+        POPT.IDConta   :=  Conta;
+        POPT.NomeConta :=  QContasCon.FieldByName('Nome').AsString;
+
+        if POPT.Port <> 110 then
+        begin
+          POPT.IOHandler := SSLT;
+          POPT.UseTLS    := utUseImplicitTLS;
+        end
+        else
+        begin
+          POPT.IOHandler := nil;
+          POPT.UseTLS    := utNoTLSSupport;
+        end;
+
+
+        POPT.ConnectTimeout := 3000;
+        POPT.Ticket := Ticket;
+        try
+
+          try
+            POPT.Connect;
+          except
+            result := nil;
+            POPT.Free;
+            exit;
+          end;
+
+          POPT.QtdMens := POPT.CheckMessages;
+          POPT.UIDL(POPT.UIDS);
+          SeparaUIDPop(POPT);
+          PegaMensPop(POPT);
+          Result := POPT;
+
+        finally
+          Fmain.ListaPop.add(POPT);
+        end;
+      end;
+      result:= POPT;
+    end;
+  end;
+end;
+
+
+
+
+
+
+end.

@@ -1,0 +1,28 @@
+unit Uabout;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, ExtCtrls, JvExStdCtrls, JvWinampLabel, StdCtrls;
+
+type
+  TFabout = class(TForm)
+    Panel1: TPanel;
+    Image1: TImage;
+    Label1: TLabel;
+    JvWinampLabel1: TJvWinampLabel;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Fabout: TFabout;
+
+implementation
+
+{$R *.dfm}
+
+end.

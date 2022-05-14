@@ -1,0 +1,88 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Martin Harvey">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (WinNT; I) [Netscape]">
+   <title>source34</title>
+</head>
+<body>
+<PRE><TT><B>unit</B> SyncForm;
+
+<B>interface</B>
+
+<B>uses</B>
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
+  ExtCtrls, StdCtrls, ChecksumList, CheckThread;
+
+<B>type</B>
+  TForm1 = <B>class</B>(TForm)
+    FileMemo: TMemo;
+    Timer1: TTimer;
+    <B>procedure</B> FormCreate(Sender: TObject);
+    <B>procedure</B> FormDestroy(Sender: TObject);
+    <B>procedure</B> Timer1Timer(Sender: TObject);
+  <B>private</B>
+    <FONT COLOR=NAVY><I>{ Private declarations }</I></FONT>
+    FChecksumList: TChecksumList;
+    FCheckThread: TCheckThread;
+  <B>public</B>
+    <FONT COLOR=NAVY><I>{ Public declarations }</I></FONT>
+  <B>end</B>;
+
+<B>var</B>
+  Form1: TForm1;
+
+<B>implementation</B>
+
+<FONT COLOR=NAVY><I>{$R *.DFM}</I></FONT>
+
+<B>procedure</B> TForm1.FormCreate(Sender: TObject);
+<B>begin</B>
+  FChecksumList := TChecksumList.Create;
+  FCheckThread := TCheckThread.Create(true);
+  <B>with</B> FCheckThread <B>do</B>
+  <B>begin</B>
+    StartDir := <FONT COLOR=BLUE>'D:\Netscape Profiles\Martin\News\host-newsgroups.borland.com\'</FONT>;
+    CheckList := FChecksumList;
+    Resume;
+  <B>end</B>;
+<B>end</B>;
+
+<B>procedure</B> TForm1.FormDestroy(Sender: TObject);
+<B>begin</B>
+  <B>with</B> FCheckThread <B>do</B>
+  <B>begin</B>
+    Terminate;
+    WaitFor;
+    Free;
+  <B>end</B>;
+  FChecksumList.Free;
+<B>end</B>;
+
+<B>procedure</B> TForm1.Timer1Timer(Sender: TObject);
+
+<B>var</B>
+  TempList: TStringList;
+
+<B>begin</B>
+  TempList := FChecksumList.GetChecksumList;
+  <B>with</B> FileMemo <B>do</B>
+  <B>begin</B>
+    <B>with</B> Lines <B>do</B>
+    <B>begin</B>
+      BeginUpdate;
+      Assign(TempList);
+      EndUpdate;
+    <B>end</B>;
+    selstart := gettextlen;
+    perform(em_scrollcaret, 0, 0);
+  <B>end</B>;
+  TempList.Free;
+<B>end</B>;
+
+<B>end.</B>
+
+</TT></PRE>
+</body>
+</html>

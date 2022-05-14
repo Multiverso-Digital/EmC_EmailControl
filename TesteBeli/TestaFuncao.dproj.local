@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2009/01/02 10:55:15.015.pas,C:\Documents and Settings\ar\Meus documentos\RAD Studio\Projects\Unit1.pas=\\Ar0\prgsbeli\@Projetos_em_andamento\EmC2010\TesteBeli\Utestafuncao.pas</Transaction>
+    <Transaction>2009/01/02 10:55:15.015.dfm,C:\Documents and Settings\ar\Meus documentos\RAD Studio\Projects\Unit1.dfm=\\Ar0\prgsbeli\@Projetos_em_andamento\EmC2010\TesteBeli\Utestafuncao.dfm</Transaction>
+    <Transaction>2009/01/02 10:55:22.609.dproj,C:\Documents and Settings\ar\Meus documentos\RAD Studio\Projects\Project1.dproj=\\Ar0\prgsbeli\@Projetos_em_andamento\EmC2010\TesteBeli\TestaFuncao.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

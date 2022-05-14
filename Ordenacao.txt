@@ -1,0 +1,26 @@
+procedure TDataGroupForm.DoSorting(cdsName:TClientDataset; AFieldName: String);
+const
+  NONSORTABLE: Set of TFieldType=[ftBlob,ftMemo,ftOraBlob,ftOraCLob];
+begin
+  with cdsName do
+  begin
+    if IsEmpty or (FieldByName(AFieldName).DataType in NONSORTABLE) then
+      Exit;
+
+    if (IndexFieldNames=AFieldName) then
+    begin
+       IndexDefs.Update;
+       if IndexDefs.IndexOf('w2wTempIndex')>-1  then
+       begin
+         DeleteIndex('w2wTempIndex');
+         IndexDefs.Update;
+       end;
+       AddIndex('w2wTempIndex',AFieldName,[ixDescending,ixCaseInsensitive],'','',0);
+       IndexName:='w2wTempIndex';
+    end
+    else
+    begin
+       IndexFieldNames := AFieldName;
+    end;
+  end;
+end;

@@ -1,0 +1,2 @@
+http://www.paulgraham.com/better.html
+http://www.felix-colibri.com/papers/web/bayesian_spam_filter/bayesian_spam_filter.html#delphi_bayes_spam_classifier

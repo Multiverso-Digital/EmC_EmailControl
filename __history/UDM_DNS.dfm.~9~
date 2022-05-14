@@ -1,0 +1,194 @@
+object DM_DNS: TDM_DNS
+  OldCreateOrder = False
+  OnDestroy = DataModuleDestroy
+  Height = 604
+  Width = 732
+  object MC: TMyConnection
+    Database = 'emc'
+    ConnectionTimeout = 2
+    Options.UseUnicode = True
+    PoolingOptions.MaxPoolSize = 1000
+    PoolingOptions.ConnectionLifetime = 2
+    Pooling = True
+    Username = 'root'
+    Password = 'aw1122'
+    Server = '192.168.0.10'
+    LoginPrompt = False
+    Left = 16
+    Top = 24
+  end
+  object qdns: TMyQuery
+    SQLInsert.Strings = (
+      'INSERT INTO dns'
+      '  (ID, Name, dns, active)'
+      'VALUES'
+      '  (:ID, :Name, :dns, :active)')
+    SQLDelete.Strings = (
+      'DELETE FROM dns'
+      'WHERE'
+      '  ID = :Old_ID')
+    SQLUpdate.Strings = (
+      'UPDATE dns'
+      'SET'
+      '  ID = :ID, Name = :Name, dns = :dns, active = :active'
+      'WHERE'
+      '  ID = :Old_ID')
+    SQLRefresh.Strings = (
+      'SELECT dns.ID, dns.Name, dns.dns, dns.active FROM dns'
+      'WHERE'
+      '  dns.ID = :Old_ID')
+    Connection = MC
+    SQL.Strings = (
+      'SELECT '
+      '  dns.ID,'
+      '  dns.Name,'
+      '  dns.dns,'
+      '  dns.active'
+      'FROM'
+      '  dns')
+    CachedUpdates = True
+    Left = 64
+    Top = 24
+    object qdnsactive: TIntegerField
+      DisplayLabel = 'Active'
+      DisplayWidth = 5
+      FieldName = 'active'
+    end
+    object qdnsName: TWideStringField
+      DisplayWidth = 10
+      FieldName = 'Name'
+    end
+    object qdnsdns: TWideStringField
+      DisplayLabel = 'Domain'
+      DisplayWidth = 20
+      FieldName = 'dns'
+      Size = 255
+    end
+    object qdnsID: TIntegerField
+      DisplayWidth = 10
+      FieldName = 'ID'
+      Visible = False
+    end
+  end
+  object qIPSpam: TMyQuery
+    SQLInsert.Strings = (
+      'INSERT INTO ipspam'
+      '  (IPDecimal, IP, QTD)'
+      'VALUES'
+      '  (:IPDecimal, :IP, :QTD)')
+    SQLDelete.Strings = (
+      'DELETE FROM ipspam'
+      'WHERE'
+      '  IPDecimal = :Old_IPDecimal')
+    SQLUpdate.Strings = (
+      'UPDATE ipspam'
+      'SET'
+      '   IP = :IP, QTD = :QTD'
+      'WHERE'
+      '  IPDecimal = :Old_IPDecimal')
+    SQLRefresh.Strings = (
+      'SELECT ipspam.IPDecimal, ipspam.IP, ipspam.QTD FROM ipspam'
+      'WHERE'
+      '  ipspam.IPDecimal = :IPDecimal')
+    Connection = MC
+    SQL.Strings = (
+      'SELECT '
+      '  ipspam.IPDecimal,'
+      '  ipspam.IP,'
+      '  ipspam.QTD'
+      'FROM'
+      '  ipspam'
+      'where   '
+      'ipspam.IPDecimal = :IPD')
+    CachedUpdates = True
+    Left = 112
+    Top = 24
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'IPD'
+      end>
+    object qIPSpamIPDecimal: TLargeintField
+      FieldName = 'IPDecimal'
+    end
+    object qIPSpamIP: TWideStringField
+      FieldName = 'IP'
+      Size = 15
+    end
+    object qIPSpamQTD: TIntegerField
+      FieldName = 'QTD'
+    end
+  end
+  object qsetup: TMyQuery
+    SQLInsert.Strings = (
+      'INSERT INTO setup'
+      
+        '  (ID, Bayesian, MyFriends, BlackList, DNS, Countries, DT, Filte' +
+        'r, minutes, IPdns, valorBaysean)'
+      'VALUES'
+      
+        '  (:ID, :Bayesian, :MyFriends, :BlackList, :DNS, :Countries, :DT' +
+        ', :Filter, :minutes, :IPdns, :valorBaysean)')
+    SQLDelete.Strings = (
+      'DELETE FROM setup'
+      'WHERE'
+      '  ID = :Old_ID')
+    SQLUpdate.Strings = (
+      'UPDATE setup'
+      'SET'
+      
+        '  ID = :ID, Bayesian = :Bayesian, MyFriends = :MyFriends, BlackL' +
+        'ist = :BlackList, DNS = :DNS, Countries = :Countries, DT = :DT, ' +
+        'Filter = :Filter, minutes = :minutes, IPdns = :IPdns, valorBayse' +
+        'an = :valorBaysean'
+      'WHERE'
+      '  ID = :Old_ID')
+    SQLRefresh.Strings = (
+      
+        'SELECT setup.ID, setup.Bayesian, setup.MyFriends, setup.BlackLis' +
+        't, setup.DNS, setup.Countries, setup.DT, setup.Filter, setup.min' +
+        'utes, setup.IPdns, setup.valorBaysean FROM setup'
+      'WHERE'
+      '  setup.ID = :Old_ID')
+    Connection = MC
+    SQL.Strings = (
+      'select * from setup limit 1')
+    CachedUpdates = True
+    Left = 160
+    Top = 24
+    object qsetupID: TIntegerField
+      FieldName = 'ID'
+    end
+    object qsetupBayesian: TIntegerField
+      FieldName = 'Bayesian'
+    end
+    object qsetupMyFriends: TIntegerField
+      FieldName = 'MyFriends'
+    end
+    object qsetupBlackList: TIntegerField
+      FieldName = 'BlackList'
+    end
+    object qsetupDNS: TIntegerField
+      FieldName = 'DNS'
+    end
+    object qsetupCountries: TIntegerField
+      FieldName = 'Countries'
+    end
+    object qsetupDT: TDateTimeField
+      FieldName = 'DT'
+    end
+    object qsetupFilter: TIntegerField
+      FieldName = 'Filter'
+    end
+    object qsetupminutes: TIntegerField
+      FieldName = 'minutes'
+    end
+    object qsetupIPdns: TWideStringField
+      FieldName = 'IPdns'
+      Size = 15
+    end
+    object qsetupvalorBaysean: TFloatField
+      FieldName = 'valorBaysean'
+    end
+  end
+end

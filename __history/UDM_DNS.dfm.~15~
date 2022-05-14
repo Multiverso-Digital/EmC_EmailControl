@@ -1,0 +1,55 @@
+object DM_DNS: TDM_DNS
+  OldCreateOrder = False
+  Height = 604
+  Width = 732
+  object Cone_IPSpam: TABSDatabase
+    Connected = True
+    CurrentVersion = '6.02 '
+    DatabaseFileName = 
+      '\\Ar0\prgsbeli\@Projetos_em_andamento\EmC2011_Thread\Dados\IpSpa' +
+      'mDNS.abs'
+    DatabaseName = 'DNS'
+    Exclusive = False
+    MaxConnections = 500
+    MultiUser = True
+    SessionName = 'SessaoIPSpam_6'
+    Left = 24
+    Top = 16
+  end
+  object qdns: TABSQuery
+    CurrentVersion = '6.02 '
+    DatabaseName = 'DNS'
+    SessionName = 'SessaoIPSpam_6'
+    InMemory = False
+    ReadOnly = True
+    SQL.Strings = (
+      'SELECT '
+      '  dns.ID,'
+      '  dns.Name,'
+      '  dns.dns,'
+      '  dns.active'
+      'FROM'
+      '  dns')
+    Left = 176
+    Top = 16
+    object qdnsID: TIntegerField
+      FieldName = 'ID'
+    end
+    object qdnsName: TWideStringField
+      FieldName = 'Name'
+    end
+    object qdnsdns: TWideStringField
+      FieldName = 'dns'
+      Size = 255
+    end
+    object qdnsactive: TIntegerField
+      FieldName = 'active'
+    end
+  end
+  object SessaoIPSpam: TABSSession
+    Active = True
+    AutoSessionName = True
+    Left = 104
+    Top = 16
+  end
+end

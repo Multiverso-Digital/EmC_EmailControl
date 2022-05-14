@@ -1,0 +1,53 @@
+Received: from spescra01 ([201.28.214.75]) by abreuretto.com with MailEnable ESMTP; Thu, 12 Feb 2009 11:15:12 -0800
+From: "Associagco Brasileira de Administragco" <curso@admbrasileira.com.br>
+To: <abreu@abreuretto.com>
+Subject: Curso - Administragco Integral
+Mime-Version: 1.0
+Content-Type: text/html; charset="iso-8859-1"
+Date: Thu, 12 Feb 2009 17:18:41
+Return-Path: <curso@admbrasileira.com.br>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>O Administrador Profissional</title>
+<style type="text/css">
+<!--
+a:link, a:active,a:visited{color:#FFFFFF;}
+
+body {
+	font: 10px Verdana, Arial, Helvetica, sans-serif;
+	background:#336699;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+
+}
+#container {
+	width: 800px;
+	margin: 0 auto; 
+	text-align: center;
+}
+#mainContent {
+
+}
+-->
+</style></head>
+
+<body>
+<div>
+<div id="container">
+  <div id="mainContent"><a href="http://www.admbrasileira.com.br/EmailMKT/admIntegral.html">Acesse este link caso nC#o consiga visualizar este e-mail.</a><br />
+    <img src="http://www.admbrasileira.com.br/EmailMKT/admIntegral.jpg" width="809" height="1161" border="0" usemap="#Map" />
+    <map name="Map" id="Map">
+      <area shape="rect" coords="83,79,683,141" href="#" target="_blank" />
+      <area shape="rect" coords="240,1070,531,1133" href="http://www.admbrasileira.com.br" target="_blank" alt="Site Adm - AssociaC'C#o Brasileira de AdministraC'C#o" />
+    <area shape="rect" coords="293,925,581,1017" href="http://www.admbrasileira.com.br/Cursos/Cursos.aspx" target="_blank" alt="InscriC'C5es" />
+    </map>
+  <!-- end #mainContent --></div>
+<!-- end #container --></div>
+</div>
+</body>
+</html>
+

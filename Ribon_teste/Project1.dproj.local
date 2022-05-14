@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2008/11/28 12:22:17.750.pas,C:\Documents and Settings\Administrador\Meus documentos\RAD Studio\Projects\Unit2.pas=C:\Documents and Settings\Administrador\Meus documentos\RAD Studio\Projects\Ribon_teste\Unit2.pas</Transaction>
+    <Transaction>2008/11/28 12:22:17.765.dfm,C:\Documents and Settings\Administrador\Meus documentos\RAD Studio\Projects\Unit2.dfm=C:\Documents and Settings\Administrador\Meus documentos\RAD Studio\Projects\Ribon_teste\Unit2.dfm</Transaction>
+    <Transaction>2008/11/28 12:22:18.609.dproj,C:\Documents and Settings\Administrador\Meus documentos\RAD Studio\Projects\Project1.dproj=C:\Documents and Settings\Administrador\Meus documentos\RAD Studio\Projects\Ribon_teste\Project1.dproj</Transaction>
+    <Transaction>2008/11/28 19:11:12.312.pas,C:\Documents and Settings\Administrador\Meus documentos\RAD Studio\Projects\Ribon_teste\Unit2.pas=C:\Documents and Settings\Administrador\Meus documentos\RAD Studio\Projects\Ribon_teste\Umain.pas</Transaction>
+    <Transaction>2008/11/28 19:11:12.312.dfm,C:\Documents and Settings\Administrador\Meus documentos\RAD Studio\Projects\Ribon_teste\Unit2.dfm=C:\Documents and Settings\Administrador\Meus documentos\RAD Studio\Projects\Ribon_teste\Umain.dfm</Transaction>
+    <Transaction>2008/11/28 19:21:46.953.pas,C:\Documents and Settings\Administrador\Meus documentos\RAD Studio\Projects\Ribon_teste\Unit1.pas=C:\Documents and Settings\Administrador\Meus documentos\RAD Studio\Projects\Ribon_teste\Uproj.pas</Transaction>
+    <Transaction>2008/11/28 19:21:46.953.dfm,C:\Documents and Settings\Administrador\Meus documentos\RAD Studio\Projects\Ribon_teste\Unit1.dfm=C:\Documents and Settings\Administrador\Meus documentos\RAD Studio\Projects\Ribon_teste\Uproj.dfm</Transaction>
+    <Transaction>2008/11/28 19:44:35.484.pas,C:\Documents and Settings\Administrador\Meus documentos\RAD Studio\Projects\Ribon_teste\Uproj.pas=</Transaction>
+    <Transaction>2008/11/28 19:44:35.484.dfm,C:\Documents and Settings\Administrador\Meus documentos\RAD Studio\Projects\Ribon_teste\Uproj.dfm=</Transaction>
+    <Transaction>2008/11/29 08:49:06.031.pas,C:\Documents and Settings\Administrador\Meus documentos\RAD Studio\Projects\Ribon_teste\Unit1.pas=C:\Documents and Settings\Administrador\Meus documentos\RAD Studio\Projects\Ribon_teste\Udm.pas</Transaction>
+    <Transaction>2008/11/29 08:49:06.031.dfm,C:\Documents and Settings\Administrador\Meus documentos\RAD Studio\Projects\Ribon_teste\Unit1.dfm=C:\Documents and Settings\Administrador\Meus documentos\RAD Studio\Projects\Ribon_teste\Udm.dfm</Transaction>
+    <Transaction>2008/12/01 09:20:33.187.pas,C:\Documents and Settings\Administrador\Meus documentos\RAD Studio\Projects\Ribon_teste\Unit1.pas=C:\Documents and Settings\Administrador\Meus documentos\RAD Studio\Projects\Ribon_teste\Ucliente.pas</Transaction>
+    <Transaction>2008/12/01 09:20:33.187.dfm,C:\Documents and Settings\Administrador\Meus documentos\RAD Studio\Projects\Ribon_teste\Unit1.dfm=C:\Documents and Settings\Administrador\Meus documentos\RAD Studio\Projects\Ribon_teste\Ucliente.dfm</Transaction>
+    <Transaction>2008/12/01 09:29:42.015.pas,C:\Documents and Settings\Administrador\Meus documentos\RAD Studio\Projects\Ribon_teste\Ucliente.pas=</Transaction>
+    <Transaction>2008/12/01 09:29:42.015.dfm,C:\Documents and Settings\Administrador\Meus documentos\RAD Studio\Projects\Ribon_teste\Ucliente.dfm=</Transaction>
+    <Transaction>2008/12/01 09:30:14.671.pas,C:\Documents and Settings\Administrador\Meus documentos\RAD Studio\Projects\Ribon_teste\Unit1.pas=C:\Documents and Settings\Administrador\Meus documentos\RAD Studio\Projects\Ribon_teste\Ucliente.pas</Transaction>
+    <Transaction>2008/12/01 09:30:14.671.dfm,C:\Documents and Settings\Administrador\Meus documentos\RAD Studio\Projects\Ribon_teste\Unit1.dfm=C:\Documents and Settings\Administrador\Meus documentos\RAD Studio\Projects\Ribon_teste\Ucliente.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

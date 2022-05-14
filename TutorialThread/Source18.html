@@ -1,0 +1,163 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Martin Harvey">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (WinNT; I) [Netscape]">
+   <title>Source18</title>
+</head>
+<body>
+<PRE><TT><B>unit</B> BoundedBuf;
+
+<FONT COLOR=NAVY><I>{Martin Harvey 24/4/2000}</I></FONT>
+
+<B>interface</B>
+
+<B>uses</B> Windows, SysUtils;
+
+<B>const</B>
+  DefaultWaitTime = 5000; <FONT COLOR=NAVY><I>{ Five second wait on mutexes }</I></FONT>
+
+<B>type</B>
+  <FONT COLOR=NAVY><I>{ I don't particularly like dynamic arrays, so I'm going to do things
+    the "C" way here, explicitly allocating memory
+    Think of TBufferEntries as ^(array of pointer) }</I></FONT>
+
+  TBufferEntries = ^Pointer;
+
+  TBoundedBuffer = <B>class</B>
+  <B>private</B>
+    FBufInit: boolean;
+    FBufSize: integer;
+    FBuf: TBufferEntries;
+    FReadPtr, <FONT COLOR=NAVY><I>{ ReadPtr points to next used entry in buffer}</I></FONT>
+    FWritePtr: integer; <FONT COLOR=NAVY><I>{ WritePtr points to next free entry in buffer}</I></FONT>
+    FEntriesFree, FEntriesUsed: THandle; <FONT COLOR=NAVY><I>{ Flow control semaphores }</I></FONT>
+    FCriticalMutex: THandle; <FONT COLOR=NAVY><I>{ Critical section mutex }</I></FONT>
+  <B>protected</B>
+    <B>procedure</B> SetSize(NewSize: integer);
+  <B>public</B>
+    <B>procedure</B> ResetState;
+    <B>destructor</B> Destroy; <B>override</B>;
+    <B>function</B> PutItem(NewItem: Pointer): boolean;
+    <B>function</B> GetItem: Pointer;
+  <B>published</B>
+    <B>property</B> Size: integer <B>read</B> FBufSize <B>write</B> SetSize;
+  <B>end</B>;
+
+  <FONT COLOR=NAVY><I>{ No constructor required because default values of 0, false etc acceptable }</I></FONT>
+
+<B>implementation</B>
+
+<B>const</B>
+  FailMsg1 = <FONT COLOR=BLUE>'Flow control failed, or buffer not initialised'</FONT>;
+  FailMsg2 = <FONT COLOR=BLUE>'Critical section failed, or buffer not initialised'</FONT>;
+
+<B>procedure</B> TBoundedBuffer.SetSize(NewSize: integer);
+
+<FONT COLOR=NAVY><I>{ Initialises handles and allocates memory.
+  If the buffer size has previously been set, then this may invoke a buffer
+  reset }</I></FONT>
+
+<B>begin</B>
+  <B>if</B> FBufInit <B>then</B> ResetState;
+  <B>if</B> NewSize &lt 2 <B>then</B> NewSize := 2;
+  FBufSize := NewSize;
+  GetMem(FBuf, Sizeof(Pointer) * FBufSize);
+  FillMemory(FBuf, Sizeof(Pointer) * FBufSize, 0);
+  FBufInit := true;
+  FCriticalMutex := CreateMutex(<B>nil</B>, false, <B>nil</B>); <FONT COLOR=NAVY><I>{ note lack of name }</I></FONT>
+  <FONT COLOR=NAVY><I>{ The initial count on the semaphores requires some thought,
+    The maximum count requires more thought.
+    Again, all synchronisation objects are anonymous }</I></FONT>
+  FEntriesFree := CreateSemaphore(<B>nil</B>, FBufSize - 1, FBufSize, <B>nil</B>);
+  FEntriesUsed := CreateSemaphore(<B>nil</B>, 0, FBufSize, <B>nil</B>);
+  <B>if</B> (FCriticalMutex = 0)
+    <B>or</B> (FEntriesFree = 0)
+    <B>or</B> (FEntriesUsed = 0) <B>then</B> ResetState
+<B>end</B>;
+
+<B>procedure</B> TBoundedBuffer.ResetState;
+
+<FONT COLOR=NAVY><I>{ Closes handles and deallocates memory.
+  Note that this must unblock threads in such a manner that they quit cleanly }</I></FONT>
+
+<B>begin</B>
+  <B>if</B> FBufInit <B>then</B>
+  <B>begin</B>
+    WaitForSingleObject(FCriticalMutex, DefaultWaitTime);
+    FBufInit := false;
+    FBufSize := 0;
+    FreeMem(FBuf);
+    <FONT COLOR=NAVY><I>{ Now wake up all threads currently waiting.
+      Currently assumes only 1 producer and 1 consumer.
+      Plenty of ordering subtleties and pitfalls to be discussed here }</I></FONT>
+    ReleaseSemaphore(FEntriesFree, 1, <B>nil</B>);
+    ReleaseSemaphore(FEntriesUsed, 1, <B>nil</B>);
+    CloseHandle(FEntriesFree);
+    CloseHandle(FEntriesUsed);
+    <FONT COLOR=NAVY><I>{ If reader or writer threads are waiting,
+      then they will be waiting on the mutex.
+      We will close the handle and let them time out }</I></FONT>
+    CloseHandle(FCriticalMutex);
+  <B>end</B>;
+<B>end</B>;
+
+<B>function</B> TBoundedBuffer.PutItem(NewItem: Pointer): boolean;
+
+<FONT COLOR=NAVY><I>{ Called by producer thread }</I></FONT>
+<B>var</B>
+  NthItem: TBufferEntries;
+
+<B>begin</B>
+  result := false;
+  <FONT COLOR=NAVY><I>{ WAIT(EntriesFree) }</I></FONT>
+  <B>if</B> WaitForSingleObject(FEntriesFree, INFINITE) &lt;&gt WAIT_OBJECT_0 <B>then</B>
+    exit;
+  <B>if</B> (WaitForSingleObject(FCriticalMutex, DefaultWaitTime) &lt;&gt WAIT_OBJECT_0)
+    <B>or</B> <B>not</B> FBufInit <B>then</B>
+    exit;
+  NthItem := FBuf;
+  Inc(NthItem, FWritePtr);
+  NthItem^ := NewItem;
+  FWritePtr := (FWritePtr + 1) <B>mod</B> FBufSize;
+  ReleaseMutex(FCriticalMutex);
+  <FONT COLOR=NAVY><I>{ SIGNAL(EntriesUsed) }</I></FONT>
+  ReleaseSemaphore(FEntriesUsed, 1, <B>nil</B>);
+  result := true;
+<B>end</B>;
+
+<B>function</B> TBoundedBuffer.GetItem: Pointer;
+
+<FONT COLOR=NAVY><I>{ Called by consumer thread }</I></FONT>
+<B>var</B>
+  NthItem: TBufferEntries;
+
+<B>begin</B>
+  result := <B>nil</B>;
+  <FONT COLOR=NAVY><I>{ WAIT(EntriesUsed) }</I></FONT>
+  <B>if</B> WaitForSingleObject(FEntriesUsed, INFINITE) &lt;&gt WAIT_OBJECT_0 <B>then</B>
+    exit;
+  <B>if</B> (WaitForSingleObject(FCriticalMutex, DefaultWaitTime) &lt;&gt WAIT_OBJECT_0)
+    <B>or</B> <B>not</B> FBufInit <B>then</B>
+    exit;
+  NthItem := FBuf;
+  Inc(NthItem, FReadPtr);
+  Result := NthItem^;
+  FReadPtr := (FReadPtr + 1) <B>mod</B> FBufSize;
+  ReleaseMutex(FCriticalMutex);
+  <FONT COLOR=NAVY><I>{ SIGNAL(EntriesFree) }</I></FONT>
+  ReleaseSemaphore(FEntriesFree, 1, <B>nil</B>);
+<B>end</B>;
+
+<B>destructor</B> TBoundedBuffer.Destroy;
+<B>begin</B>
+  ResetState;
+  <B>inherited</B> Destroy;
+<B>end</B>;
+
+<B>end.</B>
+
+</TT></PRE>
+</body>
+</html>

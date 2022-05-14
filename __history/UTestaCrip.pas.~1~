@@ -1,0 +1,31 @@
+unit UTestaCrip;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, DB, Grids, DBGrids, DBClient;
+
+type
+  TForm1 = class(TForm)
+    DataSource1: TDataSource;
+    cds: TClientDataSet;
+    DBGrid1: TDBGrid;
+    cdsNome: TWideStringField;
+    cdsPOP: TWideStringField;
+    cdsUsuario: TWideStringField;
+    cdsSenha: TWideStringField;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+end.

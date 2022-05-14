@@ -1,0 +1,96 @@
+Received: from servidor.cenpec.org.br ([200.230.152.130]) by abreuretto.com with MailEnable ESMTP; Tue, 10 Feb 2009 11:27:53 -0800
+Received: by servidor.cenpec.org.br (Postfix, from userid 502)
+	id DA086154054; Tue, 10 Feb 2009 11:29:54 -0200 (BRST)
+Received: from [10.10.0.162] (unknown [10.10.0.162])
+	by servidor.cenpec.org.br (Postfix) with ESMTP id 3C9CE15404E
+	for <abreu@abreuretto.com>; Tue, 10 Feb 2009 11:29:52 -0200 (BRST)
+Message-ID: <49918D84.3090109@cenpec.org.br>
+Disposition-Notification-To: Evandro Braga Teodoro <evandro@cenpec.org.br>
+Date: Tue, 10 Feb 2009 11:21:56 -0300
+From: Evandro Braga Teodoro <evandro@cenpec.org.br>
+Organization: CENPEC
+User-Agent: Thunderbird 2.0.0.19 (Windows/20081209)
+MIME-Version: 1.0
+To: Abreu Retto <abreu@abreuretto.com>
+Subject: Re: RES: Sobre o Caderno 2
+References: <49916CCB.3000106@cenpec.org.br> <001c01c98b82$cc3f0020$64bd0060$@com>
+In-Reply-To: <001c01c98b82$cc3f0020$64bd0060$@com>
+Content-Type: multipart/mixed;
+ boundary="------------010109000300080705010206"
+X-Spam-Checker-Version: SpamAssassin 2.63-spambr_20030926 (2004-01-11) on 
+	servidor.cenpec.org.br
+X-Spam-Level: 
+X-Spam-Status: No, hits=0.0 required=7.7 tests=none autolearn=no 
+	version=2.63-spambr_20030926
+Return-Path: <evandro@cenpec.org.br>
+
+This is a multi-part message in MIME format.
+--------------010109000300080705010206
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: quoted-printable
+
+Abreu, pode ser no per=EDodo da tarde.
+
+Abreu Retto escreveu:
+> Evandro
+>
+> Vamos marcar para esta sexta-feira =E0s 10:00hs aqui na minha empresa. =
+Tudo
+> bem pra vc?
+>
+> Um abra=E7o
+>
+> Abreu
+>
+> -----Mensagem original-----
+> De: Evandro Braga Teodoro [mailto:evandro@cenpec.org.br]=20
+> Enviada em: ter=E7a-feira, 10 de fevereiro de 2009 10:02
+> Para: Abreu Retto; Vanda Noventa Fonseca
+> Assunto: Sobre o Caderno 2
+>
+> Ol=E1 Abreu, bom dia.
+>
+> Eu gostaria de marcar com voc=EA para acertarmos alguns detalhes do cad=
+erno 2,
+> caso voc=EA tenha uma data por favor agendsar, ok.
+>
+> Aguardo retorno.
+> Um grande abra=E7o,
+>
+> Evandro.
+>
+>
+> Obs.: Segue caderno com algumas corre=E7=F5es nas =FAltimas tabelas.
+>
+>
+>
+> Nenhum v=EDrus encontrado nessa mensagem recebida.
+> Verificado por AVG - www.avgbrasil.com.br
+> Vers=E3o: 8.0.234 / Banco de dados de v=EDrus: 270.10.20/1943 - Data de
+> Lan=E7amento: 02/10/09 07:20:00
+>
+>
+>  =20
+
+--------------010109000300080705010206
+Content-Type: text/x-vcard; charset=utf-8;
+ name="evandro.vcf"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: attachment;
+ filename="evandro.vcf"
+
+begin:vcard
+fn:Evandro Braga Teodoro
+n:Braga Teodoro;Evandro
+org:CENPEC 
+adr;quoted-printable;quoted-printable:;;Rua Dante Carraro, 69;S=C3=A3o Paulo;S=C3=A3o Paulo;05422-060;Brasil
+email;internet:evandro@cenpec.org.br
+tel;work:(11) 2132-9016
+tel;cell:(11) 8272-6058
+url:www.cenpec.org.br
+version:2.1
+end:vcard
+
+
+--------------010109000300080705010206--
+

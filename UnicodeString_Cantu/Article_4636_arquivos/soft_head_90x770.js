@@ -1,0 +1,10 @@
+document.write('<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="770" height="90">');
+document.write('<param name=movie value="../newpic/hb.swf">');
+document.write('<param name=quality value=high>');
+document.write('<embed src="../newpic/hb.swf" width="770" height="90" quality=high pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash">'); 
+document.write('</embed></object>');
+document.write('<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="770" height="108">');
+document.write('<param name=movie value="../newpic/lm.swf">');
+document.write('<param name=quality value=high>');
+document.write('<embed src="../newpic/lm.swf" width="770" height="108" quality=high pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash">'); 
+document.write('</embed></object>');

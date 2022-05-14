@@ -1,0 +1,77 @@
+Received: from ns200859.ovh.net ([91.121.113.115]) by abreuretto.com with MailEnable ESMTP; Thu, 19 Feb 2009 20:55:28 -0800
+Received: (qmail 19426 invoked by uid 1000); 20 Feb 2009 02:18:43 -0000
+To: abreu@abreuretto.com
+Subject: More than just Acajoom
+Date: Fri, 20 Feb 2009 03:18:43 +0100
+From: Joobilation <newsletter@ijoobi.com>
+Reply-to: Joobilation <newsletter@ijoobi.com>
+Message-ID: <3026fb474e81cd2824215f25f6c87152@www.ijoobi.com>
+X-Priority: 3
+X-Mailer: PHPMailer [version 1.73]
+X-Mailer: http://www.ijoobi.com
+X-MessageID: 14493
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="b1_3026fb474e81cd2824215f25f6c87152"
+Return-Path: <webmaster@ijoobi.com>
+
+
+--b1_3026fb474e81cd2824215f25f6c87152
+Content-Type: text/plain; charset = "utf-8"
+Content-Transfer-Encoding: 8bit
+
+                                                        B              B              B                                    B              B           
+  B                                    B                                                                               Joobilation News!
+                                      Issue #: 2
+                   Friday, 20 February 2009                                                                                          B                
+                   B                                                                              B                    B                    B         
+                                            B                    Hello Belisario,
+                   
+In this issue of Joobilation you will find: 
+iJoobi.com is alive!Acajoom tune up.jCommunity new release.jTickets Beta now available.1. iJoobi.com is alive!
+iJoobi is up and running and we appreciate the positive feedback we have received from you and we are working on the improvements you requested.
+You have probably noticed that you have a private area on iJoobi where you can see you orders and licenses.  In the next few months you will see this
+area grow to give you even more control over Joobi website and improve its usability.  We want to make it as integrative as possible.
+Feel free to send us any comment or feedback ( index.php?option=com_jtickets&controller=ticket&Itemid=65 ) on how we can make your experience on Joobi
+website even better.
+2. Acajoom tune up.
+New versions of Acajoom News (3.1.0) / Plus(3.1.1) and PRO(3.1.2) are now available.  Mostly some minor fixed and some improvements.  However we have
+been working on the next generation of newsletters and auto-responders system and you should see the first results of that work in Beta version in a
+month or so.
+3. jCommunity new release.
+jCommunity team has also released a new version (1.0.5).  They fix some bugs and also added a visibility functionality.  Now each member of the
+community can choose to be public or private.  Should it choose to be private, the member will not be listed on the website and the member information
+will not be accessible by anyone on the frontend.  Read more... ( index.php?option=com_content&view=category&layout=blog&id=14&Itemid=76 ) 
+B 
+4.  jTickets Beta now available.
+You might have already used jTickets without knowing it.  We use it to manage all your support requests.  So if you have asked us a question you
+probably already used jTickets.  The application is working very well and it has helped us tremendously to provide better support than the previously
+used forum.
+Today, we are releasing jTickets in Beta version. It will be Beta for about 1 month and then we will do a final release.CB  Feel free to install it
+on your website and send us feedback.  Read more.... ( index.php?option=com_content&task=view&id=7896&Itemid=30 )
+B 
+Thank you so much for all your feedback and please keep sending them.
+Joobi Team. 
+B 
+B 
+                   
+Change your subscription (
+http://www.ijoobi.com/index.php?option=com_acajoom&Itemid=99&act=change&subscriber=72182&cle=c61da8c774d31f47478f2fbdc4d01053&listid=10 )
+Unsubscribe (
+http://www.ijoobi.com/index.php?option=com_acajoom&Itemid=99&act=unsubscribe&subscriber=72182&cle=c61da8c774d31f47478f2fbdc4d01053&listid=10 )
+                   
+                   B                                                                        B                                    B             
+Powered by Joobi.             B                                    B              B              B                                            
+
+
+--b1_3026fb474e81cd2824215f25f6c87152
+Content-Type: text/html; charset = "utf-8"
+Content-Transfer-Encoding: 8bit
+
+<!-- body {font-size:11px; color:#666666; line-height:20px; font-family:"Trebuchet MS",Verdana, Arial, Helvetica, sans-serif;} p,td {font-size:11px; color:#666666; line-height:20px; font-family:"Trebuchet MS",Verdana, Arial, Helvetica, sans-serif;} --> <table border="0" cellspacing="0" cellpadding="0" style="background-color: #ffdb4d; text-align: center; width: 100%">   <tbody>     <tr>       <td align="center" valign="top">       <table border="0" cellspacing="0" cellpadding="0" style="text-align: left; width: 610px">         <tbody>           <tr>             <td>&nbsp;</td>             <td height="10">&nbsp;</td>             <td>&nbsp;</td>           </tr>           <tr>             <td width="30" background="http://www.ijoobi.com/media/newsletter/yb.gif">&nbsp;</td>             <td height="58" background="http://www.ijoobi.com/media/newsletter/joobi_newsletter_header.jpg">&nbsp;</td>             <td width="30" background="http://www.ijoobi.com/media/newsletter/yb.gif">&nbsp;</td>           </tr>           <tr>             <td style="background-color: #ffdb4d">&nbsp;</td>             <td>             <table border="0" cellspacing="0" cellpadding="5" style="text-align: left; width: 100%; color: #ffffff">               <tbody>                 <tr style="background-color: #0095c7">                   <td style="width: 40%"> Joobilation News!<br />                   </td>                   <td style="width: 20%">Issue #: 2<br /></td>                   <td style="width: 30%">Friday, 20 February 2009                   </td>                 </tr>               </tbody>             </table>             </td>             <td style="background-color: #ffdb4d">&nbsp;</td>           </tr>           <tr>             <td>&nbsp;</td>             <td>             <table border="0" cellspacing="0" cellpadding="5" style="text-align: left; background-color: #ffffff; width: 100%">               <tbody>                 <tr>                   <td>&nbsp;</td>                   <td style="height: 7px">&nbsp;</td>                   <td>&nbsp;</td>                 </tr>                 <tr>                   <td width="20" background="http://www.ijoobi.com/media/newsletter/wb.gif">&nbsp;</td>                   <td style="color: #333333"><p>Hello Belisario,<br />                   </p><p>In this issue of Joobilation you will find: </p><ol><li>iJoobi.com is alive!</li><li>Acajoom tune up.</li><li>jCommunity new release.</li><li>jTickets Beta now available.</li></ol><h4>1. iJoobi.com is alive!</h4><p>iJoobi is up and running and we appreciate the positive feedback we have received from you and we are working on the improvements you requested.<br />You have probably noticed that you have a private area on iJoobi where you can see you orders and licenses.  In the next few months you will see this area grow to give you even more control over Joobi website and improve its usability.  We want to make it as integrative as possible.<br /><em>Feel free to <a href="http://www.ijoobi.com/index.php?option=com_jtickets&controller=ticket&Itemid=65">send us any comment or feedback</a> on how we can make your experience on Joobi website even better.</em></p><h4>2. Acajoom tune up.</h4><p>New versions of Acajoom News (3.1.0) / Plus(3.1.1) and PRO(3.1.2) are now available.  Mostly some minor fixed and some improvements.  However we have been working on the next generation of newsletters and auto-responders system and you should see the first results of that work in Beta version in a month or so.</p><h4>3. jCommunity new release.</h4><p>jCommunity team has also released a new version (1.0.5).  They fix some bugs and also added a visibility functionality.  Now each member of the community can choose to be public or private.  Should it choose to be private, the member will not be listed on the website and the member information will not be accessible by anyone on the frontend.  <a href="http://www.ijoobi.com/index.php?option=com_content&view=category&layout=blog&id=14&Itemid=76">Read more...</a> </p><p>&nbsp;</p><h4>4.  jTickets Beta now available.</h4><p><img src="http://www.ijoobi.com/images/stories/product/jtickets/jtickets_pro.jpg" border="0" hspace="10" width="100" align="left" />You might have already used jTickets without knowing it.  We use it to manage all your support requests.  So if you have asked us a question you probably already used jTickets.  The application is working very well and it has helped us tremendously to provide better support than the previously used forum.<br />Today, we are releasing jTickets in Beta version. It will be Beta for about 1 month and then we will do a final release.B  Feel free to install it on your website and send us feedback.  <a href="http://www.ijoobi.com/index.php?option=com_content&task=view&id=7896&Itemid=30">Read more....</a></p><p>&nbsp;</p><p>Thank you so much for all your feedback and please keep sending them.<br />Joobi Team. </p><p>&nbsp;</p><p>&nbsp;</p><p>                   <p><a href="http://www.ijoobi.com/index.php?option=com_acajoom&Itemid=99&act=change&subscriber=72182&cle=c61da8c774d31f47478f2fbdc4d01053&listid=10" target="_blank"><span class="subscriptionlink_nws">Change your subscription</span></a><br /><a href="http://www.ijoobi.com/index.php?option=com_acajoom&Itemid=99&act=unsubscribe&subscriber=72182&cle=c61da8c774d31f47478f2fbdc4d01053&listid=10" target="_blank"><span class="subscriptionlink_nws">Unsubscribe</span></a></p><br />                   </p></td>                   <td width="20" background="http://www.ijoobi.com/media/newsletter/wb.gif">&nbsp;</td>                 </tr>               </tbody>             </table>             </td>             <td>&nbsp;</td>           </tr>           <tr>             <td>&nbsp;</td>             <td height="40" style="height: 39px; width: 550px; text-align: center; vertical-align: middle; color: #ffffff; background-color: #ffdb4d" background="http://www.ijoobi.com/media/newsletter/joobi_newsletter_bottom.gif"><a href="http://www.ijoobi.com/" target="_blank">Powered by <img src="http://www.ijoobi.com/joobi/user/themes/site/joobi/images/toolbar/16/joobi_logo_micro.gif" border="0" alt="Joobi" width="14" height="14" />Joobi.</a></td>             <td>&nbsp;</td>           </tr>           <tr>             <td>&nbsp;</td>             <td height="30">&nbsp;</td>             <td>&nbsp;</td>           </tr>         </tbody>       </table>       </td>     </tr>   </tbody> </table><img src="http://www.ijoobi.com/index.php?option=com_acajoom&Itemid=99&act=log&listid=10&mailingid=14493&subscriber=72182" border="0" width="1" height="1" />
+
+
+
+--b1_3026fb474e81cd2824215f25f6c87152--
+
+

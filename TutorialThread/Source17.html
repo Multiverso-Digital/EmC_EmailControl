@@ -1,0 +1,92 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Martin Harvey">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (WinNT; I) [Netscape]">
+   <title>Source17</title>
+</head>
+<body>
+<PRE><TT><B>type</B>
+  TPrimeFrm = <B>class</B>(TForm)
+    <FONT COLOR=NAVY><I>{ No change here until public declarations }</I></FONT>
+  <B>public</B>
+    <FONT COLOR=NAVY><I>{ Public declarations }</I></FONT>
+    StringSemaphore: THandle; <FONT COLOR=NAVY><I>{ Now a semaphore instead of a critical section }</I></FONT>
+    <B>property</B> StringBuf: TStringList <B>read</B> FStringBuf <B>write</B> FStringBuf;
+  <B>end</B>;
+
+<B>procedure</B> TPrimeFrm.StartBtnClick(Sender: TObject);
+<B>begin</B>
+  <B>if</B> <B>not</B> FStringSectInit <B>then</B>
+  <B>begin</B>
+    StringSemaphore := CreateSemaphore(<B>nil</B>, 1, 1, SemName); <FONT COLOR=NAVY><I>{ Now creating a semaphore instead of a critical section }</I></FONT>
+    FStringBuf := TStringList.Create;
+    FStringSectInit := true;
+    FPrimeThread := TPrimeThrd2.Create(true);
+    SetThreadPriority(FPrimeThread.Handle, THREAD_PRIORITY_BELOW_NORMAL);
+    <B>try</B>
+      FPrimeThread.StartNum := StrToInt(StartNumEdit.Text);
+    <B>except</B>
+      <B>on</B> EConvertError <B>do</B> FPrimeThread.StartNum := 2;
+    <B>end</B>;
+    FPrimeThread.Resume;
+  <B>end</B>;
+  UpdateButtons;
+<B>end</B>;
+
+<B>procedure</B> TPrimeFrm.StopBtnClick(Sender: TObject);
+<B>begin</B>
+  <B>if</B> FStringSectInit <B>then</B>
+  <B>begin</B>
+    <B>with</B> FPrimeThread <B>do</B>
+    <B>begin</B>
+      Terminate;
+      WaitFor;
+      Free;
+    <B>end</B>;
+    FPrimeThread := <B>nil</B>;
+    FStringBuf.Free;
+    FStringBuf := <B>nil</B>;
+    CloseHandle(StringSemaphore); <FONT COLOR=NAVY><I>{ Deleting semaphore }</I></FONT>
+    FStringSectInit := false;
+  <B>end</B>;
+  UpdateButtons;
+<B>end</B>;
+
+<B>procedure</B> TPrimeFrm.HandleNewData(<B>var</B> <B>Message</B>: TMessage);
+<B>begin</B>
+  <B>if</B> FStringSectInit <B>then</B> <FONT COLOR=NAVY><I>{Not necessarily the case!}</I></FONT>
+  <B>begin</B>
+    WaitForSingleObject(StringSemaphore, INFINITE); <FONT COLOR=NAVY><I>{ New wait call }</I></FONT>
+    ResultMemo.Lines.Add(FStringBuf.Strings[0]);
+    FStringBuf.Delete(0);
+    ReleaseSemaphore(StringSemaphore, 1, <B>nil</B>); <FONT COLOR=NAVY><I>{ New release call }</I></FONT>
+    <FONT COLOR=NAVY><I>{Now trim the Result Memo.}</I></FONT>
+    <B>if</B> ResultMemo.Lines.Count &gt; MaxMemoLines <B>then</B>
+      ResultMemo.Lines.Delete(0);
+  <B>end</B>;
+<B>end</B>;
+
+<B>procedure</B> TPrimeThrd2.Execute;
+
+<B>var</B>
+  CurrentNum: integer;
+
+<B>begin</B>
+  CurrentNum := FStartNum;
+  <B>while</B> <B>not</B> Terminated <B>do</B>
+  <B>begin</B>
+    <B>if</B> IsPrime(CurrentNum) <B>then</B>
+    <B>begin</B>
+      WaitForSingleObject(PrimeFrm.StringSemaphore, INFINITE); <FONT COLOR=NAVY><I>{ New wait call }</I></FONT>
+      PrimeFrm.StringBuf.Add(IntToStr(CurrentNum) + <FONT COLOR=BLUE>' is prime.'</FONT>);
+      ReleaseSemaphore(PrimeFrm.StringSemaphore, 1, <B>nil</B>); <FONT COLOR=NAVY><I>{ New release call }</I></FONT>
+      PostMessage(PrimeFrm.Handle, WM_DATA_IN_BUF, 0, 0);
+    <B>end</B>;
+    Inc(CurrentNum);
+  <B>end</B>;
+<B>end</B>;
+</TT></PRE>
+</body>
+</html>

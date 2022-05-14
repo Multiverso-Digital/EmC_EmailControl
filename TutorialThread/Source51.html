@@ -1,0 +1,114 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Martin Harvey">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (WinNT; I) [Netscape]">
+   <title>Source51</title>
+</head>
+<body>
+<PRE><TT><B>unit</B> GlobalForm;
+
+<B>interface</B>
+
+<B>uses</B>
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
+  StdCtrls;
+
+<B>type</B>
+  TGlobalFrm = <B>class</B>(TForm)
+    GlobalProcessEdit: TEdit;
+    GlobalThreadEdit: TEdit;
+    LocalThreadEdit: TEdit;
+    SharedDataEdit: TEdit;
+    ReadBtn: TButton;
+    IncBtn: TButton;
+    DecBtn: TButton;
+    SetBtn: TButton;
+    CreateThread: TButton;
+    <B>procedure</B> ReadBtnClick(Sender: TObject);
+    <B>procedure</B> IncBtnClick(Sender: TObject);
+    <B>procedure</B> DecBtnClick(Sender: TObject);
+    <B>procedure</B> SetBtnClick(Sender: TObject);
+    <B>procedure</B> CreateThreadClick(Sender: TObject);
+  <B>private</B>
+    <FONT COLOR=NAVY><I>{ Private declarations }</I></FONT>
+  <B>public</B>
+    <FONT COLOR=NAVY><I>{ Public declarations }</I></FONT>
+  <B>end</B>;
+
+<B>var</B>
+  GlobalFrm: TGlobalFrm;
+
+<B>implementation</B>
+
+<B>uses</B> GlobalHdr, DelayThread;
+
+<B>procedure</B> ReadInfo(<B>var</B> GlobalInfo: TGlobalInfo; <B>var</B> LocalThreads: integer);
+  <B>stdcall</B>; <B>external</B> <FONT COLOR=BLUE>'GlobalData.dll'</FONT>;
+
+<B>procedure</B> SetSharedInteger(NewValue: integer);
+  <B>stdcall</B>; <B>external</B> <FONT COLOR=BLUE>'GlobalData.dll'</FONT>;
+
+<B>procedure</B> IncSharedInteger;
+  <B>stdcall</B>; <B>external</B> <FONT COLOR=BLUE>'GlobalData.dll'</FONT>;
+
+<B>procedure</B> DecSharedInteger;
+  <B>stdcall</B>; <B>external</B> <FONT COLOR=BLUE>'GlobalData.dll'</FONT>;
+
+
+<FONT COLOR=NAVY><I>{$R *.DFM}</I></FONT>
+
+<B>procedure</B> TGlobalFrm.ReadBtnClick(Sender: TObject);
+
+<B>var</B>
+  GlobalInfo: TGlobalInfo;
+  LocalThreads: integer;
+
+<B>begin</B>
+  ReadInfo(GlobalInfo, LocalThreads);
+  GlobalProcessEdit.Text := IntToStr(GlobalInfo.GlobalProcesses);
+  GlobalThreadEdit.Text := IntToStr(GlobalInfo.GlobalThreads);
+  SharedDataEdit.Text := IntToStr(GlobalInfo.SharedNumber);
+
+  LocalThreadEdit.Text := IntToStr(LocalThreads);
+<B>end</B>;
+
+<B>procedure</B> TGlobalFrm.IncBtnClick(Sender: TObject);
+<B>begin</B>
+  IncSharedInteger;
+  ReadBtnClick(Sender);
+<B>end</B>;
+
+<B>procedure</B> TGlobalFrm.DecBtnClick(Sender: TObject);
+<B>begin</B>
+  DecSharedInteger;
+  ReadBtnClick(Sender);
+<B>end</B>;
+
+<B>procedure</B> TGlobalFrm.SetBtnClick(Sender: TObject);
+
+<B>var</B>
+  NewInt: integer;
+
+<B>begin</B>
+  NewInt := StrToInt(SharedDataEdit.Text);
+  SetSharedInteger(NewInt);
+<B>end</B>;
+
+<B>procedure</B> TGlobalFrm.CreateThreadClick(Sender: TObject);
+
+<B>var</B>
+  NewThread: TDelayThread;
+
+<B>begin</B>
+  NewThread := TDelayThread.Create(true);
+  NewThread.FreeOnTerminate := true;
+  NewThread.Resume;
+<B>end</B>;
+
+<B>end.</B>
+
+</TT></PRE>
+</body>
+</html>

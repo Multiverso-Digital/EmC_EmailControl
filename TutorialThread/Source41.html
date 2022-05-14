@@ -1,0 +1,46 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Martin Harvey">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (WinNT; I) [Netscape]">
+   <title>Source41</title>
+</head>
+<body>
+<PRE><TT><FONT COLOR=NAVY><I>{ Single producer consumer bounded buffer }</I></FONT>
+<FONT COLOR=NAVY><I>{ buffer has N slots }</I></FONT>
+
+<B>var</B>
+  InE, OutE: TEventCount; <FONT COLOR=NAVY><I>{ Set up and initially 0 }</I></FONT>
+
+<FONT COLOR=NAVY><I>{ producer }</I></FONT>
+
+<B>var</B>
+  I: integer;
+
+<B>begin</B>
+  <B>while</B> <B>not</B> terminated <B>do</B>
+  <B>begin</B>
+    OutE.Await(I - N);
+    <FONT COLOR=NAVY><I>{ insert item at I mod N }</I></FONT>
+    InE.Advance;
+    Inc(I);
+  <B>end</B>;
+<B>end</B>;
+
+<FONT COLOR=NAVY><I>{ consumer }</I></FONT>
+
+<B>var</B>
+  I: integer;
+
+<B>begin</B>
+  <B>while</B> <B>not</B> terminated <B>do</B>
+  <B>begin</B>
+    InE.Await(I);
+    <FONT COLOR=NAVY><I>{ remove item at i mod N }</I></FONT>
+    OutE.Advance;
+  <B>end</B>;
+<B>end</B>;
+</TT></PRE>
+</body>
+</html>

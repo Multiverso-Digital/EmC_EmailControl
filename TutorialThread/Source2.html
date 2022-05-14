@@ -1,0 +1,60 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Martin Harvey">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (WinNT; I) [Netscape]">
+   <title>Source2</title>
+</head>
+<body>
+<PRE><TT><B>unit</B> PrimeForm;
+
+<B>interface</B>
+
+<B>uses</B>
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
+  StdCtrls;
+
+<B>type</B>
+  TPrimeFrm = <B>class</B>(TForm)
+    NumEdit: TEdit;
+    SpawnButton: TButton;
+    <B>procedure</B> SpawnButtonClick(Sender: TObject);
+  <B>private</B>
+      <FONT COLOR=NAVY><I>{ Private declarations }</I></FONT>
+  <B>public</B>
+      <FONT COLOR=NAVY><I>{ Public declarations }</I></FONT>
+  <B>end</B>;
+
+<B>var</B>
+  PrimeFrm: TPrimeFrm;
+
+<B>implementation</B>
+
+<B>uses</B> PrimeThread;
+
+<FONT COLOR=NAVY><I>{$R *.DFM}</I></FONT>
+
+<B>procedure</B> TPrimeFrm.SpawnButtonClick(Sender: TObject);
+
+<B>var</B>
+  NewThread: TPrimeThrd;
+
+<B>begin</B>
+  NewThread := TPrimeThrd.Create(True);
+  NewThread.FreeOnTerminate := True;
+  <B>try</B>
+    NewThread.TestNumber := StrToInt(NumEdit.Text);
+    NewThread.Resume;
+  <B>except</B> <B>on</B> EConvertError <B>do</B>
+    <B>begin</B>
+      NewThread.Free;
+      ShowMessage(<FONT COLOR=BLUE>'That is not a valid number!'</FONT>);
+    <B>end</B>;
+  <B>end</B>;
+<B>end</B>;
+
+<B>end.</B>
+</TT></PRE>
+</body>
+</html>

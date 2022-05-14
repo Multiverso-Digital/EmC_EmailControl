@@ -1,0 +1,28 @@
+unit Ucliente;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, JvWizard, JvWizardRouteMapSteps, JvExControls, JvComponentBase,
+  JvEmbeddedForms;
+
+type
+  TFCliente = class(TForm)
+    JvEmbeddedFormLink1: TJvEmbeddedFormLink;
+    JvWizard1: TJvWizard;
+    JvWizardRouteMapSteps1: TJvWizardRouteMapSteps;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FCliente: TFCliente;
+
+implementation
+
+{$R *.dfm}
+
+end.

@@ -1,0 +1,465 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Martin Harvey">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (WinNT; I) [Netscape]">
+   <title>Chapter 13. Using threads in conjunction with the BDE, Exceptions and DLLs.</title>
+</head>
+<body>
+
+<h3>
+Chapter 13. Using threads in conjunction with the BDE, Exceptions and DLLs.</h3>
+
+<h4>
+In this chapter:</h4>
+
+<ul>
+<li>
+<a href="#DLL's and Multiprocess programming.">DLL's and Multiprocess programming.</a></li>
+
+<li>
+<a href="#Thread and process scope. A single threaded DLL.">Thread and
+process scope. A single threaded DLL.</a></li>
+
+<li>
+<a href="#Writing a multithreaded DLL.">Writing a multithreaded DLL.</a></li>
+
+<li>
+<a href="#DLL Set-up and Tear down.">DLL Set-up and Tear down.</a></li>
+
+<li>
+<a href="#Pitfall 1: The Delphi encapsulation of the Entry">Pitfall 1:
+The Delphi encapsulation of the Entry Point Function.</a></li>
+
+<li>
+<a href="#Writing a multiprocess DLL.">Writing a multiprocess DLL.</a></li>
+
+<li>
+<a href="#Global named objects.">Global named objects.</a></li>
+
+<li>
+<a href="#The DLL in detail.">The DLL in detail.</a></li>
+
+<li>
+<a href="#DLL Initialization.">DLL Initialization.</a></li>
+
+<li>
+<a href="#An application using the DLL.">An application using the DLL.</a></li>
+
+<li>
+<a href="#Pitfall number 2: Thread context in Entry Point">Pitfall 2: Thread
+context in Entry Point Functions</a></li>
+
+<li>
+<a href="#Exception Handling.">Exception Handling.</a></li>
+
+<li>
+<a href="#The BDE.">The BDE.</a></li>
+</ul>
+
+<h4>
+<a NAME="DLL's and Multiprocess programming."></a>DLL's and Multiprocess
+programming.</h4>
+Dynamic link libraries, or DLL's allow a programmer to share executable
+code between several processes. They are commonly used to provide shared
+library code. for several programs. Writing code for DLL's is in most respects
+similar to writing code for executables. Despite this, the shared nature
+of DLL's means that programmers familiar with multithreading often use
+them to provide <i>system wide</i> services: that is code which affects
+several processes that have the DLL loaded. In this chapter, we will look
+at how to write code for DLL's that operates across more than one process.
+<h4>
+<a NAME="Thread and process scope. A single threaded DLL."></a>Thread and
+process scope. A single threaded DLL.</h4>
+Global variables in DLL's have process wide scope. This means that if two
+separate processes have a DLL loaded, all the global variables in the DLL
+are local to that process. This is not limited to variables in the users
+code: it also includes all global variables in the Borland run time libraries,
+and any units used by code in the DLL. This has the advantage that novice
+DLL programmers can treat DLL programming in the same way as executable
+programming: if a DLL contains a global variable, then each process has
+its own copy. Furthermore, this also means that if a DLL is invoked by
+a processes which contain only one thread, then no special techniques are
+required: the DLL need not be thread safe, since all the processes have
+completely isolated incarnations of the DLL.
+<p>We can demonstrate this with&nbsp;<a NAME="Code43"></a><a href="#Code43" onClick="window.open('Source43.html','Code43','height=400,width=600,resizable,scrollbars')">a
+simple DLL</a> which does nothing but store an integer. It exports a couple
+of functions that enable an application to read and write the value of
+that integer. We can then write&nbsp;<a NAME="Code44"></a><a href="#Code44" onClick="window.open('Source44.html','Code44','height=400,width=600,resizable,scrollbars')">a
+simple test application</a> which uses this DLL. If several copies of the
+application are executed, one notes that each application uses its own
+integer, and no interference exists between any of the applications.
+<h4>
+<a NAME="Writing a multithreaded DLL."></a>Writing a multithreaded DLL.</h4>
+Writing a multithreaded DLL is mostly the same as writing multithreaded
+code in an application. The behaviour of multiple threads inside the DLL
+is the same as the behaviour of multiple threads in a particular application.
+As always, there are a couple of pitfalls for the unwary:
+<p>The main pitfall one can fall into is the behaviour of the Delphi memory
+manager. By default, the Delphi memory manager is not thread safe. This
+is for efficiency reasons: if a program only ever contains one thread,
+then it is pure wasted overhead to include synchronization in the memory
+manager. The Delphi memory manager can be made thread safe by setting the
+<b>IsMultiThread</b>
+variable to true. This is done automatically for a given module if a descendant
+class of TThread is created.
+<p>The problem is that an executable and the DLL consist of two separate
+modules, each with their own copy of the Delphi memory manager. Thus, if
+an executable creates several threads, its memory manager is multithreaded.
+However, if those two threads call a DLL loaded by the executable, the
+DLL memory manager is not aware of the fact that it is being called by
+multiple threads. This can be solved by setting the IsMultiThread variable.
+It is best to set this by using the DLL entry point function, covered later.
+<p>The second pitfall occurs as a result of the same problem; that of having
+two separate memory managers. Memory allocated by the Delphi memory manager
+that is passed from the DLL to the executable cannot be allocated in one
+and disposed of in the other. This occurs most often with long strings,
+but can occur with memory allocated using New or GetMem, and disposed using
+Dispose or FreeMem. The solution in this case is to include <b>ShareMem</b>,
+a unit which keeps the two memory managers in step using techniques discussed
+later.
+<h4>
+<a NAME="DLL Set-up and Tear down."></a>DLL Set-up and Tear down.</h4>
+Mindful of the fact that DLL programmers often need to be aware of how
+many threads and processes are active in a DLL at any given time, the Win32
+system architects provide a method for DLL programmers to keep track of
+thread and process counts in a DLL. This method is known as the DLL <b>Entry
+Point Function</b>.
+<p>In an executable, the entry point (as specified in the module header)
+indicates where program execution should start. In a DLL, it points to
+a function that is executed whenever an executable loads or unloads the
+DLL, or whenever an executable that is currently using the DLL creates
+or destroys a thread. The function takes a single integer argument which
+can be one of the following values:
+<ul>
+<li>
+DLL_PROCESS_ATTACH: A process has attached itself to the DLL. If this is
+the first process, then the DLL has just been loaded.</li>
+
+<li>
+DLL_PROCESS_DETACH: A process has detached from the DLL. If this is the
+only process using the DLL, then the DLL will be unloaded.</li>
+
+<li>
+DLL_THREAD_ATTACH: A thread in the has attached to the DLL. This will happen
+once when the process loads the DLL, and subsequently whenever the process
+creates a new thread.</li>
+
+<li>
+DLL_THREAD_DETACH: A thread has detached from the DLL. This will happen
+whenever the process destroys a thread, and finally when the process unloads
+the DLL.</li>
+</ul>
+As it turns out, DLL entry points have two characteristics which can lead
+to misunderstandings and problems when writing entry point code. The first
+characteristic occurs as a result of the Delphi encapsulation of the entry
+point function, and is relatively simple to work around. The second occurs
+as a result of thread context, and will be discussed later on.
+<h4>
+<a NAME="Pitfall 1: The Delphi encapsulation of the Entry"></a>Pitfall
+1: The Delphi encapsulation of the Entry Point Function.</h4>
+Delphi uses the DLL entry point function to manage initialization and finalization
+of units within a DLL as well as execution of the main body of DLL code.
+The DLL writer can put a hook into the Delphi handling by assigning an
+appropriate function to the variable DLLProc. The default Delphi handling
+works as follows:
+<ul>
+<li>
+The DLL is loaded, which results in the entry point function being called
+with DLL_PROCESS_ATTACH</li>
+
+<li>
+Delphi uses this to call the initialization of all the units in the DLL,
+followed by the main body of the DLL code.</li>
+
+<li>
+The DLL is unloaded, resulting in two calls to the entry point function,
+with the arguments DLL_PROCESS_DETACH.</li>
+</ul>
+Now, the application writer only gets code to execute in response to the
+entry point function when the DLLProc variable points to a function. The
+correct point to set this up is in the main body of the DLL. However, this
+is in response to the second call to the entry point function. In short,
+what this means is that when using the entry point function in the DLL,
+the delphi programmer will never see the first process attachment to the
+DLL. As it turns out, this isn't such a huge problem: one can simply assume
+that the main body of the DLL is called in response to a process loading
+the DLL, and hence the process and thread count is 1 at that point. Since
+the DLLProc variable is replicated on a per process basis, even if more
+processes attach themselves later, the same argument applies, since each
+incarnation of the DLL has separate global variables.
+<p>In case the reader is still confused, I'll present an example. Here
+is a&nbsp;<a NAME="Code45"></a><a href="#Code45" onClick="window.open('Source45.html','Code45','height=400,width=600,resizable,scrollbars')">modified
+DLL</a> that contains a&nbsp;<a NAME="Code46"></a><a href="#Code46" onClick="window.open('Source46.html','Code46','height=400,width=600,resizable,scrollbars')">unit</a>
+with a function that displays a message. As you can see, the main body,
+unit initialization and DLL entry point hooks all contain "ShowMessage"
+calls which enable one to trace what is going on. In order to test this
+DLL, here is a test application. It consists of a&nbsp;<a NAME="Code47"></a><a href="#Code47" onClick="window.open('Source47.html','Code47','height=400,width=600,resizable,scrollbars')">form</a>
+with a button on. When the button is clicked, a&nbsp;<a NAME="Code48"></a><a href="#Code48" onClick="window.open('Source48.html','Code48','height=400,width=600,resizable,scrollbars')">thread</a>
+is created, which calls the procedure in the DLL, and then destroys itself.
+So, what happens when we run the program?
+<ul>
+<li>
+The DLL reports units initialization</li>
+
+<li>
+The DLL reports main DLL body execution</li>
+
+<li>
+Every time the button is clicked the DLL reports:</li>
+
+<ul>
+<li>
+Entry point: thread attach</li>
+
+<li>
+Unit procedure.</li>
+
+<li>
+Entry point: thread detach</li>
+</ul>
+
+<li>
+Note that if we spawn more than one thread from the application, whilst
+leaving existing threads blocked on the Unit Procedure message box, the
+total thread attachment count can increase beyond one.</li>
+
+<li>
+When the program is closed, the DLL reports entry point: process detach,
+followed by unit finalization.</li>
+</ul>
+
+<h4>
+<a NAME="Writing a multiprocess DLL."></a>Writing a multiprocess DLL.</h4>
+Armed with a knowledge of how to use the entry point function, we will
+now write a multiprocess DLL. This DLL will store some information on a
+system wide basis using memory shared between processes. It is worth remembering
+that when code accesses data shared between processes, the programmer must
+provide appropriate synchronization. Just as multiple threads in a single
+process are not inherently synchronized, so the main threads in different
+processes are also not synchronized. We will also look at some subtleties
+which occur when trying to use the entry point function to keep track of
+global threads.
+<p>This DLL will share a single integer between processes, as well as keeping
+a count of the number of processes and threads in the DLL at any one time.
+It consists of a&nbsp;<a NAME="Code49"></a><a href="#Code49" onClick="window.open('Source49.html','Code49','height=400,width=600,resizable,scrollbars')">header
+file</a> shared between the DLL and applications that use the DLL, and
+the&nbsp;<a NAME="Code50"></a><a href="#Code50" onClick="window.open('Source50.html','Code50','height=400,width=600,resizable,scrollbars')">DLL
+project file</a>. Before we look more closely at the code, it's worth reviewing
+some Win32 behaviour.
+<h4>
+<a NAME="Global named objects."></a>Global named objects.</h4>
+The Win32 API allows the programmer to create various objects. For some
+of these objects, they may be created either anonymously, or with a certain
+name. Objects created anonymously are, on the whole, limited to use by
+a single process, the exception being that they may be inherited by child
+processes. Objects created with a name can be shared between processes.
+Typically, one process will create the object, specifying a name for that
+object, and other processes will open a handle to that object by specifying
+its name.
+<p>The delightful thing about named objects is that handles to these objects
+are reference counted throughout the system. That is, several processes
+can acquire handles to an object, and when all the handles to that object
+are closed, the object itself is destroyed, and not before. This includes
+the situation where an application crashes: typically windows does a good
+job of cleaning up unused handles after a crash.
+<h4>
+<a NAME="The DLL in detail."></a>The DLL in detail.</h4>
+Our DLL uses this property to maintain a memory mapped file. Normally,
+memory mapped files are used to create an area of memory which is a mirror
+image of a file on disk. This has many useful applications, not least "on
+demand" paging in of executable images from disk. For this DLL however,
+a special case is used whereby a memory mapped file is created with no
+corresponding disk image. This allows the programmer to allocate a section
+of memory which is shared between several processes. This is surprisingly
+efficient: once the mapping is set up, no memory copying is done between
+processes. Once the memory mapped file has been set up, a global named
+mutex is used to synchronize access to that portion of memory.
+<h4>
+<a NAME="DLL Initialization."></a>DLL Initialization.</h4>
+Initialization consists of four main stages:
+<ul>
+<li>
+Creation of synchronization objects (global and otherwise).</li>
+
+<li>
+Creation of shared data.</li>
+
+<li>
+Initial increment of thread and process counts.</li>
+
+<li>
+Hooking the DLL entry point function.</li>
+</ul>
+In the first stage, two synchronization objects are created, a global mutex,
+and a critical section. Little needs to be said about the critical section.
+The global mutex is created via the CreateMutex API call. This call has
+the beneficial feature that if the mutex is named, and the named object
+already exists, then a handle to the existing named object is returned.
+This occurs atomically. Were this not the case, then a whole range of unpleasant
+race conditions could potentially occur. Determining the precise range
+of possible problems and potential solutions (mainly involving optimistic
+concurrency control) is left as an exercise to the reader. Suffice to say
+that if operations on handles to global shared objects were not atomic,
+the application level Win32 programmer would be staring into an abyss...
+<p>In the second stage the area of shared memory is set up. Since we have
+already set up the global mutex, it is used when setting up the file mapping.
+A view of the "file" is mapped, which maps the (virtual) file into the
+address space of the calling process. We also check whether we happened
+to be the process that originally created the file mapping, and if this
+is the case, then we zero out the data in our mapped view. This is why
+the procedure is wrapped in a mutex: CreateFileMapping has the same nice
+atomicity properties as CreateMutex, ensuring that race conditions on handles
+will never occur. In the general case, however, the same is not necessarily
+true for the data in the mapping. If the mapping had a backing file, then
+we might be able to assume validity of the shared data at start-up. For
+virtual mappings this is not assured. In this case we need to initialize
+the data in the mapping atomically with setting up a handle to the mapping,
+hence the mutex.
+<p>In the third stage, we perform our first manipulation on the globally
+shared data, by incrementing the process and thread counts, since the execution
+of the main body of the DLL is consistent with the addition of another
+thread and process to those using the DLL. Note that the AtomicIncThreadCount
+procedure increments both the local and global threads counts whilst both
+the global mutex and process local critical section have been acquired.
+This ensures that multiple threads from the same process see a fully consistent
+view of both counts.
+<p>In the final stage, the DLLProc is hooked, thus ensuring that the creation
+and destruction of other threads in the process is monitored,&nbsp; and
+the final exit of the process is also registered.
+<h4>
+<a NAME="An application using the DLL."></a>An application using the DLL.</h4>
+A simple application that uses the DLL is presented here. It consists of
+the&nbsp;<a NAME="Code49a"></a><a href="#Code49a" onClick="window.open('Source49.html','Code49','height=400,width=600,resizable,scrollbars')">global
+shared unit</a>, a&nbsp;<a NAME="Code51"></a><a href="#Code51" onClick="window.open('Source51.html','Code51','height=400,width=600,resizable,scrollbars')">unit
+containing the main form</a>, and a&nbsp;<a NAME="Code52"></a><a href="#Code52" onClick="window.open('Source52.html','Code52','height=400,width=600,resizable,scrollbars')">subsidiary
+unit containing a simple thread</a>. Five buttons exist on the form, allowing
+the user to read the data contained in the DLL, increment, decrement and
+set the shared integer, and create one or more threads within the application,
+just to verify that local thread counts work. As expected, the thread counts
+increment whenever a new copy of the application is executed, or one of
+the applications creates a thread. Note that the thread need not directly
+use the DLL in order for the DLL to be informed of its presence.
+<h4>
+<a NAME="Pitfall number 2: Thread context in Entry Point"></a>Pitfall 2:
+Thread context in Entry Point Functions.</h4>
+Instead of using a simple application, let's try one that does something
+more advanced. In this situation, the DLL is loaded manually by the application
+programmer, instead of being automatically loaded. This is possible by
+replacing the previous form unit with&nbsp;<a NAME="Code53"></a><a href="#Code53" onClick="window.open('Source53.html','Code53','height=400,width=600,resizable,scrollbars')">this
+one</a>. An extra button is added which loads the DLL, and sets up the
+procedure addressed manually. Try running the program, creating several
+threads and then loading the DLL. You should find that the DLL no longer
+correctly keeps track of the number of threads in the various processes
+that use it. Why is this? The Win32 help file states that when using the
+entry point function with the arguments DLL_THREAD_ATTACH and DLL_THREAD_DETACH:
+<p><i><font size=-1>"DLL_THREAD_ATTACH Indicates that the current process
+is creating a new thread. When this occurs, the system calls the entry-point
+function of all DLLs currently attached to the process. The call is made
+in the context of the new thread. DLLs can use this opportunity to initialize
+a TLS slot for the thread. A thread calling the DLL entry-point function
+with the DLL_PROCESS_ATTACH value does not call the DLL entry-point function
+with the DLL_THREAD_ATTACH value.</font></i>
+<p><i><font size=-1>Note that a DLL's entry-point function is called with
+this value only by threads created after the DLL is attached to the process.
+When a DLL is attached by LoadLibrary, existing threads do not call the
+entry-point function of the newly loaded DLL."</font></i>
+<p>It drives the point home by also stating:
+<p><i><font size=-1>"DLL_THREAD_DETACH Indicates that a thread is exiting
+cleanly. If the DLL has stored a pointer to allocated memory in a TLS slot,
+it uses this opportunity to free the memory. The operating system calls
+the entry-point function of all currently loaded DLLs with this value.
+The call is made in the context of the exiting thread. There are cases
+in which the entry-point function is called for a terminating thread even
+if the DLL never attached to the thread.</font></i>
+<ul>
+<li>
+<i><font size=-1>The thread was the initial thread in the process, so the
+system called the entry-point function with the DLL_PROCESS_ATTACH value.</font></i></li>
+
+<li>
+<i><font size=-1>The thread was already running when a call to the LoadLibrary
+function was made, so the system never called the entry-point function
+for it"</font></i></li>
+</ul>
+This behaviour has two potentially unpleasant side effects.
+<ul>
+<li>
+It is not possible, in the general case to keep track of how many threads
+are in the DLL on a global basis unless one can guarantee that an application
+loads the DLL before creating any child threads. One might mistakenly assume
+that an application loading a DLL would have the DLL_THREAD_ATTACH entry
+point called for already existing threads. This is not the case because,
+having guaranteed that thread attachments and detachments are notified
+to the DLL in the context of the thread attaching or detaching, it is <i>impossible</i>
+to call the DLL entry point in the correct context of threads that are
+already running.</li>
+
+<li>
+Since the DLL entry point can be called by several different threads, race
+conditions can occur between the entry point function and DLL initialization.
+If a thread is created at about the same time as the DLL is loaded by an
+application, then it is possible that the DLL entry point might be called
+for the thread attachment whilst the thread main body is still being executed.
+This is why it is always a good idea to set up the entry point function
+as the very last action in DLL initialization.</li>
+</ul>
+Readers would benefit from noting that both these side effects have repercussions
+when deciding when to set the IsMultiThread variable.
+<h4>
+<a NAME="Exception Handling."></a>Exception Handling.</h4>
+When writing robust applications, the programmer should always be prepared
+for things to go wrong. The same is true for multithreaded programming.
+Most of the examples presented in this tutorial have been relatively simple,
+and exception handling has mostly been omitted for clarity. In real world
+applications, this is likely to be unacceptable.
+<p>Recall that threads have their own call stack. This means that an exception
+in a thread does not fall through the standard VCL exception handling mechanisms.
+Instead of raising a user-friendly dialog box, and an unhandled exception
+in a thread will terminate the application. As a result of this, the execute
+method of a thread is one of the few places where it can be useful to create
+an exception handler that catches all exceptions. Once an exception has
+been caught in a thread, dealing with it is also slightly different from
+ordinary VCL handling. It may not always be appropriate to show a dialog
+box. Quite often, a valid tactic is to let the thread communicate the fact
+that a failure has occurred to the main VCL thread, using whatever communication
+mechanisms are in place, and then let the VCL thread decide what to do.
+This is particularly useful if the VCL thread has created the child thread
+to perform a particular operation.
+<p>Despite this, there are some situations in threads where dealing with
+error cases can be particularly difficult. Most of these situations occur
+when using threads to perform continuous background operations. Recalling
+chapter 10, the BAB has a couple of threads that forward read and write
+operations from the VCL thread to a blocking buffer. If an error occurs
+in either of these threads, the error may show no clear causal relationship
+with any particular operation in the VCL thread, and it may be difficult
+to communicate failure instantly back to the VCL thread. Not only this,
+but an exception in either of these threads is likely to break them out
+of the read or write loop that they are in, raising the difficult question
+of whether these threads can be usefully restarted. About the best that
+can be done is to set some state indicating that all future operations
+should be failed, forcing the main thread to destroy and re-initialize
+the buffer.
+<p>The best solution is to include the possibility of such problems into
+the original application design, and to determine best effort recovery
+attempts that may be made.
+<h4>
+<a NAME="The BDE."></a>The BDE.</h4>
+In Chapter 7, I indicated that one potential solution to locking problems
+is to put shared data in a database, and use the BDE to perform concurrency
+control. The programmer should note that each thread must maintain a separate
+database connection for this to work properly. Hence, each thread should
+use a separate TSession object to manage its connection to the database.
+Each application has a TSessionList component called Sessions to enable
+this to be done easily. Detailed explanation of multiple sessions is beyond
+the scope of this document.
+<p>
+<hr WIDTH="100%">
+<p><a href="ToC.html">[Contents]</a> <a href="Ch12.html">[Previous]</a>
+<a href="Ch14.html">[Next]</a>
+<p><i>&copy; <a href="mailto:martin@pergolesi.demon.co.uk">Martin Harvey</a>
+2000.</i>
+<br>&nbsp;
+</body>
+</html>

@@ -1,0 +1,9 @@
+object DM_pais: TDM_pais
+  OldCreateOrder = False
+  Height = 505
+  Width = 626
+  object JvCSVBase1: TJvCSVBase
+    Left = 240
+    Top = 232
+  end
+end

@@ -1,0 +1,42 @@
+object Fbackup: TFbackup
+  Left = 0
+  Top = 0
+  Caption = 'mC-Backup/Restore system files'
+  ClientHeight = 286
+  ClientWidth = 426
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object PageControl1: TPageControl
+    Left = 0
+    Top = 0
+    Width = 426
+    Height = 286
+    ActivePage = TabSheet2
+    Align = alClient
+    Style = tsButtons
+    TabOrder = 0
+    object TabSheet1: TTabSheet
+      Caption = 'Backup'
+      object GroupBox1: TGroupBox
+        Left = 3
+        Top = 3
+        Width = 412
+        Height = 241
+        Caption = 'Backup System Files'
+        TabOrder = 0
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'Restore'
+      ImageIndex = 1
+    end
+  end
+end

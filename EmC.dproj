@@ -1,0 +1,205 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{BDD73F97-675A-4DCD-BA89-308BDB0EEFDC}</ProjectGuid>
+			<ProjectVersion>12.0</ProjectVersion>
+			<MainSource>EmC.dpr</MainSource>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<DCC_UsePackage>vclx;vcl;dbrtl;Rave76VCL;bdertl;vclactnband;vcldb;ipstudiowindataset;ipstudiowin;rtl;vcldbx;dsnap;dsnapcon;TeeUI;TeeDB;Tee;adortl;vclib;ibxpress;IndyCore;IndySystem;IndyProtocols;xmlrtl;inet;intrawebdb_100_120;Intraweb_100_120;VclSmp;vclie;websnap;webdsnap;inetdbbde;inetdbxpress;soaprtl;vclribbon;dbexpress;DbxCommonDriver;DataSnapIndy10ServerTransport;DataSnapProviderClient;DataSnapServer;DbxClientDriver;DBXInterBaseDriver;DBXMySQLDriver;dbxcds;DBXSybaseASEDriver;DBXSybaseASADriver;DBXOracleDriver;DBXMSSQLDriver;DBXInformixDriver;DBXDb2Driver;dacvcl120;dac120;CRControls120;mydacvcl120;mydac120;mysqlmon120;Jcl;JclVcl;JvCoreD12R;JvSystemD12R;JvStdCtrlsD12R;JvAppFrmD12R;JvBandsD12R;JvDBD12R;JvDlgsD12R;JvBDED12R;JvCmpD12R;JvCryptD12R;JvCtrlsD12R;JvCustomD12R;JvDockingD12R;JvDotNetCtrlsD12R;JvEDID12R;JvGlobusD12R;JvHMID12R;JvInterpreterD12R;JvJansD12R;JvManagedThreadsD12R;JvMMD12R;JvNetD12R;JvPageCompsD12R;JvPluginD12R;JvPrintPreviewD12R;JvRuntimeDesignD12R;JvTimeFrameworkD12R;JvValidatorsD12R;JvWizardD12R;JvXPCtrlsD12R;PerlRegExD2009;dclOfficeXP</DCC_UsePackage>
+			<DCC_OutputDRCFile>true</DCC_OutputDRCFile>
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;$(DCC_UnitAlias)</DCC_UnitAlias>
+			<DCC_DependencyCheckOutputName>EmC.exe</DCC_DependencyCheckOutputName>
+			<DCC_ImageBase>00400000</DCC_ImageBase>
+			<DCC_Platform>x86</DCC_Platform>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_DebugInformation>false</DCC_DebugInformation>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<DCC_DebugDCUs>true</DCC_DebugDCUs>
+			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+		</PropertyGroup>
+		<ItemGroup>
+			<DelphiCompile Include="EmC.dpr">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="Umain.pas">
+				<Form>Fmain</Form>
+			</DCCReference>
+			<DCCReference Include="UDMSERVER.pas">
+				<Form>DM_SERVER</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="UContas.pas">
+				<Form>FContas</Form>
+			</DCCReference>
+			<DCCReference Include="Umens.pas">
+				<Form>Fmens</Form>
+			</DCCReference>
+			<DCCReference Include="UImportAccounts.pas">
+				<Form>FImportAccounts</Form>
+			</DCCReference>
+			<DCCReference Include="UExportAccounts.pas">
+				<Form>FExportAccounts</Form>
+			</DCCReference>
+			<DCCReference Include="UFavoritos.pas">
+				<Form>FFavoritos</Form>
+			</DCCReference>
+			<DCCReference Include="UShowFilterFriends.pas">
+				<Form>FShowFilterFriends</Form>
+			</DCCReference>
+			<DCCReference Include="UShowWhyFilter.pas">
+				<Form>FShowWhyFilter</Form>
+			</DCCReference>
+			<DCCReference Include="UTestaExpression.pas">
+				<Form>FTestaExpression</Form>
+			</DCCReference>
+			<DCCReference Include="UBody.pas">
+				<Form>FBody</Form>
+			</DCCReference>
+			<DCCReference Include="USetUp.pas">
+				<Form>FSetUp</Form>
+			</DCCReference>
+			<DCCReference Include="Ucontas_new.pas">
+				<Form>FContas_New</Form>
+			</DCCReference>
+			<DCCReference Include="Utypeacct.pas">
+				<Form>FTypeAcct</Form>
+			</DCCReference>
+			<DCCReference Include="UConectaPop.pas"/>
+			<DCCReference Include="UconectaImap.pas"/>
+			<DCCReference Include="UDM_FavoNegra.pas">
+				<Form>DM_FavoNegra</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="UDM_pais.pas">
+				<Form>DM_pais</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="UDM_DNS.pas">
+				<Form>DM_DNS</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="UDM_Avancado.pas">
+				<Form>DM_Avancado</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="UDM_Baysean.pas">
+				<Form>DM_Baysean</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="UcriaObjetos.pas"/>
+			<DCCReference Include="Ubayesian.pas"/>
+			<DCCReference Include="RecError.pas">
+				<Form>ReconcileErrorForm</Form>
+			</DCCReference>
+			<DCCReference Include="UComu.pas">
+				<Form>FComu</Form>
+			</DCCReference>
+			<DCCReference Include="Uabout.pas">
+				<Form>Fabout</Form>
+			</DCCReference>
+			<DCCReference Include="UBackup.pas">
+				<Form>Fbackup</Form>
+			</DCCReference>
+			<DCCReference Include="MsgHdrCoders.pas"/>
+			<DCCReference Include="MultipleInstancePrevention.pas"/>
+			<DCCReference Include="Uespera.pas">
+				<Form>Fespera</Form>
+			</DCCReference>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Delphi.Personality>
+					<Source>
+						<Source Name="MainSource">EmC.dpr</Source>
+					</Source>
+					<Parameters>
+						<Parameters Name="UseLauncher">False</Parameters>
+						<Parameters Name="LoadAllSymbols">True</Parameters>
+						<Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+					</Parameters>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">True</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">1959</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1046</VersionInfo>
+						<VersionInfo Name="CodePage">1252</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName">Abreu Retto Informatica</VersionInfoKeys>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.0.1959</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName">EmC</VersionInfoKeys>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName">Email Control</VersionInfoKeys>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+					<Excluded_Packages>
+						<Excluded_Packages Name="$(BDS)\bin\dcloffice2k120.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+					</Excluded_Packages>
+					<Language>
+						<Language Name="ProjectLang">$00000416</Language>
+					</Language>
+					<Resource_DLL_Projects>
+						<Resource_DLL_Projects Name="Item0">Português (Brasil)*$00000416*PTB*PTB</Resource_DLL_Projects>
+					</Resource_DLL_Projects>
+					<RDP_Source_Files>
+						<RDP_Source_Files Name="Item0">Umain.dfm</RDP_Source_Files>
+						<RDP_Source_Files Name="Item1">UDMSERVER.dfm</RDP_Source_Files>
+						<RDP_Source_Files Name="Item2">UContas.dfm</RDP_Source_Files>
+						<RDP_Source_Files Name="Item3">Umens.dfm</RDP_Source_Files>
+						<RDP_Source_Files Name="Item4">UImportAccounts.dfm</RDP_Source_Files>
+						<RDP_Source_Files Name="Item5">UExportAccounts.dfm</RDP_Source_Files>
+						<RDP_Source_Files Name="Item6">UFavoritos.dfm</RDP_Source_Files>
+						<RDP_Source_Files Name="Item7">UShowFilterFriends.dfm</RDP_Source_Files>
+						<RDP_Source_Files Name="Item8">EmC.drc</RDP_Source_Files>
+					</RDP_Source_Files>
+				</Delphi.Personality>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>

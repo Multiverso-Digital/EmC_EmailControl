@@ -1,0 +1,80 @@
+unit UFiltro_Favoritos_ListaNegra;
+
+interface
+
+uses
+Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls,Dialogs,IdMessage,
+UCriaObjetos, UDmServer, DB;
+
+
+Function Filtrar_Favoritos_ListaNegra(Mens:TMSG):TMSG;
+
+
+
+implementation
+
+
+Function Filtrar_Favoritos_ListaNegra(Mens:TMSG):TMSG;
+begin
+
+
+Result := Mens;
+
+
+with dm_server do
+begin
+
+
+if VeriEmail.Locate('Expression',Mens.EmailFrom,[loCaseInsensitive]) then
+begin
+ if VeriEmailTypeBox.AsInteger = 1 then
+   begin
+   Mens.FiltroResultado.Add('Email found in My Friends:'+Mens.EmailFrom);
+   Mens.Favorita := 144;
+   result := Mens;
+   exit;
+   end;
+
+  if VeriEmailTypeBox.AsInteger = 2 then
+   begin
+   Mens.FiltroResultado.Add('Email found in BlackList: '+Mens.EmailFrom);
+   Mens.ListaNegra := 5;
+   result := Mens;
+   exit;
+   end;
+end;
+
+
+if VeriEmail.Locate('Expression',Mens.DominioFrom,[loCaseInsensitive]) then
+begin
+
+  if VeriEmailTypeBox.AsInteger = 1 then
+   begin
+   Mens.FiltroResultado.Add('Domain found in My Friends List: '+Mens.DominioFrom);
+   Mens.Favorita := 144;
+   result := Mens;
+   exit;
+   end;
+
+  if VeriEmailTypeBox.AsInteger = 2 then
+   begin
+   Mens.FiltroResultado.Add('Domain found in BlackList: '+Mens.DominioFrom);
+   Mens.ListaNegra := 5;
+   result := Mens;
+   exit;
+   end;
+
+end;
+
+
+
+end;
+
+
+end;
+
+
+
+
+
+end.

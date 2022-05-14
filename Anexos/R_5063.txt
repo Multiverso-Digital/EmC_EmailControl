@@ -1,0 +1,60 @@
+Received: from bsaftpz-96esk2f ([89.132.52.174]) by abreuretto.com with MailEnable ESMTP; Wed, 11 Feb 2009 01:23:53 -0800
+Received: from [89.132.52.174] by mta.actrix.co.nz; Wed, 11 Feb 2009 10:24:23 +0100
+Date:	Wed, 11 Feb 2009 10:24:23 +0100
+From:	=?koi8-r?B?5czFzsE=?= <ovalil6@actrix.co.nz>
+X-Mailer: The Bat! (v3.80.03) Home
+Reply-To: ovalil6@actrix.co.nz
+X-Priority: 3 (Normal)
+Message-ID: <375982485.38964826919080@actrix.co.nz>
+To: abreu@abreuretto.com
+Subject: =?koi8-r?B?0NLPxsXT08nPzsHM2M7ZxSDV08zVx8kg0M8gz9LHwc7J2sHDyckgyQ==?=
+	=?koi8-r?B?INDSz9fFxMXOycAgz8bJ087ZyCwgy9fB0tTJ0s7ZyCDQxdLFxdrEzw==?=
+	=?koi8-r?B?1w==?=
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+  boundary="----------48D3BB4F0C70534F"
+Return-Path: <ovalil6@actrix.co.nz>
+
+------------48D3BB4F0C70534F
+Content-Type: text/plain; charset=koi8-r
+Content-Transfer-Encoding: 8bit
+
+mOSKOWSKOE TRANSPORTNOE AGENTSTWO "mta PL@S" TELEFON (495) 768 27 97pREDOSTAWLQET wAM PROFESSIONALXNYE USLUGI PO ORGANIZACII I PROWEDENI@ OFISNYH, KWARTIRNYH PEREEZDOW PO mOSKWE, mOSKOWSKOJ OBL. I rOSSII.w NA[I ZADA^I WHODQT NE TOLXKO POGRUZKA I WYGRUZKA WE]EJ, A TAKVE RAZBORKA, SBORKA, UPAKOWKA, UKLADKA I RASSTANOWKA MEBELI; MONTAV I DEMONTAV OBORUDOWANIQ.wA[I WE]I PROFESSIONALXNO I AKKURATNO POGRUZQT W SPECIALXNO PODGOTOWLENNYJ DLQ PEREEZDA AWTOTRANSPORT, KOTORYJ OBORUDOWAN STQVNYMI REMNQMI I PROKLADO^NYM MATERIALOM. 
+tELEFON:(495) 768 27 97
+
+
+
+------------48D3BB4F0C70534F
+Content-Type: text/html; charset=koi8-r
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML><HEAD><TITLE></TITLE>
+</HEAD>
+<BODY>
+
+<DIV><FONT face=Arial size=2>
+<DIV style="MARGIN: 1ex">
+<DIV>
+<H1><FONT face=Arial size=4><B>mOSKOWSKOE TRANSPORTNOE AGENTSTWO "mta PL@S" 
+TELEFON (495) </B></FONT><FONT face=Arial color=#ff0000 size=4><B>768 
+</B></FONT><FONT face=Arial color=#ff0000 size=5><B>27 97</B></FONT></H1>
+<P align=center><FONT face="Times New Roman" size=3>pREDOSTAWLQET wAM 
+</FONT><FONT face="Times New Roman" size=4><B>PROFESSIONALXNYE USLUGI PO 
+ORGANIZACII I PROWEDENI@ OFISNYH, KWARTIRNYH PEREEZDOW PO mOSKWE, mOSKOWSKOJ 
+OBL. I rOSSII.</B></FONT></P>
+<P align=center><FONT face="Times New Roman" size=3>w NA[I ZADA^I WHODQT NE 
+TOLXKO POGRUZKA I WYGRUZKA WE]EJ, A TAKVE RAZBORKA, SBORKA, UPAKOWKA, UKLADKA I 
+RASSTANOWKA MEBELI; MONTAV I DEMONTAV OBORUDOWANIQ.</FONT></P>
+<P align=center><FONT face="Times New Roman" size=3>wA[I WE]I PROFESSIONALXNO I 
+AKKURATNO POGRUZQT W SPECIALXNO PODGOTOWLENNYJ DLQ PEREEZDA AWTOTRANSPORT, 
+KOTORYJ OBORUDOWAN STQVNYMI REMNQMI I PROKLADO^NYM 
+MATERIALOM.</FONT>&nbsp;<BR></P>
+<P><FONT face="Times New Roman" size=4>tELEFON:</FONT></P>
+<P><FONT face="Times New Roman" size=3>(495) 768 27 
+97</FONT></P></DIV></DIV></FONT></DIV>
+
+</BODY></HTML>
+------------48D3BB4F0C70534F--
+
+

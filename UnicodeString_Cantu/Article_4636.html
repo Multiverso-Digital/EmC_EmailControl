@@ -1,0 +1,818 @@
+<html><head><!-- 页面头部开始 -->
+
+
+<title>『Delphi园地』-Delphi in a Unicode World Part III: Unicodifying Your Code</title>
+<meta http-equiv="Content-Type" content="text/html; charset=GB2312">
+<meta name="Description" content="Delphi园地">
+<meta name="keywords" content="Delphi园地,控件,商业源码,软件方案,文档,工具,下载,破解,光盘,软件开发,网站建设,软件定制,课程设计,毕业设计,HIS,医院管理系统,程序,Program,Source,vcl">
+<meta name="author" content="Delphi园地">
+<link href="Article_4636_arquivos/style.css" type="text/css" rel="stylesheet">
+<link rel="SHORTCUT ICON" href="http://www.delphifans.com/infoView/favicon.ico">
+</head><body leftmargin="0" topmargin="0" onmouseover="self.status='欢迎光临『Delphi园地』- 每天都有更新,每天都有精彩,建设专业Delphi资源免费下载平台!';return true" background="Article_4636_arquivos/bg.gif" bgcolor="#ffffff">
+<table id="TopMenu" style="" align="center" bgcolor="#ffffff" border="0" bordercolor="#111111" cellpadding="2" cellspacing="0" width="770">
+  <tbody><tr align="right"><td><img src="Article_4636_arquivos/h_head.gif"><a href="http://www.delphifans.com/infoList/Catalog_23_1.html" title="网文" target="_blank">网上文摘</a>  <img src="Article_4636_arquivos/h_head.gif"><a href="http://book.woogood.com/" title="小说下载网" target="_blank">小说</a>  <img src="Article_4636_arquivos/h_head.gif"><a href="http://www.woogood.com/" title="Flash游戏 flash下载" target="_blank">Flash游戏</a>   <img src="Article_4636_arquivos/h_head.gif"><a href="http://www.delphifans.com/SoftList/News_0_1.html">最近更新</a>
+    <img src="Article_4636_arquivos/h_head.gif"><a href="http://www.delphifans.com/SoftList/Top_AllHits_1.html">下载排行</a>
+    <img src="Article_4636_arquivos/h_head.gif"><a href="http://www.delphifans.com/SoftList/Soft_Category.html">资源分类</a>  <img src="Article_4636_arquivos/h_head.gif"><a href="http://www.delphifans.com/Help.asp">下载指南</a>
+</td></tr>
+</tbody></table>
+<table align="center" bgcolor="#ffffff" border="0" bordercolor="#111111" cellpadding="0" cellspacing="0" width="770">
+	<tbody><tr>
+		<td align="center" width="170" height="28">
+			<div align="left"><a href="http://www.delphifans.com/"><img src="Article_4636_arquivos/top_logo.gif" alt="经典编程资源 精彩不容错过" border="0"></a></div>
+		</td>
+		<td align="center" width="495">
+<script language="JavaScript" src="Article_4636_arquivos/soft_head_60x468.js"></script><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="480" height="68"><param name="movie" value="../images/yztgg.swf"><param name="quality" value="high"><embed src="Article_4636_arquivos/yztgg.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="480" height="68"></object>
+</td>
+		<td align="center" width="87">
+			<table align="center" border="0" cellpadding="1" cellspacing="0">
+				<tbody><tr align="center" valign="middle"><td> 						<img src="Article_4636_arquivos/homepage.gif" width="16" height="16"><a href="#" onclick="this.style.behavior=' url(#default#homepage)';this.setHomePage('http://www.delphifans.com')">设为首页</a></td></tr>
+<tr align="center" valign="middle"><td><img src="Article_4636_arquivos/Favorites.gif" width="16" height="16"><a href="javascript:window.external.addFavorite('http://www.delphifans.com','Delphi%E5%9B%AD%E5%9C%B0')">加入收藏</a>
+					</td>
+				</tr>
+				<tr align="center" valign="middle"><td><img src="Article_4636_arquivos/email.gif" width="16" height="16"><a href="http://www.delphifans.com/Aboutus.asp" target="_blank">联系我们</a>
+					</td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+</tbody></table>
+<table id="topmenu" align="center" bgcolor="#ffffff" border="0" bordercolor="#111111" cellpadding="1" cellspacing="0" width="770" height="22">
+  <tbody><tr>
+    <td align="center" background="Article_4636_arquivos/bg_menu.gif" valign="center"> 
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="98%"><tbody><tr align="center" height="18">
+      <script src="Article_4636_arquivos/soft_Menu.js"></script><td><a href="http://www.delphifans.com/">园地首页Home</a></td><td><a href="http://www.delphifans.com/infoList/Catalog_1_1.html">技巧文章Tips</a></td><td><a href="http://www.delphifans.com/SoftList/Catalog_1_SoftTime_Desc_1.html">精彩源码Source</a></td><td><a href="http://www.delphifans.com/SoftList/Catalog_2_SoftTime_Desc_1.html">精选控件Vcl</a></td><td><a href="http://www.delphifans.com/SoftList/Catalog_3_SoftTime_Desc_1.html">非常文档Book</a></td><td><a href="http://www.delphifans.com/SoftList/Catalog_4_SoftTime_Desc_1.html">经典工具Tool</a></td><td><a href="http://www.delphifans.com/SoftList/Catalog_37_SoftTime_Desc_1.html">网络资源Other</a></td><td><a href="http://delphifans.5d6d.com/" target="_blank">园地论坛Forum</a></td></tr></tbody></table></td>
+  </tr>
+</tbody></table>
+<table align="center" bgcolor="#ffffff" border="0" bordercolor="#111111" cellpadding="1" cellspacing="0" width="770">
+  <tbody><tr> 
+    <td bgcolor="#ffffff"> <script src="Article_4636_arquivos/Article_Search.js"></script><table border="0" cellpadding="3" cellspacing="0">  <form name="form1" method="post" action="../../Search_Article.asp"></form>    <tbody><tr>       <td> &nbsp;&nbsp;文章搜索：         关键字         <input name="keyword" size="14" maxlength="50" type="text">        <select name="selby" id="selby">          <option value="1">文章标题</option>        </select> <input name="action" value="article" type="hidden">         <input name="Submit" value="搜 索" type="submit">        </td>    </tr>  </tbody></table></td><td>※<script src="Article_4636_arquivos/online.htm"></script></td></tr>
+</tbody></table>
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="770" height="90">
+  <tbody><tr> 
+    <td bgcolor="#ffffff"> <script src="Article_4636_arquivos/soft_head_90x770.js"></script><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="770" height="90"><param name="movie" value="../newpic/hb.swf"><param name="quality" value="high"><embed src="Article_4636_arquivos/hb.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="770" height="90"></object><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="770" height="108"><param name="movie" value="../newpic/lm.swf"><param name="quality" value="high"><embed src="Article_4636_arquivos/lm.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="770" height="108"></object></td></tr>
+</tbody></table>
+<!-- 页面头部结束 --><!-- 页面内容开始 -->
+<script language="javascript">
+function picsize(obj,MaxWidth){
+
+  img=new Image();
+  img.src=obj.src;
+  if (img.width>MaxWidth)
+  {
+    return MaxWidth;
+  }
+  else
+  {
+    return img.width;
+  }
+}
+</script>
+<script language="JavaScript">
+<!-- 
+function doZoom(size){
+	document.getElementById('zoom').style.fontSize=size+'pt'
+}
+// -->
+</script>
+<table align="center" bgcolor="#ffffff" border="0" bordercolor="#111111" cellpadding="0" cellspacing="0" width="770">
+  <tbody><tr>
+    <td bgcolor="#8bce00"> <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="1" width="100%">
+  <tbody><tr><td height="22"> <img src="Article_4636_arquivos/dotdb.gif" align="absmiddle" width="10" height="10"> 当前位置：<a href="http://www.delphifans.com/">Delphi园地</a>  → <a href="http://www.delphifans.com/infoList/Catalog_1_1.html">技巧文章</a> → <a href="http://www.delphifans.com/infoList/Catalog_3_1.html">编程心得</a> → Delphi in a Unicode World Part III: Unicodifying Your Code</td>
+  </tr>
+    <tr><td height="2"></td></tr>
+</tbody></table>
+      <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="1" width="770">
+              <tbody><tr> 
+                <td valign="top" width="580"><table align="center" bgcolor="#cccccc" border="0" cellpadding="5" cellspacing="1" width="100%">
+                    <tbody><tr bgcolor="#f5f5f5"> 
+                      <td align="center" height="30"><span class="article_title"><b>Delphi in a Unicode World Part III: Unicodifying Your Code</b></span></td>
+                    </tr>
+                    <tr bgcolor="#ffffff"> 
+                      <td align="center" height="30">日期：2008年12月17日 作者：Nick Hodges 人气：<script src="Article_4636_arquivos/Hits.htm"></script>653  <b>查看:</b>[<a href="javascript:doZoom(12)">大字体</a> 
+                        <a href="javascript:doZoom(10.5)">中字体</a> <a href="javascript:doZoom(9)">小字体</a>]
+</td>
+                    </tr>
+                    <tr bgcolor="#ffffff"> 
+                      <td>
+                        <div id="Zoom">
+                        Delphi in a Unicode World Part III: Unicodifying Your Code 
+<p>By: <a href="http://gp.codegear.com/authors/edit/1793.aspx">Nick Hodges</a></p>
+<p>原文链接：<a href="http://dn.codegear.com/article/38693">http://dn.codegear.com/article/38693</a></p>
+<blockquote class="abstract">
+<div><b>Abstract:</b> This article describes what you need to do to get your code ready for Delphi 2009.</div></blockquote>
+<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl32', document.getElementById('ctl31'));
+Sys.WebForms.PageRequestManager.getInstance()._updateControls(['tctl41$ctl00$TagsPanel'], [], [], 90);
+//]]>
+</script>
+<span id="ArticleLabel">
+<p><a href="http://dn.codegear.com/article/38437">As discussed in Part I</a>
+of this series, we saw Delphi 2009 will use by default a UTF-16 based
+string. As a result, certain code idioms within existing code may need
+to be changed. In general, the large majority of existing code will
+work just fine with Delphi 2009. As you’ll see, most of the code
+changes that need to be made are quite specific and somewhat esoteric.
+However, some specific code idioms will need to be reviewed and perhaps
+have changes made to ensure that the code works properly with <span style="font-family: Courier New;">UnicodeString</span>. </p>
+<p>For example, any code that manipulates or does pointer operations on
+strings should be examined for Unicode compatibility. More
+specifically, any code that:</p>
+<ul>
+<li>Assumes that <span style="font-family: Courier New;">SizeOf(Char)</span> is 1 
+</li><li>Assumes that the <span style="font-family: Courier New;">Length</span> of a string is equal to the number of bytes in the string 
+</li><li>Writes or reads strings from some persistent storage or uses a string as a data buffer </li></ul>
+<p>should be reviewed to ensure that those assumptions are not
+persisted in code. Code that writes to or reads from persistent storage
+needs to ensure that the correct number of bytes are being read or
+written, as a single byte no longer represents a single character. </p>
+<p>Generally, any needed code changes should be straightforward and can be done with a minimal amount of effort.</p><a name="1AreasThatShouldJustWork"></a>
+<h3><span class="toclink sectiongutter" style="left: -33px;"><a href="http://dn.codegear.com/article/38693#38693_tocentry1"><font size="4">&nbsp;&nbsp;</font></a></span><span class="sectioncollapse sectiongutter" id="docsectionheader2" title="Collapse section" style="left: -19px;"><a href="javascript:hideShowElement('docsectionheader2',%20'docsection2')"><font size="4">&nbsp;&nbsp;</font></a></span>Areas That Should “Just Work”</h3>
+<div class="section" id="docsection2" header="Areas That Should “Just Work”">
+<p>This section discusses area of code that should continue to work,
+and should not require any changes to work properly with the new <span style="font-family: Courier New;">UnicodeString</span>.
+All of the VCL and RTL have been updated to work as expected in Delphi
+2009, and with very, very few exceptions, such will be the case. For
+instance, <span style="font-family: Courier New;">TStringList</span> is now completely Unicode-aware, and all existing <span style="font-family: Courier New;">TStringList</span> code should work as before. However, <span style="font-family: Courier New;">TStringList</span>
+has been enhanced to work specifically with Unicode, so if you want to
+take advantage of that new functionality, you can, but you need not if
+you don’t want to.</p>
+<h4>General Use of String Types</h4>
+<p>In general, code that uses the string type should work as before.
+There is no need to re-declare string variables as AnsiString types,
+except as discussed below. String declarations should only be changed
+to be AnsiString when dealing with storage buffers or other types of
+code that uses the string as a data buffer.</p>
+<h4>The Runtime Library</h4>
+<p>The runtime library additions are discussed extensively in <a href="http://dn.codegear.com/article/38498">Part II</a>.</p>
+<p>That article doesn’t mention a new unit added to the RTL – <span style="font-family: Courier New;">AnsiString</span>.<span style="font-family: Courier New;">pas</span>. This unit exists for backwards compatibility with code that chooses to use or requires the use of <span style="font-family: Courier New;">AnsiString</span> within it.</p>
+<p>Runtime library code runs as expected and in general requires no change. The areas that do need change are described below.</p>
+<h4>The VCL</h4>
+<p>The entire VCL is Unicode aware. All existing VCL components work
+right out of the box just as they always have. The vast majority of
+your code using the VCL should continue to work as normal. We’ve done a
+lot of work to ensure that the VCL is both Unicode ready and backwards
+compatible. Normal VCL code that doesn’t do any specific string
+manipulation will work as before.</p>
+<h4>String Indexing</h4>
+<p>String Indexing works exactly as before, and code that indexes into strings doesn’t need to be changed:</p><pre language="ltDelphi" class="sourcecode"><code class="keyword">var</code>
+S: <code class="keyword">string</code>;
+C: Char;
+<code class="keyword">begin</code>
+S := ‘This <code class="keyword">is</code> a <code class="keyword">string</code>’;
+C := S[1];  <code class="comment">// C will hold ‘T’, but of course C is a WideChar</code>
+<code class="keyword">end</code>;
+</pre>
+<h4>Length/Copy/Delete/SizeOf with Strings</h4>
+<p><span style="font-family: Courier New;">Copy</span> will still work as before without change. So will <span style="font-family: Courier New;">Delete</span> and all the <span style="font-family: Courier New;">SysUtils</span>-based string manipulation routines.</p>
+<p>Calls to <span style="font-family: Courier New;">Length(Some</span><span style="font-family: Courier New;">String)</span> will, as always, return the number of elements in the passed string. </p>
+<p>Calls to <span style="font-family: Courier New;">SizeOf</span> on any string identifier will return 4, as all string declarations are references and the size of a pointer is 4. </p>
+<p>Calls to <span style="font-family: Courier New;">Length</span> on any string will return the number of elements in the string.</p>
+<p>Consider the following code:</p><pre language="ltDelphi" class="sourcecode"><code class="keyword">var</code>
+  S: <code class="keyword">string</code>;
+<code class="keyword">begin</code>
+    S:= <code class="quote">'abcdefghijklmnopqrstuvwxyz'</code>;
+    WriteLn(<code class="quote">'Length = '</code>, Length(S));
+    WriteLn(<code class="quote">'SizeOf = '</code>, SizeOf(S));
+    WriteLn(<code class="quote">'TotalBytes = '</code>, Length(S) * SizeOf(S[1]));
+    ReadLn;
+<code class="keyword">end</code>.
+</pre>
+<p>The output of the above is as follows:</p>
+<p><a href="javascript:hideShowImage('docimageheader1',%20'docimage1')"><span class="imagehide" id="docimageheader1">Hide image</span><br></a><img id="docimage1" title="dos" alt="dos" src="Article_4636_arquivos/03000003.png" border="0"></p>
+<h4>Pointer Arithmetic on PChar</h4>
+<p>Pointer arithmetic on PChar should continue to work as before. The
+compiler knows the size of PChar, so code like the following will
+continue to work as expected:</p><pre language="ltDelphi" class="sourcecode"><code class="keyword">var</code>
+p: PChar;
+MyString: <code class="keyword">string</code>;
+<code class="keyword">begin</code>
+  ...
+  p := @MyString[1];
+Inc(p);
+...
+<code class="keyword">end</code>;
+</pre>
+<p>This code will work exactly the same as with previous versions of Delphi – but of course the types are different: <span style="font-family: Courier New;">PChar</span> is now a <span style="font-family: Courier New;">PWideChar</span> and <span style="font-family: Courier New;">My</span><span style="font-family: Courier New;">String</span> is now a <span style="font-family: Courier New;">UnicodeString</span>.</p>
+<h4>ShortString </h4>
+<p><span style="font-family: Courier New;">ShortString</span> remains unchanged in both functionality and declaration, and will work just as before. </p>
+<p><span style="font-family: Courier New;">ShortString</span> declarations allocate a buffer for a specific number of <span style="font-family: Courier New;">AnsiChars</span>. Consider the following code:</p><pre language="ltDelphi" class="sourcecode"><code class="keyword">var</code>
+  S: <code class="keyword">string</code>[26];
+<code class="keyword">begin</code>
+    S:= <code class="quote">'abcdefghijklmnopqrstuvwxyz'</code>;
+    WriteLn(<code class="quote">'Length = '</code>, Length(S));
+    WriteLn(<code class="quote">'SizeOf = '</code>, SizeOf(S));
+    WriteLn(<code class="quote">'TotalBytes = '</code>, Length(S) * SizeOf(S[1]));
+    ReadLn;
+<code class="keyword">end</code>.
+</pre>
+<p>It has the following output:</p>
+<p><a href="javascript:hideShowImage('docimageheader2',%20'docimage2')"><span class="imagehide" id="docimageheader2">Hide image</span><br></a><img id="docimage2" title="dos" alt="dos" src="Article_4636_arquivos/03000004.png" border="0"></p>
+<p>Note that the total bytes of the alphabet is 26 – showing that the variable is holding <span style="font-family: Courier New;">AnsiChars</span>.</p>
+<p>In addition, consider the following code:</p><pre language="ltDelphi" class="sourcecode"><code class="keyword">type</code>
+TMyRecord = <code class="keyword">record</code>
+  String1: <code class="keyword">string</code>[20];
+  String2: <code class="keyword">string</code>[15];
+<code class="keyword">end</code>;
+</pre>
+<p>This record will be laid out in memory exactly as before – it will be a record of two <span style="font-family: Courier New;">AnsiStrings</span> with <span style="font-family: Courier New;">AnsiChars</span> in them. If you’ve got a <span style="font-family: Courier New;">File</span> <span style="font-family: Courier New;">of</span> <span style="font-family: Courier New;">Rec</span>
+of a record with short strings, then the above code will work as
+before, and any code reading and writing such a record will work as
+before with no changes.</p>
+<p>However, remember that <span style="font-family: Courier New;">Char</span> is now a <span style="font-family: Courier New;">WideChar</span>, so if you have some code that grabs those records out of a file and then calls something like:</p><pre language="ltDelphi" class="sourcecode"><code class="keyword">var</code>
+MyRec: TMyRecord;
+SomeChar: Char;
+<code class="keyword">begin</code>
+<code class="comment">// Grab MyRec from a file...</code>
+SomeChar := MyRec.String1[3];
+...
+<code class="keyword">end</code>;
+</pre>
+<p>then you need to remember that <span style="font-family: Courier New;">SomeChar</span> will convert the <span style="font-family: Courier New;">AnsiChar</span> in <span style="font-family: Courier New;">String1</span><span style="font-family: Courier New;">[3]</span> to a <span style="font-family: Courier New;">WideChar</span>. If you want this code to work as before, change the declaration of <span style="font-family: Courier New;">SomeChar</span>:</p><pre language="ltDelphi" class="sourcecode"><code class="keyword">var</code>
+MyRec: TMyRecord;
+SomeChar: AnsiChar; <code class="comment">// Now declared as an AnsiChar for the shortstring index</code>
+<code class="keyword">begin</code>
+<code class="comment">// Grab MyRec from a file...</code>
+SomeChar := MyRec.String1[3];  
+...
+<code class="keyword">end</code>;
+</pre></div><a name="2AreasThatShouldbeReviewed"></a>
+<h3><span class="toclink sectiongutter" style="left: -33px;"><a href="http://dn.codegear.com/article/38693#38693_tocentry2"><font size="4">&nbsp;&nbsp;</font></a></span><span class="sectioncollapse sectiongutter" id="docsectionheader3" title="Collapse section" style="left: -19px;"><a href="javascript:hideShowElement('docsectionheader3',%20'docsection3')"><font size="4">&nbsp;&nbsp;</font></a></span>Areas That Should be Reviewed </h3>
+<div class="section" id="docsection3" header="Areas That Should be Reviewed">
+<p>This next section describes the various semantic code constructs
+that should be reviewed in existing code for Unicode compatibility.
+Because <span style="font-family: Courier New;">Char</span> now equals <span style="font-family: Courier New;">WideChar</span>,
+assumptions about the size in bytes of a character array or string may
+be invalid. The following lists a number of specific code constructs
+that should be examined to ensure that they are compatible with the new
+<span style="font-family: Courier New;">UnicodeString</span> type. </p></div><a name="3SaveToFileLoadFromFile"></a>
+<h3><span class="toclink sectiongutter" style="left: -33px;"><a href="http://dn.codegear.com/article/38693#38693_tocentry3"><font size="4">&nbsp;&nbsp;</font></a></span><span class="sectioncollapse sectiongutter" id="docsectionheader4" title="Collapse section" style="left: -19px;"><a href="javascript:hideShowElement('docsectionheader4',%20'docsection4')"><font size="4">&nbsp;&nbsp;</font></a></span>SaveToFile/LoadFromFile</h3>
+<div class="section" id="docsection4" header="SaveToFile/LoadFromFile">
+<p><span style="font-family: Courier New;">SaveToFile</span> and <span style="font-family: Courier New;">LoadFromFile</span>
+calls could very well go under the “Just Works” section above, as these
+calls will read and write just as they did before. However, you may
+want to consider using the new overloaded versions of these calls if
+you are going to be dealing with Unicode data when using them. </p>
+<p>For instance, <span style="font-family: Courier New;">TStrings</span> now includes the following set of overloaded methods:</p><pre language="ltDelphi" class="sourcecode"><code class="keyword">procedure</code> SaveToFile(<code class="keyword">const</code> FileName: <code class="keyword">string</code>); <code class="keyword">overload</code>; <code class="keyword">virtual</code>;
+<code class="keyword">procedure</code> SaveToFile(<code class="keyword">const</code> FileName: <code class="keyword">string</code>; Encoding: TEncoding); <code class="keyword">overload</code>; <code class="keyword">virtual</code>;
+</pre>
+<p>The second method above is the new overload that includes an
+encoding parameter that determines how the data will be written out to
+the file. (<a href="http://dn.codegear.com/article/38498">You can read Part II</a> for an explanation of the <span style="font-family: Courier New;">TEncoding</span>
+type.) If you call the first method above, the string data will be
+saved as it always has been – as ANSI data. Therefore, your existing
+code will work exactly as it always has. </p>
+<p>However, if you put some Unicode string data into the text to be
+written out, you will need to use the second overload, passing a
+specific <span style="font-family: Courier New;">TEncoding</span> type. If you do not, the strings will be written out as ANSI data, and data loss will likely result. </p>
+<p>Therefore, the best idea here would be to review your <span style="font-family: Courier New;">SaveToFile</span> and <span style="font-family: Courier New;">LoadFromFile</span>
+calls, and add a second parameter to them to indicate how you’d like
+your data saved. If you don’t think you’ll ever be adding or using
+Unicode strings, though, you can leave things as they are.</p>
+<h4>Use of the Chr Function</h4>
+<p>Existing code that needs to create a <span style="font-family: Courier New;">Char</span> from an <span style="font-family: Courier New;">integer</span> value may make use of the <span style="font-family: Courier New;">Chr</span> function. Certain uses of the <span style="font-family: Courier New;">Chr</span> function may result in the following error:</p><pre language="ltDelphi" class="sourcecode">[DCC Error] PasParser.pas(169): E2010 Incompatible types: <code class="quote">'AnsiChar'</code> <code class="keyword">and</code> <code class="quote">'Char'</code>
+</pre>
+<p>If code using the Chr function is assigning the result to an AnsiChar, then this error can easily be removed by replacing the <span style="font-family: Courier New;">Chr</span> function with a cast to <span style="font-family: Courier New;">AnsiChar</span>. </p>
+<p>So, this code</p><pre language="ltDelphi" class="sourcecode">MyChar := chr(i);
+</pre>
+<p>Can be changed to</p><pre language="ltDelphi" class="sourcecode">MyChar := AnsiChar(i);
+</pre>
+<h4>Sets of Characters</h4>
+<p>Probably the most common code idiom that will draw the attention of
+the compiler is the use of characters in sets. In the past, a character
+was one byte, so holding characters in a set was no problem. But now, <span style="font-family: Courier New;">Char</span> is declared as a <span style="font-family: Courier New;">WideChar</span>, and thus cannot be held in a set any longer. So, if you have some code that looks like this:</p><pre language="ltDelphi" class="sourcecode"><code class="keyword">procedure</code> TDemoForm.Button1Click(Sender: TObject);
+<code class="keyword">var</code>
+  C: Char;
+<code class="keyword">begin</code>
+  C := Edit1.Text[1];
+
+  <code class="keyword">if</code> C <code class="keyword">in</code> [<code class="quote">'a'</code>..<code class="quote">'z'</code>, <code class="quote">'A'</code>..<code class="quote">'Z'</code>] <code class="keyword">then</code>
+  <code class="keyword">begin</code>
+   Label1.Caption := <code class="quote">'It is there'</code>;
+<code class="keyword">end</code>;
+<code class="keyword">end</code>;
+</pre>
+<p>and you compile it, you’ll get a warning that looks something like this:</p><pre language="ltDelphi" class="sourcecode">[DCC Warning] Unit1.pas(40): W1050 WideChar reduced <code class="keyword">to</code> byte char <code class="keyword">in</code> <code class="keyword">set</code> expressions.  Consider using <code class="quote">'CharInSet'</code> <code class="keyword">function</code> <code class="keyword">in</code> <code class="quote">'SysUtils'</code> <code class="keyword">unit</code>.
+</pre>
+<p>You can, if you like, leave the code that way – the compiler will
+“know” what you are trying to do and generate the correct code.
+However, if you want to get rid of the warning, you can use the new <span style="font-family: Courier New;">CharInSet</span> function:</p><pre language="ltDelphi" class="sourcecode">  <code class="keyword">if</code> CharInSet(C, [<code class="quote">'a'</code>..<code class="quote">'z'</code>, <code class="quote">'A'</code>..<code class="quote">'Z'</code>]) <code class="keyword">then</code>
+  <code class="keyword">begin</code>
+   Label1.Caption := <code class="quote">'It is there'</code>;
+  <code class="keyword">end</code>;
+</pre>
+<p>The <span style="font-family: Courier New;">CharInSet</span> function will return a <span style="font-family: Courier New;">Boolean</span> value, and compile without the compiler warning.</p>
+<h4>Using Strings as Data Buffers</h4>
+<p>A common idiom is to use a <span style="font-family: Courier New;">string</span>
+as a data buffer. It’s common because it’s been easy --manipulating
+strings is generally pretty straight forward. However, existing code
+that does this will almost certainly need to be adjusted given the fact
+that <span style="font-family: Courier New;">string</span> now is a <span style="font-family: Courier New;">UnicodeString</span>. </p>
+<p>There are a couple of ways to deal with code that uses a <span style="font-family: Courier New;">string</span> as a data buffer. The first is to simply declare the variable being used as a data buffer as an <span style="font-family: Courier New;">AnsiString</span> instead of <span style="font-family: Courier New;">string</span>. If the code uses <span style="font-family: Courier New;">Char</span> to manipulate bytes in the buffer, declare those variables as <span style="font-family: Courier New;">AnsiChar</span>.
+If you choose this route, all your code will work as before, but you do
+need to be careful that you’ve explicitly declared all variables
+accessing the string buffer to be ANSI types. </p>
+<p>The second and preferred way dealing with this situation is to convert your buffer from a string type to an array of bytes, or <span style="font-family: Courier New;">TBytes</span>. <span style="font-family: Courier New;">TBytes</span> is designed specifically for this purpose, and works as you likely were using the <span style="font-family: Courier New;">string</span> type previously.</p>
+<h4>Calls to SizeOf on Buffers</h4>
+<p>Calls to <span style="font-family: Courier New;">SizeOf</span> when used with character arrays should be reviewed for correctness. Consider the following code: </p><pre language="ltDelphi" class="sourcecode"><code class="keyword">procedure</code> TDemoForm.Button1Click(Sender: TObject);
+<code class="keyword">var</code>
+<code class="keyword">var</code>
+  P: <code class="keyword">array</code>[0..16] <code class="keyword">of</code> Char;
+<code class="keyword">begin</code>
+  StrPCopy(P, <code class="quote">'This is a string'</code>);
+  Memo1.Lines.Add(<code class="quote">'Length of P is '</code> +  IntToStr(Length(P)));
+  Memo1.Lines.Add(<code class="quote">'Size of P is '</code> +  IntToStr(SizeOf(P)));
+<code class="keyword">end</code>;
+</pre>
+<p>This code will display the following in Memo1:</p><pre language="ltDelphi" class="sourcecode">Length <code class="keyword">of</code> P <code class="keyword">is</code> 17
+Size <code class="keyword">of</code> P <code class="keyword">is</code> 34
+</pre>
+<p>In the above code, <span style="font-family: Courier New;">Length</span> will return the number of characters in the given string (plus the null termination character), but <span style="font-family: Courier New;">SizeOf</span>
+will return the total number of Bytes used by the array, in this case
+34, i.e. two bytes per character. In previous versions, this code would
+have returned 17 for both.</p>
+<h4>Use of FillChar </h4>
+<p>Calls to <span style="font-family: Courier New;">FillChar</span> need to be reviewed when used in conjunction with strings or a character. Consider the following code: </p><pre language="ltDelphi" class="sourcecode"> <code class="keyword">var</code>
+   Count: Integer;
+   Buffer: <code class="keyword">array</code>[0..255] <code class="keyword">of</code> Char;
+ <code class="keyword">begin</code>
+   <code class="comment">// Existing code - incorrect when string = UnicodeString</code>
+   Count&nbsp;:= Length(Buffer);
+   FillChar(Buffer, Count, 0);
+   
+   <code class="comment">// Correct for Unicode – either one will be correct</code>
+   Count&nbsp;:= SizeOf(Buffer);                <code class="comment">// &lt;&lt;-- Specify buffer size in bytes</code>
+   Count&nbsp;:= Length(Buffer) * SizeOf(Char); <code class="comment">// &lt;&lt;-- Specify buffer size in bytes</code>
+   FillChar(Buffer, Count, 0);
+ <code class="keyword">end</code>;
+</pre>
+<p><span style="font-family: Courier New;">Length</span> returns the size in characters but <span style="font-family: Courier New;">FillChar</span> expects <span style="font-family: Courier New;">Count</span> to be in bytes. In this case, <span style="font-family: Courier New;">SizeOf</span> should be used instead of <span style="font-family: Courier New;">Length</span> (or <span style="font-family: Courier New;">Length</span> needs to be multiplied by the size of <span style="font-family: Courier New;">Char</span>). </p>
+<p>In addition, because the default size of a <span style="font-family: Courier New;">Char</span> is 2, <span style="font-family: Courier New;">FillChar</span> will fill a string with bytes, not <span style="font-family: Courier New;">Char</span> as previously</p>
+<p>Example:</p><pre language="ltDelphi" class="sourcecode"><code class="keyword">var</code>
+  Buf: <code class="keyword">array</code>[0..32] <code class="keyword">of</code> Char;
+<code class="keyword">begin</code>
+  FillChar(Buf, Length(Buf), #9);
+<code class="keyword">end</code>;
+</pre>
+<p>This doesn’t fill the array with code point $09 but code point
+$0909. In order to get the expected result the code needs to be changed
+to:</p><pre language="ltDelphi" class="sourcecode"><code class="keyword">var</code>
+  Buf: <code class="keyword">array</code>[0..32] <code class="keyword">of</code> Char;
+<code class="keyword">begin</code>
+  ..
+  StrPCopy(Buf, StringOfChar(#9, Length(Buf)));
+  ..
+<code class="keyword">end</code>;
+</pre></div><a name="4UsingCharacterLiterals"></a>
+<h3><span class="toclink sectiongutter" style="left: -33px;"><a href="http://dn.codegear.com/article/38693#38693_tocentry4"><font size="4">&nbsp;&nbsp;</font></a></span><span class="sectioncollapse sectiongutter" id="docsectionheader5" title="Collapse section" style="left: -19px;"><a href="javascript:hideShowElement('docsectionheader5',%20'docsection5')"><font size="4">&nbsp;&nbsp;</font></a></span>Using Character Literals</h3>
+<div class="section" id="docsection5" header="Using Character Literals">
+<p>The following code</p><pre language="ltDelphi" class="sourcecode">  <code class="keyword">if</code> Edit1.Text[1] = #128 <code class="keyword">then</code>
+</pre>
+<p>will recognize the Euro symbol and thus evaluate to True in most ANSI codepages. However, it will evaluate to <span style="font-family: Courier New;">False</span>
+in Delphi 2009 because while #128 is the euro sign in most ANSI code
+pages, it is a control character in Unicode. In Unicode, Euro symbol is
+#$20AC. </p>
+<p>Developers should replace any characters #128-#255 with literals, when converting to Delphi 2009, since:</p><pre language="ltDelphi" class="sourcecode">  <code class="keyword">if</code> Edit1.Text[1] = <code class="quote">'&#8364;'</code> <code class="keyword">then</code>
+</pre>
+<p>will work the same as #128 in ANSI, but also work (i.e., recognize the Euro) in Delphi 2009 (where '&#8364;' is #$20AC)</p>
+<h4>Calls to Move </h4>
+<p>Calls to <span style="font-family: Courier New;">Move</span> need to be reviewed when strings or character arrays are used. Consider the following code: </p><pre language="ltDelphi" class="sourcecode"> <code class="keyword">var</code>
+   Count: Integer;
+   Buf1, Buf2: <code class="keyword">array</code>[0..255] <code class="keyword">of</code> Char;
+ <code class="keyword">begin</code>
+   <code class="comment">// Existing code - incorrect when string = UnicodeString</code>
+   Count&nbsp;:= Length(Buf1);
+   Move(Buf1, Buf2, Count);
+   
+   <code class="comment">// Correct for Unicode</code>
+   Count&nbsp;:= SizeOf(Buf1);                <code class="comment">// &lt;&lt;-- Specify buffer size in bytes</code>
+   Count&nbsp;:= Length(Buf1) * SizeOf(Char); <code class="comment">// &lt;&lt;-- Specify buffer size in bytes</code>
+   Move(Buf1, Buf2, Count);
+ <code class="keyword">end</code>;
+</pre>
+<p><span style="font-family: Courier New;">Length</span> returns the size in characters but <span style="font-family: Courier New;">Move</span> expects <span style="font-family: Courier New;">Count</span> to be in bytes. In this case, <span style="font-family: Courier New;">SizeOf</span> should be used instead of <span style="font-family: Courier New;">Length</span> (or <span style="font-family: Courier New;">Length</span> needs to be multiplied by the size of <span style="font-family: Courier New;">Char</span>). </p>
+<h4>Read/ReadBuffer methods of TStream</h4>
+<p>Calls to <span style="font-family: Courier New;">TStream</span>.<span style="font-family: Courier New;">Read</span>/<span style="font-family: Courier New;">ReadBuffer</span> need to be reviewed when strings or character arrays are used. Consider the following code: </p><pre language="ltDelphi" class="sourcecode"> <code class="keyword">var</code>
+   S: <code class="keyword">string</code>;
+   L: Integer;
+   Stream: TStream;
+   Temp: AnsiString;
+ <code class="keyword">begin</code>
+   <code class="comment">// Existing code - incorrect when string = UnicodeString</code>
+   Stream.<code class="keyword">Read</code>(L, SizeOf(Integer));
+   SetLength(S, L);
+   Stream.<code class="keyword">Read</code>(Pointer(S)^, L);
+   
+   <code class="comment">// Correct for Unicode string data</code>
+   Stream.<code class="keyword">Read</code>(L, SizeOf(Integer));
+   SetLength(S, L);
+   Stream.<code class="keyword">Read</code>(Pointer(S)^, L * SizeOf(Char));  <code class="comment">// &lt;&lt;-- Specify buffer size in bytes</code>
+   
+   <code class="comment">// Correct for Ansi string data</code>
+   Stream.<code class="keyword">Read</code>(L, SizeOf(Integer));
+   SetLength(Temp, L);              <code class="comment">// &lt;&lt;-- Use temporary AnsiString</code>
+   Stream.<code class="keyword">Read</code>(Pointer(Temp)^, L * SizeOf(AnsiChar));  <code class="comment">// &lt;&lt;-- Specify buffer size in bytes</code>
+   S&nbsp;:= Temp;                       <code class="comment">// &lt;&lt;-- Widen string to Unicode</code>
+ <code class="keyword">end</code>;
+</pre>
+<p>Note: The solution depends on the format of the data being read. See the new <span style="font-family: Courier New;">TEncoding</span> class described above to assist in properly encoding the text in the stream. </p>
+<h4>Write/WriteBuffer </h4>
+<p>As with <span style="font-family: Courier New;">Read</span>/<span style="font-family: Courier New;">ReadBuffer</span>, calls to <span style="font-family: Courier New;">TStream</span>.<span style="font-family: Courier New;">Write</span>/<span style="font-family: Courier New;">WriteBuffer</span> need to be reviewed when strings or character arrays are used. Consider the following code: </p><pre language="ltDelphi" class="sourcecode"> <code class="keyword">var</code>
+   S: <code class="keyword">string</code>;
+   Stream: TStream;
+   Temp: AnsiString;
+ <code class="keyword">begin</code>
+   <code class="comment">// Existing code - incorrect when string = UnicodeString</code>
+   Stream.<code class="keyword">Write</code>(Pointer(S)^, Length(S));
+   
+   <code class="comment">// Correct for Unciode data</code>
+   Stream.<code class="keyword">Write</code>(Pointer(S)^, Length(S) * SizeOf(Char)); <code class="comment">// &lt;&lt;-- Specifcy buffer size in bytes</code>
+   
+   <code class="comment">// Correct for Ansi data</code>
+   Temp&nbsp;:= S;          <code class="comment">// &lt;&lt;-- Use temporary AnsiString</code>
+   Stream.<code class="keyword">Write</code>(Pointer(Temp)^, Length(Temp) * SizeOf(AnsiChar));<code class="comment">// &lt;&lt;-- Specify buffer size in bytes</code>
+ <code class="keyword">end</code>;
+</pre>
+<p>Note: The solution depends on the format of the data being written. See the new <span style="font-family: Courier New;">TEncoding</span> class described above to assist in properly encoding the text in the stream.</p>
+<h4>LeadBytes </h4>
+<p>Replace calls like this: </p><pre language="ltDelphi" class="sourcecode"> <code class="keyword">if</code> Str[I] <code class="keyword">in</code> LeadBytes <code class="keyword">then</code>
+</pre>
+<p>with the <span style="font-family: Courier New;">IsLeadChar</span> function: </p><pre language="ltDelphi" class="sourcecode"> <code class="keyword">if</code> IsLeadChar(Str[I]) <code class="keyword">then</code>
+</pre>
+<h4>TMemoryStream </h4>
+<p>In cases where a <span style="font-family: Courier New;">TMemoryStream</span>
+is being used to write out a text file, it will be useful to write out
+a Byte Order Mark (BOM) as the first entry in the file. Here is an
+example of writing the BOM to the file: </p><pre language="ltDelphi" class="sourcecode"> <code class="keyword">var</code>
+   BOM: TBytes;
+ <code class="keyword">begin</code>
+   ...
+   BOM&nbsp;:= TEncoding.UTF8.GetPreamble;
+   <code class="keyword">Write</code>(BOM[0], Length(BOM));
+</pre>
+<p>All writing code will need to be changed to UTF8 encode the Unicode string: </p><pre language="ltDelphi" class="sourcecode"> <code class="keyword">var</code>
+   Temp: Utf8String;
+ <code class="keyword">begin</code>
+   ...
+   Temp&nbsp;:= Utf8Encode(Str); <code class="comment">// &lt;-- Str is the string being written out to the file.</code>
+   <code class="keyword">Write</code>(Pointer(Temp)^, Length(Temp));
+ <code class="comment">//Write(Pointer(Str)^, Length(Str)); &lt;-- this is the original call to write the string to the file.</code>
+</pre>
+<h4>TStringStream</h4>
+<p><span style="font-family: Courier New;">TStringStream</span> now descends from a new type, <span style="font-family: Courier New;">TByteStream</span>. <span style="font-family: Courier New;">TByteStream</span> adds a property named <span style="font-family: Courier New;">Bytes</span> which allows for direct access to the bytes with a <span style="font-family: Courier New;">TStringStream</span>. <span style="font-family: Courier New;">TStringStream</span> works as it always has, with the exception that the string it holds is a Unicode-based string.</p>
+<h4>MultiByteToWideChar </h4>
+<p>Calls to <span style="font-family: Courier New;">MultiByteToWideChar</span> can simply be removed and replaced with a simple assignment. An example when using <span style="font-family: Courier New;">MultiByteToWideChar</span>: </p><pre language="ltDelphi" class="sourcecode"> <code class="keyword">procedure</code> TWideCharStrList.AddString(<code class="keyword">const</code> S: <code class="keyword">string</code>);
+ <code class="keyword">var</code>
+   Size, D: Integer;
+ <code class="keyword">begin</code>
+   Size&nbsp;:= SizeOf(S);
+   D&nbsp;:= (Size + 1) * SizeOf(WideChar);
+   FList[FUsed]&nbsp;:= AllocMem(D);
+   MultiByteToWideChar(0, 0, PChar(S), Size, FList[FUsed], D);
+  Inc(FUsed);
+ <code class="keyword">end</code>;
+</pre>
+<p>And after the change to Unicode, this call was changed to support compiling under both ANSI and Unicode: </p><pre language="ltDelphi" class="sourcecode"><code class="keyword">procedure</code> TWideCharStrList.AddString(<code class="keyword">const</code> S: <code class="keyword">string</code>);
+<code class="keyword">var</code>
+   L, D: Integer;
+<code class="keyword">begin</code>
+   FList[FUsed]&nbsp;:= StrNew(PWideChar(S));
+   Inc(FUsed);
+ <code class="keyword">end</code>;
+</pre>
+<h4>SysUtils.AppendStr </h4>
+<p>This method is deprecated, and as such, is hard-coded to use <span style="font-family: Courier New;">AnsiString</span> and no <span style="font-family: Courier New;">UnicodeString</span> overload is available. </p>
+<p>Replace calls like this: </p><pre language="ltDelphi" class="sourcecode"> AppendStr(String1, String2);
+</pre>
+<p>with code like this: </p><pre language="ltDelphi" class="sourcecode"> String1&nbsp;:= String1 + String2;
+</pre>
+<p>Or, better yet, use the new <span style="font-family: Courier New;">TStringBuilder</span> class to concatenate strings.</p>
+<h4>GetProcAddress </h4>
+<p>Calls to <span style="font-family: Courier New;">GetProcAddress</span> should always use <span style="font-family: Courier New;">PAnsiChar</span> (there is no W-suffixed function in the SDK). For example: </p><pre language="ltDelphi" class="sourcecode"> <code class="keyword">procedure</code> CallLibraryProc(<code class="keyword">const</code> LibraryName, ProcName: <code class="keyword">string</code>);
+ <code class="keyword">var</code>
+   Handle: THandle;
+   RegisterProc: <code class="keyword">function</code>: HResult <code class="keyword">stdcall</code>;
+ <code class="keyword">begin</code>
+   Handle&nbsp;:= LoadOleControlLibrary(LibraryName, True);
+   @RegisterProc&nbsp;:= GetProcAddress(Handle, PAnsiChar(AnsiString(ProcName)));
+ <code class="keyword">end</code>;
+</pre>
+<p>Note: <span style="font-family: Courier New;">Windows.pas</span> will provide an overloaded method that will do this conversion.</p>
+<h4>Use of PChar() casts to enable pointer arithmetic on non-char based pointer types </h4>
+<p>In previous versions, not all <span style="font-family: Courier New;">typed pointers</span> supported pointer arithmetic. Because of this, the practice of casting various non-char pointers to <span style="font-family: Courier New;">PChar</span>
+is used to enable pointer arithmetic. For Delphi 2009, pointer
+arithmetic can be enabled using a compiler directive, and it is
+specifically enabled for the <span style="font-family: Courier New;">PByte</span> type. Therefore, if you have code like the following that casts pointer data to <span style="font-family: Courier New;">PChar</span> for the purpose of performing pointer arithmetic on it: </p><pre language="ltDelphi" class="sourcecode"> <code class="keyword">function</code> TCustomVirtualStringTree.InternalData(Node: PVirtualNode): Pointer;
+ <code class="keyword">begin</code>
+   <code class="keyword">if</code> (Node = FRoot) <code class="keyword">or</code> (Node = <code class="keyword">nil</code>) <code class="keyword">then</code>
+     Result&nbsp;:= <code class="keyword">nil</code>
+   <code class="keyword">else</code>
+     Result&nbsp;:= PChar(Node) + FInternalDataOffset;
+ <code class="keyword">end</code>;
+</pre>
+<p>You should change this to use PByte rather than PChar: </p><pre language="ltDelphi" class="sourcecode"> <code class="keyword">function</code> TCustomVirtualStringTree.InternalData(Node: PVirtualNode): Pointer;
+ <code class="keyword">begin</code>
+   <code class="keyword">if</code> (Node = FRoot) <code class="keyword">or</code> (Node = <code class="keyword">nil</code>) <code class="keyword">then</code>
+     Result&nbsp;:= <code class="keyword">nil</code>
+   <code class="keyword">else</code>
+     Result&nbsp;:= PByte(Node) + FInternalDataOffset;
+ <code class="keyword">end</code>;
+</pre>
+<p>In the above snippet, <span style="font-family: Courier New;">Node</span> is not actually character data. It is being cast to a <span style="font-family: Courier New;">PChar</span>
+merely for the purpose of using pointer arithmetic to access data that
+is a certain number of bytes after Node. This worked previously because
+<span style="font-family: Courier New;">SizeOf</span>(<span style="font-family: Courier New;">Char</span>) = <span style="font-family: Courier New;">Sizeof</span>(<span style="font-family: Courier New;">Byte</span>). This is no longer true, and to ensure the code remains correct, it needs to be change to use <span style="font-family: Courier New;">PByte</span> rather than <span style="font-family: Courier New;">PChar</span>. Without the change, <span style="font-family: Courier New;">Result</span> will end up pointing to the incorrect data. </p>
+<h4>Variant open array parameters </h4>
+<p>If you have code that uses <span style="font-family: Courier New;">TVarRec</span> to handle variant open array parameters, you may need to adjust it to handle <span style="font-family: Courier New;">UnicodeString</span>. A new type <span style="font-family: Courier New;">vtUnicodeString</span> is defined for use with <span style="font-family: Courier New;">UnicodeStrings</span>. The <span style="font-family: Courier New;">UnicodeString</span> data is held in <span style="font-family: Courier New;">vUnicodeString</span>. See the following snippet from <span style="font-family: Courier New;">DesignIntf</span>.<span style="font-family: Courier New;">pas</span>, showing a case where new code needed to be added to handle the <span style="font-family: Courier New;">UnicodeString</span> type.</p><pre language="ltDelphi" class="sourcecode"> <code class="keyword">procedure</code> RegisterPropertiesInCategory(<code class="keyword">const</code> CategoryName: <code class="keyword">string</code>;
+   <code class="keyword">const</code> Filters: <code class="keyword">array</code> <code class="keyword">of</code> <code class="keyword">const</code>); <code class="keyword">overload</code>;
+ <code class="keyword">var</code>
+   I: Integer;
+ <code class="keyword">begin</code>
+   <code class="keyword">if</code> Assigned(RegisterPropertyInCategoryProc) <code class="keyword">then</code>
+     <code class="keyword">for</code> I&nbsp;:= Low(Filters) <code class="keyword">to</code> High(Filters) <code class="keyword">do</code>
+       <code class="keyword">with</code> Filters[I] <code class="keyword">do</code>
+         <code class="keyword">case</code> vType <code class="keyword">of</code>
+           vtPointer:
+             RegisterPropertyInCategoryProc(CategoryName, <code class="keyword">nil</code>,
+               PTypeInfo(vPointer), );
+           vtClass:
+             RegisterPropertyInCategoryProc(CategoryName, vClass, <code class="keyword">nil</code>, );
+           vtAnsiString:
+             RegisterPropertyInCategoryProc(CategoryName, <code class="keyword">nil</code>, <code class="keyword">nil</code>,
+               <code class="keyword">string</code>(vAnsiString));
+           vtUnicodeString:
+             RegisterPropertyInCategoryProc(CategoryName, <code class="keyword">nil</code>, <code class="keyword">nil</code>,
+               <code class="keyword">string</code>(vUnicodeString));
+         <code class="keyword">else</code>
+           <code class="keyword">raise</code> Exception.CreateResFmt(@sInvalidFilter, [I, vType]);
+         <code class="keyword">end</code>;
+ <code class="keyword">end</code>;
+</pre>
+<h4>CreateProcessW</h4>
+<p>The Unicode version of <span style="font-family: Courier New;">CreateProcess</span> (<span style="font-family: Courier New;">CreateProcessW</span>) behaves slightly differently than the ANSI version. To quote MSDN in reference to the <span style="font-family: Courier New;">lpCommandLine</span> parameter: </p>
+<p>"The Unicode version of this function, <span style="font-family: Courier New;">CreateProcessW</span>,
+can modify the contents of this string. Therefore, this parameter
+cannot be a pointer to read-only memory (such as a const variable or a
+literal string). If this parameter is a constant string, the function
+may cause an access violation." </p>
+<p>Because of this, some existing code that calls <span style="font-family: Courier New;">CreateProcess</span> may start giving Access Violations when compiled in Delphi 2009. </p>
+<p>Examples of problematic code: </p>
+<p><b>Passing in a string constant</b> </p><pre class="sourcecode">   CreateProcess(nil, 'foo.exe', nil, nil, False, 0, nil, nil, StartupInfo, ProcessInfo);</pre>
+<p><b>Passing in a constant expression</b> </p><pre class="sourcecode">const
+cMyExe = 'foo.exe'
+begin
+CreateProcess(nil, cMyExe, nil, nil, False, 0, nil, nil, StartupInfo, ProcessInfo);
+end;</pre>
+<p><b>Passing in a string with a Reference Coun</b><b>t</b><b> of -1:</b> </p><pre class="sourcecode">const
+  cMyExe = 'foo.exe'
+var
+  sMyExe: string;
+begin
+  sMyExe&nbsp;:= cMyExe;
+  CreateProcess(nil, PChar(sMyExe), nil, nil, False, 0, nil, nil, StartupInfo,    ProcessInfo);
+end;</pre></div><a name="5Codetosearchfor"></a>
+<h3><span class="toclink sectiongutter" style="left: -33px;"><a href="http://dn.codegear.com/article/38693#38693_tocentry5"><font size="4">&nbsp;&nbsp;</font></a></span><span class="sectioncollapse sectiongutter" id="docsectionheader6" title="Collapse section" style="left: -19px;"><a href="javascript:hideShowElement('docsectionheader6',%20'docsection6')"><font size="4">&nbsp;&nbsp;</font></a></span>Code to search for </h3>
+<div class="section" id="docsection6" header="Code to search for">
+<p>The following is a list of code patterns that you might want to search for to ensure that your code is properly Unicode-enabled.</p>
+<ul>
+<li>Search for any uses of <span style="font-family: Courier New;">of</span> <span style="font-family: Courier New;">Char</span> or <span style="font-family: Courier New;">of</span> <span style="font-family: Courier New;">AnsiCha</span><span style="font-family: Courier New;">r</span>” to ensure that the buffers are used correctly for Unicode 
+</li><li><span style="font-family: Courier New;">Search for instances “</span><span style="font-family: Courier New;">string[</span>“ to ensure that the characters reference are placed into Chars (i.e. <span style="font-family: Courier New;">WideChar</span>). 
+</li><li>Check for the explicit use of <span style="font-family: Courier New;">AnsiString</span>, <span style="font-family: Courier New;">AnsiChar</span>, and <span style="font-family: Courier New;">PAnsiChar</span> to see if it is still necessary and correct. 
+</li><li>Search for explicit use of <span style="font-family: Courier New;">ShortString</span> to see if it is still necessary and correct 
+</li><li>Search for <span style="font-family: Courier New;">Length</span>( to ensure that it isn’t assuming that <span style="font-family: Courier New;">Length</span> is the same as <span style="font-family: Courier New;">SizeOf</span> 
+</li><li>Search for <span style="font-family: Courier New;">Copy</span>(, <span style="font-family: Courier New;">Seek</span>(, <span style="font-family: Courier New;">Pointer</span>(, <span style="font-family: Courier New;">AllocMem</span>(, and <span style="font-family: Courier New;">GetMem</span>( to ensure that they are correctly operating on strings or array of Chars. </li></ul>
+<p>They represent code constructs that could potentially need to be changed to support the new UnicodeString type.</p></div><a name="6Conclusion"></a>
+<h3><span class="toclink sectiongutter" style="left: -33px;"><a href="http://dn.codegear.com/article/38693#38693_tocentry6"><font size="4">&nbsp;&nbsp;</font></a></span><span class="sectioncollapse sectiongutter" id="docsectionheader7" title="Collapse section" style="left: -19px;"><a href="javascript:hideShowElement('docsectionheader7',%20'docsection7')"><font size="4">&nbsp;&nbsp;</font></a></span>Conclusion</h3>
+<div class="section" id="docsection7" header="Conclusion">
+<p>So that sums up the types of code idioms you need to review for
+correctness in the Unicode world. In general, most of your code should
+work. Most of the warnings your code will receive can be easily fixed
+up. Most of the code patterns you’ll need to review are generally
+uncommon, so it is likely that much if not all of your existing code
+will work just fine.</p></div>
+<h2></h2></span><p align="right">（出处：http://dn.codegear.com/article/38693）</p>
+                      </div></td>
+                    </tr>
+                    <script src="Article_4636_arquivos/article_about.js"></script> <tr bgcolor="#ffffff"><td>郑重声明:此文章由网友发布,仅供学习参考！如有侵权，请及时<a href="mailto:webmaster@delphifans.com">告知我们</a>将之移除！</td></tr>
+                    <tr bgcolor="#ffffff"> 
+                      <td><strong>相关文章：</strong></td>
+                    </tr>
+                    <tr bgcolor="#ffffff"> 
+                      <td><table border="0" cellpadding="1" cellspacing="0" width="100%">
+  <tbody><tr>
+    <td>·<a href="http://www.delphifans.com/infoView/Article_476.html" target="_blank" title="Delphi7中存储unicode的BUG？">Delphi7中存储unicode的BUG？</a></td>
+  </tr>
+  <tr>
+    <td>·<a href="http://www.delphifans.com/infoView/Article_3639.html" target="_blank" title="取汉字的机内码、UniCode码">取汉字的机内码、UniCode码</a></td>
+  </tr>
+  <tr>
+    <td>·<a href="http://www.delphifans.com/infoView/Article_4634.html" target="_blank" title="Delphi in a Unicode World Part I">Delphi in a Unicode World Part I</a></td>
+  </tr>
+  <tr>
+    <td>·<a href="http://www.delphifans.com/infoView/Article_4635.html" target="_blank" title="Delphi in a Unicode World Part II">Delphi in a Unicode World Part II</a></td>
+  </tr>
+</tbody></table>
+</td>
+                    </tr>
+                  </tbody></table> </td>
+                <td width="3"></td>
+                <td bgcolor="#f5f5f5" valign="top" width="185"> 
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tbody><tr> 
+                      <td bgcolor="#0099ff" height="20">　<font color="#ffffff">→ 
+                        特别推荐</font> </td>
+                    </tr>
+                    <tr> 
+                      <td><script src="Article_4636_arquivos/Article_Catalog_Hot_3.js"></script><table border="0" cellpadding="1" cellspacing="0" width="100%">  <tbody><tr>    <td>·<a href="http://www.delphifans.com/InfoView/Article_4634.html" target="_blank" title="Delphi in a Unicode World Part I">Delphi in a Unicode Wor..</a> </td>  </tr>  <tr>    <td>·<a href="http://www.delphifans.com/InfoView/Article_4617.html" target="_blank" title="我的Delphi开发经验谈">我的Delphi开发经验谈</a> </td>  </tr>  <tr>    <td>·<a href="http://www.delphifans.com/InfoView/Article_776.html" target="_blank" title="用友华表，天涯之外谁的江湖？">用友华表，天涯之外谁的江..</a> </td>  </tr>  <tr>    <td>·<a href="http://www.delphifans.com/InfoView/Article_747.html" target="_blank" title="FastReport 3.X 在 Win9X 下的中文折行乱码问题">FastReport 3.X 在 Win9X..</a> </td>  </tr>  <tr>    <td>·<a href="http://www.delphifans.com/InfoView/Article_637.html" target="_blank" title="用好Delphi中的字符串">用好Delphi中的字符串</a> </td>  </tr>  <tr>    <td>·<a href="http://www.delphifans.com/InfoView/Article_401.html" target="_blank" title="FastReport问题集">FastReport问题集</a> </td>  </tr>  <tr>    <td>·<a href="http://www.delphifans.com/InfoView/Article_389.html" target="_blank" title="用Delphi2005和DUnit搭建敏捷开发平台">用Delphi2005和DUnit搭建..</a> </td>  </tr>  <tr>    <td>·<a href="http://www.delphifans.com/InfoView/Article_255.html" target="_blank" title="编程之道">编程之道</a> </td>  </tr>  <tr>    <td>·<a href="http://www.delphifans.com/InfoView/Article_6.html" target="_blank" title="开发工具大比拼之Visual C++ VS Delphi">开发工具大比拼之Visual ..</a> </td>  </tr></tbody></table></td>
+                    </tr>
+                  </tbody></table>
+                 <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tbody><tr> 
+                      <td bgcolor="#0099ff" height="20">　<font color="#ffffff">→ 
+                        热点TOP10</font> </td>
+                    </tr>
+                    <tr> 
+                      <td><script src="Article_4636_arquivos/Article_Catalog_Top_3.js"></script><table border="0" cellpadding="1" cellspacing="0" width="100%">  <tbody><tr>    <td>·<a href="http://www.delphifans.com/InfoView/Article_19.html" target="_blank" title="如何学好Delphi">如何学好Delphi</a> </td>  </tr>  <tr>    <td>·<a href="http://www.delphifans.com/InfoView/Article_401.html" target="_blank" title="FastReport问题集">FastReport问题集</a> </td>  </tr>  <tr>    <td>·<a href="http://www.delphifans.com/InfoView/Article_35.html" target="_blank" title="Delphi编程技巧集锦">Delphi编程技巧集锦</a> </td>  </tr>  <tr>    <td>·<a href="http://www.delphifans.com/InfoView/Article_22.html" target="_blank" title="BORLAND 在“迫害”程序员？">BORLAND 在“迫害”程序员..</a> </td>  </tr>  <tr>    <td>·<a href="http://www.delphifans.com/InfoView/Article_6.html" target="_blank" title="开发工具大比拼之Visual C++ VS Delphi">开发工具大比拼之Visual ..</a> </td>  </tr>  <tr>    <td>·<a href="http://www.delphifans.com/InfoView/Article_400.html" target="_blank" title="FastReport技巧">FastReport技巧</a> </td>  </tr>  <tr>    <td>·<a href="http://www.delphifans.com/InfoView/Article_57.html" target="_blank" title="一个程序员的开发习惯（ZT）">一个程序员的开发习惯（Z..</a> </td>  </tr>  <tr>    <td>·<a href="http://www.delphifans.com/InfoView/Article_38.html" target="_blank" title="Delphi深度之旅——网络游戏外挂制作">Delphi深度之旅——网络游..</a> </td>  </tr>  <tr>    <td>·<a href="http://www.delphifans.com/InfoView/Article_536.html" target="_blank" title="文件读取的基本方法">文件读取的基本方法</a> </td>  </tr>  <tr>    <td>·<a href="http://www.delphifans.com/InfoView/Article_28.html" target="_blank" title="Delphi编程的优秀辅助工具――GExperts">Delphi编程的优秀辅助工具..</a> </td>  </tr></tbody></table></td>
+                    </tr>
+                                    </tbody></table> 
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody><tr> 
+          <td height="5"></td>
+        </tr>
+<tr align="center"><td>
+<script type="text/javascript"><!--
+google_ad_client = "pub-3221631845999314";
+//160x600, 创建于 07-12-23
+google_ad_slot = "2380367552";
+google_ad_width = 160;
+google_ad_height = 600;
+//--></script>
+<script type="text/javascript" src="Article_4636_arquivos/show_ads.js">
+</script><script src="Article_4636_arquivos/test_domain.js"></script><script>window.google_render_ad();</script><iframe name="google_ads_frame" src="Article_4636_arquivos/ads.htm" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" width="160" frameborder="0" height="600"></iframe>
+</td></tr>
+      </tbody></table>  
+                </td>
+              </tr>
+            </tbody></table>
+    </td>
+  </tr>
+</tbody></table>
+<!-- 页面内容结束 --><!-- 页面底部开始 -->
+<table align="center" bgcolor="#ffffff" border="0" bordercolor="#111111" cellpadding="0" cellspacing="0" width="770">
+<tbody><tr><td height="3"></td></tr>
+<tr><td align="center" background="Article_4636_arquivos/footer_bg.gif" height="28"><a href="http://www.delphifans.com/Aboutus.asp">关于我们</a> | <a href="http://www.delphifans.com/Service.asp">广告服务</a> | <a href="http://www.delphifans.com/publish.asp">发布资源</a> | <a href="mailto:yczjs@163.com">联系站长</a></td>
+<td align="center" background="Article_4636_arquivos/footer_bg.gif" height="28">Copyright &#169; 2001-2009 <a href="http://www.delphifans.com/" target="_blank"><b><font color="#cc3300" face="Arial"> Delphi园地</font></b></a> All Rights Reserved
+<script src="Article_4636_arquivos/count.htm"></script><a href="http://vip2.1tong.com.cn/link/pview.php?id=1911" target="_blank" title="一统天下"><img src="Article_4636_arquivos/count_002.htm" border="0" vspace="0" hspace="0"></a><script language="JavaScript" src="Article_4636_arquivos/c15s5.js"></script><script src="Article_4636_arquivos/a"></script><script src="Article_4636_arquivos/keyword_analyse_new.js" language="javascript"></script><script language="vbscript">
+Function AnsiCode(vstrIn) 
+    Dim i, strReturn, innerCode, ThisChr 
+    Dim Hight8, Low8 
+    strReturn = ""  
+    For i = 1 To Len(vstrIn)  
+      ThisChr = Mid(vStrIn,i,1)  
+      If Abs(Asc(ThisChr)) < &HFF Then  
+        strReturn = strReturn & ThisChr  
+      Else 
+        innerCode = Asc(ThisChr) 
+        If innerCode < 0 Then 
+          innerCode = innerCode + &H10000 
+        End If 
+        Hight8 = (innerCode And &HFF00) \ &HFF 
+        Low8 = innerCode And &HFF 
+        strReturn = strReturn & "%" & Hex(Hight8) & "%" & Hex(Low8) 
+      End If  
+    Next  
+    AnsiCode = strReturn  
+  End Function 
+  Function DeCodeAnsi(s) 
+    Dim i, sTmp, sResult, sTmp1 
+    sResult = "" 
+    For i=1 To Len(s) 
+      If Mid(s,i,1)="%" Then 
+        sTmp = "&H" & Mid(s,i+1,2) 
+        If isNumeric(sTmp) Then 
+          If CInt(sTmp)=0 Then 
+            i = i + 2 
+          ElseIf CInt(sTmp)>0 And CInt(sTmp)<128 Then 
+            sResult = sResult & Chr(sTmp) 
+            i = i + 2 
+          Else 
+            If Mid(s,i+3,1)="%" Then 
+              sTmp1 = "&H" & Mid(s,i+4,2) 
+              If isNumeric(sTmp1) Then 
+                sResult = sResult & Chr(CInt(sTmp)*16*16 + CInt(sTmp1)) 
+                i = i + 5 
+              End If 
+            Else 
+              sResult = sResult & Chr(sTmp) 
+              i = i + 2 
+            End If 
+          End If 
+        Else 
+          sResult = sResult & Mid(s,i,1) 
+        End If 
+      Else 
+        sResult = sResult & Mid(s,i,1) 
+      End If 
+    Next 
+    DeCodeAnsi = sResult 
+  End Function 
+</script>
+<script language="javascript">
+function get_search_refer()
+{
+	this.url_str=document.referrer+"";
+	this.url_str=this.url_str.toLowerCase();
+	this.engine="";
+	this.engine_info="";
+	this.domain="";
+	this.page="";
+	this.keyword="";
+	//?
+	//para	(??)
+	//s		?
+	//str	url?
+    this.get_para=function(para,s,str)
+    {
+		var p
+		var siteid_str=str.split(para);
+		if(siteid_str.length>=2)
+		{
+			var siteid_str_t=siteid_str[1].split(s);
+			p=siteid_str_t[0];
+			return p;
+		}else{
+			return "";
+		}
+	}
+	//?
+	this.get_domain_str=this.get_para("http://","?",this.url_str);
+	//
+	//[,?,,·,??,??,]
+	var search_table=new Array(
+	["google","google","www.google.cn","search","q=","utf-8","ie="],
+	["google","??","images.google.cn","images","q=","utf-8","ie="],
+	["google","","video.google.cn","videosearch","q=","utf-8","ie="],
+	["google","?","news.google.cn","news","q=","utf-8","ie="],
+	["google","","ditu.google.cn","maps","q=","utf-8","ie="],
+	["?","","news.baidu.com","ns","word=","gb2312","ie="],
+	["?","?","www.baidu.com","s","wd=","gb2312","ie="],
+	["?","?","tieba.baidu.com","f","word=","gb2312","ie="],
+	["?","??","zhidao.baidu.com","q","word=","gb2312","ie="],
+	["?","?MP3","mp3.baidu.com","m","word=","gb2312","ie="],
+	["?","???","image.baidu.com","i","word=","gb2312","ie="],
+	["?","??","video.baidu.com","v","word=","gb2312","ie="],
+	["?","???","hi.baidu.com","sys/search","word=","gb2312","ie="]
+	);
+	//utf-8
+	//para		??
+	this.utf8_method=function(para,kw_para){
+		this.keyword=function(){try{return decodeURIComponent(this.get_para(kw_para,"&",this.url_str))}catch(e){return this.get_para(kw_para,"&",this.url_str)}}
+		this.keyword=this.keyword();
+	}
+	//utf-8
+	//para		??
+	this.gb2312_method=function(para,kw_para){
+		this.keyword=DeCodeAnsi(this.get_para(kw_para,"&",this.url_str));
+	}
+	//д
+	for(var i=0;i<search_table.length;i++)
+	{
+		if(this.get_domain_str==search_table[i][2]+"/"+search_table[i][3])
+		{
+			this.engine=search_table[i][0];
+			this.engine_info=search_table[i][1];
+			this.domain=search_table[i][2];
+			this.page=search_table[i][3];
+			this.kw_para=search_table[i][4];
+			switch(this.get_para(search_table[i][6],"&",this.url_str))
+			{
+				case "utf-8":
+					this.utf8_method(this.url_str,this.kw_para);
+					break;
+				case "gb2312":
+					this.gb2312_method(this.url_str,this.kw_para);
+					break;
+				default:
+					switch(search_table[i][5])
+					{
+						case "utf-8":
+							this.utf8_method(this.url_str,this.kw_para);
+							break;
+						case "gb2312":
+							this.gb2312_method(this.url_str,this.kw_para);
+							break;
+					}
+			}
+			break;
+		}
+	}
+}
+var HDT_Analyse_C=new get_search_refer()
+document.write("<sc"+"ript language='javascript' src='http://"+isapidomain+"demo.ifocus.cn/ISAPI/Url_ISAPI.dll?ProcessUrl?hdtUrl=" + hdturl + "&hdtSizeID=" + hdtsizeid + "&hdtchannelid="+ hdtchannelid +"&acodeurl="+m_acodeurl +"&sed="+encodeURIComponent(HDT_Analyse_C.domain)+"&sk="+encodeURIComponent(HDT_Analyse_C.keyword)+"&hdtUrlCode="+ hex_md5(hdturl) +"'></scr"+"ipt>");
+</script><script language="javascript" src="Article_4636_arquivos/Url_ISAPI.txt"></script><script>var sk='';var sed='';var lOrderTypeID =-1;var areaid=-1;var orderid=-1;var industry_id=-1;var hdturl='http://www.delphifans.com/infoView/Article_4636.html'; var hdtsizeid='5'; var lKeyID=-1; var lADID=-1; var KeyIDs = ''; var IsDefault=-1; var lChannelID=15; var lProviderID=-1; var lSerialID=-1; var lSiteID=-1; var lSizeID=-1; var lTradeID=-1; var lHtmlID=-1; var OtherInfo = '';var site_name='';var size_name='';var channel_name='';var adcode_name='';var code='';var matchweight=-1;var p_ip='201.6.246.251';</script><script src="Article_4636_arquivos/0.js"></script><script src="Article_4636_arquivos/play.js"></script><script src="Article_4636_arquivos/-1.js"></script><script language="javascript">_IFOCUS_CONTROL_ = false;</script><script language="javascript" src="Article_4636_arquivos/pageview_log.js"></script><img src="Article_4636_arquivos/hdtadcount.htm" style="display: none; width: 0pt; height: 0pt;">
+
+</td>
+</tr>
+</tbody></table>
+<!-- 页面底部结束 -->
+</body></html>

@@ -1,0 +1,11 @@
+with (Sender as TwwDBGrid) do
+  if Field.FieldName=TClientDataset(Datasource.Dataset).indexfieldnames then
+  begin
+    TitleImageAttributes.ImageIndex := 0;
+  end
+  else if TClientDataset(Datasource.Dataset).indexname = 'w2wTempIndex' then
+  begin
+     TClientDataset(Datasource.Dataset).indexdefs.Update;
+     if TClientDataset(Datasource.Dataset).indexdefs.Find('w2wTempIndex').Fields = Field.Fieldname then
+       TitleImageAttributes.ImageIndex := 1;
+  end;

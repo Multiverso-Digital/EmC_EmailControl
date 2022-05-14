@@ -1,0 +1,58 @@
+unit Unit1;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, Outlook2000, StdCtrls, OleServer;
+
+type
+  TForm1 = class(TForm)
+    OutlookApplication1: TOutlookApplication;
+    Button1: TButton;
+    NameSpace1: TNameSpace;
+    ListBox1: TListBox;
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.Button1Click(Sender: TObject);
+var
+NmSpace: NameSpace;
+    Folder: MAPIFolder;
+    Appt: ContactItem;
+    I : integer;
+begin
+    OutlookApplication1.Connect;
+    NmSpace := OutlookApplication1.GetNamespace('MAPI');
+    NmSpace.Logon('', '', False, False);
+    Folder := NmSpace.GetDefaultFolder(olFolderContacts);
+    appt := Folder.Items.GetFirst as ContactItem;
+    for I:= 1 to Folder.Items.Count - 1 do
+    begin
+       if appt <> nil then
+       begin
+       appt := Folder.Items.Item(i) as ContactItem;
+       listbox1.items.add(appt.FullName+' '+appt.Email1Address);
+       listbox1.items.add(appt.FullName+' '+appt.Email2Address);
+       listbox1.items.add(appt.FullName+' '+appt.Email3Address);
+       end;
+    end;
+
+
+   OutlookApplication1.Disconnect;
+
+
+end;
+
+end.

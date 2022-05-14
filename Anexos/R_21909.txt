@@ -1,0 +1,71 @@
+Received: from mtaout7.012.net.il ([84.95.2.19]) by abreuretto.com with MailEnable ESMTP; Thu, 19 Feb 2009 10:19:48 -0800
+Received: from conversion-daemon.i-mtaout7.012.net.il by i-mtaout7.012.net.il (HyperSendmail v2007.08) id <0KFB00D00S4S9200@i-mtaout7.012.net.il> for info@abreuretto.com; Thu, 19 Feb 2009 20:19:54 +0200 (IST)
+Received: from diana ([213.8.44.10]) by i-mtaout7.012.net.il (HyperSendmail v2007.08) with ESMTPA id <0KFB00FPSS959VJ1@i-mtaout7.012.net.il> for info@abreuretto.com; Thu, 19 Feb 2009 20:19:53 +0200 (IST)
+Date: Thu, 19 Feb 2009 20:22:19 +0200
+From: Diana Edelstein <dianaei@hatzerim.org.il>
+Subject: emc
+X-012-Sender: dianaei@inter.net.il
+To: info@abreuretto.com
+Message-id: <000801c992bf$007646d0$cd0014ac@diana>
+MIME-version: 1.0
+X-MIMEOLE: Produced By Microsoft MimeOLE V6.00.2600.0000
+X-Mailer: Microsoft Outlook Express 6.00.2600.0000
+Content-type: multipart/alternative; boundary="Boundary_(ID_o9QjWXQ94vhwQJPUkbc/hg)"
+X-Priority: 3
+X-MSMail-priority: Normal
+Return-Path: <dianaei@hatzerim.org.il>
+
+This is a multi-part message in MIME format.
+
+--Boundary_(ID_o9QjWXQ94vhwQJPUkbc/hg)
+Content-type: text/plain;	charset="windows-1255"
+Content-transfer-encoding: quoted-printable
+
+
+Hello EMC:
+
+I try to delete from  "favourites" my email address, I get hundreds of =
+mails from my address, and it is in the EMC favourites.
+I delete  it, with no success.
+Can you help?
+Thank you
+Diana
+
+--Boundary_(ID_o9QjWXQ94vhwQJPUkbc/hg)
+Content-type: text/html;	charset="windows-1255"
+Content-transfer-encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Dwindows-1255">
+<META content=3D"MSHTML 6.00.2600.0" name=3DGENERATOR>
+<STYLE></STYLE>
+</HEAD>
+<BODY bgColor=3D#ffffff>
+<DIV><STRONG><EM><FONT face=3D"Monotype Hadassah" color=3D#000080=20
+size=3D4></FONT></EM></STRONG>&nbsp;</DIV>
+<DIV><FONT face=3D"Monotype Hadassah" color=3D#000080 =
+size=3D4><STRONG><EM>Hello=20
+EMC:</EM></STRONG></FONT></DIV>
+<DIV><STRONG><EM><FONT face=3D"Monotype Hadassah" color=3D#000080=20
+size=3D4></FONT></EM></STRONG>&nbsp;</DIV>
+<DIV><STRONG><EM><FONT face=3D"Monotype Hadassah" color=3D#000080 =
+size=3D4>I try to=20
+delete from&nbsp; "favourites" my email address, I get hundreds of mails =
+from my=20
+address, and it is in the EMC favourites.</FONT></EM></STRONG></DIV>
+<DIV><STRONG><EM><FONT face=3D"Monotype Hadassah" color=3D#000080 =
+size=3D4>I=20
+delete&nbsp; it, with no success.</FONT></EM></STRONG></DIV>
+<DIV><STRONG><EM><FONT face=3D"Monotype Hadassah" color=3D#000080 =
+size=3D4>Can you=20
+help?</FONT></EM></STRONG></DIV>
+<DIV><STRONG><EM><FONT face=3D"Monotype Hadassah" color=3D#000080 =
+size=3D4>Thank=20
+you</FONT></EM></STRONG></DIV>
+<DIV><STRONG><EM><FONT face=3D"Monotype Hadassah" color=3D#000080=20
+size=3D4>Diana</FONT></EM></STRONG></DIV></BODY></HTML>
+
+--Boundary_(ID_o9QjWXQ94vhwQJPUkbc/hg)--
+

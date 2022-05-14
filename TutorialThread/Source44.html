@@ -1,0 +1,58 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Martin Harvey">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (WinNT; I) [Netscape]">
+   <title>Source44</title>
+</head>
+<body>
+<PRE><TT><B>unit</B> NumberForm;
+
+<B>interface</B>
+
+<B>uses</B>
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
+  StdCtrls;
+
+<B>type</B>
+  TNumberFrm = <B>class</B>(TForm)
+    GetBtn: TButton;
+    SetBtn: TButton;
+    NumberEdit: TEdit;
+    <B>procedure</B> GetBtnClick(Sender: TObject);
+    <B>procedure</B> SetBtnClick(Sender: TObject);
+  <B>private</B>
+    <FONT COLOR=NAVY><I>{ Private declarations }</I></FONT>
+  <B>public</B>
+    <FONT COLOR=NAVY><I>{ Public declarations }</I></FONT>
+  <B>end</B>;
+
+<B>var</B>
+  NumberFrm: TNumberFrm;
+
+<B>implementation</B>
+
+<FONT COLOR=NAVY><I>{$R *.DFM}</I></FONT>
+
+<B>function</B> GetNumber:integer;<B>stdcall</B>;<B>external</B> <FONT COLOR=BLUE>'NumberDLL.dll'</FONT>;
+<B>procedure</B> SetNumber(NewNumber:integer);<B>stdcall</B>;<B>external</B> <FONT COLOR=BLUE>'NumberDLL.dll'</FONT>;
+
+<B>procedure</B> TNumberFrm.GetBtnClick(Sender: TObject);
+<B>begin</B>
+  NumberEdit.Text := IntToStr(GetNumber);
+<B>end</B>;
+
+<B>procedure</B> TNumberFrm.SetBtnClick(Sender: TObject);
+<B>begin</B>
+  <B>try</B>
+    SetNumber(StrToInt(NumberEdit.Text));
+  <B>except</B>
+    <B>on</B> EConvertError <B>do</B> ShowMessage(<FONT COLOR=BLUE>'Not a valid number. Number not set.'</FONT>);
+  <B>end</B>;
+<B>end</B>;
+
+<B>end.</B>
+</TT></PRE>
+</body>
+</html>

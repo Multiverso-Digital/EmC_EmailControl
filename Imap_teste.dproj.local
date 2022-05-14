@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2009/01/07 16:31:39.414.pas,C:\Documents and Settings\ar\Meus documentos\RAD Studio\Projects\Unit1.pas=\\Ar0\prgsbeli\@Projetos_em_andamento\EmC2010\Uimap_teste.pas</Transaction>
+    <Transaction>2009/01/07 16:31:39.414.dfm,C:\Documents and Settings\ar\Meus documentos\RAD Studio\Projects\Unit1.dfm=\\Ar0\prgsbeli\@Projetos_em_andamento\EmC2010\Uimap_teste.dfm</Transaction>
+    <Transaction>2009/01/07 16:31:53.977.dproj,C:\Documents and Settings\ar\Meus documentos\RAD Studio\Projects\Project1.dproj=\\Ar0\prgsbeli\@Projetos_em_andamento\EmC2010\Imap_teste.dproj</Transaction>
+    <Transaction>2009/01/07 19:50:11.071.pas,\\Ar0\prgsbeli\@Projetos_em_andamento\EmC2010\Unit2.pas=\\Ar0\prgsbeli\@Projetos_em_andamento\EmC2010\MsgHdrCoders.pas</Transaction>
+    <Transaction>2009/01/19 15:30:24.689.dproj,C:\EmC2010\Imap_teste.dproj=K:\@Projetos_em_andamento\EmC2010\Imap_teste.dproj</Transaction>
+    <Transaction>2009/01/19 15:30:37.564.pas,C:\EmC2010\Uimap_teste.pas=K:\@Projetos_em_andamento\EmC2010\Uimap_teste.pas</Transaction>
+    <Transaction>2009/01/19 15:30:37.564.dfm,C:\EmC2010\Uimap_teste.dfm=K:\@Projetos_em_andamento\EmC2010\Uimap_teste.dfm</Transaction>
+    <Transaction>2009/01/19 15:30:51.986.pas,C:\EmC2010\MsgHdrCoders.pas=</Transaction>
+  </Transactions>
+</BorlandProject>

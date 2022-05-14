@@ -1,0 +1,1158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file original="\\Ar0\prgsbeli\@Projetos_em_andamento\EmC2010\UShowFilterFriends.dfm" source-language="pt-BR" target-language="pt-BR" datatype="delphiform" tool="ETM v10.0" ts="\\Ar0\prgsbeli\@Projetos_em_andamento\EmC2010\UShowFilterFriends.dfm">
+    <header>
+      <prop-group name="ITEHeaderProp">
+        <prop prop-type="Version">9.0</prop>
+        <prop prop-type="SelfDateTime">39807.4632407407</prop>
+        <prop prop-type="OrigDateTime">39807.4593981481</prop>
+        <prop prop-type="XlatDateTime">39807.4593981481</prop>
+        <prop prop-type="Translated">0</prop>
+        <prop prop-type="UnTranslated">228</prop>
+      </prop-group>
+    </header>
+    <body>
+      <trans-unit id="O:FShowFilterFriends.Left" resname="O:FShowFilterFriends.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632483333</prop><prop prop-type="Status">0</prop><prop prop-type="Order">0</prop><prop prop-type="Type">TFShowFilterFriends</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.Top" resname="O:FShowFilterFriends.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632483333</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1</prop><prop prop-type="Type">TFShowFilterFriends</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.Caption" resname="O:FShowFilterFriends.Caption">
+        <source>'EmC-My Friends  filters to selected message header'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632483333</prop><prop prop-type="Status">0</prop><prop prop-type="Order">2</prop><prop prop-type="Type">TFShowFilterFriends</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.ClientHeight" resname="O:FShowFilterFriends.ClientHeight">
+        <source>566</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632483333</prop><prop prop-type="Status">0</prop><prop prop-type="Order">3</prop><prop prop-type="Type">TFShowFilterFriends</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.ClientWidth" resname="O:FShowFilterFriends.ClientWidth">
+        <source>792</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632483333</prop><prop prop-type="Status">0</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TFShowFilterFriends</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.Color" resname="O:FShowFilterFriends.Color">
+        <source>15984085</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632483333</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TFShowFilterFriends</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.Font.Charset" resname="O:FShowFilterFriends.Font.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632483333</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">TFShowFilterFriends</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.Font.Color" resname="O:FShowFilterFriends.Font.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632483333</prop><prop prop-type="Status">0</prop><prop prop-type="Order">7</prop><prop prop-type="Type">TFShowFilterFriends</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.Font.Height" resname="O:FShowFilterFriends.Font.Height">
+        <source>-11</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632483333</prop><prop prop-type="Status">0</prop><prop prop-type="Order">8</prop><prop prop-type="Type">TFShowFilterFriends</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.Font.Name" resname="O:FShowFilterFriends.Font.Name">
+        <source>'Tahoma'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632483333</prop><prop prop-type="Status">0</prop><prop prop-type="Order">9</prop><prop prop-type="Type">TFShowFilterFriends</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.Font.Style" resname="O:FShowFilterFriends.Font.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632483333</prop><prop prop-type="Status">0</prop><prop prop-type="Order">10</prop><prop prop-type="Type">TFShowFilterFriends</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.KeyPreview" resname="O:FShowFilterFriends.KeyPreview">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632483333</prop><prop prop-type="Status">0</prop><prop prop-type="Order">11</prop><prop prop-type="Type">TFShowFilterFriends</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.OldCreateOrder" resname="O:FShowFilterFriends.OldCreateOrder">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632483333</prop><prop prop-type="Status">0</prop><prop prop-type="Order">12</prop><prop prop-type="Type">TFShowFilterFriends</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.Position" resname="O:FShowFilterFriends.Position">
+        <source>poDesktopCenter</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632483333</prop><prop prop-type="Status">0</prop><prop prop-type="Order">13</prop><prop prop-type="Type">TFShowFilterFriends</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.OnCloseQuery" resname="O:FShowFilterFriends.OnCloseQuery">
+        <source>FormCloseQuery</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632483333</prop><prop prop-type="Status">0</prop><prop prop-type="Order">14</prop><prop prop-type="Type">TFShowFilterFriends</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.OnShow" resname="O:FShowFilterFriends.OnShow">
+        <source>FormShow</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632483333</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">TFShowFilterFriends</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.PixelsPerInch" resname="O:FShowFilterFriends.PixelsPerInch">
+        <source>96</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632483333</prop><prop prop-type="Status">0</prop><prop prop-type="Order">16</prop><prop prop-type="Type">TFShowFilterFriends</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.TextHeight" resname="O:FShowFilterFriends.TextHeight">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632483333</prop><prop prop-type="Status">0</prop><prop prop-type="Order">17</prop><prop prop-type="Type">TFShowFilterFriends</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.Left" resname="O:FShowFilterFriends.O:GroupBox1.Left">
+        <source>16</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632483333</prop><prop prop-type="Status">0</prop><prop prop-type="Order">18</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.Top" resname="O:FShowFilterFriends.O:GroupBox1.Top">
+        <source>8</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632483333</prop><prop prop-type="Status">0</prop><prop prop-type="Order">19</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.Width" resname="O:FShowFilterFriends.O:GroupBox1.Width">
+        <source>768</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">20</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.Height" resname="O:FShowFilterFriends.O:GroupBox1.Height">
+        <source>550</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">21</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.Caption" resname="O:FShowFilterFriends.O:GroupBox1.Caption">
+        <source>'My Friends filters to the selected message'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">22</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.TabOrder" resname="O:FShowFilterFriends.O:GroupBox1.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">23</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:CBItens.Left" resname="O:FShowFilterFriends.O:GroupBox1.O:CBItens.Left">
+        <source>7</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">24</prop><prop prop-type="Type">TListBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:CBItens.Top" resname="O:FShowFilterFriends.O:GroupBox1.O:CBItens.Top">
+        <source>24</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TListBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:CBItens.Width" resname="O:FShowFilterFriends.O:GroupBox1.O:CBItens.Width">
+        <source>165</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TListBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:CBItens.Height" resname="O:FShowFilterFriends.O:GroupBox1.O:CBItens.Height">
+        <source>302</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">27</prop><prop prop-type="Type">TListBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:CBItens.ItemHeight" resname="O:FShowFilterFriends.O:GroupBox1.O:CBItens.ItemHeight">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TListBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:CBItens.TabOrder" resname="O:FShowFilterFriends.O:GroupBox1.O:CBItens.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TListBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.Left" resname="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.Left">
+        <source>2</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.Top" resname="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.Top">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.Width" resname="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.Width">
+        <source>764</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.Height" resname="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.Height">
+        <source>312</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">33</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.ControlType.Strings[0]" resname="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.ControlType.Strings[0]">
+        <source>'Filtro;CheckBox;true;false'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">34</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.ControlType.Strings[1]" resname="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.ControlType.Strings[1]">
+        <source>'Valor;RichEdit;;F'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">)</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.Selected.Strings[0]" resname="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.Selected.Strings[0]">
+        <source>'Filtro'#9'5'#9'Make rule'#9'F'#9</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.Selected.Strings[1]" resname="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.Selected.Strings[1]">
+        <source>'Item'#9'30'#9'Item'#9'T'#9</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.Selected.Strings[2]" resname="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.Selected.Strings[2]">
+        <source>'Valor'#9'80'#9'Value'#9'T'#9</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">)</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.MemoAttributes" resname="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.MemoAttributes">
+        <source>[mSizeable, mWordWrap, mGridShow, mViewOnly]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.IniAttributes.Delimiter" resname="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.IniAttributes.Delimiter">
+        <source>';;'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.TitleColor" resname="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.TitleColor">
+        <source>clBtnFace</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">41</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.FixedCols" resname="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.FixedCols">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">42</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.ShowHorzScrollBar" resname="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.ShowHorzScrollBar">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">43</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.EditControlOptions" resname="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.EditControlOptions">
+        <source>[ecoCheckboxSingleClick, ecoDisableEditorIfReadOnly]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">44</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.Align" resname="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.Align">
+        <source>alTop</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">45</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.DataSource" resname="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.DataSource">
+        <source>DM_SERVER.ds_Cabectmp</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">46</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.KeyOptions" resname="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.KeyOptions">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">47</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.Options" resname="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.Options">
+        <source>[dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgWordWrap]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">48</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.TabOrder" resname="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.TabOrder">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">49</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.TitleAlignment" resname="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.TitleAlignment">
+        <source>taLeftJustify</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">50</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.TitleFont.Charset" resname="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.TitleFont.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">51</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.TitleFont.Color" resname="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.TitleFont.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">52</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.TitleFont.Height" resname="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.TitleFont.Height">
+        <source>-11</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">53</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.TitleFont.Name" resname="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.TitleFont.Name">
+        <source>'Tahoma'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">54</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.TitleFont.Style" resname="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.TitleFont.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">55</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.TitleLines" resname="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.TitleLines">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">56</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.TitleButtons" resname="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.TitleButtons">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">57</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.OnFieldChanged" resname="O:FShowFilterFriends.O:GroupBox1.O:wwDBGrid1.OnFieldChanged">
+        <source>wwDBGrid1FieldChanged</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">58</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.Left" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.Left">
+        <source>7</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">59</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.Top" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.Top">
+        <source>355</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">60</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.Width" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.Width">
+        <source>326</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">61</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.Height" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.Height">
+        <source>188</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">62</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.Caption" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.Caption">
+        <source>'Making rule'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">63</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.TabOrder" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.TabOrder">
+        <source>2</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">64</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:Label7.Left" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:Label7.Left">
+        <source>5</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">65</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:Label7.Top" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:Label7.Top">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">66</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:Label7.Width" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:Label7.Width">
+        <source>101</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">67</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:Label7.Height" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:Label7.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">68</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:Label7.Caption" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:Label7.Caption">
+        <source>'Selected header item'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">69</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:Eitem.Left" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:Eitem.Left">
+        <source>6</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">70</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:Eitem.Top" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:Eitem.Top">
+        <source>29</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">71</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:Eitem.Width" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:Eitem.Width">
+        <source>150</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">72</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:Eitem.Height" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:Eitem.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">73</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:Eitem.TabOrder" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:Eitem.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">74</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:Button1.Left" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:Button1.Left">
+        <source>8</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">75</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:Button1.Top" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:Button1.Top">
+        <source>159</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">76</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:Button1.Width" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:Button1.Width">
+        <source>311</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">77</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:Button1.Height" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:Button1.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">78</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:Button1.Cursor" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:Button1.Cursor">
+        <source>crHandPoint</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">79</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:Button1.Caption" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:Button1.Caption">
+        <source>'Add rule'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">80</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:Button1.TabOrder" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:Button1.TabOrder">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">81</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:Button1.OnClick" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:Button1.OnClick">
+        <source>Button1Click</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">82</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:CBExists.Left" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:CBExists.Left">
+        <source>159</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">83</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:CBExists.Top" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:CBExists.Top">
+        <source>32</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">84</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:CBExists.Width" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:CBExists.Width">
+        <source>166</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">85</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:CBExists.Height" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:CBExists.Height">
+        <source>17</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">86</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:CBExists.Cursor" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:CBExists.Cursor">
+        <source>crHandPoint</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">87</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:CBExists.Caption" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:CBExists.Caption">
+        <source>'This Item MUST exist in header'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">88</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:CBExists.TabOrder" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:CBExists.TabOrder">
+        <source>2</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">89</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:CBExists.OnClick" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:CBExists.OnClick">
+        <source>CBExistsClick</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">90</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.Left" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.Left">
+        <source>4</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">91</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.Top" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.Top">
+        <source>50</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">92</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.Width" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.Width">
+        <source>320</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">93</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.Height" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.Height">
+        <source>108</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">94</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.TabOrder" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.TabOrder">
+        <source>3</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">95</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label4.Left" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label4.Left">
+        <source>4</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">96</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label4.Top" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label4.Top">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">97</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label4.Width" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label4.Width">
+        <source>163</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">98</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label4.Height" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label4.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">99</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label4.Caption" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label4.Caption">
+        <source>'Text to match in the selected item'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">100</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:SpeedButton1.Left" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:SpeedButton1.Left">
+        <source>232</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">101</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:SpeedButton1.Top" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:SpeedButton1.Top">
+        <source>83</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">102</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:SpeedButton1.Width" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:SpeedButton1.Width">
+        <source>23</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">103</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:SpeedButton1.Height" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:SpeedButton1.Height">
+        <source>22</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">104</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:SpeedButton1.Cursor" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:SpeedButton1.Cursor">
+        <source>crHandPoint</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">105</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:SpeedButton1.Hint" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:SpeedButton1.Hint">
+        <source>'Click here to see about Regular Expression'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">106</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:SpeedButton1.CustomHint" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:SpeedButton1.CustomHint">
+        <source>BalloonHint1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">107</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:SpeedButton1.Glyph.Data" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:SpeedButton1.Glyph.Data">
+        <source>36030000424D360300000000000036000000280000001000000010000000010018000000000000030000120B0000120B00000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDFDFDF0F0F0DCDCDCD1D1D1D1D1D1DADADAEDEDEDFBFBFBFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDFDFDEBEBEBBDBDBD8A8A8A737373737373868686B3B3B3E3E3E3FBFBFBFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFEFEF9CA5993067203C853648CC8320622B3A513D6F6F6FB2B2B2ECECECFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8F8F8ACB8AC2B832099C59EE4EAE240B154318D4E1F7D403A553D7E7E7EC6C6C6F2F2F2FFFFFFFFFFFFFFFFFFFFFFFFDDE4E0368831ACE2C0EFEFEFF8F8F85FB6682772323BB77B2C713E555555858585BEBEBEE6E6E6FAFAFAFFFFFFFFFFFF92D8B2518740FFFFFFFFFFFFE8EDE66EDF9E34915259F3B83190550F361447504A737373A5A5A5D6D6D6F5F5F5FFFFFF4EB9649FB499FEFEFEFFFFFF90BF804DD89468C69473FFCB359C6106532128874F3660456060608E8E8EC8C8C8F2F2F259B361E7EAE6F6F6F6CDDEC74EC7725FCB94E4F4EBC7FFEB1B793C30B0764DDCA038B0742F7D505056538C8C8CDCDCDC4ABF66A0B29A9EC29270CF8962F4BAB6DDC4F1FFFA95BF9E2EA36A9BFFDA6FFFCA5CF6BB4AD49936A46C717171D0D0D06AEEB740BF6250DF9394E8C281DDB0B8FFE5AEE4C847BD82E1F9EFF7FFFCD2FFEE90FFD66AFFC859F2B7707070CFCFCFE4F7EF83D9AF8ADDB365F4BB63FFC65BC1A84ACF9B9AFFDAC2FFE8DFFFF3F3FFFBF4FFFBC7FFEA87FFD3757575D2D2D2FFFFFFFFFFFFDAF0E69EDBBD9ECAAE53BDD61F9CD543BDC777FFCDA1FFDDC7FFEBE3FFF5F5FFFBF0FFFA949494E0E0E0FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFCEF0E591EEC85CF9BE63FFC67DFFCFA9FFDFCDFFEDB3D3C3CBCBCBF4F4F4FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE4F1E98CE1BC59F1B765FFC682DBB4DEE2E0F4F4F4FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">108</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">{</prop><prop prop-type="Close">}</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:SpeedButton1.ParentShowHint" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:SpeedButton1.ParentShowHint">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">109</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:SpeedButton1.ShowHint" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:SpeedButton1.ShowHint">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">110</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:SpeedButton1.OnClick" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:SpeedButton1.OnClick">
+        <source>SpeedButton1Click</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">111</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label5.Left" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label5.Left">
+        <source>7</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">112</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label5.Top" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label5.Top">
+        <source>36</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">113</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label5.Width" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label5.Width">
+        <source>263</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">114</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label5.Height" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label5.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">115</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label5.Cursor" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label5.Cursor">
+        <source>crHandPoint</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">116</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label5.Hint" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label5.Hint">
+        <source>'Example: Pa?l@domain.com  '</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">117</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label5.CustomHint" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label5.CustomHint">
+        <source>BalloonHint1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">118</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label5.Caption" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label5.Caption">
+        <source>'Use wildcard ? to accept ANY characters in the position'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">119</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label5.ParentShowHint" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label5.ParentShowHint">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">120</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label5.ShowHint" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label5.ShowHint">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">121</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label6.Left" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label6.Left">
+        <source>7</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">122</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label6.Top" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label6.Top">
+        <source>61</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">123</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label6.Width" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label6.Width">
+        <source>281</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">124</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label6.Height" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label6.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">125</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label6.Cursor" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label6.Cursor">
+        <source>crHandPoint</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">126</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label6.Hint" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label6.Hint">
+        <source>'Example: *@domain.com   or  *Paul*@domain.*'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">127</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label6.CustomHint" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label6.CustomHint">
+        <source>BalloonHint1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">128</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label6.Caption" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label6.Caption">
+        <source>'Use wildcard * to accept zero or more unknown characters'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">129</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label6.ParentShowHint" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label6.ParentShowHint">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">130</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label6.ShowHint" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label6.ShowHint">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">131</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label8.Left" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label8.Left">
+        <source>7</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">132</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label8.Top" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label8.Top">
+        <source>48</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">133</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label8.Width" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label8.Width">
+        <source>277</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">134</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label8.Height" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label8.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">135</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label8.Cursor" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label8.Cursor">
+        <source>crHandPoint</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">136</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label8.Hint" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label8.Hint">
+        <source>'Example: Pa+l@domain.com'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">137</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label8.CustomHint" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label8.CustomHint">
+        <source>BalloonHint1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">138</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label8.Caption" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label8.Caption">
+        <source>'Use wildcard +to accept one or more unknown characters'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">139</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label8.ParentShowHint" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label8.ParentShowHint">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">140</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label8.ShowHint" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Label8.ShowHint">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">141</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Etexto.Left" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Etexto.Left">
+        <source>3</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">142</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Etexto.Top" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Etexto.Top">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">143</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Etexto.Width" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Etexto.Width">
+        <source>313</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">144</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Etexto.Height" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Etexto.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">145</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Etexto.TabOrder" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:Etexto.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">146</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:CBRegExpr.Left" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:CBRegExpr.Left">
+        <source>68</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">147</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:CBRegExpr.Top" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:CBRegExpr.Top">
+        <source>86</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">148</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:CBRegExpr.Width" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:CBRegExpr.Width">
+        <source>161</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">149</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:CBRegExpr.Height" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:CBRegExpr.Height">
+        <source>17</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">150</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:CBRegExpr.Cursor" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:CBRegExpr.Cursor">
+        <source>crHandPoint</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">151</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:CBRegExpr.Hint" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:CBRegExpr.Hint">
+        <source>'Use Regular Expression if you know about that'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">152</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:CBRegExpr.CustomHint" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:CBRegExpr.CustomHint">
+        <source>BalloonHint1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">153</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:CBRegExpr.Caption" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:CBRegExpr.Caption">
+        <source>'Text to match is a RegExpr'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">154</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:CBRegExpr.Font.Charset" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:CBRegExpr.Font.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">155</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:CBRegExpr.Font.Color" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:CBRegExpr.Font.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">156</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:CBRegExpr.Font.Height" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:CBRegExpr.Font.Height">
+        <source>-11</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">157</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:CBRegExpr.Font.Name" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:CBRegExpr.Font.Name">
+        <source>'Tahoma'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">158</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:CBRegExpr.Font.Style" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:CBRegExpr.Font.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">159</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:CBRegExpr.ParentFont" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:CBRegExpr.ParentFont">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">160</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:CBRegExpr.ParentShowHint" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:CBRegExpr.ParentShowHint">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">161</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:CBRegExpr.ShowHint" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:CBRegExpr.ShowHint">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">162</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:CBRegExpr.TabOrder" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox2.O:GroupBox4.O:CBRegExpr.TabOrder">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">163</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.Left" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.Left">
+        <source>335</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">164</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.Top" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.Top">
+        <source>327</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">165</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.Width" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.Width">
+        <source>430</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">166</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.Height" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.Height">
+        <source>218</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">167</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.Caption" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.Caption">
+        <source>'Rules saved(Double click to edit or Rigth click to delete)'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">168</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.TabOrder" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.TabOrder">
+        <source>3</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">169</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.Left" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.Left">
+        <source>2</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">170</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.Top" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.Top">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">171</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.Width" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.Width">
+        <source>426</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">172</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.Height" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.Height">
+        <source>201</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">173</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.Selected.Strings[0]" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.Selected.Strings[0]">
+        <source>'Item'#9'20'#9'Item'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">174</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.Selected.Strings[1]" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.Selected.Strings[1]">
+        <source>'Expression'#9'30'#9'Expression'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">175</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.Selected.Strings[2]" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.Selected.Strings[2]">
+        <source>'MatchType'#9'3'#9'MatchType'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">176</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">)</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.IniAttributes.Delimiter" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.IniAttributes.Delimiter">
+        <source>';;'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">177</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.TitleColor" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.TitleColor">
+        <source>clBtnFace</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">178</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.FixedCols" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.FixedCols">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">179</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.ShowHorzScrollBar" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.ShowHorzScrollBar">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">180</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.Align" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.Align">
+        <source>alClient</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">181</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.DataSource" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.DataSource">
+        <source>DM_SERVER.DS_qBoxes</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">182</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.Options" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.Options">
+        <source>[dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgWordWrap]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">183</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.PopupMenu" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.PopupMenu">
+        <source>PopupMenu1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">184</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.ReadOnly" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.ReadOnly">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">185</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.TabOrder" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">186</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.TitleAlignment" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.TitleAlignment">
+        <source>taLeftJustify</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">187</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.TitleFont.Charset" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.TitleFont.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">188</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.TitleFont.Color" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.TitleFont.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">189</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.TitleFont.Height" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.TitleFont.Height">
+        <source>-11</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">190</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.TitleFont.Name" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.TitleFont.Name">
+        <source>'Tahoma'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">191</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.TitleFont.Style" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.TitleFont.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">192</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.TitleLines" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.TitleLines">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">193</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.TitleButtons" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.TitleButtons">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">194</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.OnDblClick" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.OnDblClick">
+        <source>wwDBGrid2DblClick</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">195</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.ExplicitLeft" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.ExplicitLeft">
+        <source>32</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">196</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.ExplicitTop" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.ExplicitTop">
+        <source>32</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">197</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.ExplicitWidth" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.ExplicitWidth">
+        <source>320</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">198</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.ExplicitHeight" resname="O:FShowFilterFriends.O:GroupBox1.O:GroupBox3.O:wwDBGrid2.ExplicitHeight">
+        <source>120</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">199</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:RBAND.Left" resname="O:FShowFilterFriends.O:GroupBox1.O:RBAND.Left">
+        <source>12</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">200</prop><prop prop-type="Type">TRadioButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:RBAND.Top" resname="O:FShowFilterFriends.O:GroupBox1.O:RBAND.Top">
+        <source>335</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">201</prop><prop prop-type="Type">TRadioButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:RBAND.Width" resname="O:FShowFilterFriends.O:GroupBox1.O:RBAND.Width">
+        <source>147</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">202</prop><prop prop-type="Type">TRadioButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:RBAND.Height" resname="O:FShowFilterFriends.O:GroupBox1.O:RBAND.Height">
+        <source>17</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">203</prop><prop prop-type="Type">TRadioButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:RBAND.Cursor" resname="O:FShowFilterFriends.O:GroupBox1.O:RBAND.Cursor">
+        <source>crHandPoint</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">204</prop><prop prop-type="Type">TRadioButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:RBAND.Caption" resname="O:FShowFilterFriends.O:GroupBox1.O:RBAND.Caption">
+        <source>'Match only all rules(and)'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">205</prop><prop prop-type="Type">TRadioButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:RBAND.TabOrder" resname="O:FShowFilterFriends.O:GroupBox1.O:RBAND.TabOrder">
+        <source>4</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">206</prop><prop prop-type="Type">TRadioButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:RBAND.OnClick" resname="O:FShowFilterFriends.O:GroupBox1.O:RBAND.OnClick">
+        <source>RBANDClick</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">207</prop><prop prop-type="Type">TRadioButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:RBOR.Left" resname="O:FShowFilterFriends.O:GroupBox1.O:RBOR.Left">
+        <source>165</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">208</prop><prop prop-type="Type">TRadioButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:RBOR.Top" resname="O:FShowFilterFriends.O:GroupBox1.O:RBOR.Top">
+        <source>335</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">209</prop><prop prop-type="Type">TRadioButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:RBOR.Width" resname="O:FShowFilterFriends.O:GroupBox1.O:RBOR.Width">
+        <source>164</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">210</prop><prop prop-type="Type">TRadioButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:RBOR.Height" resname="O:FShowFilterFriends.O:GroupBox1.O:RBOR.Height">
+        <source>17</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">211</prop><prop prop-type="Type">TRadioButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:RBOR.Cursor" resname="O:FShowFilterFriends.O:GroupBox1.O:RBOR.Cursor">
+        <source>crHandPoint</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">212</prop><prop prop-type="Type">TRadioButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:RBOR.Caption" resname="O:FShowFilterFriends.O:GroupBox1.O:RBOR.Caption">
+        <source>'Match one or more rules(or)'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">213</prop><prop prop-type="Type">TRadioButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:RBOR.TabOrder" resname="O:FShowFilterFriends.O:GroupBox1.O:RBOR.TabOrder">
+        <source>5</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">214</prop><prop prop-type="Type">TRadioButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:GroupBox1.O:RBOR.OnClick" resname="O:FShowFilterFriends.O:GroupBox1.O:RBOR.OnClick">
+        <source>RBORClick</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">215</prop><prop prop-type="Type">TRadioButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:BalloonHint1.Left" resname="O:FShowFilterFriends.O:BalloonHint1.Left">
+        <source>360</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">216</prop><prop prop-type="Type">TBalloonHint</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:BalloonHint1.Top" resname="O:FShowFilterFriends.O:BalloonHint1.Top">
+        <source>288</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">217</prop><prop prop-type="Type">TBalloonHint</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:PopupMenu1.Images" resname="O:FShowFilterFriends.O:PopupMenu1.Images">
+        <source>Fmain.ilGFX16</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">218</prop><prop prop-type="Type">TPopupMenu</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:PopupMenu1.Left" resname="O:FShowFilterFriends.O:PopupMenu1.Left">
+        <source>504</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">219</prop><prop prop-type="Type">TPopupMenu</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:PopupMenu1.Top" resname="O:FShowFilterFriends.O:PopupMenu1.Top">
+        <source>448</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">220</prop><prop prop-type="Type">TPopupMenu</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:PopupMenu1.O:Deleteselectedrule1.Caption" resname="O:FShowFilterFriends.O:PopupMenu1.O:Deleteselectedrule1.Caption">
+        <source>'Delete selected rule'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">221</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:PopupMenu1.O:Deleteselectedrule1.ImageIndex" resname="O:FShowFilterFriends.O:PopupMenu1.O:Deleteselectedrule1.ImageIndex">
+        <source>5</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">222</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:PopupMenu1.O:Deleteselectedrule1.OnClick" resname="O:FShowFilterFriends.O:PopupMenu1.O:Deleteselectedrule1.OnClick">
+        <source>Deleteselectedrule1Click</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">223</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:PopupMenu1.O:N1.Caption" resname="O:FShowFilterFriends.O:PopupMenu1.O:N1.Caption">
+        <source>'-'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">224</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:PopupMenu1.O:DeleteALLrules1.Caption" resname="O:FShowFilterFriends.O:PopupMenu1.O:DeleteALLrules1.Caption">
+        <source>'Delete ALL rules'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">225</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:PopupMenu1.O:DeleteALLrules1.ImageIndex" resname="O:FShowFilterFriends.O:PopupMenu1.O:DeleteALLrules1.ImageIndex">
+        <source>31</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">226</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FShowFilterFriends.O:PopupMenu1.O:DeleteALLrules1.OnClick" resname="O:FShowFilterFriends.O:PopupMenu1.O:DeleteALLrules1.OnClick">
+        <source>DeleteALLrules1Click</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4632485069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">227</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

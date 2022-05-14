@@ -1,0 +1,214 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Martin Harvey">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (WinNT; I) [Netscape]">
+   <title>Chapter 12. More Win32 synchronization facilities.</title>
+</head>
+<body>
+
+<h3>
+Chapter 12. More Win32 synchronization facilities.</h3>
+
+<h4>
+In this chapter:</h4>
+
+<ul>
+<li>
+<a href="#Greater efficiency via interlocked operations.">Greater efficiency
+via interlocked operations.</a></li>
+
+<li>
+<a href="#Atomicity from nothing.">Atomicity from nothing.</a></li>
+
+<li>
+<a href="#Eventcounts and sequencers">Eventcounts and sequencers.</a></li>
+
+<li>
+<a href="#Other Win32 synchronization facilities">Other Win32 synchronization
+facilities.</a></li>
+</ul>
+
+<h4>
+<a NAME="Greater efficiency via interlocked operations."></a>Greater efficiency
+via interlocked operations.</h4>
+Conventional synchronization primitives can be a considerable overhead
+in simple multithreaded systems, particularly for threads that are tightly
+synchronized to each other. One possible alternative is to use interlocked
+operations.
+<p>Interlocked operations were originally conceived as a low level synchronization
+mechanism for shared memory symmetric multiprocessor systems. In multiprocessor
+systems, shared memory is an extremely efficient way to transfer data between
+processes and threads. A way had to be found to prevent atomicity problems
+when two or more processors tried to use the same piece of memory. Almost
+all processors introduced recently support interlocked operations to allow
+this. These are operations whereby a processor can read a value from memory,
+modify it and then write it back atomically, whilst ensuring that no other
+processors access the same memory, and the processor performing the operation
+is not interrupted. Win32 provides the following interlocked operations:
+<ul>
+<li>
+InterlockedCompareExchange (Win NT/2K only).</li>
+
+<li>
+InterlockedDecrement.</li>
+
+<li>
+InterlockedExchange.</li>
+
+<li>
+InterlockedExchangeAdd (Win NT/2K only).</li>
+
+<li>
+InterlockedIncrement.</li>
+</ul>
+So why would one use interlocked operations at all? One good example is
+that of a <b>spin lock</b>. Occasionally one wishes to create something
+similar to a critical section. However, there may be very little code in
+the critical section, and the code in the critical section may be accessed
+very often. In cases such as this, a full blown synchronization object
+may prove to be overkill. The spin lock allows us to do a similar thing,
+and it works&nbsp;<a NAME="Code37"></a><a href="#Code37" onClick="window.open('Source37.html','Code37','height=400,width=600,resizable,scrollbars')">like
+this</a>. A thread acquires the lock if, when performing an interlocked
+increment, it finds that, after the increment, the value of the lock is
+0. If it finds that the value is greater than 0, then another thread has
+the lock, and it goes around for another try. The call to sleep is included
+so that one thread does not spin for long periods on the lock whilst a
+lower priority thread has the lock. In simple schedulers, if the thread
+priorities are equal, then the call to sleep may not be required. The interlocked
+operation is necessary, because if a thread performed a memory read, increment,
+compare and then write back, then two threads could acquire the lock simultaneously.
+<p>Overhead is reduced because just a couple of CPU instructions are required
+to enter and leave the lock, provided a thread does not have to wait. If
+threads have to wait for any appreciable time, then CPU is wasted, so they
+are only useful for implementing small critical sections. Spin locks are
+useful when enforcing critical sections that are themselves part of synchronization
+structures. Shared data inside synchronization primitives or schedulers
+is often protected by locks of this sort: the locks are often necessary
+because OS level synchronization primitives cannot be used to implement
+OS level synchronization primitives. Spin locks have all the same concurrency
+problems as mutexes, with the particular quirk that cyclic acquisition
+results not in deadlock, but in <b>livelock</b>. This is a slightly worse
+situation than deadlock because although the "blocked" threads are not
+executing any useful code, they are running around an infinite loop, using
+up CPU and degrading the performance of the entire system. Spin locks should
+not be used as semaphores to "suspend" a thread.
+<h4>
+<a NAME="Atomicity from nothing."></a>Atomicity from nothing.</h4>
+With care, it is in fact possible to create a spin lock that is atomic
+without assuming any interlocking at all, provided that interrupts only
+occur in between CPU instructions.&nbsp;<a NAME="Code38"></a><a href="#Code38" onClick="window.open('Source38.html','Code38','height=400,width=600,resizable,scrollbars')">Consider
+this</a>. Lets look at the pascal first to get the general idea. We have
+an integer lock in memory. When trying to enter the lock, we first increment
+the lock in memory. We then read the value from memory into a local variable,
+and check, as before to see whether it is greater than zero. If it is,
+then someone else has the lock, and we go round again, otherwise, we have
+the lock.
+<p>The important thing about this set of operations is that, given certain
+provisos, a thread switch can occur at any point in time, and this still
+remains thread safe. The first increment of the lock is a straight register
+indirect increment. The value is always in memory, and the increment is
+atomic. We then read the value of the lock into a local vairable. This
+is <b>not</b> atomic. The value read in to the local variable may be different
+from the result of the increment. However, the really cunning thing about
+this is that because the increment is performed <i>before</i> the read
+operation, thread conflicts that occur will always mean that the value
+read is too high instead of too low:
+<i>thread conflicts result in a conservative
+estimate of whether the lock is free</i>.
+<p>It is often useful to write operations like this in assembler, so as
+to be totally sure that the correct values are being left in memory, and
+not cached in registers. As it turns out, under Delphi 4 at least, by passing
+the lock as a var parameter, and including the local variable, the Delphi
+compiler generates correct code which will work on uniprocessor machines.
+On multiprocessor machines, register indirect increments and decrements
+are not atomic. This has been solved in the hand coded assembler version
+by adding the lock prefix in front of instructions that manipulate the
+lock. This prefix instructs a processor to lock the memory bus exclusively
+for the entire duration of the instruction, thus making these operations
+atomic.
+<p>The bad news is that although this is correct in theory, the Win32 virtual
+machine does not allow user level processes to execute instructions with
+the lock prefix. Programmers intending to actually use this mechanism should
+use it only in code with ring 0 privileges. Another problem is that since
+this version of the spin lock does not call Sleep, it is possible for threads
+to monopolise the processor whilst waiting for the lock, something that
+is guaranteed to bring the machine to a grinding halt.
+<h4>
+<a NAME="Eventcounts and sequencers"></a>Eventcounts and sequencers.</h4>
+One proposed alternative to semaphores is to use two new sorts of primitive:
+<b>eventcounts</b>
+and <b>sequencers</b>. They both contain counts, but unlike semaphores,
+the counts increase indefinitely from the time they are created. Some people
+are happier with the idea that it is possible to individually distinguish
+between the 32nd and 33rd occurrences of an event in the system. The values
+of these counts are made available to threads using them, and the values
+can be used by processes to order their actions. Eventcounts support three
+operations:
+<ul>
+<li>
+EVCount.Advance(): This increments the count, and returns the new value
+after the increment.</li>
+
+<li>
+EVCount.Read(): This returns the current count.</li>
+
+<li>
+EVCount.Await(WaitCount:integer): This suspends the calling thread until
+the internal count is greater than or equal to WaitCount.</li>
+</ul>
+Sequencers support just one operation:
+<ul>
+<li>
+Sequencer.Ticket(): Returns the current internal count in the sequencer,
+and increments it.</li>
+</ul>
+A definition of the classes involved might look&nbsp;<a NAME="Code39"></a><a href="#Code39" onClick="window.open('Source39.html','Code39','height=400,width=600,resizable,scrollbars')">something
+like this</a>. It is then relatively easy to use eventcounts and sequencers
+to perform all the operations that can be performed using semaphores:
+<ul>
+<li>
+<a NAME="Code40"></a><a href="#Code40" onClick="window.open('Source40.html','Code40','height=400,width=600,resizable,scrollbars')">Enforcing
+a mutual Exclusion</a>.</li>
+
+<li>
+<a NAME="Code41"></a><a href="#Code41" onClick="window.open('Source41.html','Code41','height=400,width=600,resizable,scrollbars')">The
+bounded buffer with one producer and one consumer</a>.</li>
+
+<li>
+<a NAME="Code42"></a><a href="#Code42" onClick="window.open('Source42.html','Code42','height=400,width=600,resizable,scrollbars')">The
+bounded buffer with an arbitrary number of producers and consumers</a>.</li>
+</ul>
+A particular benefit of this type of synchronization primitive is that
+the advance and ticket operations can be implemented very simply, using
+the interlocked compare exchange instruction. This is left as a slightly
+more difficult exercise for the reader.
+<h4>
+<a NAME="Other Win32 synchronization facilities"></a>Other Win32 synchronization
+facilities.</h4>
+<b>Waitable timers.</b> Windows NT and Win2K provide waitable timer objects.
+These allow a thread or number of threads to wait for a particular amount
+of time on a timer object. Timers can be used to release a single thread
+or a certain number of threads on a timed basis; a form of thread flow
+control. In addition, the delay that waitable timers provide can be set
+very precisely: the smallest value available is around 100 nanoseconds,
+making timers preferable to using Sleep if a thread has to be suspended
+for a certain amount of time.
+<p><b>MessageWaits.</b> When Delphi applications are waiting for threads
+to exit, the main VCL thread is permanently blocked. This is a potentially
+problematic situation, because the VCL thread cannot process messages.
+Win32 provides a MsgWaitForMultipleObjects function to get around this.
+A thread performing a message wait is blocked either until the synchronization
+objects become signalled, or a message is placed in the threads message
+queue. This means that you can get the main VCL thread in an application
+to wait for worker threads whilst also allowing it to respond to windows
+messages. A good article on the subject can be found at: <a href="http://www.midnightbeach.com/jon/pubs/MsgWaits/MsgWaits.html">http://www.midnightbeach.com/jon/pubs/MsgWaits/MsgWaits.html.</a>
+<p>
+<hr WIDTH="100%">
+<p><a href="ToC.html">[Contents]</a> <a href="Ch11.html">[Previous]</a><a href="Ch13.html">[Next]</a>
+<p><i>&copy; <a href="mailto:martin@pergolesi.demon.co.uk">Martin Harvey</a>
+2000.</i>
+<br>&nbsp;
+</body>
+</html>

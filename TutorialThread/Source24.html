@@ -1,0 +1,233 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Martin Harvey">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (WinNT; I) [Netscape]">
+   <title>Source24</title>
+</head>
+<body>
+<PRE><TT><B>unit</B> PrimeThreads;
+
+<B>interface</B>
+
+<B>uses</B>
+  Windows, Classes, SysUtils, BoundedBuf, Forms;
+
+<B>type</B>
+  TIntRec = <B>record</B>
+    Num: integer;
+  <B>end</B>;
+  PIntRec = ^TIntRec;
+
+  TPrimeThread = <B>class</B>(TThread)
+  <B>private</B>
+    FBuffer: TBoundedBuffer;
+  <B>protected</B>
+    <B>function</B> IsPrime(TestNum: integer): boolean;
+  <B>public</B>
+    <B>property</B> Buffer: TBoundedBuffer <B>read</B> FBuffer <B>write</B> FBuffer;
+  <B>end</B>;
+
+  TForwardPrimeThread = <B>class</B>(TPrimeThread)
+  <B>private</B>
+  <B>protected</B>
+    <B>procedure</B> SendToBackThread(TestNum: integer);
+    <B>procedure</B> Execute; <B>override</B>;
+  <B>end</B>;
+
+  TBackwardPrimeThread = <B>class</B>(TPrimeThread)
+  <B>private</B>
+    FDestSection: PRTLCriticalSection;
+    FDestMsgNum: integer;
+    FDestForm: TForm;
+    FDestList: TStrings;
+  <B>protected</B>
+    <B>function</B> ReverseNumber(Input: integer): integer;
+    <B>function</B> RecieveFromForwardThread(<B>var</B> TestNum: integer): boolean;
+    <B>procedure</B> SendToVCLThread(CurrentNumber, ReversedNumber: integer);
+    <B>procedure</B> Execute; <B>override</B>;
+  <B>public</B>
+    <B>property</B> DestSection: PRTLCriticalSection <B>read</B> FDestSection <B>write</B> FDestSection;
+    <B>property</B> DestMsgNum: integer <B>read</B> FDestMsgNum <B>write</B> FDestMsgNum;
+    <B>property</B> DestForm: TForm <B>read</B> FDestForm <B>write</B> FDestForm;
+    <B>property</B> DestList: TStrings <B>read</B> FDestList <B>write</B> FDestList;
+  <B>end</B>;
+
+<B>var</B>
+  ForwardThread: TForwardPrimeThread;
+  BackwardThread: TBackwardPrimeThread;
+  Buffer: TBoundedBuffer;
+
+<B>procedure</B> StartThreads(Form: TForm;
+  Section: PRTLCriticalSection;
+  MsgNum: integer;
+  List: TStrings);
+<B>procedure</B> StopThreads;
+
+<B>implementation</B>
+
+<B>const</B>
+  DefBufSize = 16;
+
+<FONT COLOR=NAVY><I>{ Ancillary procedures }</I></FONT>
+
+<B>procedure</B> StartThreads(Form: TForm;
+  Section: PRTLCriticalSection;
+  MsgNum: integer;
+  List: TStrings);
+<B>begin</B>
+  ForwardThread := TForwardPrimeThread.Create(true);
+  BackwardThread := TBackwardPrimeThread.Create(true);
+  SetThreadPriority(ForwardThread.Handle, THREAD_PRIORITY_BELOW_NORMAL);
+  SetThreadPriority(BackwardThread.Handle, THREAD_PRIORITY_BELOW_NORMAL);
+  Buffer := TBoundedBuffer.Create;
+  Buffer.Size := DefBufSize;
+  ForwardThread.Buffer := Buffer;
+  BackwardThread.Buffer := Buffer;
+  <B>with</B> BackwardThread <B>do</B>
+  <B>begin</B>
+    DestForm := Form;
+    DestSection := Section;
+    DestMsgNum := MsgNum;
+    DestList := List;
+  <B>end</B>;
+  ForwardThread.Resume;
+  BackwardThread.Resume;
+<B>end</B>;
+
+<B>procedure</B> StopThreads;
+<B>begin</B>
+  ForwardThread.Terminate;
+  BackwardThread.Terminate;
+  Buffer.ResetState;
+  ForwardThread.WaitFor;
+  BackwardThread.WaitFor;
+  Buffer.Free;
+  ForwardThread.Free;
+  BackwardThread.Free;
+<B>end</B>;
+
+<FONT COLOR=NAVY><I>{ TPrimeThread }</I></FONT>
+
+<B>function</B> TPrimeThread.IsPrime(TestNum: integer): boolean;
+
+<B>var</B>
+  iter: integer;
+
+<B>begin</B>
+  result := true;
+  <B>if</B> TestNum &lt 0 <B>then</B>
+    result := false;
+  <B>if</B> TestNum &lt;= 2 <B>then</B>
+    exit;
+  iter := 2;
+  <B>while</B> (iter &lt TestNum) <B>and</B> (<B>not</B> terminated) <B>do</B> <FONT COLOR=NAVY><I>{Line A}</I></FONT>
+  <B>begin</B>
+    <B>if</B> (TestNum <B>mod</B> iter) = 0 <B>then</B>
+    <B>begin</B>
+      result := false;
+      exit;
+    <B>end</B>;
+    Inc(iter);
+  <B>end</B>;
+<B>end</B>;
+
+<FONT COLOR=NAVY><I>{ TForwardPrimeThread }</I></FONT>
+
+<B>procedure</B> TForwardPrimeThread.SendToBackThread(TestNum: integer);
+
+<B>var</B>
+  NewRec: PIntRec;
+
+<B>begin</B>
+  New(NewRec);
+  NewRec.Num := TestNum;
+  <B>if</B> <B>not</B> Buffer.PutItem(NewRec) <B>then</B> Dispose(NewRec);
+<B>end</B>;
+
+<B>procedure</B> TForwardPrimeThread.Execute;
+
+<B>var</B>
+  CurrentNumber: integer;
+
+<B>begin</B>
+  CurrentNumber := 2;
+  <B>while</B> <B>not</B> Terminated <B>do</B>
+  <B>begin</B>
+    <B>if</B> IsPrime(CurrentNumber) <B>then</B>
+      SendToBackThread(CurrentNumber);
+    Inc(CurrentNumber);
+  <B>end</B>;
+<B>end</B>;
+
+<FONT COLOR=NAVY><I>{ TBackwardPrimeThread }</I></FONT>
+
+<B>function</B> TBackwardPrimeThread.RecieveFromForwardThread(<B>var</B> TestNum: integer): boolean;
+
+<B>var</B>
+  NewRec: PIntRec;
+
+<B>begin</B>
+  NewRec := Buffer.GetItem;
+  Result := Assigned(NewRec);
+  <B>if</B> Result <B>then</B> TestNum := NewRec^.Num;
+<B>end</B>;
+
+<B>procedure</B> TBackwardPrimeThread.SendToVCLThread(CurrentNumber, ReversedNumber: integer);
+
+<B>var</B>
+  Msg: <B>string</B>;
+
+<B>begin</B>
+  Msg := <FONT COLOR=BLUE>'Palindromic primes: '</FONT> + IntToStr(CurrentNumber) + <FONT COLOR=BLUE>' and '</FONT>
+    + IntToStr(ReversedNumber);
+  EnterCriticalSection(FDestSection^);
+  DestList.Add(Msg);
+  LeaveCriticalSection(FDestSection^);
+  PostMessage(DestForm.Handle, DestMsgNum, 0, 0);
+<B>end</B>;
+
+<B>function</B> TBackwardPrimeThread.ReverseNumber(Input: integer): integer;
+
+<B>var</B>
+  InStr, OutStr: <B>string</B>;
+  Len, Iter: integer;
+
+<B>begin</B>
+  Input := Abs(Input);
+  InStr := IntToStr(Input);
+  OutStr := <FONT COLOR=BLUE>''</FONT>;
+  Len := Length(InStr);
+  <B>for</B> Iter := Len <B>downto</B> 1 <B>do</B>
+    OutStr := OutStr + InStr[Iter];
+  <B>try</B>
+    Result := StrToInt(OutStr);
+  <B>except</B>
+    <B>on</B> EConvertError <B>do</B> Result := Input;
+  <B>end</B>;
+<B>end</B>;
+
+<B>procedure</B> TBackwardPrimeThread.Execute;
+
+<B>var</B>
+  CurrentNumber,
+    ReversedNumber: integer;
+
+<B>begin</B>
+  <B>while</B> <B>not</B> Terminated <B>do</B>
+  <B>begin</B>
+    <B>if</B> RecieveFromForwardThread(CurrentNumber) <B>then</B>
+    <B>begin</B>
+      ReversedNumber := ReverseNumber(CurrentNumber);
+      <B>if</B> IsPrime(ReversedNumber) <B>then</B>
+        SendToVCLThread(CurrentNumber, ReversedNumber);
+    <B>end</B>;
+  <B>end</B>;
+<B>end</B>;
+
+<B>end.</B>
+
+</TT></PRE>
+</body>
+</html>

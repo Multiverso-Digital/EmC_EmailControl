@@ -1,0 +1,62 @@
+Received: from servidor.cenpec.org.br ([200.230.152.130]) by abreuretto.com with MailEnable ESMTP; Mon, 09 Feb 2009 09:55:41 -0800
+Received: by servidor.cenpec.org.br (Postfix, from userid 502)
+	id 704CA154056; Mon,  9 Feb 2009 09:57:35 -0200 (BRST)
+Received: from [10.10.0.162] (unknown [10.10.0.162])
+	by servidor.cenpec.org.br (Postfix) with ESMTP id E033E15404E
+	for <abreu@abreuretto.com>; Mon,  9 Feb 2009 09:57:32 -0200 (BRST)
+Message-ID: <4990266A.90607@cenpec.org.br>
+Disposition-Notification-To: Evandro Braga Teodoro <evandro@cenpec.org.br>
+Date: Mon, 09 Feb 2009 09:49:46 -0300
+From: Evandro Braga Teodoro <evandro@cenpec.org.br>
+Organization: CENPEC
+User-Agent: Thunderbird 2.0.0.19 (Windows/20081209)
+MIME-Version: 1.0
+To: Abreu Retto <abreu@abreuretto.com>
+Subject: Sobre o caderno 2
+Content-Type: multipart/mixed;
+ boundary="------------020801020004090203070806"
+X-Spam-Checker-Version: SpamAssassin 2.63-spambr_20030926 (2004-01-11) on 
+	servidor.cenpec.org.br
+X-Spam-Level: 
+X-Spam-Status: No, hits=0.0 required=7.7 tests=none autolearn=no 
+	version=2.63-spambr_20030926
+Return-Path: <evandro@cenpec.org.br>
+
+This is a multi-part message in MIME format.
+--------------020801020004090203070806
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: quoted-printable
+
+Abreu, com rela=E7=E3o as cores do caderno n=F3s vamos utilizar as mesmas=
+ que=20
+est=E3o no indice.
+
+Verde para tudo que est=E1 relacionado ao iten I, rosa para tudo que est=E1=
+=20
+relacionado ao inte II e roxo para tudo que est=E1 relacionado ao iten II=
+I.
+
+At=E9 mais, Evandro.
+
+--------------020801020004090203070806
+Content-Type: text/x-vcard; charset=utf-8;
+ name="evandro.vcf"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: attachment;
+ filename="evandro.vcf"
+
+begin:vcard
+fn:Evandro Braga Teodoro
+n:Braga Teodoro;Evandro
+org:CENPEC 
+adr;quoted-printable;quoted-printable:;;Rua Dante Carraro, 69;S=C3=A3o Paulo;S=C3=A3o Paulo;05422-060;Brasil
+email;internet:evandro@cenpec.org.br
+tel;work:(11) 2132-9016
+tel;cell:(11) 8272-6058
+url:www.cenpec.org.br
+version:2.1
+end:vcard
+
+
+--------------020801020004090203070806--
+

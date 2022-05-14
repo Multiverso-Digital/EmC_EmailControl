@@ -1,0 +1,28 @@
+unit UBackup;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, ComCtrls, StdCtrls, JvExStdCtrls, JvListBox, JvDriveCtrls;
+
+type
+  TFbackup = class(TForm)
+    PageControl1: TPageControl;
+    TabSheet1: TTabSheet;
+    TabSheet2: TTabSheet;
+    GroupBox1: TGroupBox;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Fbackup: TFbackup;
+
+implementation
+
+{$R *.dfm}
+
+end.

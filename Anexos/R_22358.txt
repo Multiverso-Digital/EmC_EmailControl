@@ -1,0 +1,299 @@
+Received: from mtaout2.012.net.il ([84.95.2.4]) by abreuretto.com with MailEnable ESMTP; Thu, 19 Feb 2009 21:49:54 -0800
+Received: from conversion-daemon.i_mtaout2.012.net.il by i_mtaout2.012.net.il (HyperSendmail v2004.12) id <0KFC00800O3L5400@i_mtaout2.012.net.il> for abreu@abreuretto.com; Fri, 20 Feb 2009 07:50:26 +0200 (IST)
+Received: from diana ([213.8.44.10]) by i_mtaout2.012.net.il (HyperSendmail v2004.12) with ESMTPA id <0KFC0030FO81EQ20@i_mtaout2.012.net.il> for abreu@abreuretto.com; Fri, 20 Feb 2009 07:50:26 +0200 (IST)
+Date: Fri, 20 Feb 2009 07:52:23 +0200
+From: Diana Edelstein <dianaei@hatzerim.org.il>
+Subject: Re: emc
+X-012-Sender: dianaei@inter.net.il
+To: Abreu Retto <abreu@abreuretto.com>
+Message-id: <000f01c9931f$67028f20$cd0014ac@diana>
+MIME-version: 1.0
+X-MIMEOLE: Produced By Microsoft MimeOLE V6.00.2600.0000
+X-Mailer: Microsoft Outlook Express 6.00.2600.0000
+Content-type: multipart/alternative; boundary="Boundary_(ID_2q8wrqXZMuwWMvfWUv/5/g)"
+X-Priority: 3
+X-MSMail-priority: Normal
+References: <000801c992bf$007646d0$cd0014ac@diana> <002801c992d5$a4b27d20$ee177760$@com>
+Return-Path: <dianaei@hatzerim.org.il>
+
+This is a multi-part message in MIME format.
+
+--Boundary_(ID_2q8wrqXZMuwWMvfWUv/5/g)
+Content-type: text/plain;	charset="iso-8859-1"
+Content-transfer-encoding: quoted-printable
+
+It doesnt work, I delete and it comes again.
+Only my address , I cannot get rid of it.
+Could you help?
+Thanks
+  ----- Original Message -----=20
+  From: Abreu Retto=20
+  To: 'Diana Edelstein'=20
+  Sent: Thursday, February 19, 2009 11:04 PM
+  Subject: RES: emc
+
+
+  Hi
+
+  =20
+
+  =20
+
+  To delete favoutites rigth-click  in the email and click on "Delete =
+selected item" in "My Friends" icon.
+
+  =20
+
+  =20
+
+  Thanks
+
+  =20
+
+  =20
+
+  De: Diana Edelstein [mailto:dianaei@hatzerim.org.il]=20
+  Enviada em: quinta-feira, 19 de fevereiro de 2009 15:22
+  Para: info@abreuretto.com
+  Assunto: emc
+
+  =20
+
+  =20
+
+  Hello EMC:
+
+  =20
+
+  I try to delete from  "favourites" my email address, I get hundreds of =
+mails from my address, and it is in the EMC favourites.
+
+  I delete  it, with no success.
+
+  Can you help?
+
+  Thank you
+
+  Diana
+
+  Nenhum v?rus encontrado nessa mensagem recebida.
+  Verificado por AVG - www.avgbrasil.com.br
+  Vers?o: 8.0.237 / Banco de dados de v?rus: 270.11.0/1959 - Data de =
+Lan?amento: 02/18/09 20:55:00
+
+
+
+-------------------------------------------------------------------------=
+-----
+
+
+  No virus found in this incoming message.
+  Checked by AVG.=20
+  Version: 7.5.552 / Virus Database: 270.11.1/1960 - Release Date: =
+2/19/2009 10:48 AM
+
+
+--Boundary_(ID_2q8wrqXZMuwWMvfWUv/5/g)
+Content-type: text/html;	charset="iso-8859-1"
+Content-transfer-encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns=3D"http://www.w3.org/TR/REC-html40" xmlns:v =3D=20
+"urn:schemas-microsoft-com:vml" xmlns:o =3D=20
+"urn:schemas-microsoft-com:office:office" xmlns:w =3D=20
+"urn:schemas-microsoft-com:office:word" xmlns:m =3D=20
+"http://schemas.microsoft.com/office/2004/12/omml"><HEAD>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Diso-8859-1">
+<META content=3D"MSHTML 6.00.2600.0" name=3DGENERATOR>
+<STYLE>@font-face {
+	font-family: Cambria Math;
+}
+@font-face {
+	font-family: Calibri;
+}
+@font-face {
+	font-family: Tahoma;
+}
+@font-face {
+	font-family: Monotype Hadassah;
+}
+@page Section1 {size: 612.0pt 792.0pt; margin: 70.85pt 3.0cm 70.85pt =
+3.0cm; }
+P.MsoNormal {
+	FONT-SIZE: 12pt; MARGIN: 0cm 0cm 0pt; FONT-FAMILY: "Times New =
+Roman","serif"
+}
+LI.MsoNormal {
+	FONT-SIZE: 12pt; MARGIN: 0cm 0cm 0pt; FONT-FAMILY: "Times New =
+Roman","serif"
+}
+DIV.MsoNormal {
+	FONT-SIZE: 12pt; MARGIN: 0cm 0cm 0pt; FONT-FAMILY: "Times New =
+Roman","serif"
+}
+A:link {
+	COLOR: blue; TEXT-DECORATION: underline; mso-style-priority: 99
+}
+SPAN.MsoHyperlink {
+	COLOR: blue; TEXT-DECORATION: underline; mso-style-priority: 99
+}
+A:visited {
+	COLOR: purple; TEXT-DECORATION: underline; mso-style-priority: 99
+}
+SPAN.MsoHyperlinkFollowed {
+	COLOR: purple; TEXT-DECORATION: underline; mso-style-priority: 99
+}
+P {
+	FONT-SIZE: 12pt; MARGIN-LEFT: 0cm; MARGIN-RIGHT: 0cm; FONT-FAMILY: =
+"Times New Roman","serif"; mso-style-priority: 99; mso-margin-top-alt: =
+auto; mso-margin-bottom-alt: auto
+}
+SPAN.EstiloDeEmail20 {
+	COLOR: #1f497d; FONT-FAMILY: "Calibri","sans-serif"; mso-style-type: =
+personal-reply
+}
+.MsoChpDefault {
+	FONT-SIZE: 10pt; mso-style-type: export-only
+}
+DIV.Section1 {
+	page: Section1
+}
+</STYLE>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext=3D"edit">
+  <o:idmap v:ext=3D"edit" data=3D"1" />
+ </o:shapelayout></xml><![endif]--></HEAD>
+<BODY lang=3DPT-BR vLink=3Dpurple link=3Dblue bgColor=3Dwhite>
+<DIV><STRONG><EM><FONT face=3D"Monotype Hadassah" color=3D#000080 =
+size=3D4>It doesnt=20
+work, I delete and it comes again.</FONT></EM></STRONG></DIV>
+<DIV><STRONG><EM><FONT face=3D"Monotype Hadassah" color=3D#000080 =
+size=3D4>Only my=20
+address , I cannot get rid of it.</FONT></EM></STRONG></DIV>
+<DIV><STRONG><EM><FONT face=3D"Monotype Hadassah" color=3D#000080 =
+size=3D4>Could you=20
+help?</FONT></EM></STRONG></DIV>
+<DIV><STRONG><EM><FONT face=3D"Monotype Hadassah" color=3D#000080=20
+size=3D4>Thanks</FONT></EM></STRONG></DIV>
+<BLOCKQUOTE=20
+style=3D"PADDING-RIGHT: 0px; PADDING-LEFT: 5px; MARGIN-LEFT: 5px; =
+BORDER-LEFT: #000080 2px solid; MARGIN-RIGHT: 0px">
+  <DIV style=3D"FONT: 10pt arial">----- Original Message ----- </DIV>
+  <DIV=20
+  style=3D"BACKGROUND: #e4e4e4; FONT: 10pt arial; font-color: =
+black"><B>From:</B>=20
+  <A title=3Dabreu@abreuretto.com =
+href=3D"mailto:abreu@abreuretto.com">Abreu=20
+  Retto</A> </DIV>
+  <DIV style=3D"FONT: 10pt arial"><B>To:</B> <A =
+title=3Ddianaei@hatzerim.org.il=20
+  href=3D"mailto:dianaei@hatzerim.org.il">'Diana Edelstein'</A> </DIV>
+  <DIV style=3D"FONT: 10pt arial"><B>Sent:</B> Thursday, February 19, =
+2009 11:04=20
+  PM</DIV>
+  <DIV style=3D"FONT: 10pt arial"><B>Subject:</B> RES: emc</DIV>
+  <DIV><BR></DIV>
+  <DIV class=3DSection1>
+  <P class=3DMsoNormal><SPAN lang=3DEN-US=20
+  style=3D"FONT-SIZE: 11pt; COLOR: #1f497d; FONT-FAMILY: =
+'Calibri','sans-serif'">Hi<o:p></o:p></SPAN></P>
+  <P class=3DMsoNormal><SPAN lang=3DEN-US=20
+  style=3D"FONT-SIZE: 11pt; COLOR: #1f497d; FONT-FAMILY: =
+'Calibri','sans-serif'"><o:p>&nbsp;</o:p></SPAN></P>
+  <P class=3DMsoNormal><SPAN lang=3DEN-US=20
+  style=3D"FONT-SIZE: 11pt; COLOR: #1f497d; FONT-FAMILY: =
+'Calibri','sans-serif'"><o:p>&nbsp;</o:p></SPAN></P>
+  <P class=3DMsoNormal><SPAN lang=3DEN-US=20
+  style=3D"FONT-SIZE: 11pt; COLOR: #1f497d; FONT-FAMILY: =
+'Calibri','sans-serif'">To=20
+  delete favoutites rigth-click &nbsp;in the email and click on =
+=93Delete selected=20
+  item=94 in =93My Friends=94 icon.<o:p></o:p></SPAN></P>
+  <P class=3DMsoNormal><SPAN lang=3DEN-US=20
+  style=3D"FONT-SIZE: 11pt; COLOR: #1f497d; FONT-FAMILY: =
+'Calibri','sans-serif'"><o:p>&nbsp;</o:p></SPAN></P>
+  <P class=3DMsoNormal><SPAN lang=3DEN-US=20
+  style=3D"FONT-SIZE: 11pt; COLOR: #1f497d; FONT-FAMILY: =
+'Calibri','sans-serif'"><o:p>&nbsp;</o:p></SPAN></P>
+  <P class=3DMsoNormal><SPAN lang=3DEN-US=20
+  style=3D"FONT-SIZE: 11pt; COLOR: #1f497d; FONT-FAMILY: =
+'Calibri','sans-serif'">Thanks<o:p></o:p></SPAN></P>
+  <P class=3DMsoNormal><SPAN=20
+  style=3D"FONT-SIZE: 11pt; COLOR: #1f497d; FONT-FAMILY: =
+'Calibri','sans-serif'"><o:p>&nbsp;</o:p></SPAN></P>
+  <P class=3DMsoNormal><SPAN=20
+  style=3D"FONT-SIZE: 11pt; COLOR: #1f497d; FONT-FAMILY: =
+'Calibri','sans-serif'"><o:p>&nbsp;</o:p></SPAN></P>
+  <DIV>
+  <DIV=20
+  style=3D"BORDER-RIGHT: medium none; PADDING-RIGHT: 0cm; BORDER-TOP: =
+#b5c4df 1pt solid; PADDING-LEFT: 0cm; PADDING-BOTTOM: 0cm; BORDER-LEFT: =
+medium none; PADDING-TOP: 3pt; BORDER-BOTTOM: medium none">
+  <P class=3DMsoNormal><B><SPAN=20
+  style=3D"FONT-SIZE: 10pt; FONT-FAMILY: =
+'Tahoma','sans-serif'">De:</SPAN></B><SPAN=20
+  style=3D"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'"> Diana =
+Edelstein=20
+  [mailto:dianaei@hatzerim.org.il] <BR><B>Enviada em:</B> quinta-feira, =
+19 de=20
+  fevereiro de 2009 15:22<BR><B>Para:</B> <A=20
+  =
+href=3D"mailto:info@abreuretto.com">info@abreuretto.com</A><BR><B>Assunto=
+:</B>=20
+  emc<o:p></o:p></SPAN></P></DIV></DIV>
+  <P class=3DMsoNormal><o:p>&nbsp;</o:p></P>
+  <DIV>
+  <P class=3DMsoNormal>&nbsp;<o:p></o:p></P></DIV>
+  <DIV>
+  <P class=3DMsoNormal><EM><B><SPAN=20
+  style=3D"FONT-SIZE: 13.5pt; COLOR: navy; FONT-FAMILY: 'Monotype =
+Hadassah','serif'">Hello=20
+  EMC:</SPAN></B></EM><o:p></o:p></P></DIV>
+  <DIV>
+  <P class=3DMsoNormal>&nbsp;<o:p></o:p></P></DIV>
+  <DIV>
+  <P class=3DMsoNormal><EM><B><SPAN=20
+  style=3D"FONT-SIZE: 13.5pt; COLOR: navy; FONT-FAMILY: 'Monotype =
+Hadassah','serif'">I=20
+  try to delete from&nbsp; "favourites" my email address, I get hundreds =
+of=20
+  mails from my address, and it is in the EMC=20
+  favourites.</SPAN></B></EM><o:p></o:p></P></DIV>
+  <DIV>
+  <P class=3DMsoNormal><EM><B><SPAN=20
+  style=3D"FONT-SIZE: 13.5pt; COLOR: navy; FONT-FAMILY: 'Monotype =
+Hadassah','serif'">I=20
+  delete&nbsp; it, with no success.</SPAN></B></EM><o:p></o:p></P></DIV>
+  <DIV>
+  <P class=3DMsoNormal><EM><B><SPAN=20
+  style=3D"FONT-SIZE: 13.5pt; COLOR: navy; FONT-FAMILY: 'Monotype =
+Hadassah','serif'">Can=20
+  you help?</SPAN></B></EM><o:p></o:p></P></DIV>
+  <DIV>
+  <P class=3DMsoNormal><EM><B><SPAN=20
+  style=3D"FONT-SIZE: 13.5pt; COLOR: navy; FONT-FAMILY: 'Monotype =
+Hadassah','serif'">Thank=20
+  you</SPAN></B></EM><o:p></o:p></P></DIV>
+  <DIV>
+  <P class=3DMsoNormal><EM><B><SPAN=20
+  style=3D"FONT-SIZE: 13.5pt; COLOR: navy; FONT-FAMILY: 'Monotype =
+Hadassah','serif'">Diana</SPAN></B></EM><o:p></o:p></P></DIV>
+  <P><SPAN style=3D"FONT-SIZE: 10pt; FONT-FAMILY: =
+'Arial','sans-serif'">Nenhum=20
+  v?rus encontrado nessa mensagem recebida.<BR>Verificado por AVG -=20
+  www.avgbrasil.com.br<BR>Vers?o: 8.0.237 / Banco de dados de v?rus:=20
+  270.11.0/1959 - Data de Lan?amento: 02/18/09=20
+  20:55:00</SPAN><o:p></o:p></P></DIV>
+  <P>
+  <HR>
+
+  <P></P>No virus found in this incoming message.<BR>Checked by AVG.=20
+  <BR>Version: 7.5.552 / Virus Database: 270.11.1/1960 - Release Date: =
+2/19/2009=20
+  10:48 AM<BR></BLOCKQUOTE></BODY></HTML>
+
+--Boundary_(ID_2q8wrqXZMuwWMvfWUv/5/g)--
+

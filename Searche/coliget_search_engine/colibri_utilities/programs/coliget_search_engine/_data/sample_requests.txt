@@ -1,0 +1,3 @@
+interbase
+gof and decorator
+gof and "abstract factory"

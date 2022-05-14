@@ -1,0 +1,73 @@
+object FCliente: TFCliente
+  Left = 0
+  Top = 0
+  Caption = 'FCliente'
+  ClientHeight = 643
+  ClientWidth = 721
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  WindowState = wsMaximized
+  PixelsPerInch = 96
+  TextHeight = 13
+  object JvWizard1: TJvWizard
+    Left = 0
+    Top = 0
+    Width = 721
+    Height = 643
+    ButtonBarHeight = 42
+    ButtonStart.Caption = 'To &Start Page'
+    ButtonStart.NumGlyphs = 1
+    ButtonStart.Width = 85
+    ButtonLast.Caption = 'To &Last Page'
+    ButtonLast.NumGlyphs = 1
+    ButtonLast.Width = 85
+    ButtonBack.Caption = '< &Back'
+    ButtonBack.NumGlyphs = 1
+    ButtonBack.Width = 75
+    ButtonNext.Caption = '&Next >'
+    ButtonNext.NumGlyphs = 1
+    ButtonNext.Width = 75
+    ButtonFinish.Caption = '&Finish'
+    ButtonFinish.NumGlyphs = 1
+    ButtonFinish.Width = 75
+    ButtonCancel.Caption = 'Cancel'
+    ButtonCancel.NumGlyphs = 1
+    ButtonCancel.ModalResult = 2
+    ButtonCancel.Width = 75
+    ButtonHelp.Caption = '&Help'
+    ButtonHelp.NumGlyphs = 1
+    ButtonHelp.Width = 75
+    ShowRouteMap = True
+    OnCancelButtonClick = JvWizard1CancelButtonClick
+    ExplicitLeft = 568
+    ExplicitTop = 408
+    ExplicitWidth = 100
+    ExplicitHeight = 41
+    DesignSize = (
+      721
+      643)
+    object JvWizardRouteMapSteps1: TJvWizardRouteMapSteps
+      Left = 0
+      Top = 0
+      Width = 145
+      Height = 601
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ExplicitLeft = 232
+      ExplicitTop = 312
+      ExplicitHeight = 0
+    end
+  end
+  object JvEmbeddedFormLink1: TJvEmbeddedFormLink
+    Left = 640
+    Top = 536
+  end
+end

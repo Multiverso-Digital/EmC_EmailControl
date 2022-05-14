@@ -1,0 +1,16 @@
+program Project1;
+
+uses
+  Forms,
+  Umain in 'Umain.pas' {Fmain},
+  Uproj in 'Uproj.pas' {Fproj};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFmain, Fmain);
+  Application.CreateForm(TFproj, Fproj);
+  Application.Run;
+end.

@@ -1,0 +1,155 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Martin Harvey">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (WinNT; I) [Netscape]">
+   <title>Chapter 1. What are threads? Why use them?</title>
+</head>
+<body>
+
+<h3>
+Chapter 1. What are threads? Why use them?</h3>
+
+<h4>
+In this chapter:</h4>
+
+<ul>
+<li>
+<a href="#History.">History.</a></li>
+
+<li>
+<a href="#Definitions.">Definitions.</a></li>
+
+<li>
+<a href="#An Example.">An Example.</a></li>
+
+<li>
+<a href="#Time slicing.">Time slicing.</a></li>
+
+<li>
+<a href="#Why use threads?">Why use threads?</a></li>
+</ul>
+
+<h4>
+<a NAME="History."></a>History.</h4>
+In the early days of computing, all programming was essentially single
+threaded. You created your program by punching holes into cards or tape,
+submitted your deck of cards to the local computing centre, and after a
+few days, you received another deck of cards, containing, if you were lucky,
+the required results. All processing was batch, not time critical, first
+come first served, and when your program was running, it had exclusive
+use of the computer's time.
+<p>Things have moved on. The concept of multiple threads of execution first
+appeared with time sharing systems, where more than one person could be
+logged into a central mainframe computer at once. It was important to ensure
+that the processing time of the machine was fairly divided between all
+users, and the operating systems of the time made use of the "process"
+and "thread" concepts. Desktop computers have seen a similar progression.
+Early DOS and Windows systems were single tasking. Your program ran exclusively
+on the machine, or not at all. With increasingly sophisticated applications,
+and increasing demands on personal computers, especially with respect to
+high performance in the graphics and networking areas, multiprocess and
+multithread operating systems are now commonplace. Multithreading on PC's
+has mainly been driven by the need for better performance and usability
+<h4>
+<a NAME="Definitions."></a>Definitions.</h4>
+The first concept to define is that of the <b>process</b>. Most Windows
+95, 98 and NT users have a good intuitive idea of what a process is. They
+see it as a program which runs on the machine, co-existing and sharing
+CPU, disk and memory resources with other programs. Programmers know a
+process to be an invocation of executable code, such that that code has
+a unique existence, and the instructions executed by that process are executed
+in an ordered manner. On the whole, processes execute in isolation. The
+resources they use (memory, disk, I/O, CPU time) are virtualised, such
+that every process has its own set of virtual resources, untouched by other
+processes. The operating system provides this virtualisation. Processes
+execute <b>modules</b> of code. These may be disjoint; in the sense that,
+the executable modules of code comprising Windows Explorer and Microsoft
+Word are disjoint. However, they may also be shared, as in the case of
+DLL's. The code for a DLL is typically being executed in the context of
+many different processes, often simultaneously. The execution of instructions
+is on the whole not ordered between processes: Microsoft word does not
+stop opening a document just because the print spooler is currently sending
+something to the printer! Of course, where different processes interact,
+the programmer must impose an ordering, a central problem which will be
+covered later.
+<p>Our next concept is that of the <b>thread</b>. Threads were developed
+when it became clear that it was desirable to have applications which performed
+sets of actions in a more loosely time ordered fashion, possibly performing
+several sets of actions at once. In situations where some actions would
+cause a considerable delay in one thread of execution (e.g.. waiting for
+the user to do something), it was often desirable to have the program still
+perform other actions concurrently (e.g. background spell checking, or
+processing incoming network messages). However, the overhead of creating
+a whole new process for each concurrent action, and then having the processes
+communicate was often far too much of an overhead.
+<h4>
+<a NAME="An Example."></a>An Example.</h4>
+If one needs to look for a good example of multithreading, then Windows
+Explorer (i.e. the Windows Shell) is an excellent example. Double click
+on "My Computer", and click through a few sub folders, creating new windows
+as you go. Now invoke a lengthy copy operation on one of those windows.
+The progress bar pops up, and that particular window does not respond to
+user input. However, all the other windows are perfectly usable. Obviously,
+several things are going on at once, but only one copy of explorer.exe
+is running. This is the essence of multithreading.
+<h4>
+<a NAME="Time slicing."></a>Time slicing.</h4>
+In most systems that support multithreading, there may be many users making
+simultaneous requests on the computer system. Normally the number of physical
+processors in the system is fewer than the number of threads that might
+be run in parallel. Most systems support <b>time slicing</b>, also known
+as <b>pre-emptive multitasking</b>, in order to get around this problem.
+In a system that is time sliced, threads run for a short while, and are
+then pre-empted; that is, a hardware timer fires which causes the operating
+system to re-evaluate which threads should be run, potentially stopping
+execution on currently running threads, and running other threads which
+have not be executed recently. This allows even single processor machines
+to run multiple threads. On PC's a timeslice tends to be about about fifty
+five milliseconds long.
+<h4>
+<a NAME="Why use threads?"></a>Why use threads?</h4>
+Threads should not alter the semantics of a program. They simply change
+the timing of operations. As a result, they are almost always used as an
+elegant solution to performance related problems. Here are some examples
+of situations where you might use threads:
+<ul>
+<li>
+Doing lengthy processing: When a windows application is calculating it
+cannot process any more messages. As a result, the display cannot be updated.</li>
+
+<li>
+Doing background processing: Some tasks may not be time critical, but need
+to execute continuously.</li>
+
+<li>
+Doing I/O work: I/O to disk or to network can have unpredictable delays.
+Threads allow you to ensure that I/O latency does not delay unrelated parts
+of your application.</li>
+</ul>
+All of these examples have one thing in common: In the program, some operations
+incur a potentially large delay or CPU hogging, but this delay or CPU usage
+is unacceptable for other operations; they need to be serviced <i>now</i>.
+Of course there are other miscellaneous benefits, and here they are:
+<ul>
+<li>
+Making use of multiprocessor systems: You can't expect one application
+with only one thread to make use of two or more processors! Chapter 3 explains
+this in more detail.</li>
+
+<li>
+Efficient time sharing: Using thread and process priorities, you can ensure
+that everyone gets a fair allocation of CPU time.</li>
+</ul>
+The wise use of threads turns slow, clunky, not very responsive programs
+into crisply responsive, efficient, fast programs, and can radically simplify
+various performance and usability problems.
+<br>
+<hr WIDTH="100%">
+<p><a href="ToC.html">[Contents]</a> <a href="Ch2.html">[Next]</a>
+<p><i>&copy; <a href="mailto:martin@pergolesi.demon.co.uk">Martin Harvey</a>
+2000.</i>
+<br>&nbsp;
+</body>
+</html>

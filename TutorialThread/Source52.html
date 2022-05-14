@@ -1,0 +1,38 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Martin Harvey">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (WinNT; I) [Netscape]">
+   <title>Source52</title>
+</head>
+<body>
+<PRE><TT><B>unit</B> DelayThread;
+
+<B>interface</B>
+
+<B>uses</B>
+  Windows, Classes;
+
+<B>type</B>
+  TDelayThread = <B>class</B>(TThread)
+  <B>private</B>
+  <B>protected</B>
+    <B>procedure</B> Execute; <B>override</B>;
+  <B>end</B>;
+
+<B>implementation</B>
+
+<FONT COLOR=NAVY><I>{ TDelayThread }</I></FONT>
+
+<B>procedure</B> TDelayThread.Execute;
+<B>begin</B>
+  Sleep(5000);
+<B>end</B>;
+
+<B>end.</B>
+
+ 
+</TT></PRE>
+</body>
+</html>

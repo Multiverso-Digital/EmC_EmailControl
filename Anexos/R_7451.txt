@@ -1,0 +1,436 @@
+Received: from yx-out-2526.google.com ([74.125.44.34]) by abreuretto.com with MailEnable ESMTP; Thu, 12 Feb 2009 12:10:00 -0800
+Received: by yx-out-2526.google.com with SMTP id 4so582049yxk.80
+        for <abreu@abreuretto.com>; Thu, 12 Feb 2009 12:13:37 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=beta;
+        h=domainkey-signature:received:received:x-sender:x-apparently-to
+         :received:received:received-spf:authentication-results:received
+         :received:x-msreally-from:message-id:from:to:subject:date
+         :mime-version:content-type:x-priority:x-msmail-priority:x-mailer
+         :x-mimeole:x-sig5:reply-to:sender:precedence:x-google-loop
+         :mailing-list:list-id:list-post:list-help:list-unsubscribe
+         :x-beenthere-env:x-beenthere;
+        bh=6KHK4E8sE1P3gAkown4ZN716EiIhXk9zXYKX1t7XHTA=;
+        b=LROXIiSsPF4BTSmxZz/RGL0vD3iwSn5ETTUlj7BrilvYano6Q3HSV7l0ASpmMTNhUL
+         CIw6Fz06rVwQ/oWJzWFxVYn1BWZuIyxlhOOtIf6hWv2rGP+RM51yLvrRYSTQ+HXHQPZc
+         E/wF/vqW6R94pHsU74Gcl75E1UcxDtX8fn7+I=
+DomainKey-Signature: a=rsa-sha1; c=nofws;
+        d=googlegroups.com; s=beta;
+        h=x-sender:x-apparently-to:received-spf:authentication-results
+         :x-msreally-from:message-id:from:to:subject:date:mime-version
+         :content-type:x-priority:x-msmail-priority:x-mailer:x-mimeole:x-sig5
+         :reply-to:sender:precedence:x-google-loop:mailing-list:list-id
+         :list-post:list-help:list-unsubscribe:x-beenthere-env:x-beenthere;
+        b=2igEth6TRkvK1c1UsRtJCcn1GUkOepdtE+9OgMOaNYtxQgQD5wPdEIa3Iwje7U2pDG
+         t0uNgtdGizums99JI/8vL4UDbiYUK8oJjASFO/TlXvzlTMa0HXuV/BjI/ZgIvayrbgHd
+         BT+J6lXFFoD8GbXZTztAARhr8+KxRPXCHqYdQ=
+Received: by 10.100.111.15 with SMTP id j15mr313183anc.25.1234469616939;
+        Thu, 12 Feb 2009 12:13:36 -0800 (PST)
+Received: by 10.177.6.2 with SMTP id j2gr837yqi.0;
+	Thu, 12 Feb 2009 12:13:21 -0800 (PST)
+X-Sender: alexandrecumino@uol.com.br
+X-Apparently-To: alexandrecumino@googlegroups.com
+Received: by 10.224.15.17 with SMTP id i17mr223984qaa.2.1234469601000; Thu, 12 Feb 2009 12:13:21 -0800 (PST)
+Return-Path: <grbounce-T8ZzpwUAAAAQqSi3CJ-gkNf2kh-wUsg5=abreu=abreuretto.com@googlegroups.com>
+Received: from smtp.uol.com.br (smtpout7.uol.com.br [200.221.4.198]) by mx.google.com with ESMTP id 7si6356yxg.0.2009.02.12.12.13.20; Thu, 12 Feb 2009 12:13:20 -0800 (PST)
+Received-SPF: pass (google.com: domain of alexandrecumino@uol.com.br designates 200.221.4.198 as permitted sender) client-ip=200.221.4.198;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of alexandrecumino@uol.com.br designates 200.221.4.198 as permitted sender) smtp.mail=alexandrecumino@uol.com.br
+Received: from localhost (localhost [127.0.0.1]) by socom7.uol.com.br (Postfix) with ESMTP id 828351806473B for <alexandrecumino@googlegroups.com>; Thu, 12 Feb 2009 18:13:19 -0200 (BRST)
+Received: from alexandrd02a23 (unknown [189.96.101.9]) by socom7.uol.com.br (Postfix) with SMTP id BF7CB180645DE for <alexandrecumino@googlegroups.com>; Thu, 12 Feb 2009 18:13:11 -0200 (BRST)
+X-MSReally-From: alexandrecumino@uol.com.br
+Message-ID: <00ac01c98d4e$54639e30$096560bd@alexandrd02a23>
+From: "alexandrecumino" <alexandrecumino@uol.com.br>
+To: "grupo google grupo" <alexandrecumino@googlegroups.com>
+Subject: =?iso-8859-1?Q?S=E3o_Jorge_e_Hist=F3ria_dos_Templ=E1rios?=
+Date: Thu, 12 Feb 2009 17:13:08 -0300
+Mime-Version: 1.0
+Content-Type: multipart/alternative; boundary="----=_NextPart_000_00A9_01C98D35.2D3E4AD0"
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook Express 6.00.2900.2180
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.2180
+X-SIG5: 2b344b1785a94f0c79976cf4e56ddc9d
+Reply-To: alexandrecumino@googlegroups.com
+Sender: alexandrecumino@googlegroups.com
+Precedence: bulk
+X-Google-Loop: groups
+Mailing-List: list alexandrecumino@googlegroups.com;
+	contact alexandrecumino+owner@googlegroups.com
+List-Id: <alexandrecumino.googlegroups.com>
+List-Post: <mailto:alexandrecumino@googlegroups.com>
+List-Help: <mailto:alexandrecumino+help@googlegroups.com>
+List-Unsubscribe: <http://googlegroups.com/group/alexandrecumino/subscribe>,
+	<mailto:alexandrecumino+unsubscribe@googlegroups.com>
+X-BeenThere-Env: alexandrecumino@googlegroups.com
+X-BeenThere: alexandrecumino@googlegroups.com
+
+
+------=_NextPart_000_00A9_01C98D35.2D3E4AD0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Uma Musica para S=E3o Jorge
+
+E um video imperdivel com a=20
+Hist=F3ria dos Cavaleiros Templ=E1rios
+baseada em fatos comprovados.
+
+Primeiro ou=E7am a m=FAsica e...
+
+http://br.youtube.com/watch?v=3D7F1QQowaiGk&feature=3Drelated
+
+depois assistam os v=EDdeos:
+
+http://br.youtube.com/watch?v=3D6_RDEgmgWss&feature=3Drelated
+
+
+
+Alexandre Cumino
+PS.: Recebi este e-mail de meu irm=E3o:. Wagner Veneziani Costa
+e assim o encaminho para todos pois vale muito ouvir e assistir.
+
+Para receber estes textos por e-mail, Cadastre-se, envie um e-mail para:
+
+alexandrecumino@uol.com.br com assunto "cadastrar"
+
+Para n=E3o receber mais coloque assunto "descadastrar"
+
+
+
+.=20
+__,_._,___=20
+--~--~---------~--~----~------------~-------~--~----~
+"Umbanda =E9 Religi=E3o, portanto s=F3 pode fazer o BEM !!!"
+Alexandre Cumino
+
+Voc=EA recebeu esta mensagem porque est=E1 inscrito no
+Grupo "alexandrecumino" em Grupos do Google.
+Para postar neste grupo, envie um e-mail para
+alexandrecumino@googlegroups.com
+Para cancelar a sua inscri=E7=E3o neste grupo, envie um e-mail para
+alexandrecumino-unsubscribe@googlegroups.com
+Para ver mais op=E7=F5es, visite este grupo em
+http://groups.google.com.br/group/alexandrecumino?hl=3Dpt-BR?hl=3Dpt-BR
+-~----------~----~----~----~------~----~------~--~---
+
+
+------=_NextPart_000_00A9_01C98D35.2D3E4AD0
+Content-Type: text/html; charset=iso-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.=
+w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML><HEAD>
+<META http-equiv=3DContent-Type content=3D"text/html; charset=3Diso-8859-1"=
+>
+<META content=3D"MSHTML 6.00.2900.2180" name=3DGENERATOR></HEAD>
+<BODY style=3D"BACKGROUND-COLOR: #ffffff" bgColor=3D#ffffff>
+<DIV><FONT face=3DArial size=3D2>Uma Musica para S=E3o Jorge</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>E um video imperdivel com a </FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>Hist=F3ria dos Cavaleiros Templ=E1rios</FO=
+NT></DIV>
+<DIV><FONT face=3DArial size=3D2>baseada em fatos comprovados.</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV>
+<DIV><FONT face=3DGaramond size=3D4>Primeiro ou=E7am a m=FAsica e...</FONT>=
+</DIV>
+<DIV><FONT face=3DGaramond size=3D4></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DGaramond size=3D4><A=20
+href=3D"http://br.youtube.com/watch?v=3D7F1QQowaiGk&amp;feature=3Drelated">=
+http://br.youtube.<WBR>com/watch?<WBR>v=3D7F1QQowaiGk&amp;feature=3Drelated=
+</A></FONT></DIV>
+<DIV><FONT face=3DGaramond size=3D4></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DGaramond size=3D4>depois assistam os v=EDdeos:</FONT></DI=
+V>
+<DIV><FONT face=3DGaramond size=3D4></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DGaramond size=3D4><A=20
+href=3D"http://br.youtube.com/watch?v=3D6_RDEgmgWss&amp;feature=3Drelated">=
+http://br.youtube.<WBR>com/watch?<WBR>v=3D6_RDEgmgWss&amp;feature=3Drelated=
+</A></FONT></DIV></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>Alexandre Cumino</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>PS.: Recebi este e-mail de meu irm=E3o:. W=
+agner=20
+Veneziani Costa</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>e assim o encaminho para todos pois vale m=
+uito=20
+ouvir e assistir.</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV>
+<DIV align=3Dcenter>
+<P class=3DMsoNormal style=3D"MARGIN: 0cm 0cm 0pt"><FONT size=3D4><SPAN=20
+style=3D"FONT-SIZE: 13.5pt; COLOR: navy"><FONT face=3D"Times New Roman"=20
+color=3D#ff0000><STRONG>Para receber estes textos por e-mail,=20
+</STRONG></FONT></SPAN><STRONG><FONT color=3D#ff0000><SPAN=20
+style=3D"FONT-SIZE: 13.5pt; COLOR: navy"><FONT face=3D"Times New Roman">Cad=
+astre-se,=20
+</FONT></SPAN><SPAN style=3D"FONT-SIZE: 13.5pt; COLOR: navy"><FONT=20
+face=3D"Times New Roman">envie um e-mail=20
+para:</FONT></SPAN></FONT></STRONG></FONT></P>
+<P class=3DMsoNormal style=3D"TEXT-ALIGN: center" align=3Dcenter><SPAN=20
+style=3D"FONT-SIZE: 13.5pt; COLOR: navy"><A href=3D""><FONT face=3D"Times N=
+ew Roman"=20
+color=3D#ff0000=20
+size=3D4><STRONG>alexandrecumino@<WBR>uol.com.br</STRONG></FONT></A><FONT=
+=20
+face=3DArial color=3D#000000 size=3D4>&nbsp;</FONT></SPAN><SPAN=20
+style=3D"FONT-SIZE: 13.5pt; COLOR: navy"><FONT face=3D"Times New Roman"=20
+color=3D#ff0000 size=3D4><STRONG>com assunto "cadastrar"</STRONG></FONT></S=
+PAN></P>
+<P class=3DMsoNormal style=3D"TEXT-ALIGN: center" align=3Dcenter><FONT size=
+=3D4><SPAN=20
+style=3D"FONT-SIZE: 13.5pt; COLOR: navy"><FONT face=3D"Times New Roman"=20
+color=3D#ff0000><STRONG>Para n=E3o receber mais coloque </STRONG></FONT></S=
+PAN><SPAN=20
+style=3D"FONT-SIZE: 13.5pt; COLOR: navy"><FONT face=3D"Times New Roman"=20
+color=3D#ff0000><STRONG>assunto=20
+"descadastrar"</STRONG></FONT></SPAN></FONT></P></O></DIV></DIV>
+<DIV><BR></DIV><!--~-|**|PrettyHtmlStartT|**|-~-->
+<DIV id=3Dygrp-mlmsg style=3D"WIDTH: 655px; POSITION: relative"><!-- ygrp-m=
+sg --><!-- Sponsor --><!-- |**|begin egp html banner|**| --><!-- |**|end eg=
+p html banner|**| -->
+<DIV style=3D"CLEAR: both; FONT-SIZE: 1px; COLOR: #fff">.</DIV></DIV><IMG h=
+eight=3D1=20
+src=3D"http://geo.yahoo.com/serv?s=3D97490437/grpId=3D13055385/grpspId=3D21=
+37114302/msgId=3D8273/stime=3D1232729261/nc1=3D1/nc2=3D2/nc3=3D3"=20
+width=3D1> <BR><SPAN style=3D"COLOR: white">__,_._,___</SPAN> <!--~-|**|Pre=
+ttyHtmlEnd|**|-~--><!--~-|**|PrettyHtmlStart|**|-~-->
+<STYLE type=3Dtext/css>#ygrp-mkp {
+	BORDER-RIGHT: #d8d8d8 1px solid; PADDING-RIGHT: 14px; BORDER-TOP: #d8d8d8 =
+1px solid; PADDING-LEFT: 14px; PADDING-BOTTOM: 0px; MARGIN: 14px 0px; BORDE=
+R-LEFT: #d8d8d8 1px solid; PADDING-TOP: 0px; BORDER-BOTTOM: #d8d8d8 1px sol=
+id; FONT-FAMILY: Arial
+}
+#ygrp-mkp HR {
+	BORDER-RIGHT: #d8d8d8 1px solid; BORDER-TOP: #d8d8d8 1px solid; BORDER-LEF=
+T: #d8d8d8 1px solid; BORDER-BOTTOM: #d8d8d8 1px solid
+}
+#ygrp-mkp #hd {
+	FONT-WEIGHT: bold; FONT-SIZE: 85%; MARGIN: 10px 0px; COLOR: #628c2a; LINE-=
+HEIGHT: 122%
+}
+#ygrp-mkp #ads {
+	MARGIN-BOTTOM: 10px
+}
+#ygrp-mkp .ad {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0=
+px
+}
+#ygrp-mkp .ad A {
+	COLOR: #0000ff; TEXT-DECORATION: none
+}
+</STYLE>
+
+<STYLE type=3Dtext/css>
+<!--
+#ygrp-sponsor #ygrp-lc{
+  font-family: Arial;
+}
+#ygrp-sponsor #ygrp-lc #hd{
+  margin: 10px 0px;
+  font-weight: bold;
+  font-size: 78%;
+  line-height: 122%;
+}
+#ygrp-sponsor #ygrp-lc .ad{
+  margin-bottom: 10px;
+  padding: 0 0;
+}
+-->
+</STYLE>
+
+<STYLE type=3Dtext/css>
+	<!--
+	#ygrp-mlmsg {font-size:13px; font-family: arial,helvetica,clean,sans-serif=
+;*font-size:small;*font:x-small;}
+	#ygrp-mlmsg table {font-size:inherit;font:100%;}
+	#ygrp-mlmsg select, input, textarea {font:99% arial,helvetica,clean,sans-s=
+erif;}
+	#ygrp-mlmsg pre, code {font:115% monospace;*font-size:100%;}
+	#ygrp-mlmsg * {line-height:1.22em;}
+	#ygrp-text{
+	    font-family: Georgia;=09
+	}
+	#ygrp-text p{
+	    margin: 0 0 1em 0;
+	}
+	#ygrp-tpmsgs{
+	    font-family: Arial;=09
+	    clear: both;
+	}
+	#ygrp-vitnav{
+		padding-top: 10px;
+		font-family: Verdana;
+		font-size: 77%;
+		margin: 0;
+	}
+	#ygrp-vitnav a{
+		padding: 0 1px;
+	}
+	#ygrp-actbar{
+		clear: both;
+		margin: 25px 0;
+		white-space:nowrap;
+		color: #666;
+		text-align: right;
+	}
+	#ygrp-actbar .left{
+		float: left;
+		white-space:nowrap;
+	}
+	.bld{font-weight:bold;}
+	#ygrp-grft{
+		font-family: Verdana;
+		font-size: 77%;
+		padding: 15px 0;
+	}
+	#ygrp-ft{
+	  font-family: verdana;
+	  font-size: 77%;
+	  border-top: 1px solid #666;=20
+	  padding: 5px 0;=20
+	}
+	#ygrp-mlmsg #logo{
+	  padding-bottom: 10px;
+	}
+
+	#ygrp-reco {
+	margin-bottom: 20px;
+	padding: 0px;
+	}
+	#ygrp-reco #reco-head {
+		font-weight: bold;
+		color: #ff7900;
+	}
+
+	#reco-grpname{
+        font-weight: bold;
+        margin-top: 10px;
+  	}
+	#reco-category{
+        	font-size: 77%;
+	}
+	#reco-desc{
+        	font-size: 77%;
+	}
+
+	#ygrp-vital{
+		background-color: #e0ecee;
+		margin-bottom: 20px;
+		padding: 2px 0 8px 8px;
+	}
+	#ygrp-vital #vithd{
+		font-size: 77%;
+		font-family: Verdana;
+		font-weight: bold;
+		color: #333;
+		text-transform: uppercase;
+	}
+	#ygrp-vital ul{
+		padding: 0;
+		margin: 2px 0;
+	}
+	#ygrp-vital ul li{
+	  list-style-type: none;
+	  clear: both;
+	  border: 1px solid #e0ecee; =20
+	}
+	#ygrp-vital ul li .ct{
+	  font-weight: bold;
+	  color: #ff7900;
+	  float: right;
+	  width: 2em;
+	  text-align:right;
+	  padding-right: .5em;
+	}
+	#ygrp-vital ul li .cat{
+	  font-weight: bold;
+	}
+	#ygrp-vital a{
+		text-decoration: none;
+	}
+
+	#ygrp-vital a:hover{
+	  text-decoration: underline;
+	}
+
+	#ygrp-sponsor #hd{
+		color: #999;
+		font-size: 77%;
+	}
+	#ygrp-sponsor #ov{
+		padding: 6px 13px;
+		background-color: #e0ecee;
+		margin-bottom: 20px;
+	}
+	#ygrp-sponsor #ov ul{
+		padding: 0 0 0 8px;
+		margin: 0;
+	}
+	#ygrp-sponsor #ov li{
+		list-style-type: square;
+		padding: 6px 0;
+		font-size: 77%;
+	}
+	#ygrp-sponsor #ov li a{
+		text-decoration: none;
+		font-size: 130%;
+	}
+	#ygrp-sponsor #nc{
+	  background-color: #eee;
+	  margin-bottom: 20px;
+	  padding: 0 8px;
+	}
+	#ygrp-sponsor .ad{
+		padding: 8px 0;
+	}
+	#ygrp-sponsor .ad #hd1{
+		font-family: Arial;
+		font-weight: bold;
+		color: #628c2a;
+		font-size: 100%;
+		line-height: 122%;
+	}
+	#ygrp-sponsor .ad a{
+		text-decoration: none;
+	}
+	#ygrp-sponsor .ad a:hover{
+		text-decoration: underline;
+	}
+	#ygrp-sponsor .ad p{
+		margin: 0;
+	}
+	o{font-size: 0; }
+	.MsoNormal{
+	   margin: 0 0 0 0;
+	}
+	#ygrp-text tt{
+	  font-size: 120%;
+	}
+	blockquote{margin: 0 0 0 4px;}
+	.replbq{margin:4}
+	-->
+	</STYLE>
+<!--~-|**|PrettyHtmlEnd|**|-~--><!--End group email --><br>
+--~--~---------~--~----~------------~-------~--~----~<br>
+&quot;Umbanda =E9 Religi=E3o, portanto s=F3 pode fazer o BEM !!!&quot;
+ <br> Alexandre Cumino
+ <br> <p>Voc=EA recebeu esta mensagem porque est=E1 inscrito no
+ <br> Grupo &quot;alexandrecumino&quot; em Grupos do Google.
+ <br> Para postar neste grupo, envie um e-mail para
+ <br> alexandrecumino@googlegroups.com
+ <br> Para cancelar a sua inscri=E7=E3o neste grupo, envie um e-mail para
+ <br> alexandrecumino-unsubscribe@googlegroups.com
+ <br> Para ver mais op=E7=F5es, visite este grupo em
+ <br> http://groups.google.com.br/group/alexandrecumino?hl=3Dpt-BR?hl=3Dpt-=
+BR<br>
+-~----------~----~----~----~------~----~------~--~---<br>
+</BODY></HTML>
+<br>
+
+------=_NextPart_000_00A9_01C98D35.2D3E4AD0--
+
+

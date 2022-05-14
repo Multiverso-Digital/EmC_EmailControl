@@ -1,0 +1,35 @@
+object DM_DNS: TDM_DNS
+  OldCreateOrder = False
+  Height = 604
+  Width = 732
+  object qdns: TABSQuery
+    CurrentVersion = '6.02 '
+    DatabaseName = 'DNS'
+    SessionName = 'SessaoIPSpam_6'
+    InMemory = False
+    ReadOnly = True
+    SQL.Strings = (
+      'SELECT '
+      '  dns.ID,'
+      '  dns.Name,'
+      '  dns.dns,'
+      '  dns.active'
+      'FROM'
+      '  dns')
+    Left = 176
+    Top = 16
+    object qdnsID: TIntegerField
+      FieldName = 'ID'
+    end
+    object qdnsName: TWideStringField
+      FieldName = 'Name'
+    end
+    object qdnsdns: TWideStringField
+      FieldName = 'dns'
+      Size = 255
+    end
+    object qdnsactive: TIntegerField
+      FieldName = 'active'
+    end
+  end
+end

@@ -1,0 +1,105 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Martin Harvey">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (WinNT; I) [Netscape]">
+   <title>Source25</title>
+</head>
+<body>
+<PRE><TT><B>unit</B> PalPrimeForm;
+
+<B>interface</B>
+
+<B>uses</B>
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
+  StdCtrls;
+
+<B>const</B>
+  WM_DATA_IN_BUF = WM_APP + 1000;
+  MaxMemoLines = 20;
+
+<B>type</B>
+  TPalFrm = <B>class</B>(TForm)
+    ResultsMemo: TMemo;
+    StartButton: TButton;
+    StopButton: TButton;
+    <B>procedure</B> StartButtonClick(Sender: TObject);
+    <B>procedure</B> StopButtonClick(Sender: TObject);
+    <B>procedure</B> FormClose(Sender: TObject; <B>var</B> Action: TCloseAction);
+  <B>private</B>
+    <FONT COLOR=NAVY><I>{ Private declarations }</I></FONT>
+    FStringSectInit: boolean;
+    FStringBuf: TStringList;
+    StringSection: TRTLCriticalSection;
+    <B>procedure</B> UpdateButtons;
+    <B>procedure</B> HandleNewData(<B>var</B> <B>Message</B>: TMessage); <B>message</B> WM_DATA_IN_BUF;
+  <B>public</B>
+    <FONT COLOR=NAVY><I>{ Public declarations }</I></FONT>
+  <B>end</B>;
+
+<B>var</B>
+  PalFrm: TPalFrm;
+
+<B>implementation</B>
+
+<B>uses</B> PrimeThreads;
+
+<FONT COLOR=NAVY><I>{$R *.DFM}</I></FONT>
+
+<B>procedure</B> TPalFrm.UpdateButtons;
+<B>begin</B>
+  StopButton.Enabled := FStringSectInit;
+  StartButton.Enabled := <B>not</B> FStringSectInit;
+<B>end</B>;
+
+<B>procedure</B> TPalFrm.StartButtonClick(Sender: TObject);
+<B>begin</B>
+  <B>if</B> <B>not</B> FStringSectInit <B>then</B>
+  <B>begin</B>
+    InitializeCriticalSection(StringSection);
+    FStringBuf := TStringList.Create;
+    FStringSectInit := true;
+    StartThreads(Self, @StringSection, WM_DATA_IN_BUF, FStringBuf);
+  <B>end</B>;
+  UpdateButtons;
+<B>end</B>;
+
+<B>procedure</B> TPalFrm.StopButtonClick(Sender: TObject);
+<B>begin</B>
+  <B>if</B> FStringSectInit <B>then</B>
+  <B>begin</B>
+    ResultsMemo.Lines.Add(<FONT COLOR=BLUE>'Please wait...'</FONT>);
+    StopThreads;
+    ResultsMemo.Lines.Add(<FONT COLOR=BLUE>'Done!'</FONT>);
+    FStringBuf.Free;
+    FStringBuf := <B>nil</B>;
+    DeleteCriticalSection(StringSection);
+    FStringSectInit := false;
+  <B>end</B>;
+  UpdateButtons;
+<B>end</B>;
+
+<B>procedure</B> TPalFrm.HandleNewData(<B>var</B> <B>Message</B>: TMessage);
+<B>begin</B>
+  <B>if</B> FStringSectInit <B>then</B>
+  <B>begin</B>
+    EnterCriticalSection(StringSection);
+    ResultsMemo.Lines.Add(FStringBuf.Strings[0]);
+    FStringBuf.Delete(0);
+    LeaveCriticalSection(StringSection);
+    <B>if</B> ResultsMemo.Lines.Count &gt MaxMemoLines <B>then</B>
+      ResultsMemo.Lines.Delete(0);
+  <B>end</B>;
+<B>end</B>;
+
+<B>procedure</B> TPalFrm.FormClose(Sender: TObject; <B>var</B> Action: TCloseAction);
+<B>begin</B>
+  StopButtonClick(Self);
+<B>end</B>;
+
+<B>end.</B>
+
+</TT></PRE>
+</body>
+</html>

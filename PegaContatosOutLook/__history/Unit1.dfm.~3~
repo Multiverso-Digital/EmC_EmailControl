@@ -1,0 +1,65 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 534
+  ClientWidth = 641
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Button1: TButton
+    Left = 32
+    Top = 232
+    Width = 75
+    Height = 25
+    Caption = 'Button1'
+    TabOrder = 0
+    OnClick = Button1Click
+  end
+  object ListBox1: TListBox
+    Left = 152
+    Top = 24
+    Width = 473
+    Height = 481
+    ItemHeight = 13
+    TabOrder = 1
+  end
+  object JvRegistryTreeView1: TJvRegistryTreeView
+    Left = 8
+    Top = 272
+    Width = 121
+    Height = 185
+    ShowHint = False
+    ReadOnly = False
+    Indent = 19
+    RootCaption = 'My Computer'
+    DefaultCaption = '(Default)'
+    DefaultNoValueCaption = '(value not set)'
+  end
+  object OutlookApplication1: TOutlookApplication
+    AutoConnect = False
+    ConnectKind = ckRunningOrNew
+    AutoQuit = False
+    Left = 40
+    Top = 88
+  end
+  object NameSpace1: TNameSpace
+    AutoConnect = False
+    ConnectKind = ckRunningOrNew
+    Left = 56
+    Top = 152
+  end
+  object JvAppRegistryStorage1: TJvAppRegistryStorage
+    StorageOptions.BooleanStringTrueValues = 'TRUE, YES, Y'
+    StorageOptions.BooleanStringFalseValues = 'FALSE, NO, N'
+    SubStorages = <>
+    Left = 64
+    Top = 480
+  end
+end

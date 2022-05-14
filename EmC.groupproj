@@ -1,0 +1,48 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{E9645C6C-945E-46BB-A787-E607F87CF12B}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="EmC.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="PTB\EmC_PTB.bdsproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="EmC">
+			<MSBuild Projects="EmC.dproj"/>
+		</Target>
+		<Target Name="EmC:Clean">
+			<MSBuild Targets="Clean" Projects="EmC.dproj"/>
+		</Target>
+		<Target Name="EmC:Make">
+			<MSBuild Targets="Make" Projects="EmC.dproj"/>
+		</Target>
+		<Target Name="EmC_PTB">
+			<MSBuild Projects="PTB\EmC_PTB.bdsproj"/>
+		</Target>
+		<Target Name="EmC_PTB:Clean">
+			<MSBuild Targets="Clean" Projects="PTB\EmC_PTB.bdsproj"/>
+		</Target>
+		<Target Name="EmC_PTB:Make">
+			<MSBuild Targets="Make" Projects="PTB\EmC_PTB.bdsproj"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="EmC;EmC_PTB"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="EmC:Clean;EmC_PTB:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="EmC:Make;EmC_PTB:Make"/>
+		</Target>
+		<Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+	</Project>

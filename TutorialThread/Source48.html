@@ -1,0 +1,40 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Martin Harvey">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (WinNT; I) [Netscape]">
+   <title>Source48</title>
+</head>
+<body>
+<PRE><TT><B>unit</B> DLLCaller;
+
+<B>interface</B>
+
+<B>uses</B>
+  Classes;
+
+<B>type</B>
+  TDLLCaller = <B>class</B>(TThread)
+  <B>private</B>
+    <FONT COLOR=NAVY><I>{ Private declarations }</I></FONT>
+  <B>protected</B>
+    <B>procedure</B> Execute; <B>override</B>;
+  <B>end</B>;
+
+<B>implementation</B>
+
+<FONT COLOR=NAVY><I>{ TDLLCaller }</I></FONT>
+
+<B>procedure</B> FancyMessage;<B>stdcall</B>;<B>external</B> <FONT COLOR=BLUE>'InitDLL.dll'</FONT>;
+
+<B>procedure</B> TDLLCaller.Execute;
+<B>begin</B>
+  FancyMessage;
+<B>end</B>;
+
+<B>end.</B>
+ 
+</TT></PRE>
+</body>
+</html>

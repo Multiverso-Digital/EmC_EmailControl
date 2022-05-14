@@ -1,0 +1,71 @@
+object DM_pais: TDM_pais
+  OldCreateOrder = False
+  Height = 505
+  Width = 626
+  object cds_Pais: TABSQuery
+    CurrentVersion = '6.02 '
+    DatabaseName = 'Pais'
+    SessionName = 'SessaoPais_8'
+    InMemory = False
+    ReadOnly = True
+    SQL.Strings = (
+      'select * from tab_pais'
+      'order by sigla')
+    Left = 48
+    Top = 24
+    object cds_PaisSigla: TStringField
+      FieldName = 'Sigla'
+      Size = 3
+    end
+    object cds_PaisPais: TStringField
+      FieldName = 'Pais'
+      Size = 50
+    end
+    object cds_PaisFiltro: TIntegerField
+      FieldName = 'Filtro'
+    end
+  end
+  object cds_VePais: TABSQuery
+    CurrentVersion = '6.02 '
+    DatabaseName = 'Pais'
+    SessionName = 'SessaoPais_8'
+    InMemory = False
+    ReadOnly = True
+    SQL.Strings = (
+      'SELECT '
+      '  pais.sigla,'
+      '  pais.PAIS,'
+      '  pais.ID,'
+      '  pais.IPNUMFROM,'
+      '  pais.IPNUMTO'
+      'FROM'
+      '  pais'
+      ''
+      'where :Nume1 BETWEEN IPNUMFROM and IPNUMTO')
+    Left = 120
+    Top = 24
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Nume1'
+        ParamType = ptUnknown
+      end>
+    object cds_VePaissigla: TStringField
+      FieldName = 'sigla'
+      Size = 2
+    end
+    object cds_VePaisPAIS: TStringField
+      FieldName = 'PAIS'
+      Size = 50
+    end
+    object cds_VePaisID: TIntegerField
+      FieldName = 'ID'
+    end
+    object cds_VePaisIPNUMFROM: TFloatField
+      FieldName = 'IPNUMFROM'
+    end
+    object cds_VePaisIPNUMTO: TFloatField
+      FieldName = 'IPNUMTO'
+    end
+  end
+end

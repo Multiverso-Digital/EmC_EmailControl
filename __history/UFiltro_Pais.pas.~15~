@@ -1,0 +1,173 @@
+unit UFiltro_Pais;
+
+interface
+uses
+Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls,Dialogs,IdMessage,
+UCriaObjetos, UDmServer, DB, JvExControls, JvComCtrls, StrUtils, IdHTTP, funcoes,
+Myaccess;
+
+Function Filtrar_pais(Mens:TMSG):TMSG;
+Function Verificapaisagain(Mens:TMSG):TMSG;
+
+
+implementation
+
+
+Function Verificapaisagain(Mens:TMSG):TMSG;
+Var
+XmLR     : String;
+IdHttp1  : TIdHttp;
+siglaX   : string;
+EIP      : TJvIPAddress;
+begin
+
+Result := Mens;
+
+EIP             :=  TJvIPAddress.Create(nil);
+Eip.Text        :=  Mens.IPSender;
+Eip.Update;
+
+
+try
+IdHttp1 := TIdHttp.Create(nil);
+XmLR    := IdHttp1.get('http://ip-lookup.net/?'+Mens.IPSender);
+except
+end;
+
+sleep(10);
+Mens.pais    := PegaValorSite(XmLR,',600,520,true,false);">',2);
+siglaX       := '.'+PegaValorSite(XmLR,'country.popup?c=',1);
+
+
+
+Result := Mens;
+EIP.Free;
+
+
+  //dm_server.GravaIPSpam(IP,EIPX.Address);
+end;
+
+
+Function Filtrar_pais(Mens:TMSG):TMSG;
+var
+EIP      : TJvIPAddress;
+SiglaDom : string;
+Monta    : string;
+Achou    : integer;
+SiglaX   : string;
+query : TMyquery;
+begin
+
+
+Result := Mens;
+
+EIP             :=  TJvIPAddress.Create(nil);
+Eip.Text        :=  Mens.IPSender;
+Eip.Update;
+
+With dm_server do
+begin
+
+sigladom := RightStr(Mens.DominioFrom,3);
+
+
+{
+query := TMyquery.create(nil);
+query.Connection := MC;
+if query.active then query.close;
+query.SQL.Add('SELECT * FROM pais where '+inttostr(Eip.Address)+' BETWEEN pais.IPNUMFROM and pais.IPNUMTO  limit 1');
+
+  query.open;
+  if query.recordcount > 0 then
+     monta := query.FieldByName('PAIS').AsString+'_.'+query.FieldByName('sigla').AsString
+     else
+     monta := 'Não achou '+inttostr(Eip.Address);
+  query.close;
+  query.Free;
+ }
+fmain.JvMTCountingSection1.enter;
+monta := VePais(Eip.Address);
+fmain.JvMTCountingSection1.leave;
+achou  := pos('_',monta);
+if achou > 0 then
+   begin
+   Mens.pais   := copy(monta,1,achou-1);
+   siglaX      := copy(monta,achou+1, length(monta)-achou);
+   end
+   else
+   begin
+   Mens.pais  := '';
+   siglaX     := '';
+   Result     := VerificaPaisAgain(Mens);
+   dm_server.GravaIPSpam(Mens.IPSender,EIP.Address);
+   EIP.Free;
+   exit;
+   end;
+
+
+
+if qsetupCountries.AsInteger = 0 then
+begin
+EIP.Free;
+exit;
+end;
+
+if cds_pais.locate('sigla',siglaX,[loCaseInsensitive]) then
+   begin
+     if cds_paisfiltro.asinteger = 1 then
+       begin
+        Mens.FiltroResultado.Add('Sender Country '+' IP:'+Mens.IPSender+' Country: '+mens.pais+' '+siglaX);
+        Mens.Filtrada     := 145;
+        Mens.Selecionada  := 1;
+        Result := Mens;
+        EIP.Free;
+        exit;
+       end
+       else
+       begin
+         if pos('.',sigladom) = 1 then
+         begin
+          if cds_pais.locate('sigla',sigladom,[loCaseInsensitive]) then
+            begin
+              if cds_paisfiltro.asinteger = 1 then
+                  begin
+                  Mens.FiltroResultado.Add('Sender Country '+' IP:'+Mens.IPSender+' Country: '+mens.pais+' '+siglaX+'  and country domain is '+sigladom);
+                  Mens.Filtrada := 145;
+                  Mens.Selecionada  := 1;
+                  Result := Mens;
+                  EIP.Free;
+                  exit;
+                  end;
+            end
+            else
+            begin
+            Mens.FiltroResultado.Add('Sender Country not found'+' IP:'+Mens.IPSender);
+            Mens.Filtrada := 145;
+            Mens.Selecionada  := 1;
+            Result := Mens;
+            EIP.Free;
+            Exit;
+            end;
+         end;
+       end;
+   end
+   else
+   begin
+            Mens.FiltroResultado.Add('Sender Country not found'+' IP:'+Mens.IPSender);
+            Mens.Filtrada     := 145;
+            Mens.Selecionada  := 1;
+            Result := Mens;
+            EIP.Free;
+            Exit;
+   end;
+
+
+end;
+
+
+
+end;
+
+
+
+end.

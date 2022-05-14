@@ -1,0 +1,50 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Martin Harvey">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (WinNT; I) [Netscape]">
+   <title>Source11</title>
+</head>
+<body>
+<PRE><TT><FONT COLOR=NAVY><I>{ Unit PrimeThread }</I></FONT>
+
+<B>type</B>
+  TPrimeThrd = <B>class</B>(TThread)
+  <B>private</B>
+    FTestNumber: integer;
+    FResultString: <B>string</B>;
+  <B>protected</B>
+    <B>function</B> IsPrime: boolean;
+    <B>procedure</B> Execute; <B>override</B>;
+  <B>public</B>
+    <B>property</B> TestNumber: integer <B>write</B> FTestNumber;
+    <B>property</B> ResultString: <B>string</B> <B>read</B> FResultString;
+  <B>end</B>;
+
+<B>procedure</B> TPrimeThrd.Execute;
+<B>begin</B>
+  <B>if</B> IsPrime <B>then</B>
+    FResultString := IntToStr(FTestNumber) + <FONT COLOR=BLUE>' is prime.'</FONT>
+  <B>else</B>
+    FResultString := IntToStr(FTestNumber) + <FONT COLOR=BLUE>' is not prime.'</FONT>;
+  <B>if</B> <B>not</B> Terminated <B>then</B> <FONT COLOR=NAVY><I>{Line B}</I></FONT>
+    PostMessage(PrimeFrm.Handle, WM_THREAD_COMPLETE, 0, 0);
+<B>end</B>;
+
+<FONT COLOR=NAVY><I>{ Unit PrimeForm }</I></FONT>
+
+<B>procedure</B> TPrimeFrm.HandleThreadCompletion(<B>var</B> <B>Message</B>: TMessage);
+<B>begin</B>
+  <B>if</B> Assigned(FThread) <B>then</B>
+  <B>begin</B>
+    FThread.WaitFor;
+    ResultsMemo.Lines.Add(FThread.ResultString);
+    FThread.Free;
+    FThread := <B>nil</B>;
+  <B>end</B>;
+<B>end</B>;
+
+</TT></PRE>
+</body>
+</html>

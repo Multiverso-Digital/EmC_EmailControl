@@ -1,0 +1,221 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Martin Harvey">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (WinNT; I) [Netscape]">
+   <title>Source33</title>
+</head>
+<body>
+<PRE><TT><B>unit</B> CheckThread;
+
+<FONT COLOR=NAVY><I>{ Martin Harvey 30/5/2000 }</I></FONT>
+
+<B>interface</B>
+
+<B>uses</B>
+  Classes, Windows, ChecksumList, SysUtils;
+
+<B>type</B>
+
+  TState = (sGetCurrentCRCs,
+    sBuildFileList,
+    sRemoveCRCs,
+    sCheckFile,
+    sDone);
+
+  TStateReturn = (rvOK, rvFail1, rvFail2);
+
+  TActionFunc = <B>function</B>: TStateReturn <B>of</B> <B>object</B>;
+
+  TStateActions = <B>array</B>[TState] <B>of</B> TActionFunc;
+
+  TNextStates = <B>array</B>[TState, TStateReturn] <B>of</B> TState;
+
+  TCheckThread = <B>class</B>(TThread)
+  <B>private</B>
+    FStartDir: <B>string</B>;
+    FCurrentState: TState;
+    FActionFuncs: TStateActions;
+    FNextStates: TNextStates;
+    FInternalFileList: TStringList;
+    FExternalFileList: TStringList;
+    FExternalCRCList: TStringList;
+    FCheckList: TChecksumList;
+    FFileToProcess: integer;
+  <B>protected</B>
+    <B>procedure</B> InitActionFuncs;
+    <B>procedure</B> InitNextStates;
+    <B>function</B> GetCurrentCRCs: TStateReturn;
+    <B>function</B> BuildFileList: TStateReturn;
+    <B>function</B> RemoveCRCs: TStateReturn;
+    <B>function</B> CheckFile: TStateReturn;
+    <B>procedure</B> Execute; <B>override</B>;
+  <B>public</B>
+    <B>constructor</B> Create(CreateSuspended: boolean);
+    <B>destructor</B> Destroy; <B>override</B>;
+    <B>property</B> StartDir: <B>string</B> <B>read</B> FStartDir <B>write</B> FStartDir;
+    <B>property</B> CheckList: TChecksumList <B>read</B> FCheckList <B>write</B> FCheckList;
+  <B>end</B>;
+
+<B>implementation</B>
+
+<FONT COLOR=NAVY><I>{ TCheckThread }</I></FONT>
+
+<FONT COLOR=NAVY><I>{(*}</I></FONT> <FONT COLOR=NAVY><I>{Prettyprinter auto-formatting off}</I></FONT>
+
+<B>const</B>
+  BaseStateTransitions:TNextStates = (
+                      <FONT COLOR=NAVY><I>{rvOK}</I></FONT>             <FONT COLOR=NAVY><I>{rvFail1}</I></FONT>        <FONT COLOR=NAVY><I>{rvFail2}</I></FONT>
+<FONT COLOR=NAVY><I>{sGetCurrentCRCs }</I></FONT> ( sBuildFileList,      sDone,           sDone ),
+<FONT COLOR=NAVY><I>{sBuildFileList  }</I></FONT> ( sRemoveCRCs,         sDone,           sDone ),
+<FONT COLOR=NAVY><I>{sRemoveCRCs     }</I></FONT> ( sCheckFile,          sDone,           sDone ),
+<FONT COLOR=NAVY><I>{sCheckFile      }</I></FONT> ( sCheckFile,          sGetCurrentCRCs, sDone ),
+<FONT COLOR=NAVY><I>{sDone           }</I></FONT> ( sDone,               sDone,           sDone ));
+
+ <FONT COLOR=NAVY><I>{*)}</I></FONT><FONT COLOR=NAVY><I>{Prettyprinter auto-formatting on}</I></FONT>
+
+<B>procedure</B> TCheckThread.InitActionFuncs;
+<B>begin</B>
+  FActionFuncs[sGetCurrentCRCs] := GetCurrentCRCs;
+  FActionFuncs[sBuildFileList] := BuildFileList;
+  FActionFuncs[sRemoveCRCs] := RemoveCRCs;
+  FActionFuncs[sCheckFile] := CheckFile;
+<B>end</B>;
+
+<B>procedure</B> TCheckThread.InitNextStates;
+<B>begin</B>
+  FNextStates := BaseStateTransitions;
+<B>end</B>;
+
+<B>function</B> TCheckThread.GetCurrentCRCs: TStateReturn;
+<B>begin</B>
+  FExternalFileList.Free;
+  FExternalFileList := <B>nil</B>;
+  FExternalCRCList.Free;
+  FExternalCRCList := <B>nil</B>;
+
+  FExternalFileList := FCheckList.GetFileList;
+  FExternalCRCList := FCheckList.GetChecksumList;
+  result := rvOK;
+<B>end</B>;
+
+<B>function</B> TCheckThread.BuildFileList: TStateReturn;
+
+<B>var</B>
+  FindRet: integer;
+  SearchRec: TSearchRec;
+
+<B>begin</B>
+  FInternalFileList.Clear;
+  FindRet := FindFirst(StartDir + <FONT COLOR=BLUE>'*.*'</FONT>, faAnyFile <B>and</B> <B>not</B> faDirectory, SearchRec);
+  <B>if</B> FindRet &lt;&gt 0 <B>then</B>
+    result := rvFail1
+  <B>else</B>
+  <B>begin</B>
+    <B>while</B> FindRet = 0 <B>do</B>
+    <B>begin</B>
+      <FONT COLOR=NAVY><I>{ Found a file.}</I></FONT>
+      FInternalFileList.Add(SearchRec.Name);
+      FindRet := FindNext(SearchRec);
+    <B>end</B>;
+    result := rvOK;
+  <B>end</B>;
+  FindClose(SearchRec);
+  FFileToProcess := 0;
+<B>end</B>;
+
+<B>function</B> TCheckThread.RemoveCRCs: TStateReturn;
+
+<B>var</B>
+  iter: integer;
+  dummy: integer;
+
+<B>begin</B>
+  FInternalFileList.Sort;
+  FExternalFileList.Sort;
+  <B>if</B> FExternalFileList.Count &gt 0 <B>then</B>
+  <B>begin</B>
+    <B>for</B> iter := 0 <B>to</B> FExternalFileList.Count - 1 <B>do</B>
+    <B>begin</B>
+      <B>if</B> <B>not</B> FInternalFileList.Find(FExternalFileList[iter], dummy) <B>then</B>
+        FCheckList.RemoveChecksum(FExternalFileList[iter]);
+    <B>end</B>;
+  <B>end</B>;
+  result := rvOK;
+
+<B>end</B>;
+
+<B>function</B> TCheckThread.CheckFile: TStateReturn;
+
+<B>var</B>
+  FileData: TFileStream;
+  MemImage: TMemoryStream;
+  Data: byte;
+  Sum: integer;
+  iter: integer;
+
+<B>begin</B>
+  <B>if</B> FFileToProcess &gt;= FInternalFileList.Count <B>then</B>
+  <B>begin</B>
+    result := rvFail1;
+    exit;
+  <B>end</B>;
+  Sum := 0;
+  FileData := <B>nil</B>;
+  MemImage := <B>nil</B>;
+  <B>try</B>
+    FileData := TFileStream.Create(StartDir + FInternalFileList[FFileToProcess],
+      fmOpenRead <B>or</B> fmShareDenyWrite);
+    FileData.Seek(0, soFromBeginning);
+    MemImage := TMemoryStream.Create;
+    MemImage.CopyFrom(FileData, FileData.Size);
+    MemImage.Seek(0, soFromBeginning);
+    <B>for</B> iter := 1 <B>to</B> FileData.Size <B>do</B>
+    <B>begin</B>
+      MemImage.ReadBuffer(Data, sizeof(Data));
+      Inc(Sum, Data);
+    <B>end</B>;
+    FileData.Free;
+    MemImage.Free;
+    <B>if</B> (FCheckList.GetChecksum(FInternalFileList[FFileToProcess]) &lt;&gt Sum) <B>then</B>
+      FCheckList.SetChecksum(FInternalFileList[FFileTOProcess], Sum);
+  <B>except</B>
+    <B>on</B> EStreamError <B>do</B>
+    <B>begin</B>
+      FileData.Free;
+      MemImage.Free;
+    <B>end</B>;
+  <B>end</B>;
+  Inc(FFileToProcess);
+  result := rvOK;
+<B>end</B>;
+
+<B>procedure</B> TCheckThread.Execute;
+<B>begin</B>
+  SetThreadPriority(Handle, THREAD_PRIORITY_IDLE);
+  <B>while</B> <B>not</B> (Terminated <B>or</B> (FCurrentState = sDone)) <B>do</B>
+    FCurrentState := FNextStates[FCurrentState, FActionFuncs[FCurrentState]];
+<B>end</B>;
+
+<B>constructor</B> TCheckThread.Create(CreateSuspended: boolean);
+<B>begin</B>
+  <B>inherited</B> Create(CreateSuspended);
+  InitActionFuncs;
+  InitNextStates;
+  FInternalFileList := TStringList.Create;
+<B>end</B>;
+
+<B>destructor</B> TCheckThread.Destroy;
+<B>begin</B>
+  FInternalFileList.Free;
+  FExternalFileList.Free;
+  FExternalCRCList.Free;
+  <B>inherited</B> Destroy;
+<B>end</B>;
+
+<B>end.</B>
+
+</TT></PRE>
+</body>
+</html>

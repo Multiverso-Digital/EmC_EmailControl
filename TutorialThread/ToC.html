@@ -1,0 +1,187 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Martin Harvey">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (WinNT; I) [Netscape]">
+   <title>Multithreading - The Delphi Way.</title>
+</head>
+<body>
+This guide is an ongoing work. If you have
+any queries or suggestions concerning style, subject matter, or presentation
+of this guide, then do not hesitate to email the author at <a href="mailto:martin@pergolesi.demon.co.uk">martin@pergolesi.demon.co.uk</a>.
+<p>The latest on line copy of this document can be found on Martin Harvey's
+website, either as a <a href="http://www.pergolesi.demon.co.uk/prog/threads/ToC.html">set
+of HTML pages</a>, or as a <a href="http://www.pergolesi.demon.co.uk/prog/threads/threads.zip">zip
+file</a>.
+<br>In the event of slow downloads from this site, a zipped copy is also
+kept on the Borland <a href="http://ww6.borland.com/codecentral/ccweb.exe/listing?id=14809">CodeCentral</a>
+archive.
+<br>If you want to find out what the author does when not writing programming
+tutorials, why not visit <a href="http://www.pergolesi.demon.co.uk/">the
+rest of his website</a>?
+<p>This document last updated on Saturday September 16 2000 at 9:00 PM
+BST.
+<center>
+<h1>
+
+<hr WIDTH="100%">Multithreading - The Delphi Way.</h1></center>
+
+<center>
+<h2>
+Martin Harvey.</h2></center>
+
+<center>Version 1.1</center>
+
+<h3>
+Table of Contents.</h3>
+<a href="#Introduction.">Introduction.</a>
+<br><a href="#Dedications.">Dedications.</a>
+<br><a href="#Recommended reading:">Recommended Reading.</a>
+<br><a href="#Navigation hints.">Navigation hints.</a>
+<br><a href="#Change history.">Change history.</a>
+<br><a href="#Other credits.">Credits.</a>
+<p><a href="Ch1.html">Chapter 1.</a> What are threads? Why use them?
+<br><a href="Ch2.html">Chapter 2.</a> Creating a thread in Delphi.
+<br><a href="Ch3.html">Chapter 3.</a> Basic synchronization.
+<br><a href="Ch4.html">Chapter 4.</a> Simple thread destruction.
+<br><a href="Ch5.html">Chapter 5.</a> More thread destruction. Deadlock.
+<br><a href="Ch6.html">Chapter 6.</a> More synchronization: Critical sections
+and mutexes.
+<br><a href="Ch7.html">Chapter 7.</a> Mutex programming guidelines. Concurrency
+control.
+<br><a href="Ch8.html">Chapter 8.</a> Delphi thread safe classes and Priorities.
+<br><a href="Ch9.html">Chapter 9.</a> Semaphores. Data flow scheduling.
+The producer - consumer relationship.
+<br><a href="Ch10.html">Chapter 10.</a> I/O and data flow: from blocking
+to asynchronous and back.
+<br><a href="Ch11.html">Chapter 11.</a> Synchronizers and Events.
+<br><a href="Ch12.html">Chapter 12.</a> More Win32 synchronization facilities.
+<br><a href="Ch13.html">Chapter 13.</a> Using threads in conjunction with
+the BDE, Exceptions and DLLs.
+<br><a href="Ch14.html">Chapter 14.</a> A real world problem, and its solution.
+<p>
+<hr WIDTH="100%">
+<h4>
+<a NAME="Introduction."></a>Introduction.</h4>
+This guide is intended for anyone who is interested in improving performance
+and responsiveness in their Delphi applications by using threads. It covers
+a range of topics from absolute beginner to intermediate level, and some
+of the real world examples raise issues bordering on the advanced. It assumes
+that the reader has a reasonable knowledge of Object Pascal programming,
+including simple object orientation, and a working understanding of event
+based programming.
+<h4>
+<a NAME="Dedications."></a>Dedications.</h4>
+Dedicated to three members of the Computer Science department at the University
+of Cambridge: Dr Jean Bacon, Dr Simon Crosby, and Dr Arthur Norman.
+<p>Many thanks to Jean as a tutor for making a complicated subject seem
+simple, for providing excellent reference material, and for lifting a corner
+of the veil around a hitherto mysterious subject. She also deserves thanks
+as a director of studies, for explaining the Computer science timetable
+to me. It took me three years to figure it out for myself!
+<p>Many thanks to Simon as a tutor, for showing me that although modern
+operating systems may be fiendishly complicated, the principles underlying
+them are simple. He also deserves thanks for taking on a student with unconventional
+ideas about final year project material, and for providing much useful
+advice on my project dissertation.
+<p>Arthur Norman never taught me a thing about multithreading. He did however
+teach me many other things, which helped me when writing the more complicated
+parts of this guide:
+<ul>
+<li>
+There is no limit to the eccentricity of university lecturers.</li>
+
+<li>
+Although most people prefer simplicity, there is a certain perverse enjoyment
+to be had doing things the complicated way, especially if you're cynical.</li>
+</ul>
+He also deserves a mention for some of the best quotes ever to fall from
+a computer science lecturers lips:
+<ul>
+<li>
+"There is something in the lecture course which may not have been visible
+so far, which is reality ..."</li>
+
+<li>
+"The theoreticians have proven that this is unsolvable, but there's three
+of us, and we're smart ..."</li>
+
+<li>
+"People who don't use computers are more sociable, reasonable, and ...
+less twisted."</li>
+
+<li>
+"[If complexity theory lives up to its title] if that proves to be the
+case, I will be the winner, as not many of you will attempt the exam questions."</li>
+</ul>
+<a href="http://www.arthurnorman.org/">He even has his own fan page.</a>
+<h4>
+<a NAME="Recommended reading:"></a>Recommended reading:</h4>
+Title: Concurrent Systems: An integrated approach to Operating Systems,
+Database, and Distributed Systems.
+<br>Author: Jean Bacon.
+<br>Publisher: Addison-Wesley
+<br>ISBN: 0-201-41677-8
+<p>The author welcomes suggestions for other useful titles.
+<h4>
+<a NAME="Navigation hints."></a>Navigation hints.</h4>
+The narrative and diagrams in this guide are all contained in single HTML
+pages, one for each chapter. The source code examples appear in pop up
+windows. You will need a javascript enabled browser to view these. To facilitate
+viewing of the narrative and source in parallel, the reader may find it
+useful to tile the various web browser windows. This can be achieved by
+right clicking on the task bar, and selecting "Tile Windows Vertically".
+<h4>
+<a NAME="Change history."></a>Change history.</h4>
+Version 1.1:
+<ul>
+<li>
+Corrected some spelling and punctuation errors in the prose, and rewrote
+some unclear explanations. Chapters 1-9 and 12 modified.</li>
+
+<li>
+Added change history and other credits to contents page.</li>
+
+<li>
+Renamed Chapter 12.</li>
+
+<li>
+Added Chapter 14.</li>
+</ul>
+
+<h4>
+<a NAME="Other credits."></a>Credits.</h4>
+Many thanks to the following people for reviewing, suggesting, correcting
+and generally improving this guide:
+<ul>
+<li>
+Tim Frost</li>
+
+<li>
+Conor Boyd</li>
+
+<li>
+Alan Lloyd</li>
+
+<li>
+Bruce Roberts</li>
+
+<li>
+Bj&oslash;rge S&aelig;ther</li>
+
+<li>
+Dr John Stockton</li>
+
+<li>
+Craig Stuntz</li>
+
+<li>
+Jim Vaught</li>
+</ul>
+
+<hr WIDTH="100%">
+<br><i>&copy; <a href="mailto:martin@pergolesi.demon.co.uk">Martin Harvey</a>
+2000.</i>
+</body>
+</html>

@@ -1,0 +1,25 @@
+object DM_Baysean: TDM_Baysean
+  OldCreateOrder = False
+  OnCreate = DataModuleCreate
+  OnDestroy = DataModuleDestroy
+  Height = 261
+  Width = 457
+  object Con_Bayesian: TABSDatabase
+    CurrentVersion = '6.02 '
+    DatabaseFileName = 'K:\@Projetos_em_andamento\EmC2011_Thread\Dados\bayesian.abs'
+    DatabaseName = 'bayesian'
+    Exclusive = False
+    KeepConnection = False
+    MaxConnections = 500
+    MultiUser = True
+    SessionName = 'SessaoBayesian_4'
+    Left = 24
+    Top = 24
+  end
+  object SessaoBayesian: TABSSession
+    Active = True
+    AutoSessionName = True
+    Left = 104
+    Top = 24
+  end
+end

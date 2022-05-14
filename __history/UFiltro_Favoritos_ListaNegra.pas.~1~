@@ -1,0 +1,10 @@
+unit UFiltro_Favoritos_ListaNegra;
+
+interface
+
+uses
+Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls,Dialogs;
+
+implementation
+
+end.

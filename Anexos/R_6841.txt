@@ -1,0 +1,39 @@
+Received: from servidor.cenpec.org.br ([200.230.152.130]) by abreuretto.com with MailEnable ESMTP; Thu, 12 Feb 2009 09:21:01 -0800
+Received: by servidor.cenpec.org.br (Postfix, from userid 502)
+	id A9B7915404E; Thu, 12 Feb 2009 15:27:43 -0200 (BRST)
+Received: from [10.10.0.80] (unknown [10.10.0.80])
+	by servidor.cenpec.org.br (Postfix) with ESMTP id BCA74154058;
+	Thu, 12 Feb 2009 15:27:40 -0200 (BRST)
+Message-ID: <4994682D.4080203@cenpec.org.br>
+Disposition-Notification-To: Ivani Alencar Madi <ivanialencar@cenpec.org.br>
+Date: Thu, 12 Feb 2009 15:19:25 -0300
+From: Ivani Alencar Madi <ivanialencar@cenpec.org.br>
+User-Agent: Thunderbird 2.0.0.19 (Windows/20081209)
+MIME-Version: 1.0
+To: Abreu Retto <abreu@abreuretto.com>
+Cc: Natalia Ugarte Cardia Pacheco <procurandooque@gmail.com>
+Subject: =?ISO-8859-1?Q?reuni=E3o_sobre_a_Comunidade_Virtual?=
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+X-Spam-Checker-Version: SpamAssassin 2.63-spambr_20030926 (2004-01-11) on 
+	servidor.cenpec.org.br
+X-Spam-Level: 
+X-Spam-Status: No, hits=0.0 required=7.7 tests=none autolearn=no 
+	version=2.63-spambr_20030926
+Content-Transfer-Encoding: quoted-printable
+Return-Path: <ivanialencar@cenpec.org.br>
+
+Abreu
+boa tarde
+
+gostaria de agendar com voc=EA uma reuni=E3o para segunda-feira dia 16/2,=
+ as=20
+14.30hs  aqui no Cenpec, comigo e a Natalia  para discutirmos assuntos=20
+da C.V. + JOOMLA.
+abs
+
+--=20
+Ivani Alencar
+e-mail ivanialencar@cenpec.org.br
+tel.(11) 2132-9019
+
+

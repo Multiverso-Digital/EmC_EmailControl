@@ -1,0 +1,67 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Martin Harvey">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (WinNT; I) [Netscape]">
+   <title>Source3</title>
+</head>
+<body>
+<PRE><TT><B>unit</B> PrimeThread;
+
+<B>interface</B>
+
+<B>uses</B>
+  Classes;
+
+<B>type</B>
+  TPrimeThrd = <B>class</B>(TThread)
+  <B>private</B>
+    FTestNumber: integer;
+  <B>protected</B>
+    <B>function</B> IsPrime: boolean;
+    <B>procedure</B> Execute; <B>override</B>;
+  <B>public</B>
+    <B>property</B> TestNumber: integer <B>write</B> FTestNumber;
+  <B>end</B>;
+
+<B>implementation</B>
+
+<B>uses</B> SysUtils, Dialogs;
+
+<B>function</B> TPrimeThrd.IsPrime: boolean;
+
+<B>var</B>
+  iter: integer;
+
+<B>begin</B>
+  result := true;
+  <B>if</B> FTestNumber &lt; 0 <B>then</B>
+  <B>begin</B>
+    result := false;
+    exit;
+  <B>end</B>;
+  <B>if</B> FTestNumber &lt;= 2 <B>then</B>
+    exit;
+  <B>for</B> iter := 2 <B>to</B> FTestNumber - 1 <B>do</B>
+  <B>begin</B>
+    <B>if</B> (FTestNumber <B>mod</B> iter) = 0 <B>then</B>
+    <B>begin</B>
+      result := false;
+      <FONT COLOR=NAVY><I>{exit;}</I></FONT>
+    <B>end</B>;
+  <B>end</B>;
+<B>end</B>;
+
+<B>procedure</B> TPrimeThrd.Execute;
+<B>begin</B>
+  <B>if</B> IsPrime <B>then</B>
+    ShowMessage(IntToStr(FTestNumber) + <FONT COLOR=BLUE>'is prime.'</FONT>)
+  <B>else</B>
+    ShowMessage(IntToStr(FTestNumber) + <FONT COLOR=BLUE>'is not prime.'</FONT>);
+<B>end</B>;
+
+<B>end.</B>
+</TT></PRE>
+</body>
+</html>

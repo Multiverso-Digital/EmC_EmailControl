@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2009/01/31 17:40:00.015.pas,C:\Documents and Settings\ar\Meus documentos\RAD Studio\Projects\Unit2.pas=K:\@Projetos_em_andamento\EmC2011_Thread\WebService\UDM.pas</Transaction>
+    <Transaction>2009/01/31 17:40:00.015.dfm,C:\Documents and Settings\ar\Meus documentos\RAD Studio\Projects\Unit2.dfm=K:\@Projetos_em_andamento\EmC2011_Thread\WebService\UDM.dfm</Transaction>
+    <Transaction>2009/01/31 17:40:16.093.pas,C:\Documents and Settings\ar\Meus documentos\RAD Studio\Projects\Unit1.pas=K:\@Projetos_em_andamento\EmC2011_Thread\WebService\UEmC_Service.pas</Transaction>
+    <Transaction>2009/01/31 17:40:16.093.dfm,C:\Documents and Settings\ar\Meus documentos\RAD Studio\Projects\Unit1.dfm=K:\@Projetos_em_andamento\EmC2011_Thread\WebService\UEmC_Service.dfm</Transaction>
+    <Transaction>2009/01/31 17:40:26.140.dproj,C:\Documents and Settings\ar\Meus documentos\RAD Studio\Projects\Project1.dproj=K:\@Projetos_em_andamento\EmC2011_Thread\WebService\EmCService.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

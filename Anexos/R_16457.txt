@@ -1,0 +1,291 @@
+Received: from mail.borland.com ([63.175.76.156]) by abreuretto.com with MailEnable ESMTP; Tue, 17 Feb 2009 06:59:11 -0800
+Received: from USSVS-EXCH01.amer.borl.net ([192.168.88.22]) by mail.borland.com with Microsoft SMTPSVC(6.0.3790.3959);
+	 Tue, 17 Feb 2009 07:02:51 -0800
+X-MimeOLE: Produced By Microsoft Exchange V6.5
+Content-class: urn:content-classes:message
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----_=_NextPart_001_01C99110.B93D4701"
+Subject: =?iso-8859-1?Q?RE=3A_Delphi_2009_-_N=E3o_libera_mem=F3ria_-_Abreu?=
+Date: Tue, 17 Feb 2009 07:02:05 -0800
+Message-ID: <C66EA3F98C9ABF4A85F03417E559DEB902563340@USSVS-EXCH01.amer.borl.net>
+In-Reply-To: <000001c990fa$6b538830$41fa9890$@com>
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+Thread-Topic: =?iso-8859-1?Q?Delphi_2009_-_N=E3o_libera_mem=F3ria_-_Abreu?=
+Thread-Index: AcmQ+mLv7/j2NHQ2SZa363m/Mc3GdAAFkGOw
+References: <000001c990fa$6b538830$41fa9890$@com>
+From: "Bruno Lichot" <Bruno.Lichot@borland.com>
+To: "Abreu Retto" <abreu@abreuretto.com>
+Return-Path: <Bruno.Lichot@borland.com>
+X-OriginalArrivalTime: 17 Feb 2009 15:02:51.0303 (UTC) FILETIME=[CDAE5B70:01C99110]
+
+This is a multi-part message in MIME format.
+
+------_=_NextPart_001_01C99110.B93D4701
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Recebi,
+
+=20
+
+Estou preparando para a viagem.. durante a semana eu verei e te dou =
+retorno sobre isso
+
+=20
+
+Abs
+
+=20
+
+BL
+
+=20
+
+From: Abreu Retto [mailto:abreu@abreuretto.com]=20
+Sent: ter=E7a-feira, 17 de fevereiro de 2009 09:23
+To: Bruno Lichot
+Subject: Delphi 2009 - N=E3o libera mem=F3ria - Abreu
+
+=20
+
+Bruno
+
+=20
+
+Aplica=E7=E3o em win32.
+
+=20
+
+Quando criamos um Tlist de TstringList e depois liberamos os objetos =
+atrav=E9s do Free a mem=F3ria continua sendo alocada. O Delphi 2009 =
+n=E3o libera a mem=F3ria ap=F3s o Free. Fizemos este mesmo exemplo no =
+Delphi 7 e a mem=F3ria foi liberada.
+
+=20
+
+Para a minha aplica=E7=E3o este problema =E9 muito s=E9rio tendo em =
+vista que as outras aplica=E7=F5es n=E3o conseguem rodar por falta de =
+mem=F3ria.
+
+=20
+
+ Para ver a mem=F3ria consumida utilizei o Gerenciador de Tarefas do =
+Windows Xp.
+
+=20
+
+Um abra=E7o
+
+=20
+
+Abreu@abreuretto.com
+
+=20
+
+
+------_=_NextPart_001_01C99110.B93D4701
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<META HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
+charset=3Diso-8859-1">
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" =
+xmlns:o=3D"urn:schemas-microsoft-com:office:office" =
+xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:x=3D"urn:schemas-microsoft-com:office:excel" =
+xmlns:p=3D"urn:schemas-microsoft-com:office:powerpoint" =
+xmlns:a=3D"urn:schemas-microsoft-com:office:access" =
+xmlns:dt=3D"uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" =
+xmlns:s=3D"uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882" =
+xmlns:rs=3D"urn:schemas-microsoft-com:rowset" xmlns:z=3D"#RowsetSchema" =
+xmlns:b=3D"urn:schemas-microsoft-com:office:publisher" =
+xmlns:ss=3D"urn:schemas-microsoft-com:office:spreadsheet" =
+xmlns:c=3D"urn:schemas-microsoft-com:office:component:spreadsheet" =
+xmlns:odc=3D"urn:schemas-microsoft-com:office:odc" =
+xmlns:oa=3D"urn:schemas-microsoft-com:office:activation" =
+xmlns:html=3D"http://www.w3.org/TR/REC-html40" =
+xmlns:q=3D"http://schemas.xmlsoap.org/soap/envelope/" xmlns:D=3D"DAV:" =
+xmlns:x2=3D"http://schemas.microsoft.com/office/excel/2003/xml" =
+xmlns:ois=3D"http://schemas.microsoft.com/sharepoint/soap/ois/" =
+xmlns:dir=3D"http://schemas.microsoft.com/sharepoint/soap/directory/" =
+xmlns:ds=3D"http://www.w3.org/2000/09/xmldsig#" =
+xmlns:dsp=3D"http://schemas.microsoft.com/sharepoint/dsp" =
+xmlns:udc=3D"http://schemas.microsoft.com/data/udc" =
+xmlns:xsd=3D"http://www.w3.org/2001/XMLSchema" =
+xmlns:sub=3D"http://schemas.microsoft.com/sharepoint/soap/2002/1/alerts/"=
+ xmlns:ec=3D"http://www.w3.org/2001/04/xmlenc#" =
+xmlns:sp=3D"http://schemas.microsoft.com/sharepoint/" =
+xmlns:sps=3D"http://schemas.microsoft.com/sharepoint/soap/" =
+xmlns:xsi=3D"http://www.w3.org/2001/XMLSchema-instance" =
+xmlns:udcxf=3D"http://schemas.microsoft.com/data/udc/xmlfile" =
+xmlns:wf=3D"http://schemas.microsoft.com/sharepoint/soap/workflow/" =
+xmlns:mver=3D"http://schemas.openxmlformats.org/markup-compatibility/2006=
+" xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" =
+xmlns:mrels=3D"http://schemas.openxmlformats.org/package/2006/relationshi=
+ps" =
+xmlns:ex12t=3D"http://schemas.microsoft.com/exchange/services/2006/types"=
+ =
+xmlns:ex12m=3D"http://schemas.microsoft.com/exchange/services/2006/messag=
+es" xmlns:Z=3D"urn:schemas-microsoft-com:" xmlns:st=3D"&#1;" =
+xmlns=3D"http://www.w3.org/TR/REC-html40">
+
+<head>
+
+<meta name=3DGenerator content=3D"Microsoft Word 12 (filtered medium)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:purple;
+	text-decoration:underline;}
+span.EmailStyle17
+	{mso-style-type:personal;
+	font-family:"Calibri","sans-serif";
+	color:windowtext;}
+span.EmailStyle18
+	{mso-style-type:personal-reply;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-size:10.0pt;}
+@page Section1
+	{size:612.0pt 792.0pt;
+	margin:70.85pt 3.0cm 70.85pt 3.0cm;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext=3D"edit">
+  <o:idmap v:ext=3D"edit" data=3D"1" />
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=3DPT-BR link=3Dblue vlink=3Dpurple>
+
+<div class=3DSection1>
+
+<p class=3DMsoNormal><span =
+style=3D'color:#1F497D'>Recebi,<o:p></o:p></span></p>
+
+<p class=3DMsoNormal><span =
+style=3D'color:#1F497D'><o:p>&nbsp;</o:p></span></p>
+
+<p class=3DMsoNormal><span style=3D'color:#1F497D'>Estou preparando para =
+a viagem..
+durante a semana eu verei e te dou retorno sobre =
+isso<o:p></o:p></span></p>
+
+<p class=3DMsoNormal><span =
+style=3D'color:#1F497D'><o:p>&nbsp;</o:p></span></p>
+
+<p class=3DMsoNormal><span =
+style=3D'color:#1F497D'>Abs<o:p></o:p></span></p>
+
+<p class=3DMsoNormal><span =
+style=3D'color:#1F497D'><o:p>&nbsp;</o:p></span></p>
+
+<p class=3DMsoNormal><span =
+style=3D'color:#1F497D'>BL<o:p></o:p></span></p>
+
+<p class=3DMsoNormal><span =
+style=3D'color:#1F497D'><o:p>&nbsp;</o:p></span></p>
+
+<div>
+
+<div style=3D'border:none;border-top:solid #B5C4DF 1.0pt;padding:3.0pt =
+0cm 0cm 0cm'>
+
+<p class=3DMsoNormal><b><span lang=3DEN-US =
+style=3D'font-size:10.0pt;font-family:
+"Tahoma","sans-serif"'>From:</span></b><span lang=3DEN-US =
+style=3D'font-size:10.0pt;
+font-family:"Tahoma","sans-serif"'> Abreu Retto =
+[mailto:abreu@abreuretto.com] <br>
+<b>Sent:</b> ter=E7a-feira, 17 de fevereiro de 2009 09:23<br>
+<b>To:</b> Bruno Lichot<br>
+<b>Subject:</b> Delphi 2009 - N=E3o libera mem=F3ria - =
+Abreu<o:p></o:p></span></p>
+
+</div>
+
+</div>
+
+<p class=3DMsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=3DMsoNormal>Bruno<o:p></o:p></p>
+
+<p class=3DMsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=3DMsoNormal>Aplica=E7=E3o em win32.<o:p></o:p></p>
+
+<p class=3DMsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=3DMsoNormal>Quando criamos um Tlist de TstringList e depois =
+liberamos os
+objetos atrav=E9s do Free a mem=F3ria continua sendo alocada. O Delphi =
+2009 n=E3o
+libera a mem=F3ria ap=F3s o Free. Fizemos este mesmo exemplo no Delphi 7 =
+e a
+mem=F3ria foi liberada.<o:p></o:p></p>
+
+<p class=3DMsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=3DMsoNormal>Para a minha aplica=E7=E3o este problema =E9 muito =
+s=E9rio tendo em
+vista que as outras aplica=E7=F5es n=E3o conseguem rodar por falta de =
+mem=F3ria.<o:p></o:p></p>
+
+<p class=3DMsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=3DMsoNormal>&nbsp;Para ver a mem=F3ria consumida utilizei o =
+Gerenciador de
+Tarefas do Windows Xp.<o:p></o:p></p>
+
+<p class=3DMsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=3DMsoNormal>Um abra=E7o<o:p></o:p></p>
+
+<p class=3DMsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=3DMsoNormal><a =
+href=3D"mailto:Abreu@abreuretto.com">Abreu@abreuretto.com</a><o:p></o:p><=
+/p>
+
+<p class=3DMsoNormal><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</body>
+
+</html>
+
+------_=_NextPart_001_01C99110.B93D4701--
+

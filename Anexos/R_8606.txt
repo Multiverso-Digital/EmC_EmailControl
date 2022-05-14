@@ -1,0 +1,50 @@
+Received: from servidor.cenpec.org.br ([200.230.152.130]) by abreuretto.com with MailEnable ESMTP; Fri, 13 Feb 2009 05:24:43 -0800
+Received: by servidor.cenpec.org.br (Postfix, from userid 502)
+	id 008A7154052; Fri, 13 Feb 2009 11:25:30 -0200 (BRST)
+Received: from [10.10.0.80] (unknown [10.10.0.80])
+	by servidor.cenpec.org.br (Postfix) with ESMTP id 60BF6154050;
+	Fri, 13 Feb 2009 11:25:25 -0200 (BRST)
+Message-ID: <49958245.7010704@cenpec.org.br>
+Disposition-Notification-To: Ivani Alencar Madi <ivanialencar@cenpec.org.br>
+Date: Fri, 13 Feb 2009 11:23:01 -0300
+From: Ivani Alencar Madi <ivanialencar@cenpec.org.br>
+User-Agent: Thunderbird 2.0.0.19 (Windows/20081209)
+MIME-Version: 1.0
+To: Heloisa Amaral <heloama@gmail.com>,
+	Roselene <rose_anjos@uol.com.br>,
+	Natalia Ugarte Cardia Pacheco <procurandooque@gmail.com>,
+	fernandaabucham <fernandaabucham@cenpec.org.br>,
+	Abreu Retto <abreu@abreuretto.com>
+Subject: boletim da comunidade
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+X-Spam-Checker-Version: SpamAssassin 2.63-spambr_20030926 (2004-01-11) on 
+	servidor.cenpec.org.br
+X-Spam-Level: 
+X-Spam-Status: No, hits=0.2 required=7.7 tests=HTML_60_70,HTML_MESSAGE,
+	MIME_HTML_ONLY autolearn=no version=2.63-spambr_20030926
+Return-Path: <ivanialencar@cenpec.org.br>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+meninas<br>
+<br>
+minha sugest&atilde;o para colocar no nosso boletim.<br>
+<br>
+<div align="justify"><font face="arial,helvetica,sans-serif">" Caso n&atilde;o
+esteja visualizando corretamente, </font><a
+ href="http://app.ecentry.com/3/s/?15760.8721.110.0.2b39e0a"><font
+ face="arial,helvetica,sans-serif">acesse aqui "<br>
+</font></a></div>
+<br>
+<br>
+<pre class="moz-signature" cols="72">-- 
+Ivani Alencar
+e-mail <a class="moz-txt-link-abbreviated" href="mailto:ivanialencar@cenpec.org.br">ivanialencar@cenpec.org.br</a>
+tel.(11) 2132-9019</pre>
+</body>
+</html>
+

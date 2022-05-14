@@ -1,0 +1,23 @@
+Received: from newswhat.com ([83.103.76.41]) by abreuretto.com with MailEnable ESMTP; Mon, 16 Feb 2009 13:32:08 -0800
+X-AuthUser: marcoc@newswhat.com
+Received: from wintech ([213.26.58.195]:44559)
+	by newswhat.com with [XMail 1.21 ESMTP Server]
+	id <S3789E4> for <abreu@abreuretto.com> from <marcoc@newswhat.com>;
+	Mon, 16 Feb 2009 23:56:55 +0100
+From: "Automatic Sender" <marcoc@newswhat.com>
+Subject: Account activation NewsWhat
+To: "Belisario Abreu" <abreu@abreuretto.com>
+Date: Mon, 16 Feb 2009 23:16:52 +0000
+X-Priority: 3
+X-Library: Indy 9.00.10
+Return-Path: <marcoc@newswhat.com>
+
+Account activation NewsWhat [delphi.newswhat.com]
+
+Select the following link to activate your account.
+
+http://delphi.newswhat.com/geoxml/attivazione/%7BB0172583-77FC-DD11-92B6-0020ED185190%7D.htm
+Se, cliccando sull'indirizzo mostrato sopra, non si aprisse correttamente 
+la pagina di registrazione, copiare l'intero indirizzo (fino a .htm 
+compreso) ed incollarlo nella barra degli indirizzi del proprio browser.
+

@@ -1,0 +1,77 @@
+unit UFiltro_Bayesian;
+
+interface
+uses
+Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls,Dialogs,IdMessage,
+UCriaObjetos,  DB, funcoes, UDM_Baysean, Ubayesian, generics.Collections;
+
+Function Filtrar_Bayesian(Mens:TMSG):TMSG;
+Function Aprenderbayesian(s:string;RuimBom:integer):boolean;
+Function Testabayesian(s:string):double;
+
+
+
+implementation
+
+
+Function Filtrar_Bayesian(Mens:TMSG):TMSG;
+var
+Pala : TList<TToken>;
+I    : integer;
+Palavras : Tbayesian;
+begin
+  Palavras := Tbayesian.create(DM_Baysean.Con_Bayesian,DM_Baysean.SessaoBayesian);
+  if  not dm_Baysean.qsetup.active then  dm_Baysean.qsetup.active := true;
+
+
+  Result := Mens;
+  if dm_Baysean.qsetupBayesian.AsInteger = 1 then
+  begin
+    Mens.IndiceBayesian :=   Palavras.TesteMail(Mens.FrasesBaesyan.text,[]);
+    if Mens.IndiceBayesian >= dm_baysean.qsetupvalorBaysean.asfloat then
+    begin
+      Mens.Filtrada     := 147;
+      Mens.Selecionada  := 1;
+      Pala := Palavras.listaTokenTeste;
+      Mens.FiltroResultado.Add('Bayesian token: '+floattostr(Mens.IndiceBayesian));
+      for I:= 0 to Pala.Count - 1 do
+      begin
+        Mens.FiltroResultado.Add('Word: '+pala.Items[i].strToken+' Prob:'+floattostr(pala.Items[i].PToken))
+      end;
+      Pala.Free;
+    end;
+
+    Result := Mens;
+  end;
+  Palavras.Free;
+end;
+
+
+
+
+
+Function Aprenderbayesian(s:string;RuimBom:integer):boolean;
+var
+  Palavras : Tbayesian;
+begin
+  Palavras := Tbayesian.create(DM_Baysean.Con_Bayesian,DM_Baysean.SessaoBayesian);
+  Palavras.learn(s,RuimBom);
+  Palavras.Free;
+end;
+
+
+Function Testabayesian(s:string):double;
+var
+  Palavras : Tbayesian;
+begin
+  Palavras := Tbayesian.create(DM_Baysean.Con_Bayesian,DM_Baysean.SessaoBayesian);
+  result := Palavras.TesteMail(s,[]);
+  Palavras.Free;
+end;
+
+
+
+
+
+
+end.

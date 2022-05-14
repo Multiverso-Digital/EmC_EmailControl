@@ -1,0 +1,233 @@
+Received: from hm1480-17.locaweb.com.br ([201.76.49.114]) by abreuretto.com with MailEnable ESMTP; Thu, 12 Feb 2009 08:46:58 -0800
+Received: from hm940.locaweb.com.br (10.1.0.29) by hm1480-17.locaweb.com.br (PowerMTA(TM) v3.5r11) id hih9lm0nva4u for <abreu@abreuretto.com>; Thu, 12 Feb 2009 14:50:33 -0200 (envelope-from <leo.fernandes@workpromo.com.br>)
+Received: from unknown (HELO workpc) (leo.fernandes@workpromo.com.br@189.120.74.193)
+  by hm940.locaweb.com.br with SMTP; 12 Feb 2009 16:50:33 -0000
+X-LocaWeb-COR: locaweb_2009_x-mail
+Message-ID: <000a01c98d3a$652ff0b0$7601a8c0@workpc>
+From: =?iso-8859-1?Q?L=E9o_Fernandes?= <leo.fernandes@workpromo.com.br>
+To: "Abreu Retto" <abreu@abreuretto.com>,
+	"Paulo Sacheta" <paulo.sacheta@workpromo.com.br>
+Cc: <paulo.sacheta@workpromo.com.br>
+References: <001601c98d31$1b532ec0$51f98c40$@com>
+Subject: Re: Pirelli - Beli
+Date: Thu, 12 Feb 2009 14:50:29 -0300
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_0007_01C98D21.3F61EFF0"
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook Express 6.00.2900.2180
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.2180
+X-Antivirus: avast! (VPS 090212-0, 12/02/2009), Outbound message
+X-Antivirus-Status: Clean
+Return-Path: <leo.fernandes@workpromo.com.br>
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0007_01C98D21.3F61EFF0
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Ok Sr. Beli.
+
+
+Comento com ele ent=E3o.
+
+Muito obrigado e um grande abra=E7o.
+
+L=E9o Fernandes
+  ----- Original Message -----=20
+  From: Abreu Retto=20
+  To: L=E9o Fernandes ; Paulo Sacheta=20
+  Sent: Thursday, February 12, 2009 1:43 PM
+  Subject: Pirelli - Beli
+
+
+  L=E9o/Paulo
+
+  =20
+
+  O endere=E7o =E9: http://www.pirellihighperformance.com.br/
+
+  =20
+
+  Usuario: ctc@pirelli.com.br
+
+  Senha: Pirelli
+
+  =20
+
+  Usu=E1rio: Renata.silva@gmail.com
+
+  Senha: Pirelli
+
+  =20
+
+  Usu=E1rio: Renato.souza@gmail.com
+
+  Senha: Pirelli
+
+  =20
+
+  =20
+
+  Fala pro Paulo que infelizmente n=E3o vai dar para eu fazer pelo valor =
+que ele me passou.  O problema =E9 que al=E9m de desenvolver o site como =
+o atual ainda teremos que acrescentar novas fun=E7=F5es e o valor =
+dispon=EDvel =E9 insuficiente para fazer algo de qualidade e sem =
+problemas. Segundo minha experi=EAncia por mais que o usu=E1rio entenda =
+que o valor aplicado no software =E9 pequeno depois que implanta vai =
+reclamar e esquecer do valor.=20
+
+  =20
+
+  Um abra=E7o
+
+  =20
+
+  Abreu
+
+------=_NextPart_000_0007_01C98D21.3F61EFF0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns=3D"http://www.w3.org/TR/REC-html40" xmlns:v =3D=20
+"urn:schemas-microsoft-com:vml" xmlns:o =3D=20
+"urn:schemas-microsoft-com:office:office" xmlns:w =3D=20
+"urn:schemas-microsoft-com:office:word" xmlns:m =3D=20
+"http://schemas.microsoft.com/office/2004/12/omml"><HEAD>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Diso-8859-1">
+<META content=3D"MSHTML 6.00.2900.2180" name=3DGENERATOR>
+<STYLE>@font-face {
+	font-family: Cambria Math;
+}
+@font-face {
+	font-family: Calibri;
+}
+@page Section1 {size: 612.0pt 792.0pt; margin: 70.85pt 3.0cm 70.85pt =
+3.0cm; }
+P.MsoNormal {
+	FONT-SIZE: 11pt; MARGIN: 0cm 0cm 0pt; FONT-FAMILY: =
+"Calibri","sans-serif"
+}
+LI.MsoNormal {
+	FONT-SIZE: 11pt; MARGIN: 0cm 0cm 0pt; FONT-FAMILY: =
+"Calibri","sans-serif"
+}
+DIV.MsoNormal {
+	FONT-SIZE: 11pt; MARGIN: 0cm 0cm 0pt; FONT-FAMILY: =
+"Calibri","sans-serif"
+}
+A:link {
+	COLOR: blue; TEXT-DECORATION: underline; mso-style-priority: 99
+}
+SPAN.MsoHyperlink {
+	COLOR: blue; TEXT-DECORATION: underline; mso-style-priority: 99
+}
+A:visited {
+	COLOR: purple; TEXT-DECORATION: underline; mso-style-priority: 99
+}
+SPAN.MsoHyperlinkFollowed {
+	COLOR: purple; TEXT-DECORATION: underline; mso-style-priority: 99
+}
+SPAN.EstiloDeEmail17 {
+	COLOR: windowtext; FONT-FAMILY: "Calibri","sans-serif"; mso-style-type: =
+personal-compose
+}
+.MsoChpDefault {
+	mso-style-type: export-only
+}
+DIV.Section1 {
+	page: Section1
+}
+</STYLE>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext=3D"edit">
+  <o:idmap v:ext=3D"edit" data=3D"1" />
+ </o:shapelayout></xml><![endif]--></HEAD>
+<BODY lang=3DPT-BR vLink=3Dpurple link=3Dblue bgColor=3D#ffffff>
+<DIV><FONT face=3DArial size=3D2>Ok Sr. Beli.</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>Comento com ele ent=E3o.</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>Muito obrigado e um grande =
+abra=E7o.</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>L=E9o Fernandes</FONT></DIV>
+<BLOCKQUOTE dir=3Dltr=20
+style=3D"PADDING-RIGHT: 0px; PADDING-LEFT: 5px; MARGIN-LEFT: 5px; =
+BORDER-LEFT: #000000 2px solid; MARGIN-RIGHT: 0px">
+  <DIV style=3D"FONT: 10pt arial">----- Original Message ----- </DIV>
+  <DIV=20
+  style=3D"BACKGROUND: #e4e4e4; FONT: 10pt arial; font-color: =
+black"><B>From:</B>=20
+  <A title=3Dabreu@abreuretto.com =
+href=3D"mailto:abreu@abreuretto.com">Abreu=20
+  Retto</A> </DIV>
+  <DIV style=3D"FONT: 10pt arial"><B>To:</B> <A=20
+  title=3Dleo.fernandes@workpromo.com.br=20
+  href=3D"mailto:leo.fernandes@workpromo.com.br">L=E9o Fernandes</A> ; =
+<A=20
+  title=3Dpaulo.sacheta@workpromo.com.br=20
+  href=3D"mailto:paulo.sacheta@workpromo.com.br">Paulo Sacheta</A> =
+</DIV>
+  <DIV style=3D"FONT: 10pt arial"><B>Sent:</B> Thursday, February 12, =
+2009 1:43=20
+  PM</DIV>
+  <DIV style=3D"FONT: 10pt arial"><B>Subject:</B> Pirelli - Beli</DIV>
+  <DIV><BR></DIV>
+  <DIV class=3DSection1>
+  <P class=3DMsoNormal>L=E9o/Paulo<o:p></o:p></P>
+  <P class=3DMsoNormal><o:p>&nbsp;</o:p></P>
+  <P class=3DMsoNormal>O endere=E7o =E9: <A=20
+  =
+href=3D"http://www.pirellihighperformance.com.br/">http://www.pirellihigh=
+performance.com.br/</A><o:p></o:p></P>
+  <P class=3DMsoNormal><o:p>&nbsp;</o:p></P>
+  <P class=3DMsoNormal>Usuario: <A=20
+  =
+href=3D"mailto:ctc@pirelli.com.br">ctc@pirelli.com.br</A><o:p></o:p></P>
+  <P class=3DMsoNormal>Senha: Pirelli<o:p></o:p></P>
+  <P class=3DMsoNormal><o:p>&nbsp;</o:p></P>
+  <P class=3DMsoNormal>Usu=E1rio: <A=20
+  =
+href=3D"mailto:Renata.silva@gmail.com">Renata.silva@gmail.com</A><o:p></o=
+:p></P>
+  <P class=3DMsoNormal>Senha: Pirelli<o:p></o:p></P>
+  <P class=3DMsoNormal><o:p>&nbsp;</o:p></P>
+  <P class=3DMsoNormal>Usu=E1rio: <A=20
+  =
+href=3D"mailto:Renato.souza@gmail.com">Renato.souza@gmail.com</A><o:p></o=
+:p></P>
+  <P class=3DMsoNormal>Senha: Pirelli<o:p></o:p></P>
+  <P class=3DMsoNormal><o:p>&nbsp;</o:p></P>
+  <P class=3DMsoNormal><o:p>&nbsp;</o:p></P>
+  <P class=3DMsoNormal>Fala pro Paulo que infelizmente n=E3o vai dar =
+para eu fazer=20
+  pelo valor que ele me passou. &nbsp;O problema =E9 que al=E9m de =
+desenvolver o=20
+  site como o atual ainda teremos que acrescentar novas fun=E7=F5es e o =
+valor=20
+  dispon=EDvel =E9 insuficiente para fazer algo de qualidade e sem =
+problemas.=20
+  Segundo minha experi=EAncia por mais que o usu=E1rio entenda que o =
+valor aplicado=20
+  no software =E9 pequeno depois que implanta vai reclamar e esquecer do =
+valor.=20
+  <o:p></o:p></P>
+  <P class=3DMsoNormal><o:p>&nbsp;</o:p></P>
+  <P class=3DMsoNormal>Um abra=E7o<o:p></o:p></P>
+  <P class=3DMsoNormal><o:p>&nbsp;</o:p></P>
+  <P =
+class=3DMsoNormal>Abreu<o:p></o:p></P></DIV></BLOCKQUOTE></BODY></HTML>
+
+------=_NextPart_000_0007_01C98D21.3F61EFF0--
+
+

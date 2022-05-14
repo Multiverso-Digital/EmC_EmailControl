@@ -1,0 +1,21 @@
+Received: from ar33 ([201.6.246.251]) by abreuretto.com with MailEnable ESMTP; Sat, 14 Feb 2009 03:56:03 -0800
+From: "Abreu Retto" <abreu@abreuretto.com>
+To: "'EmC-Authentication '" <anita@abreuretto.com>
+Subject: EmC-Authentication 
+Date: Sat, 14 Feb 2009 09:59:42 -0200
+Message-ID: <000001c98e9b$b9b1c480$2d154d80$@com>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: 7bit
+X-Mailer: Microsoft Office Outlook 12.0
+Thread-Index: AcmOm65zXmIeuxKfSliEd755DDAjIA==
+x-cr-hashedpuzzle: adg= A14j BjLZ BnWY CYyy CwCq C+nc DBHE GIfs GbMl GiQu Hu7U IXMI JAZa Jvw8 LnLq;1;YQBuAGkAdABhAEAAYQBiAHIAZQB1AHIAZQB0AHQAbwAuAGMAbwBtAA==;Sosha1_v1;7;{E4FD0653-87F8-45EF-8833-CE979CC164A0};YQBiAHIAZQB1AEAAYQBiAHIAZQB1AHIAZQB0AHQAbwAuAGMAbwBtAA==;Sat, 14 Feb 2009 11:59:35 GMT;RQBtAEMALQBBAHUAdABoAGUAbgB0AGkAYwBhAHQAaQBvAG4A
+x-cr-puzzleid: {E4FD0653-87F8-45EF-8833-CE979CC164A0}
+Return-Path: <abreu@abreuretto.com>
+
+{28E7A164-CAE0-4204-85F2-D068F00F8BDC} This email create a Friend Filter to
+authenticate your account when you send message to yourself. When you
+reiceve that the EmC will create a Friend Filter.
+
+

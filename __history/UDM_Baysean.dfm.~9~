@@ -1,0 +1,93 @@
+object DM_Baysean: TDM_Baysean
+  OldCreateOrder = False
+  OnDestroy = DataModuleDestroy
+  Height = 233
+  Width = 499
+  object MC: TMyConnection
+    Database = 'emc'
+    ConnectionTimeout = 2
+    Options.UseUnicode = True
+    PoolingOptions.MaxPoolSize = 1000
+    PoolingOptions.ConnectionLifetime = 2
+    Pooling = True
+    Username = 'root'
+    Password = 'aw1122'
+    Server = '192.168.0.10'
+    AfterDisconnect = MCAfterDisconnect
+    LoginPrompt = False
+    Left = 16
+    Top = 24
+  end
+  object qsetup: TMyQuery
+    SQLInsert.Strings = (
+      'INSERT INTO setup'
+      
+        '  (ID, Bayesian, MyFriends, BlackList, DNS, Countries, DT, Filte' +
+        'r, minutes, IPdns, valorBaysean)'
+      'VALUES'
+      
+        '  (:ID, :Bayesian, :MyFriends, :BlackList, :DNS, :Countries, :DT' +
+        ', :Filter, :minutes, :IPdns, :valorBaysean)')
+    SQLDelete.Strings = (
+      'DELETE FROM setup'
+      'WHERE'
+      '  ID = :Old_ID')
+    SQLUpdate.Strings = (
+      'UPDATE setup'
+      'SET'
+      
+        '  ID = :ID, Bayesian = :Bayesian, MyFriends = :MyFriends, BlackL' +
+        'ist = :BlackList, DNS = :DNS, Countries = :Countries, DT = :DT, ' +
+        'Filter = :Filter, minutes = :minutes, IPdns = :IPdns, valorBayse' +
+        'an = :valorBaysean'
+      'WHERE'
+      '  ID = :Old_ID')
+    SQLRefresh.Strings = (
+      
+        'SELECT setup.ID, setup.Bayesian, setup.MyFriends, setup.BlackLis' +
+        't, setup.DNS, setup.Countries, setup.DT, setup.Filter, setup.min' +
+        'utes, setup.IPdns, setup.valorBaysean FROM setup'
+      'WHERE'
+      '  setup.ID = :Old_ID')
+    Connection = MC
+    SQL.Strings = (
+      'select * from setup limit 1')
+    CachedUpdates = True
+    Left = 56
+    Top = 24
+    object qsetupID: TIntegerField
+      FieldName = 'ID'
+    end
+    object qsetupBayesian: TIntegerField
+      FieldName = 'Bayesian'
+    end
+    object qsetupMyFriends: TIntegerField
+      FieldName = 'MyFriends'
+    end
+    object qsetupBlackList: TIntegerField
+      FieldName = 'BlackList'
+    end
+    object qsetupDNS: TIntegerField
+      FieldName = 'DNS'
+    end
+    object qsetupCountries: TIntegerField
+      FieldName = 'Countries'
+    end
+    object qsetupDT: TDateTimeField
+      FieldName = 'DT'
+    end
+    object qsetupFilter: TIntegerField
+      FieldName = 'Filter'
+    end
+    object qsetupminutes: TIntegerField
+      FieldName = 'minutes'
+    end
+    object qsetupIPdns: TWideStringField
+      FieldName = 'IPdns'
+      Size = 15
+    end
+    object qsetupvalorBaysean: TFloatField
+      FieldName = 'valorBaysean'
+    end
+  end
+end

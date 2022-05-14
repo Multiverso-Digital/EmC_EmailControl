@@ -1,0 +1,120 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Martin Harvey">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (WinNT; I) [Netscape]">
+   <title>Source31</title>
+</head>
+<body>
+<PRE><TT><B>unit</B> SimpleSync;
+
+<FONT COLOR=NAVY><I>{ Martin Harvey 27/5/2000 }</I></FONT>
+
+<B>interface</B>
+
+<B>uses</B> Windows;
+
+<B>type</B>
+  TSimpleSynchronizer = <B>class</B>(TObject)
+  <B>private</B>
+    FDataLock, FWriteLock: TRTLCriticalSection;
+    FActRead, FReadRead, FActWrite, FWriteWrite: integer;
+    FReaderSem, FWriterSem: THandle;
+  <B>protected</B>
+  <B>public</B>
+    <B>constructor</B> Create;
+    <B>destructor</B> Destroy; <B>override</B>;
+    <B>procedure</B> StartRead;
+    <B>procedure</B> StartWrite;
+    <B>procedure</B> EndRead;
+    <B>procedure</B> EndWrite;
+  <B>published</B>
+  <B>end</B>;
+
+<B>implementation</B>
+
+<B>constructor</B> TSimpleSynchronizer.Create;
+<B>begin</B>
+  <B>inherited</B> Create;
+  InitializeCriticalSection(FDataLock);
+  InitializeCriticalSection(FWriteLock);
+  FReaderSem := CreateSemaphore(<B>nil</B>, 0, High(Integer), <B>nil</B>);
+  FWriterSem := CreateSemaphore(<B>nil</B>, 0, High(Integer), <B>nil</B>);
+  <FONT COLOR=NAVY><I>{ Initial values of 0 OK for all counts }</I></FONT>
+<B>end</B>;
+
+<B>destructor</B> TSimpleSynchronizer.Destroy;
+<B>begin</B>
+  DeleteCriticalSection(FDataLock);
+  DeleteCriticalSection(FWriteLock);
+  CloseHandle(FReaderSem);
+  CloseHandle(FWriterSem);
+  <B>inherited</B> Destroy;
+<B>end</B>;
+
+<B>procedure</B> TSimpleSynchronizer.StartRead;
+<B>begin</B>
+  EnterCriticalSection(FDataLock);
+  Inc(FActRead);
+  <B>if</B> FActWrite = 0 <B>then</B>
+  <B>begin</B>
+    Inc(FReadRead);
+    ReleaseSemaphore(FReaderSem, 1, <B>nil</B>);
+  <B>end</B>;
+  LeaveCriticalSection(FDataLock);
+  WaitForSingleObject(FReaderSem, INFINITE);
+<B>end</B>;
+
+<B>procedure</B> TSimpleSynchronizer.StartWrite;
+<B>begin</B>
+  EnterCriticalSection(FDataLock);
+  Inc(FActWrite);
+  <B>if</B> FReadRead = 0 <B>then</B>
+  <B>begin</B>
+    Inc(FWriteWrite);
+    ReleaseSemaphore(FWriterSem, 1, <B>nil</B>);
+  <B>end</B>;
+  LeaveCriticalSection(FDataLock);
+  WaitForSingleObject(FWriterSem, INFINITE);
+  EnterCriticalSection(FWriteLock);
+<B>end</B>;
+
+<B>procedure</B> TSimpleSynchronizer.EndRead;
+<B>begin</B>
+  EnterCriticalSection(FDataLock);
+  Dec(FReadRead);
+  Dec(FActRead);
+  <B>if</B> FReadRead = 0 <B>then</B>
+  <B>begin</B>
+    <B>while</B> FWriteWrite &lt FActWrite <B>do</B>
+    <B>begin</B>
+      Inc(FWriteWrite);
+      ReleaseSemaphore(FWriterSem, 1, <B>nil</B>);
+    <B>end</B>;
+  <B>end</B>;
+  LeaveCriticalSection(FDataLock);
+<B>end</B>;
+
+<B>procedure</B> TSimpleSynchronizer.EndWrite;
+<B>begin</B>
+  LeaveCriticalSection(FWriteLock);
+  EnterCriticalSection(FDataLock);
+  Dec(FWriteWrite);
+  Dec(FActWrite);
+  <B>if</B> FActWrite = 0 <B>then</B>
+  <B>begin</B>
+    <B>while</B> FReadRead &lt FActRead <B>do</B>
+    <B>begin</B>
+      Inc(FReadRead);
+      ReleaseSemaphore(FReaderSem, 1, <B>nil</B>);
+    <B>end</B>;
+  <B>end</B>;
+  LeaveCriticalSection(FDataLock);
+<B>end</B>;
+
+<B>end.</B>
+
+</TT></PRE>
+</body>
+</html>

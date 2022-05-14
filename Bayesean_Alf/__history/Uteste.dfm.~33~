@@ -1,0 +1,625 @@
+object Fteste: TFteste
+  Left = 0
+  Top = 0
+  Caption = 'Fteste'
+  ClientHeight = 556
+  ClientWidth = 746
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 212
+    Top = 382
+    Width = 3
+    Height = 13
+  end
+  object PB: TProgressBar
+    Left = 8
+    Top = 334
+    Width = 150
+    Height = 17
+    TabOrder = 0
+  end
+  object ProgressBar1: TProgressBar
+    Left = 299
+    Top = 334
+    Width = 150
+    Height = 17
+    TabOrder = 1
+  end
+  object Memo1: TMemo
+    Left = 8
+    Top = 8
+    Width = 441
+    Height = 210
+    TabOrder = 2
+  end
+  object GroupBox1: TGroupBox
+    Left = 8
+    Top = 224
+    Width = 441
+    Height = 49
+    Caption = 'Normal'
+    TabOrder = 3
+    object Button1: TButton
+      Left = 16
+      Top = 17
+      Width = 75
+      Height = 25
+      Caption = 'Aprende'
+      TabOrder = 0
+      OnClick = Button1Click
+    end
+    object Button2: TButton
+      Left = 231
+      Top = 17
+      Width = 75
+      Height = 25
+      Caption = 'Calcula spam'
+      TabOrder = 1
+      OnClick = Button2Click
+    end
+    object Button3: TButton
+      Left = 318
+      Top = 17
+      Width = 75
+      Height = 25
+      Caption = 'Calcula ok'
+      TabOrder = 2
+      OnClick = Button3Click
+    end
+  end
+  object GroupBox2: TGroupBox
+    Left = 8
+    Top = 279
+    Width = 441
+    Height = 49
+    Caption = 'Itens Cabe'#231'lho'
+    TabOrder = 4
+    object Button4: TButton
+      Left = 16
+      Top = 17
+      Width = 75
+      Height = 25
+      Caption = 'Aprende'
+      TabOrder = 0
+      OnClick = Button4Click
+    end
+    object Button5: TButton
+      Left = 231
+      Top = 17
+      Width = 75
+      Height = 25
+      Caption = 'Calcula spam'
+      TabOrder = 1
+      OnClick = Button5Click
+    end
+    object Button6: TButton
+      Left = 318
+      Top = 17
+      Width = 75
+      Height = 25
+      Caption = 'Calcula ok'
+      TabOrder = 2
+      OnClick = Button6Click
+    end
+  end
+  object StringGrid1: TStringGrid
+    Left = 43
+    Top = 396
+    Width = 320
+    Height = 120
+    FixedCols = 0
+    TabOrder = 5
+  end
+  object qToken: TMyQuery
+    Connection = MyConnection1
+    SQL.Strings = (
+      'select * from tab_token')
+    Left = 176
+    Top = 8
+  end
+  object MyConnection1: TMyConnection
+    Database = 'emc'
+    Username = 'root'
+    Password = 'aw1122'
+    Server = '192.168.0.10'
+    Connected = True
+    LoginPrompt = False
+    Left = 88
+    Top = 40
+  end
+  object provToken: TDataSetProvider
+    DataSet = qToken
+    Left = 224
+    Top = 8
+  end
+  object cdsToken: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'provToken'
+    Left = 280
+    Top = 8
+    object cdsTokenid: TIntegerField
+      FieldName = 'id'
+    end
+    object cdsTokenpalavra: TStringField
+      FieldName = 'palavra'
+      Size = 255
+    end
+    object cdsTokenqtd_spam: TIntegerField
+      FieldName = 'qtd_spam'
+    end
+    object cdsTokenqtd_ok: TIntegerField
+      FieldName = 'qtd_ok'
+    end
+    object cdsTokenmail_spam: TIntegerField
+      FieldName = 'mail_spam'
+    end
+    object cdsTokenmail_ok: TIntegerField
+      FieldName = 'mail_ok'
+    end
+  end
+  object qMens: TMyQuery
+    Connection = MyConnection1
+    SQL.Strings = (
+      'SELECT '
+      '    *'
+      'FROM'
+      '  all_messages'
+      'Where'
+      '  favoritos = 1 or listaNegra =1'
+      'ORDER BY'
+      ' ID'
+      'limit'
+      '1500')
+    Left = 176
+    Top = 56
+  end
+  object provMens: TDataSetProvider
+    DataSet = qMens
+    Left = 224
+    Top = 56
+  end
+  object cdsMens: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'provMens'
+    Left = 280
+    Top = 56
+    object cdsMensID: TLargeintField
+      FieldName = 'ID'
+    end
+    object cdsMensDT: TDateTimeField
+      FieldName = 'DT'
+    end
+    object cdsMensEmail: TStringField
+      FieldName = 'Email'
+      Size = 200
+    end
+    object cdsMensAssunto: TStringField
+      FieldName = 'Assunto'
+      Size = 255
+    end
+    object cdsMensEmitente: TStringField
+      FieldName = 'Emitente'
+      Size = 255
+    end
+    object cdsMensTama: TIntegerField
+      FieldName = 'Tama'
+    end
+    object cdsMensDatamens: TDateTimeField
+      FieldName = 'Datamens'
+    end
+    object cdsMensCabec: TMemoField
+      FieldName = 'Cabec'
+      BlobType = ftMemo
+    end
+    object cdsMensCorpo: TMemoField
+      FieldName = 'Corpo'
+      BlobType = ftMemo
+    end
+    object cdsMensStatus: TIntegerField
+      FieldName = 'Status'
+    end
+    object cdsMensFiltrada: TIntegerField
+      FieldName = 'Filtrada'
+    end
+    object cdsMensListaNegra: TIntegerField
+      FieldName = 'ListaNegra'
+    end
+    object cdsMensFavoritos: TIntegerField
+      FieldName = 'Favoritos'
+    end
+    object cdsMensFiltroResult: TMemoField
+      FieldName = 'FiltroResult'
+      BlobType = ftMemo
+    end
+    object cdsMensListaNegraResult: TMemoField
+      FieldName = 'ListaNegraResult'
+      BlobType = ftMemo
+    end
+    object cdsMensNumeroMens: TIntegerField
+      FieldName = 'NumeroMens'
+    end
+    object cdsMensExcluida: TIntegerField
+      FieldName = 'Excluida'
+    end
+    object cdsMensAnexos: TIntegerField
+      FieldName = 'Anexos'
+    end
+    object cdsMensselecionada: TIntegerField
+      FieldName = 'selecionada'
+    end
+    object cdsMensConta: TStringField
+      FieldName = 'Conta'
+      Size = 50
+    end
+    object cdsMensMsgId: TStringField
+      FieldName = 'MsgId'
+      Size = 255
+    end
+    object cdsMensIsBodyEmpty: TBooleanField
+      FieldName = 'IsBodyEmpty'
+    end
+    object cdsMensUID: TStringField
+      FieldName = 'UID'
+      Size = 255
+    end
+    object cdsMensIsMsgSinglePartMime: TBooleanField
+      FieldName = 'IsMsgSinglePartMime'
+    end
+    object cdsMensAttachmentEncoding: TStringField
+      FieldName = 'AttachmentEncoding'
+      Size = 255
+    end
+    object cdsMensCharSet: TStringField
+      FieldName = 'CharSet'
+      Size = 255
+    end
+    object cdsMensContentType: TStringField
+      FieldName = 'ContentType'
+      Size = 255
+    end
+    object cdsMensContentTransferEncoding: TStringField
+      FieldName = 'ContentTransferEncoding'
+      Size = 255
+    end
+    object cdsMensContentDisposition: TStringField
+      FieldName = 'ContentDisposition'
+      Size = 255
+    end
+    object cdsMensNoEncode: TBooleanField
+      FieldName = 'NoEncode'
+    end
+    object cdsMensNoDecode: TBooleanField
+      FieldName = 'NoDecode'
+    end
+    object cdsMensOrganization: TStringField
+      FieldName = 'Organization'
+      Size = 255
+    end
+    object cdsMensDataOrig: TStringField
+      FieldName = 'DataOrig'
+      Size = 255
+    end
+    object cdsMensXmailer: TStringField
+      FieldName = 'Xmailer'
+      Size = 255
+    end
+    object cdsMensReplayTO: TStringField
+      FieldName = 'ReplayTO'
+      Size = 255
+    end
+    object cdsMensReturnPath: TStringField
+      FieldName = 'ReturnPath'
+      Size = 255
+    end
+    object cdsMensFromOrig: TStringField
+      FieldName = 'FromOrig'
+      Size = 255
+    end
+    object cdsMensToOrig: TStringField
+      FieldName = 'ToOrig'
+      Size = 255
+    end
+    object cdsMensCCOrig: TMemoField
+      FieldName = 'CCOrig'
+      BlobType = ftMemo
+    end
+    object cdsMensBCCOrig: TMemoField
+      FieldName = 'BCCOrig'
+      BlobType = ftMemo
+    end
+    object cdsMensReceivedFrom: TStringField
+      FieldName = 'ReceivedFrom'
+      Size = 255
+    end
+    object cdsMensFriendResult: TMemoField
+      FieldName = 'FriendResult'
+      BlobType = ftMemo
+    end
+    object cdsMensEmailFrom: TStringField
+      FieldName = 'EmailFrom'
+      Size = 255
+    end
+    object cdsMensDominioFrom: TStringField
+      FieldName = 'DominioFrom'
+      Size = 255
+    end
+    object cdsMensIPSender: TStringField
+      FieldName = 'IPSender'
+      Size = 15
+    end
+    object cdsMensID_Conta: TIntegerField
+      FieldName = 'ID_Conta'
+    end
+    object cdsMensAnexosFiles: TMemoField
+      FieldName = 'AnexosFiles'
+      BlobType = ftMemo
+    end
+    object cdsMensCountry: TStringField
+      FieldName = 'Country'
+      Size = 50
+    end
+  end
+  object qbayesian: TMyQuery
+    Connection = MyConnection1
+    SQL.Strings = (
+      'SELECT '
+      '    *'
+      'FROM'
+      '  tab_bayesian')
+    Left = 176
+    Top = 112
+  end
+  object ProvBayesian: TDataSetProvider
+    DataSet = qbayesian
+    Left = 224
+    Top = 112
+  end
+  object cdsBayesian: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'ProvBayesian'
+    Left = 280
+    Top = 112
+    object cdsBayesianid: TIntegerField
+      FieldName = 'id'
+    end
+    object cdsBayesianqtd_mail_spam: TIntegerField
+      FieldName = 'qtd_mail_spam'
+    end
+    object cdsBayesianqtd_mail_ok: TIntegerField
+      FieldName = 'qtd_mail_ok'
+    end
+  end
+  object cdsTest: TClientDataSet
+    Aggregates = <>
+    Params = <
+      item
+        DataType = ftUnknown
+        Name = 'negra'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'fav'
+        ParamType = ptUnknown
+      end>
+    ProviderName = 'ProvTeste'
+    Left = 272
+    Top = 208
+    object cdsTestID: TLargeintField
+      FieldName = 'ID'
+    end
+    object cdsTestDT: TDateTimeField
+      FieldName = 'DT'
+    end
+    object cdsTestEmail: TStringField
+      FieldName = 'Email'
+      Size = 200
+    end
+    object cdsTestAssunto: TStringField
+      FieldName = 'Assunto'
+      Size = 255
+    end
+    object cdsTestEmitente: TStringField
+      FieldName = 'Emitente'
+      Size = 255
+    end
+    object cdsTestTama: TIntegerField
+      FieldName = 'Tama'
+    end
+    object cdsTestDatamens: TDateTimeField
+      FieldName = 'Datamens'
+    end
+    object cdsTestCabec: TMemoField
+      FieldName = 'Cabec'
+      BlobType = ftMemo
+    end
+    object cdsTestCorpo: TMemoField
+      FieldName = 'Corpo'
+      BlobType = ftMemo
+    end
+    object cdsTestStatus: TIntegerField
+      FieldName = 'Status'
+    end
+    object cdsTestFiltrada: TIntegerField
+      FieldName = 'Filtrada'
+    end
+    object cdsTestListaNegra: TIntegerField
+      FieldName = 'ListaNegra'
+    end
+    object cdsTestFavoritos: TIntegerField
+      FieldName = 'Favoritos'
+    end
+    object cdsTestFiltroResult: TMemoField
+      FieldName = 'FiltroResult'
+      BlobType = ftMemo
+    end
+    object cdsTestListaNegraResult: TMemoField
+      FieldName = 'ListaNegraResult'
+      BlobType = ftMemo
+    end
+    object cdsTestNumeroMens: TIntegerField
+      FieldName = 'NumeroMens'
+    end
+    object cdsTestExcluida: TIntegerField
+      FieldName = 'Excluida'
+    end
+    object cdsTestAnexos: TIntegerField
+      FieldName = 'Anexos'
+    end
+    object cdsTestselecionada: TIntegerField
+      FieldName = 'selecionada'
+    end
+    object cdsTestConta: TStringField
+      FieldName = 'Conta'
+      Size = 50
+    end
+    object cdsTestMsgId: TStringField
+      FieldName = 'MsgId'
+      Size = 255
+    end
+    object cdsTestIsBodyEmpty: TBooleanField
+      FieldName = 'IsBodyEmpty'
+    end
+    object cdsTestUID: TStringField
+      FieldName = 'UID'
+      Size = 255
+    end
+    object cdsTestIsMsgSinglePartMime: TBooleanField
+      FieldName = 'IsMsgSinglePartMime'
+    end
+    object cdsTestAttachmentEncoding: TStringField
+      FieldName = 'AttachmentEncoding'
+      Size = 255
+    end
+    object cdsTestCharSet: TStringField
+      FieldName = 'CharSet'
+      Size = 255
+    end
+    object cdsTestContentType: TStringField
+      FieldName = 'ContentType'
+      Size = 255
+    end
+    object cdsTestContentTransferEncoding: TStringField
+      FieldName = 'ContentTransferEncoding'
+      Size = 255
+    end
+    object cdsTestContentDisposition: TStringField
+      FieldName = 'ContentDisposition'
+      Size = 255
+    end
+    object cdsTestNoEncode: TBooleanField
+      FieldName = 'NoEncode'
+    end
+    object cdsTestNoDecode: TBooleanField
+      FieldName = 'NoDecode'
+    end
+    object cdsTestOrganization: TStringField
+      FieldName = 'Organization'
+      Size = 255
+    end
+    object cdsTestDataOrig: TStringField
+      FieldName = 'DataOrig'
+      Size = 255
+    end
+    object cdsTestXmailer: TStringField
+      FieldName = 'Xmailer'
+      Size = 255
+    end
+    object cdsTestReplayTO: TStringField
+      FieldName = 'ReplayTO'
+      Size = 255
+    end
+    object cdsTestReturnPath: TStringField
+      FieldName = 'ReturnPath'
+      Size = 255
+    end
+    object cdsTestFromOrig: TStringField
+      FieldName = 'FromOrig'
+      Size = 255
+    end
+    object cdsTestToOrig: TStringField
+      FieldName = 'ToOrig'
+      Size = 255
+    end
+    object cdsTestCCOrig: TMemoField
+      FieldName = 'CCOrig'
+      BlobType = ftMemo
+    end
+    object cdsTestBCCOrig: TMemoField
+      FieldName = 'BCCOrig'
+      BlobType = ftMemo
+    end
+    object cdsTestReceivedFrom: TStringField
+      FieldName = 'ReceivedFrom'
+      Size = 255
+    end
+    object cdsTestFriendResult: TMemoField
+      FieldName = 'FriendResult'
+      BlobType = ftMemo
+    end
+    object cdsTestEmailFrom: TStringField
+      FieldName = 'EmailFrom'
+      Size = 255
+    end
+    object cdsTestDominioFrom: TStringField
+      FieldName = 'DominioFrom'
+      Size = 255
+    end
+    object cdsTestIPSender: TStringField
+      FieldName = 'IPSender'
+      Size = 15
+    end
+    object cdsTestID_Conta: TIntegerField
+      FieldName = 'ID_Conta'
+    end
+    object cdsTestAnexosFiles: TMemoField
+      FieldName = 'AnexosFiles'
+      BlobType = ftMemo
+    end
+    object cdsTestCountry: TStringField
+      FieldName = 'Country'
+      Size = 50
+    end
+  end
+  object ProvTeste: TDataSetProvider
+    DataSet = qTest
+    Left = 216
+    Top = 208
+  end
+  object qTest: TMyQuery
+    Connection = MyConnection1
+    SQL.Strings = (
+      'SELECT '
+      '    *'
+      'FROM'
+      '  all_messages'
+      'Where'
+      'all_messages.`ListaNegra` = :negra and '
+      'all_messages.`Favoritos` = :fav'
+      'ORDER BY'
+      ' ID'
+      'limit 1')
+    Left = 168
+    Top = 208
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'negra'
+      end
+      item
+        DataType = ftUnknown
+        Name = 'fav'
+      end>
+  end
+end

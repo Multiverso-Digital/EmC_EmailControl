@@ -1,0 +1,137 @@
+Return-Path: <postmaster@agendacorporativa.com.br>
+Received: from sinai4-1.uol.com.br (sinai4.srv.intranet [172.27.64.17])
+	 by sukhoi1-a with LMTPA;
+	 Thu, 12 Feb 2009 00:46:12 -0200
+Received: from localhost (localhost [127.0.0.1])
+	by starfury14.uol.com.br (Postfix) with ESMTP id 8D6E3266
+	for <abreuretto@uol.com.br>; Thu, 12 Feb 2009 00:46:12 -0200 (BRST)
+Received: from vps13.emailmkt.org (vps13.emailmkt.org [67.207.75.81])
+	by starfury14.uol.com.br (Postfix) with ESMTP id D788337A
+	for <abreuretto@uol.com.br>; Thu, 12 Feb 2009 00:46:11 -0200 (BRST)
+Received: (qmail 8286 invoked by uid 1006); 12 Feb 2009 02:39:28 -0000
+To: abreuretto@uol.com.br
+Subject: Treinamento "Formagco de Gestores de T&D" - 12 a 14 de Margo -  9: Turma -  Nco perca!
+Message-ID: <8d22e38297671f303be551d6865979ee@www.agendacorporativa.com.br>
+Date: Thu, 12 Feb 2009 02:27:43 +0000
+From: "Agenda de Treinamentos" <agendadetreinamento@gmail.com>
+Reply-To: agendadetreinamento@gmail.com
+MIME-Version: 1.0
+X-Mailer-LID: 9
+X-Mailer-SID: 19
+X-Mailer-Sent-By: 1
+Content-Type: multipart/alternative; charset="ISO-8859-1"; boundary="b1_c4222e5747a8eeca587fe3746d98808c"
+Content-Transfer-Encoding: 7bit
+X-SIG5: 5dc4be89fb97a68ff21f5bf1388242eb
+X-Amavis-Alert: BAD HEADER Non-encoded 8-bit data (char E7 hex) in message header 'Subject': Subject: Treinamento "Forma\347\343o de Gestores ...
+
+--b1_c4222e5747a8eeca587fe3746d98808c
+Content-Type: text/plain; format=flowed; charset="ISO-8859-1"
+Content-Transfer-Encoding: 7bit
+
+http://www.agendacorporativa.com.br/unsubscribe.php?M=2277792&N=19&L=9&C=04c328977f9a8b09fc7f6ff70ae12635Seu
+cliente de email nco pode visualizar esse email. Para ver a versco online,
+por favor visite:
+http://www.agendacorporativa.com.br/display.php?M=2277792&C=04c328977f9a8b09fc7f6ff70ae12635&S=19&L=9&N=9
+
+
+Se nco deseja mais receber esses emails
+clique:http://www.agendacorporativa.com.br/unsubscribe.php?M=2277792&N=19&L=9&C=04c328977f9a8b09fc7f6ff70ae12635
+
+--b1_c4222e5747a8eeca587fe3746d98808c
+Content-Type: text/html; charset="ISO-8859-1"
+Content-Transfer-Encoding: 7bit
+
+
+<html><head><title>Forma de Gestores de T&D</title>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<meta content="MSHTML 6.00.6001.18183" name="GENERATOR"/></head>
+<body text="#000000" vlink="#0000cc" alink="#0033ff" link="#000066"
+bgcolor="#ffffff">
+<div align="center">
+<p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a
+href="http://www.agendacorporativa.com.br/link.php?M=2277792&N=19&L=15&F=H">Caso
+n&atilde;o esteja visualizando o e-mail clique aqui</a></font></p>
+<form
+action="file://///Inter/Meus%20documentos/HTMLs/2005/setembro/consultor/--WEBBOT-SELF--"
+method="post"><!--webbot bot="SaveResults"
+u-file="fpweb:///_private/form_results.csv"
+    s-format="TEXT/CSV" s-label-fields="TRUE" -->
+<p><a
+href="http://www.agendacorporativa.com.br/link.php?M=2277792&N=19&L=15&F=H"><img
+height="1000" src="http://www.companhiadorh.com.br/gestores.jpg"
+width="800" border="0"/></a> </p>
+<p><img height="113" src="http://www.companhiadorh.com.br/baixofig.jpg"
+width="700" usemap="#Map" border="0"/> <map name="Map"><area shape="RECT"
+coords="12,23,236,87"
+href="http://www.agendacorporativa.com.br/link.php?M=2277792&N=19&L=14&F=H"/><area
+shape="RECT" coords="519,17,689,101"
+href="http://www.agendacorporativa.com.br/link.php?M=2277792&N=19&L=13&F=H"/><area
+shape="RECT" coords="259,15,489,105"
+href="http://www.agendacorporativa.com.br/link.php?M=2277792&N=19&L=4&F=H"/></map><font
+face="Arial" size="2"><br/><br/></font><strong><font face="Verdana, Arial,
+Helvetica, sans-serif" size="2"><em>:: COMPANHIA DO RH :: (11) 4221 6198 /
+4221 7036 :: </em></font><font face="Arial"
+size="2"><br/></font></strong></p></form>
+<form action="http://www.companhiadorh.com.br/enviaemail_gestores.php"
+method="post">
+<table bordercolor="#000000" cellspacing="0" cellpadding="0" width="48%"
+align="center">
+<tbody>
+<tr>
+<td>
+<table height="266" cellspacing="0" cellpadding="0" width="436"
+align="center" border="0">
+<tbody>
+<tr>
+<td valign="top" width="435" height="40">
+<p align="center"><font style="FONT-SIZE: 13pt" face="Arial Black"
+color="#2a5077">INFORMA&Ccedil;&Otilde;ES</font></p></td>
+<td width="1" height="40"></td></tr>
+<tr>
+<td valign="top" width="435" height="44">
+<div align="center"><font face="Verdana, Tahoma, Arial" size="2">*
+Nome:</font><font face="Arial" size="2"><br/><input maxlength="50"
+size="60" name="nome"/> </font></div></td>
+<td width="1" height="44"></td></tr>
+<tr>
+<td valign="top" width="435" height="44">
+<div align="center"><font face="Verdana, Tahoma, Arial" size="2">E-mail:
+</font><font face="Arial" size="2"><br/><input maxlength="50" size="60"
+name="email"/> </font></div></td>
+<td width="1" height="44"></td></tr>
+<tr>
+<td valign="top" width="435" height="44">
+<div align="center"><font face="Verdana, Tahoma, Arial"
+size="2">Empresa:<br/></font><font face="Arial" size="2"><input
+maxlength="50" size="60" name="empresa"/> </font><font face="Verdana,
+Tahoma, Arial" size="2"></font></div></td>
+<td width="1" height="44"></td></tr>
+<tr>
+<td valign="top" width="435" height="44">
+<div align="center"><font face="Verdana, Tahoma, Arial" size="2">*
+Fone:<br/></font><font face="Arial" size="2"><input maxlength="50"
+size="10" value="DDD" name="ddd"/> <input maxlength="50" name="fone"/>
+</font><font face="Verdana, Tahoma, Arial" size="2"></font></div></td>
+<td width="1" height="44"></td></tr>
+<tr>
+<td valign="top" width="435" height="50">
+<div align="center"><input type="submit" value="Enviar" name="submit"/>
+</div>
+<div align="center">&nbsp;</div>
+<div align="center"><font style="FONT-SIZE: 10pt" face="Verdana">Os campos
+marcados com * s&atilde;o de preenchimento
+obrigat&oacute;rio.</font></div></td>
+<td width="1"
+height="50"></td></tr></tbody></table></td></tr></tbody></table></form>
+<p>&nbsp;</p></div>
+
+<img
+src="http://www.agendacorporativa.com.br/open.php?M=2277792&N=19&L=9&F=H"><p
+align="center"><a
+href="http://www.agendacorporativa.com.br/unsubscribe.php?M=2277792&N=19&L=9&C=04c328977f9a8b09fc7f6ff70ae12635">Clique
+aqui para se descadastrar</a></p></body></html>
+
+--b1_c4222e5747a8eeca587fe3746d98808c--
+

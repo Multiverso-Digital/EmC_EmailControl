@@ -1,0 +1,1 @@
+ini_xxx_path=K:\@Projetos_em_andamento\EmC2010\Baysean\us\web\_bayesian_spam_filter\_exe\ini\

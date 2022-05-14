@@ -1,0 +1,190 @@
+Received: from smtp.uol.com.br ([200.221.4.200]) by abreuretto.com with MailEnable ESMTP; Wed, 11 Feb 2009 17:58:33 -0800
+Received: from localhost (localhost [127.0.0.1])
+	by socom9.uol.com.br (Postfix) with ESMTP id 7C53CD8D;
+	Wed, 11 Feb 2009 23:58:44 -0200 (BRST)
+Received: from Isa (unknown [189.62.124.16])
+	by socom9.uol.com.br (Postfix) with ESMTP id D34EFBCB;
+	Wed, 11 Feb 2009 23:58:41 -0200 (BRST)
+From: =?iso-8859-1?Q?Isa_Guar=E1?= <isaguara@uol.com.br>
+To: <luizrossi@uol.com.br>
+Cc: "'Abreu Retto'" <abreu@abreuretto.com>
+References: <C8AEFC7F58474841B7202EF67945B614@Isa> <4992c8d87f528_4e621555555879b48f0@weasel4.tmail> <000001c98c71$d3a419f0$7aec4dd0$@com> <499364d3cb96a_3b231555555879b4681@weasel4.tmail>
+Subject: =?iso-8859-1?Q?RES:_RES:_ENC:_Sobre_a_transfer=EAncia__da_titularidade_do?=
+	=?iso-8859-1?Q?_sistema_ab_ri_gar_-_Abreu?=
+Date: Thu, 12 Feb 2009 00:01:37 -0200
+Message-ID: <B1412C05CEF947E5A4D8D14FF6CA9DAC@Isa>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+X-Mailer: Microsoft Office Outlook 11
+In-Reply-To: <499364d3cb96a_3b231555555879b4681@weasel4.tmail>
+Thread-Index: AcmMo9lMdhqysQxzQcWUbag7jxYwOAAEKtiA
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.5579
+X-Antivirus: avast! (VPS 090211-0, 11/02/2009), Outbound message
+X-Antivirus-Status: Clean
+X-SIG5: 440b4e3a3d0bf5a4c025fb768c4098f3
+Return-Path: <isaguara@uol.com.br>
+
+Luiz e Abreu,
+
+Tudo bem sobre as pondera=E7=F5es do Abreu, se considerarmos que desde =
+j=E1 o Neca
+far=E1 um contrato de manuten=E7=E3o para o projeto do SEDH e de S=E3o =
+Jos=E9 para
+este ano ( ate Mar=E7o de 2010) Precisamos inclusive discutir essa forma =
+de
+contrato, mas acho que chegaremos a um bom acordo.=20
+As despesas mensais fixas ser=E3o de R$ 89,10 e, precisamos calcular com =
+base
+no trabalho que teremos pela frente, as horas/trabalho do Abreu ou do =
+Alf.
+J=E1 previmos isto no or=E7amento dos projetos. Conforme conversamos, =
+nos
+primeiros meses de implanta=E7=E3o n=E3o receberemos a taxa de =
+manuten=E7=E3o, mas a
+partir da=ED , como combinamos: uma taxa mensal de 1 sal=E1rio m=EDnimo =
+para cada
+3 abrigos na rede.=20
+Vamos em frente.=20
+Abra=E7os
+Isa
+
+
+
+-----Mensagem original-----
+De: luizrossi@uol.com.br [mailto:luizrossi@uol.com.br]=20
+Enviada em: quarta-feira, 11 de fevereiro de 2009 21:53
+Para: isaguara@uol.com.br
+Assunto: Fwd: RES: ENC: Sobre a transfer=EAncia da titularidade do =
+sistema ab
+ri gar - Abreu
+
+Isa
+
+Segue a resposta do Abreu =E0 minha solicita=E7=E3o. Voc=EA tem alguma =
+orienta=E7=E3o
+sobre estas coloca=E7=F5es ou posso dar o andamento para o registro?
+
+Luiz
+
+11/02/2009 15:54,   Abreu Retto    escreveu:>=20
+Luiz
+
+O CD-ROM j=E1 est=E1 =E0 disposi=E7=E3o de vcs. =C9 s=F3 retirar. Quanto =
+ao documento que
+enviei preciso dele assinado para fazer a entrega do CD-ROM. Est=E1 =
+claro pra
+vcs que a partir do momento que entrego o CD-ROM com o documento =
+devidamente
+assinado cessam minhas responsabilidades sobre o sistema?. Este sistema =
+teve
+seu in=EDcio do desenvolvimento no final de setembro de 2007 com entrega =
+da
+vers=E3o final em janeiro de 2008 e at=E9 recentemente fiz v=E1rias =
+altera=E7=F5es por
+conta de novas demandas sem uma contrapartida. N=E3o estou cobrando =
+nada,
+apenas fa=E7o quest=E3o deste registro. Cabe aqui ressaltar que s=E3o =
+dois
+sistemas. Um para o Abrigo(WWW.abrigar.com.br) com vis=E3o restrita =E0 =
+ele e
+outro(WWW.abrigar.com.br/geral) para acessos de Ju=EDzes, Promotores e =
+etc...)
+com vis=E3o macro de todos os abrigos. Outra peculiaridade do sistema =
+=E9 que
+ele usa o Cadastro Geral do CEP que foi licenciado pela minha empresa =
+=E0 um
+custo de 4.800,00 anuais e que fica no meu servidor. Se vcs forem mu
+ dar de servidor(algum dia) precisar=E3o adquirir esta licen=E7a ou =
+alterar o
+software para n=E3o usar esta fun=E7=E3o. Quanto =E0 hospedagem o valor =
+mensal ser=E1
+de R$ 89,10. Estou considerando o valor do plano profissional III da
+Locaweb. A nossa taxa hor=E1ria de manuten=E7=E3o para Analista =E9 de =
+R$ 103,00 e
+para Programador 78,00. Estou passando estes valores caso o NECA tenha
+interesse em nos contratar para efetuar os servi=E7os de manuten=E7=E3o.
+
+Com rela=E7=E3o =E0 escolha dos programas para o envelope do INPI sugiro =
+os
+seguintes:
+
+1.Adiciona_Cad_Abrigo_01.asp (180 linhas)
+1.1.Server_Cad_Abrigo_01.asp (51 linhas)
+2.Adiciona_Cad_Abrigado_01.asp (562 linhas)
+2.1.Server_Cad_Abrigado_01.asp (42 linhas)
+
+Os arquivos para impress=E3o est=E3o no CD-ROM na pasta =
+"Arquivos_para_INPI"(S=E3o
+13 p=E1ginas)
+
+Aguardo vc me avisar quando mandar=E1 retirar o CD-ROM.
+
+Qualquer d=FAvida me ligue
+
+Abreu
+
+
+
+
+
+-----Mensagem original-----
+De: luizrossi@uol.com.br [mailto:luizrossi@uol.com.br]=20
+Enviada em: quarta-feira, 11 de fevereiro de 2009 10:47
+Para: abreu@abreuretto.com
+Cc: isaguara@uol.com.br
+Assunto: Fwd: ENC: Sobre a transfer=EAncia da titularidade do sistema ab =
+rigar
+- Abreu
+
+Prezado Abreu
+
+Para dar andamento ao registro do sistema abrigar solicito o cdrom do
+programa e as folhas impressas com as partes do programa que voc=EA =
+considera
+necess=E1rio proteger.
+
+Um abra=E7o
+Luiz Rossi
+
+
+___
+
+
+De: Abreu Retto [mailto:abreu@abreuretto.com]=20
+Enviada em: ter=E7a-feira, 10 de fevereiro de 2009 11:24
+Para: Isa Guar=E1
+Assunto: Sobre a transfer=EAncia da titularidade do sistema abrigar - =
+Abreu=20
+
+
+
+Isa=20
+
+
+
+Anexo segue modelo do instrumento particular de transfer=EAncia =
+patrimonial.
+Peguei o modelo existente no site do INPI.=20
+
+
+
+Um abra=E7o=20
+
+
+
+Abreu=20
+
+
+
+
+Nenhum v=EDrus encontrado nessa mensagem recebida.
+Verificado por AVG - www.avgbrasil.com.br=20
+Vers=E3o: 8.0.234 / Banco de dados de v=EDrus: 270.10.21/1945 - Data de
+Lan=E7amento: 02/11/09 08:01:00
+
+
+
+
+

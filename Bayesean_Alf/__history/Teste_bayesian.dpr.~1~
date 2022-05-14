@@ -1,0 +1,14 @@
+program Teste_bayesian;
+
+uses
+  Forms,
+  Uteste in 'Uteste.pas' {Fteste};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFteste, Fteste);
+  Application.Run;
+end.

@@ -1,0 +1,165 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Martin Harvey">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (WinNT; I) [Netscape]">
+   <title>Source53</title>
+</head>
+<body>
+<PRE><TT><B>unit</B> GlobalForm;
+
+<B>interface</B>
+
+<B>uses</B>
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
+  StdCtrls, GlobalHdr;
+
+<B>type</B>
+
+  TReadInfoProc = <B>procedure</B>(<B>var</B> GlobalInfo: TGlobalInfo; <B>var</B> LocalThreads: integer); <B>stdcall</B>;
+  TSetProc = <B>procedure</B>(NewValue: integer); <B>stdcall</B>;
+  TIncDecProc = <B>procedure</B>; <B>stdcall</B>;
+
+  TProcs = <B>record</B>
+    ReadProc: TReadInfoProc;
+    SetProc: TSetProc;
+    IncProc, DecProc: TIncDecProc;
+  <B>end</B>;
+
+  TGlobalFrm = <B>class</B>(TForm)
+    GlobalProcessEdit: TEdit;
+    GlobalThreadEdit: TEdit;
+    LocalThreadEdit: TEdit;
+    SharedDataEdit: TEdit;
+    ReadBtn: TButton;
+    IncBtn: TButton;
+    DecBtn: TButton;
+    SetBtn: TButton;
+    CreateThread: TButton;
+    LoadDLLBtn: TButton;
+    <B>procedure</B> ReadBtnClick(Sender: TObject);
+    <B>procedure</B> IncBtnClick(Sender: TObject);
+    <B>procedure</B> DecBtnClick(Sender: TObject);
+    <B>procedure</B> SetBtnClick(Sender: TObject);
+    <B>procedure</B> CreateThreadClick(Sender: TObject);
+    <B>procedure</B> LoadDLLBtnClick(Sender: TObject);
+    <B>procedure</B> FormCreate(Sender: TObject);
+    <B>procedure</B> FormDestroy(Sender: TObject);
+  <B>private</B>
+    <FONT COLOR=NAVY><I>{ Private declarations }</I></FONT>
+    Procs: TProcs;
+    Loaded: boolean;
+    LibHandle: THandle;
+  <B>public</B>
+    <FONT COLOR=NAVY><I>{ Public declarations }</I></FONT>
+  <B>end</B>;
+
+<B>var</B>
+  GlobalFrm: TGlobalFrm;
+
+<B>implementation</B>
+
+<B>uses</B> DelayThread;
+
+<FONT COLOR=NAVY><I>{$R *.DFM}</I></FONT>
+
+<B>procedure</B> TGlobalFrm.ReadBtnClick(Sender: TObject);
+
+<B>var</B>
+  GlobalInfo: TGlobalInfo;
+  LocalThreads: integer;
+
+<B>begin</B>
+  <B>if</B> Loaded <B>then</B>
+  <B>begin</B>
+    Procs.ReadProc(GlobalInfo, LocalThreads);
+    GlobalProcessEdit.Text := IntToStr(GlobalInfo.GlobalProcesses);
+    GlobalThreadEdit.Text := IntToStr(GlobalInfo.GlobalThreads);
+    SharedDataEdit.Text := IntToStr(GlobalInfo.SharedNumber);
+    LocalThreadEdit.Text := IntToStr(LocalThreads);
+  <B>end</B>;
+<B>end</B>;
+
+<B>procedure</B> TGlobalFrm.IncBtnClick(Sender: TObject);
+<B>begin</B>
+  <B>if</B> Loaded <B>then</B>
+  <B>begin</B>
+    Procs.IncProc;
+    ReadBtnClick(Sender);
+  <B>end</B>;
+<B>end</B>;
+
+<B>procedure</B> TGlobalFrm.DecBtnClick(Sender: TObject);
+<B>begin</B>
+  <B>if</B> Loaded <B>then</B>
+  <B>begin</B>
+    Procs.DecProc;
+    ReadBtnClick(Sender);
+  <B>end</B>;
+<B>end</B>;
+
+<B>procedure</B> TGlobalFrm.SetBtnClick(Sender: TObject);
+
+<B>var</B>
+  NewInt: integer;
+
+<B>begin</B>
+  <B>if</B> Loaded <B>then</B>
+  <B>begin</B>
+    NewInt := StrToInt(SharedDataEdit.Text);
+    Procs.SetProc(NewInt);
+  <B>end</B>;
+<B>end</B>;
+
+<B>procedure</B> TGlobalFrm.CreateThreadClick(Sender: TObject);
+
+<B>var</B>
+  NewThread: TDelayThread;
+
+<B>begin</B>
+  NewThread := TDelayThread.Create(true);
+  NewThread.FreeOnTerminate := true;
+  NewThread.Resume;
+<B>end</B>;
+
+<B>procedure</B> TGlobalFrm.LoadDLLBtnClick(Sender: TObject);
+<B>begin</B>
+  <B>if</B> <B>not</B> Loaded <B>then</B>
+  <B>begin</B>
+    LibHandle := LoadLibrary(<FONT COLOR=BLUE>'GlobalData.dll'</FONT>);
+    <B>if</B> LibHandle = INVALID_HANDLE_VALUE <B>then</B> exit;
+    <B>with</B> Procs <B>do</B>
+    <B>begin</B>
+      ReadProc := GetProcAddress(LibHandle, <FONT COLOR=BLUE>'ReadInfo'</FONT>);
+      IncProc := GetProcAddress(LibHandle, <FONT COLOR=BLUE>'IncSharedInteger'</FONT>);
+      DecProc := GetProcAddress(LibHandle, <FONT COLOR=BLUE>'DecSharedInteger'</FONT>);
+      SetProc := GetProcAddress(LibHandle, <FONT COLOR=BLUE>'SetSharedInteger'</FONT>);
+      <B>if</B> <B>not</B> (Assigned(ReadProc) <B>and</B> Assigned(IncProc) <B>and</B> Assigned(DecProc)
+        <B>and</B> Assigned(SetProc)) <B>then</B>
+      <B>begin</B>
+        FreeLibrary(LibHandle);
+        LibHandle := INVALID_HANDLE_VALUE;
+        exit;
+      <B>end</B>;
+      Loaded := true;
+    <B>end</B>;
+  <B>end</B>;
+<B>end</B>;
+
+<B>procedure</B> TGlobalFrm.FormCreate(Sender: TObject);
+<B>begin</B>
+  LibHandle := INVALID_HANDLE_VALUE;
+<B>end</B>;
+
+<B>procedure</B> TGlobalFrm.FormDestroy(Sender: TObject);
+<B>begin</B>
+  <B>if</B> LibHandle &lt&gt INVALID_HANDLE_VALUE <B>then</B>
+    FreeLibrary(LibHandle);
+<B>end</B>;
+
+<B>end.</B>
+
+</TT></PRE>
+</body>
+</html>

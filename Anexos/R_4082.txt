@@ -1,0 +1,461 @@
+Received: from servidor.cenpec.org.br ([200.230.152.130]) by abreuretto.com with MailEnable ESMTP; Mon, 09 Feb 2009 16:39:50 -0800
+Received: by servidor.cenpec.org.br (Postfix, from userid 502)
+	id 9619E15405D; Mon,  9 Feb 2009 16:41:43 -0200 (BRST)
+Received: from [10.10.0.193] (unknown [10.10.0.193])
+	by servidor.cenpec.org.br (Postfix) with ESMTP id 01956154076;
+	Mon,  9 Feb 2009 16:40:40 -0200 (BRST)
+Message-ID: <499084E2.6000203@cenpec.org.br>
+Date: Mon, 09 Feb 2009 16:32:50 -0300
+From: Maria Angela <mangela@cenpec.org.br>
+User-Agent: Thunderbird 2.0.0.19 (Windows/20081209)
+MIME-Version: 1.0
+To: =?ISO-8859-1?Q?Isa_Guar=E1?= <isaguara@uol.com.br>
+Cc: 'Abreu Retto' <abreu@abreuretto.com>,
+	'daysecfbernardi' <daysecfbernardi@uol.com.br>, neca@neca.org.br,
+	marudge@uol.com.br
+Subject: Re: RES: reuniao
+References: <42783486C5BB480FACB498A63FB61086@Isa> <498a4437c607e_50ba155555587eb46d5@weasel23.tmail> <000601c987d2$28a2a740$79e7f5c0$@com> <525C18C113B345C0AE6B6FBA8DCC5C92@Isa>
+In-Reply-To: <525C18C113B345C0AE6B6FBA8DCC5C92@Isa>
+Content-Type: multipart/related;
+ boundary="------------090004000704000704090303"
+X-Spam-Checker-Version: SpamAssassin 2.63-spambr_20030926 (2004-01-11) on 
+	servidor.cenpec.org.br
+X-Spam-Level: **
+X-Spam-Status: No, hits=2.7 required=7.7 tests=BR_LINK_UNSAFE,
+	HTML_COMMENT_SAVED_URL,HTML_FONTCOLOR_BLUE,HTML_FONTCOLOR_UNKNOWN,
+	HTML_FONTCOLOR_UNSAFE,HTML_MESSAGE,MIME_HTML_ONLY autolearn=no 
+	version=2.63-spambr_20030926
+Return-Path: <mangela@cenpec.org.br>
+
+This is a multi-part message in MIME format.
+--------------090004000704000704090303
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html;charset=ISO-8859-1" http-equiv="Content-Type">
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<font face="Arial">Ok espero contato da daise</font><br>
+<div class="moz-signature"><!-- saved from url=(0045)file://Y:\Publico\Thunderbird\assinatura.html -->
+<meta http-equiv="Content-Type" content="text/html; ">
+<meta name="ProgId" content="Word.Document">
+<meta name="Generator" content="Microsoft Word 9">
+<meta name="Originator" content="Microsoft Word 9">
+<link rel="File-List" href="./assinatura_arquivos/filelist.xml">
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>marcelobragato</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>mangela</o:LastAuthor>
+  <o:Revision>8</o:Revision>
+  <o:TotalTime>13</o:TotalTime>
+  <o:Created>2008-04-25T18:38:00Z</o:Created>
+  <o:LastSaved>2008-05-12T18:29:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>32</o:Words>
+  <o:Characters>187</o:Characters>
+  <o:Lines>1</o:Lines>
+  <o:Paragraphs>1</o:Paragraphs>
+  <o:CharactersWithSpaces>229</o:CharactersWithSpaces>
+  <o:Version>9.3821</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:HyphenationZone>21</w:HyphenationZone>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w
+:AlwaysShowPlaceholderText>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+span.SPELLE
+	{mso-spl-e: yes
+;}
+span.GRAME
+	{mso-gram-e: yes
+;}
+ /* Font Definitions */
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:536871559 0 0 0 415 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin-top:0cm;
+	margin-right:540.0pt;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	tab-stops:144.0pt;
+	font-size:12.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{margin-top:0cm;
+	margin-right:576.0pt;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	tab-stops:144.0pt;
+	font-size:12.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	font-weight:bold;}
+p.MsoBodyText3, li.MsoBodyText3, div.MsoBodyText3
+	{margin-top:0cm;
+	margin-right:576.0pt;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:144.0pt;
+	font-size:9.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+span.moz-txt-tag
+	{mso-style-name:moz-txt-tag;}
+@page Section1
+	{size:612.0pt 792.0pt;
+	margin:70.85pt 3.0cm 70.85pt 3.0cm;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">  </w:LatentStyles>
+</xml><![endif]-->
+<div class="Section1">
+<p class="MsoNormal" style="text-align: center;" align="center"><b><span
+ style="font-size: 10pt; font-family: Arial;">Maria
+Angela Leal Rudge</span></b><span
+ style="font-size: 10pt; font-family: Arial;"> <br>
+Assessora da Coordena&ccedil;&atilde;o Geral do Cenpec<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-align: center;" align="center"><span
+ style="font-size: 10pt; font-family: Arial;">Centro de
+Estudos e Pesquisas em Educa&ccedil;&atilde;o, Cultura e A&ccedil;&atilde;o Comunit&aacute;ria <br>
+Rua Dante Carraro, 68 - Pinheiros - S&atilde;o Paulo - SP <br>
+Fones: 2132-9026 <span style="">&nbsp;</span>Celular: 7206-0560<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-align: center;" align="center"><span
+ style="font-size: 10pt; font-family: Arial;"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></span></p>
+</div>
+</div>
+<br>
+<br>
+Isa Guar&aacute; escreveu:
+<blockquote cite="mid:525C18C113B345C0AE6B6FBA8DCC5C92@Isa" type="cite">
+  <meta http-equiv="Content-Type" content="text/html; ">
+  <meta name="Generator" content="Microsoft Word 11 (filtered medium)">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]--><o:SmartTagType
+ namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="PersonName">
+<!--[if !mso]>
+<style>
+st1\:*{behavior:url(#default#ieooui) }
+</style>
+<![endif]-->
+  <style>
+<!--a:link
+	{mso-style-priority:99;}
+span.MSOHYPERLINK
+	{mso-style-priority:99;}
+a:visited
+	{mso-style-priority:99;}
+span.MSOHYPERLINKFOLLOWED
+	{mso-style-priority:99;}
+p
+	{mso-style-priority:99;}
+
+ /* Font Definitions */
+ @font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"Trebuchet MS";
+	panose-1:2 11 6 3 2 2 2 2 2 4;}
+@font-face
+	{font-family:Calibri;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p
+	{mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+span.EstiloDeEmail18
+	{mso-style-type:personal;
+	font-family:Calibri;
+	color:#1F497D;}
+span.EstiloDeEmail20
+	{mso-style-type:personal-reply;
+	font-family:"Trebuchet MS";
+	color:navy;}
+@page Section1
+	{size:612.0pt 792.0pt;
+	margin:70.85pt 3.0cm 70.85pt 3.0cm;}
+div.Section1
+	{page:Section1;}
+-->
+  </style><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1" />
+ </o:shapelayout></xml><![endif]-->
+  </o:SmartTagType>
+  <div class="Section1">
+  <p class="MsoNormal"><font color="navy" face="Trebuchet MS" size="2"><span
+ style="font-size: 11pt; font-family: &quot;Trebuchet MS&quot;; color: navy;">Gente<o:p></o:p></span></font></p>
+  <p class="MsoNormal"><font color="navy" face="Trebuchet MS" size="2"><span
+ style="font-size: 11pt; font-family: &quot;Trebuchet MS&quot;; color: navy;">O
+Luiz tamb&eacute;m
+vai e assim eu vou de carona com ele direto daqui de casa. A Dayse pode
+ir com
+a Mari. <o:p></o:p></span></font></p>
+  <p class="MsoNormal"><font color="navy" face="Trebuchet MS" size="2"><span
+ style="font-size: 11pt; font-family: &quot;Trebuchet MS&quot;; color: navy;">At&eacute;
+daqui a
+pouco.<o:p></o:p></span></font></p>
+  <p class="MsoNormal"><font color="navy" face="Trebuchet MS" size="2"><span
+ style="font-size: 11pt; font-family: &quot;Trebuchet MS&quot;; color: navy;"><o:p>&nbsp;</o:p></span></font></p>
+  <p class="MsoNormal"><font color="navy" face="Trebuchet MS" size="2"><span
+ style="font-size: 11pt; font-family: &quot;Trebuchet MS&quot;; color: navy;">Abs.
+  <o:p></o:p></span></font></p>
+  <p class="MsoNormal"><font color="navy" face="Trebuchet MS" size="2"><span
+ style="font-size: 11pt; font-family: &quot;Trebuchet MS&quot;; color: navy;">Isa<o:p></o:p></span></font></p>
+  <p class="MsoNormal"><font color="navy" face="Trebuchet MS" size="2"><span
+ style="font-size: 11pt; font-family: &quot;Trebuchet MS&quot;; color: navy;"><o:p>&nbsp;</o:p></span></font></p>
+  <div>
+  <div class="MsoNormal" style="text-align: center;" align="center"><font
+ face="Times New Roman" size="3"><span style="font-size: 12pt;">
+  <hr tabindex="-1" align="center" size="2" width="100%"></span></font></div>
+  <p class="MsoNormal"><b><font face="Tahoma" size="2"><span
+ style="font-size: 10pt; font-family: Tahoma; font-weight: bold;">De:</span></font></b><font
+ face="Tahoma" size="2"><span
+ style="font-size: 10pt; font-family: Tahoma;"> <st1:PersonName
+ productid="Abreu Retto" w:st="on">Abreu Retto</st1:PersonName>
+[<a class="moz-txt-link-freetext" href="mailto:abreu@abreuretto.com">mailto:abreu@abreuretto.com</a>] <br>
+  <b><span style="font-weight: bold;">Enviada em:</span></b>
+quinta-feira, 5 de
+fevereiro de 2009 18:42<br>
+  <b><span style="font-weight: bold;">Para:</span></b> '<st1:PersonName
+ w:st="on">daysecfbernardi</st1:PersonName>'<br>
+  <b><span style="font-weight: bold;">Cc:</span></b> <a class="moz-txt-link-abbreviated" href="mailto:neca@neca.org.br">neca@neca.org.br</a>;
+<a class="moz-txt-link-abbreviated" href="mailto:marudge@uol.com.br">marudge@uol.com.br</a>; Isa Guar&aacute;<br>
+  <b><span style="font-weight: bold;">Assunto:</span></b> RES: reuniao</span></font><o:p></o:p></p>
+  </div>
+  <p class="MsoNormal"><font face="Times New Roman" size="3"><span
+ style="font-size: 12pt;"><o:p>&nbsp;</o:p></span></font></p>
+  <p class="MsoNormal"><font color="#1f497d" face="Calibri" size="2"><span
+ style="font-size: 11pt; font-family: Calibri; color: rgb(31, 73, 125);">Meninas<o:p></o:p></span></font></p>
+  <p class="MsoNormal"><font color="#1f497d" face="Calibri" size="2"><span
+ style="font-size: 11pt; font-family: Calibri; color: rgb(31, 73, 125);"><o:p>&nbsp;</o:p></span></font></p>
+  <p class="MsoNormal"><font color="#1f497d" face="Calibri" size="2"><span
+ style="font-size: 11pt; font-family: Calibri; color: rgb(31, 73, 125);">Segunda-feira
+&eacute; meu
+rod&iacute;zio e portanto estou convidando todas vcs para comerem uma(v&aacute;rias)
+deliciosa pizza com vinho aqui na minha casa. Assim comemoramos os
+anivers&aacute;rios: Da Isa, da Mari e o meu. Voc&ecirc;s e os vossos 51% est&atilde;o
+convidados.
+Vai ser um grande prazer receb&ecirc;-las aqui em casa nesta segunda-feira.<o:p></o:p></span></font></p>
+  <p class="MsoNormal"><font color="#1f497d" face="Calibri" size="2"><span
+ style="font-size: 11pt; font-family: Calibri; color: rgb(31, 73, 125);"><o:p>&nbsp;</o:p></span></font></p>
+  <p class="MsoNormal"><font color="#1f497d" face="Calibri" size="2"><span
+ style="font-size: 11pt; font-family: Calibri; color: rgb(31, 73, 125);">Endere&ccedil;o:
+Al.
+Jauaperi, 771 Moema SP Capital tel: 5055-1244<o:p></o:p></span></font></p>
+  <p class="MsoNormal"><font color="#1f497d" face="Calibri" size="2"><span
+ style="font-size: 11pt; font-family: Calibri; color: rgb(31, 73, 125);"><o:p>&nbsp;</o:p></span></font></p>
+  <p class="MsoNormal"><font color="#1f497d" face="Calibri" size="2"><span
+ style="font-size: 11pt; font-family: Calibri; color: rgb(31, 73, 125);">O
+hor&aacute;rio permanece
+o mesmo: 19:30hs.<o:p></o:p></span></font></p>
+  <p class="MsoNormal"><font color="#1f497d" face="Calibri" size="2"><span
+ style="font-size: 11pt; font-family: Calibri; color: rgb(31, 73, 125);"><o:p>&nbsp;</o:p></span></font></p>
+  <p class="MsoNormal"><font color="#1f497d" face="Calibri" size="2"><span
+ style="font-size: 11pt; font-family: Calibri; color: rgb(31, 73, 125);">Por
+favor confirmem
+para que eu possa preparar um encontro inesquec&iacute;vel.<o:p></o:p></span></font></p>
+  <p class="MsoNormal"><font color="#1f497d" face="Calibri" size="2"><span
+ style="font-size: 11pt; font-family: Calibri; color: rgb(31, 73, 125);"><o:p>&nbsp;</o:p></span></font></p>
+  <p class="MsoNormal"><font color="#1f497d" face="Calibri" size="2"><span
+ style="font-size: 11pt; font-family: Calibri; color: rgb(31, 73, 125);">Um
+abra&ccedil;o<o:p></o:p></span></font></p>
+  <p class="MsoNormal"><font color="#1f497d" face="Calibri" size="2"><span
+ style="font-size: 11pt; font-family: Calibri; color: rgb(31, 73, 125);"><o:p>&nbsp;</o:p></span></font></p>
+  <p class="MsoNormal"><font color="#1f497d" face="Calibri" size="2"><span
+ style="font-size: 11pt; font-family: Calibri; color: rgb(31, 73, 125);">Abreu<o:p></o:p></span></font></p>
+  <p class="MsoNormal"><font color="#1f497d" face="Calibri" size="2"><span
+ style="font-size: 11pt; font-family: Calibri; color: rgb(31, 73, 125);"><o:p>&nbsp;</o:p></span></font></p>
+  <p class="MsoNormal"><font color="#1f497d" face="Calibri" size="2"><span
+ style="font-size: 11pt; font-family: Calibri; color: rgb(31, 73, 125);"><o:p>&nbsp;</o:p></span></font></p>
+  <div
+ style="border-style: solid none none; border-color: rgb(181, 196, 223) -moz-use-text-color -moz-use-text-color; border-width: 1pt medium medium; padding: 3pt 0cm 0cm;">
+  <p class="MsoNormal"><b><font face="Tahoma" size="2"><span
+ style="font-size: 10pt; font-family: Tahoma; font-weight: bold;">De:</span></font></b><font
+ face="Tahoma" size="2"><span
+ style="font-size: 10pt; font-family: Tahoma;"> <st1:PersonName
+ w:st="on">daysecfbernardi</st1:PersonName> [mailto:<st1:PersonName
+ w:st="on">daysecfbernardi</st1:PersonName>@uol.com.br]
+  <br>
+  <b><span style="font-weight: bold;">Enviada em:</span></b>
+quarta-feira, 4 de
+fevereiro de 2009 23:43<br>
+  <b><span style="font-weight: bold;">Para:</span></b> Isa Guar&aacute;<br>
+  <b><span style="font-weight: bold;">Cc:</span></b> <a class="moz-txt-link-abbreviated" href="mailto:neca@neca.org.br">neca@neca.org.br</a>;
+<a class="moz-txt-link-abbreviated" href="mailto:abreu@abreuretto.com">abreu@abreuretto.com</a>; <a class="moz-txt-link-abbreviated" href="mailto:marudge@uol.com.br">marudge@uol.com.br</a><br>
+  <b><span style="font-weight: bold;">Assunto:</span></b> Re: reuniao<o:p></o:p></span></font></p>
+  </div>
+  <p class="MsoNormal"><font face="Times New Roman" size="3"><span
+ style="font-size: 12pt;"><o:p>&nbsp;</o:p></span></font></p>
+  <p><font face="Times New Roman" size="3"><span
+ style="font-size: 12pt;">Ol&aacute;,<br>
+  <br>
+Bem vinda Isa.<br>
+  <br>
+Vou me organizar para segunda-feira. Sugiro um restaurante&nbsp;ou levarmos
+para casa da Mari o vinho e algum prato&nbsp; - reservando, claro, um lugar
+especial para o chocolate sui&ccedil;o!!!!<br>
+  <br>
+Com carinho da Dayse. <br>
+  <br>
+Em 04/02/2009 17:00, <strong><b><font face="Times New Roman">Isa
+Guar&aacute;&nbsp;&nbsp;</font></b></strong> escreveu:<o:p></o:p></span></font></p>
+  <blockquote
+ style="border-style: none none none solid; border-color: -moz-use-text-color -moz-use-text-color -moz-use-text-color rgb(104, 104, 204); border-width: medium medium medium 1.5pt; margin: 5pt 0cm 5pt 4.8pt; padding: 0cm 0cm 0cm 6pt;">
+    <p class="MsoNormal"><font face="Times New Roman" size="3"><span
+ style="font-size: 12pt;"><o:p>&nbsp;</o:p></span></font></p>
+    <p class="MsoNormal"><font face="Times New Roman" size="3"><span
+ style="border: 1pt solid windowtext; padding: 0cm; font-size: 12pt;"><img
+ id="_x0000_i1025" src="cid:part1.00020908.09080002@cenpec.org.br"
+ alt="Imagem removida pelo remetente." height="100" width="100"></span><o:p></o:p></font></p>
+    <div>
+    <p><strong><b><font color="black" face="Arial" size="3"><span
+ style="font-size: 12pt; font-family: Arial; color: black;">&nbsp;Caros
+amigos,</span></font></b></strong><o:p></o:p></p>
+    <p><strong><b><font color="black" face="Arial" size="3"><span
+ style="font-size: 12pt; font-family: Arial; color: black;">Proponho
+uma reuni&atilde;o no dia 09 de fevereiro-
+segunda &agrave;s 19 horas. Pode ser na casa da Mai, da Dayse ou num
+restaurante que a
+gente combine. O assunto &eacute; o termo de cess&atilde;o do software que temos que
+fazer
+para o Neca. Sem isto nossos projetos de forma&ccedil;&atilde;o e dissemina&ccedil;&atilde;o para
+uso do
+programa n&atilde;o podem prosseguir. Estamos em contato com os advogados da
+Gruber e
+Ribeiro ( ver no link <a moz-do-not-send="true"
+ href="http://www.gr.adv.br/quemsomos.asp">http://www.gr.adv.br/quemsomos.asp</a>
+) para a elabora&ccedil;&atilde;o dos termos. N&atilde;o perderemos o direito autoral. </span></font></b></strong><o:p></o:p></p>
+    <p><strong><b><font color="black" face="Arial" size="3"><span
+ style="font-size: 12pt; font-family: Arial; color: black;">Espero que
+todos possam ir e a gente resolve
+isto tomando um bom vinho ( levarei os chocolates su&iacute;&ccedil;os ) </span></font></b></strong><o:p></o:p></p>
+    <p><strong><b><font color="black" face="Arial" size="3"><span
+ style="font-size: 12pt; font-family: Arial; color: black;">Abra&ccedil;os</span></font></b></strong><o:p></o:p></p>
+    <p><strong><b><font color="black" face="Arial" size="3"><span
+ style="font-size: 12pt; font-family: Arial; color: black;">Isa</span></font></b></strong><o:p></o:p></p>
+    <p><strong><b><font color="black" face="Arial" size="3"><span
+ style="font-size: 12pt; font-family: Arial; color: black;">&nbsp;</span></font></b></strong><o:p></o:p></p>
+    </div>
+    <div style="margin-top: 11.25pt; margin-bottom: 7.5pt;">
+    <div class="MsoNormal" style="text-align: center;" align="center"><font
+ face="Times New Roman" size="3"><span style="font-size: 12pt;">
+    <hr align="center" size="1" width="100%"></span></font></div>
+    </div>
+    <p class="MsoNormal"
+ style="margin-right: 0cm; margin-bottom: 7.5pt; margin-left: 0cm;"><font
+ face="Times New Roman" size="3"><span style="font-size: 12pt;"><o:p>&nbsp;</o:p></span></font></p>
+  </blockquote>
+  <p><font face="Arial" size="2"><span
+ style="font-size: 10pt; font-family: Arial;">Nenhum
+v&iacute;rus encontrado nessa mensagem recebida.<br>
+Verificado por AVG - <a class="moz-txt-link-abbreviated" href="http://www.avgbrasil.com.br">www.avgbrasil.com.br</a><br>
+Vers&atilde;o: 8.0.233 / Banco de dados de v&iacute;rus: 270.10.18/1935 - Data de
+Lan&ccedil;amento:
+02/04/09 16:35:00</span></font><o:p></o:p></p>
+  </div>
+</blockquote>
+</body>
+</html>
+
+--------------090004000704000704090303
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-ID: <part1.00020908.09080002@cenpec.org.br>
+
+/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRof
+Hh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwh
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAAR
+CABkAGQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAA
+AgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkK
+FhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWG
+h4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl
+5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREA
+AgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYk
+NOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOE
+hYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk
+5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iiigAooooAKKKKACiiigAooooAKKKKA
+CiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoo
+ooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKA
+CiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoo
+ooAKKKKACiiigD//2Q==
+--------------090004000704000704090303--
+

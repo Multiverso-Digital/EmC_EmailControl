@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file original="\\Ar0\prgsbeli\@Projetos_em_andamento\EmC2010\UImportAccounts.dfm" source-language="pt-BR" target-language="pt-BR" datatype="delphiform" tool="ETM v10.0" ts="\\Ar0\prgsbeli\@Projetos_em_andamento\EmC2010\UImportAccounts.dfm">
+    <header>
+      <prop-group name="ITEHeaderProp">
+        <prop prop-type="Version">9.0</prop>
+        <prop prop-type="SelfDateTime">39807.4631712963</prop>
+        <prop prop-type="OrigDateTime">39799.3254398148</prop>
+        <prop prop-type="XlatDateTime">39799.3254398148</prop>
+        <prop prop-type="Translated">0</prop>
+        <prop prop-type="UnTranslated">68</prop>
+      </prop-group>
+    </header>
+    <body>
+      <trans-unit id="O:FImportAccounts.Left" resname="O:FImportAccounts.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631794329</prop><prop prop-type="Status">0</prop><prop prop-type="Order">0</prop><prop prop-type="Type">TFImportAccounts</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.Top" resname="O:FImportAccounts.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631794329</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1</prop><prop prop-type="Type">TFImportAccounts</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.Caption" resname="O:FImportAccounts.Caption">
+        <source>'EmC-Import Accounts'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631794329</prop><prop prop-type="Status">0</prop><prop prop-type="Order">2</prop><prop prop-type="Type">TFImportAccounts</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.ClientHeight" resname="O:FImportAccounts.ClientHeight">
+        <source>283</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631794329</prop><prop prop-type="Status">0</prop><prop prop-type="Order">3</prop><prop prop-type="Type">TFImportAccounts</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.ClientWidth" resname="O:FImportAccounts.ClientWidth">
+        <source>426</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631794329</prop><prop prop-type="Status">0</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TFImportAccounts</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.Color" resname="O:FImportAccounts.Color">
+        <source>15984085</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TFImportAccounts</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.Font.Charset" resname="O:FImportAccounts.Font.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">TFImportAccounts</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.Font.Color" resname="O:FImportAccounts.Font.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">7</prop><prop prop-type="Type">TFImportAccounts</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.Font.Height" resname="O:FImportAccounts.Font.Height">
+        <source>-11</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">8</prop><prop prop-type="Type">TFImportAccounts</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.Font.Name" resname="O:FImportAccounts.Font.Name">
+        <source>'Tahoma'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">9</prop><prop prop-type="Type">TFImportAccounts</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.Font.Style" resname="O:FImportAccounts.Font.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">10</prop><prop prop-type="Type">TFImportAccounts</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.OldCreateOrder" resname="O:FImportAccounts.OldCreateOrder">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">11</prop><prop prop-type="Type">TFImportAccounts</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.Position" resname="O:FImportAccounts.Position">
+        <source>poDesktopCenter</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">12</prop><prop prop-type="Type">TFImportAccounts</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.PixelsPerInch" resname="O:FImportAccounts.PixelsPerInch">
+        <source>96</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">13</prop><prop prop-type="Type">TFImportAccounts</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.TextHeight" resname="O:FImportAccounts.TextHeight">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">14</prop><prop prop-type="Type">TFImportAccounts</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:GroupBox1.Left" resname="O:FImportAccounts.O:GroupBox1.Left">
+        <source>8</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:GroupBox1.Top" resname="O:FImportAccounts.O:GroupBox1.Top">
+        <source>8</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">16</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:GroupBox1.Width" resname="O:FImportAccounts.O:GroupBox1.Width">
+        <source>410</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">17</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:GroupBox1.Height" resname="O:FImportAccounts.O:GroupBox1.Height">
+        <source>265</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">18</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:GroupBox1.Caption" resname="O:FImportAccounts.O:GroupBox1.Caption">
+        <source>'Import Accounts from old EmC version'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">19</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:GroupBox1.TabOrder" resname="O:FImportAccounts.O:GroupBox1.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">20</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:GroupBox1.O:JvImgBtn1.Left" resname="O:FImportAccounts.O:GroupBox1.O:JvImgBtn1.Left">
+        <source>96</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">21</prop><prop prop-type="Type">TJvImgBtn</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:GroupBox1.O:JvImgBtn1.Top" resname="O:FImportAccounts.O:GroupBox1.O:JvImgBtn1.Top">
+        <source>48</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">22</prop><prop prop-type="Type">TJvImgBtn</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:GroupBox1.O:JvImgBtn1.Width" resname="O:FImportAccounts.O:GroupBox1.O:JvImgBtn1.Width">
+        <source>193</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">23</prop><prop prop-type="Type">TJvImgBtn</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:GroupBox1.O:JvImgBtn1.Height" resname="O:FImportAccounts.O:GroupBox1.O:JvImgBtn1.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">24</prop><prop prop-type="Type">TJvImgBtn</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:GroupBox1.O:JvImgBtn1.Cursor" resname="O:FImportAccounts.O:GroupBox1.O:JvImgBtn1.Cursor">
+        <source>crHandPoint</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TJvImgBtn</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:GroupBox1.O:JvImgBtn1.Caption" resname="O:FImportAccounts.O:GroupBox1.O:JvImgBtn1.Caption">
+        <source>'Import accounts'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TJvImgBtn</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:GroupBox1.O:JvImgBtn1.ImageIndex" resname="O:FImportAccounts.O:GroupBox1.O:JvImgBtn1.ImageIndex">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">27</prop><prop prop-type="Type">TJvImgBtn</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:GroupBox1.O:JvImgBtn1.Images" resname="O:FImportAccounts.O:GroupBox1.O:JvImgBtn1.Images">
+        <source>Fmain.ilGFX16</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TJvImgBtn</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:GroupBox1.O:JvImgBtn1.TabOrder" resname="O:FImportAccounts.O:GroupBox1.O:JvImgBtn1.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TJvImgBtn</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:GroupBox1.O:JvImgBtn1.OnClick" resname="O:FImportAccounts.O:GroupBox1.O:JvImgBtn1.OnClick">
+        <source>JvImgBtn1Click</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TJvImgBtn</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:GroupBox1.O:JvImgBtn1.Animate" resname="O:FImportAccounts.O:GroupBox1.O:JvImgBtn1.Animate">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TJvImgBtn</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:GroupBox1.O:JvImgBtn1.HotTrackFont.Charset" resname="O:FImportAccounts.O:GroupBox1.O:JvImgBtn1.HotTrackFont.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TJvImgBtn</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:GroupBox1.O:JvImgBtn1.HotTrackFont.Color" resname="O:FImportAccounts.O:GroupBox1.O:JvImgBtn1.HotTrackFont.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">33</prop><prop prop-type="Type">TJvImgBtn</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:GroupBox1.O:JvImgBtn1.HotTrackFont.Height" resname="O:FImportAccounts.O:GroupBox1.O:JvImgBtn1.HotTrackFont.Height">
+        <source>-11</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">34</prop><prop prop-type="Type">TJvImgBtn</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:GroupBox1.O:JvImgBtn1.HotTrackFont.Name" resname="O:FImportAccounts.O:GroupBox1.O:JvImgBtn1.HotTrackFont.Name">
+        <source>'Tahoma'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TJvImgBtn</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:GroupBox1.O:JvImgBtn1.HotTrackFont.Style" resname="O:FImportAccounts.O:GroupBox1.O:JvImgBtn1.HotTrackFont.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TJvImgBtn</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:GroupBox1.O:Panel1.Left" resname="O:FImportAccounts.O:GroupBox1.O:Panel1.Left">
+        <source>2</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:GroupBox1.O:Panel1.Top" resname="O:FImportAccounts.O:GroupBox1.O:Panel1.Top">
+        <source>238</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:GroupBox1.O:Panel1.Width" resname="O:FImportAccounts.O:GroupBox1.O:Panel1.Width">
+        <source>406</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:GroupBox1.O:Panel1.Height" resname="O:FImportAccounts.O:GroupBox1.O:Panel1.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:GroupBox1.O:Panel1.Align" resname="O:FImportAccounts.O:GroupBox1.O:Panel1.Align">
+        <source>alBottom</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">41</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:GroupBox1.O:Panel1.Alignment" resname="O:FImportAccounts.O:GroupBox1.O:Panel1.Alignment">
+        <source>taLeftJustify</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">42</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:GroupBox1.O:Panel1.BevelInner" resname="O:FImportAccounts.O:GroupBox1.O:Panel1.BevelInner">
+        <source>bvRaised</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">43</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:GroupBox1.O:Panel1.BevelOuter" resname="O:FImportAccounts.O:GroupBox1.O:Panel1.BevelOuter">
+        <source>bvLowered</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">44</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:GroupBox1.O:Panel1.Color" resname="O:FImportAccounts.O:GroupBox1.O:Panel1.Color">
+        <source>clWhite</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">45</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:GroupBox1.O:Panel1.ParentBackground" resname="O:FImportAccounts.O:GroupBox1.O:Panel1.ParentBackground">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">46</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:GroupBox1.O:Panel1.TabOrder" resname="O:FImportAccounts.O:GroupBox1.O:Panel1.TabOrder">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">47</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:GroupBox1.O:Panel1.Visible" resname="O:FImportAccounts.O:GroupBox1.O:Panel1.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">48</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:GroupBox1.O:JvHTListBox1.Left" resname="O:FImportAccounts.O:GroupBox1.O:JvHTListBox1.Left">
+        <source>96</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">49</prop><prop prop-type="Type">TJvHTListBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:GroupBox1.O:JvHTListBox1.Top" resname="O:FImportAccounts.O:GroupBox1.O:JvHTListBox1.Top">
+        <source>79</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">50</prop><prop prop-type="Type">TJvHTListBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:GroupBox1.O:JvHTListBox1.Width" resname="O:FImportAccounts.O:GroupBox1.O:JvHTListBox1.Width">
+        <source>193</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">51</prop><prop prop-type="Type">TJvHTListBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:GroupBox1.O:JvHTListBox1.Height" resname="O:FImportAccounts.O:GroupBox1.O:JvHTListBox1.Height">
+        <source>153</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">52</prop><prop prop-type="Type">TJvHTListBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:GroupBox1.O:JvHTListBox1.HideSel" resname="O:FImportAccounts.O:GroupBox1.O:JvHTListBox1.HideSel">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">53</prop><prop prop-type="Type">TJvHTListBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:GroupBox1.O:JvHTListBox1.ColorHighlight" resname="O:FImportAccounts.O:GroupBox1.O:JvHTListBox1.ColorHighlight">
+        <source>clHighlight</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">54</prop><prop prop-type="Type">TJvHTListBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:GroupBox1.O:JvHTListBox1.ColorHighlightText" resname="O:FImportAccounts.O:GroupBox1.O:JvHTListBox1.ColorHighlightText">
+        <source>clHighlightText</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">55</prop><prop prop-type="Type">TJvHTListBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:GroupBox1.O:JvHTListBox1.ColorDisabledText" resname="O:FImportAccounts.O:GroupBox1.O:JvHTListBox1.ColorDisabledText">
+        <source>clGrayText</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">56</prop><prop prop-type="Type">TJvHTListBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:GroupBox1.O:JvHTListBox1.TabOrder" resname="O:FImportAccounts.O:GroupBox1.O:JvHTListBox1.TabOrder">
+        <source>2</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">57</prop><prop prop-type="Type">TJvHTListBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:GroupBox1.O:JvHTListBox1.Visible" resname="O:FImportAccounts.O:GroupBox1.O:JvHTListBox1.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">58</prop><prop prop-type="Type">TJvHTListBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:JvSearchFiles1.RootDirectory" resname="O:FImportAccounts.O:JvSearchFiles1.RootDirectory">
+        <source>'C:\'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">59</prop><prop prop-type="Type">TJvSearchFiles</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:JvSearchFiles1.DirParams.SearchTypes" resname="O:FImportAccounts.O:JvSearchFiles1.DirParams.SearchTypes">
+        <source>[stFileMask]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">60</prop><prop prop-type="Type">TJvSearchFiles</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:JvSearchFiles1.FileParams.SearchTypes" resname="O:FImportAccounts.O:JvSearchFiles1.FileParams.SearchTypes">
+        <source>[stFileMask]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">61</prop><prop prop-type="Type">TJvSearchFiles</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:JvSearchFiles1.FileParams.FileMasks.Strings[0]" resname="O:FImportAccounts.O:JvSearchFiles1.FileParams.FileMasks.Strings[0]">
+        <source>'ini'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">62</prop><prop prop-type="Type">TJvSearchFiles</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop><prop prop-type="Close">)</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:JvSearchFiles1.OnBeginScanDir" resname="O:FImportAccounts.O:JvSearchFiles1.OnBeginScanDir">
+        <source>JvSearchFiles1BeginScanDir</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">63</prop><prop prop-type="Type">TJvSearchFiles</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:JvSearchFiles1.OnFindFile" resname="O:FImportAccounts.O:JvSearchFiles1.OnFindFile">
+        <source>JvSearchFiles1FindFile</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">64</prop><prop prop-type="Type">TJvSearchFiles</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:JvSearchFiles1.OnProgress" resname="O:FImportAccounts.O:JvSearchFiles1.OnProgress">
+        <source>JvSearchFiles1Progress</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">65</prop><prop prop-type="Type">TJvSearchFiles</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:JvSearchFiles1.Left" resname="O:FImportAccounts.O:JvSearchFiles1.Left">
+        <source>328</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">66</prop><prop prop-type="Type">TJvSearchFiles</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FImportAccounts.O:JvSearchFiles1.Top" resname="O:FImportAccounts.O:JvSearchFiles1.Top">
+        <source>72</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631796065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">67</prop><prop prop-type="Type">TJvSearchFiles</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

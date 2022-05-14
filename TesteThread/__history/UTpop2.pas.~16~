@@ -1,0 +1,141 @@
+unit UTpop2;
+
+interface
+
+Uses JvMTComponents,Classes, MyAccess,IdPOP3, IdCoderHeader, ComCtrls,
+      IdMessage, SysUtils;
+
+implementation
+
+uses unit1;
+type
+
+TNuid = class(Tobject)
+  public
+    Num:Integer;
+    UID:String;
+    Tamanho:Integer;
+end;
+
+TListNuid = class(TList)
+  protected
+    function GetObject(Index: Integer): TNuid;
+  Public
+    property Itens[Index: Integer]: TNuid read GetObject;
+    procedure popula(S:TStrings);
+end;
+
+
+TPop = class(TJvMtThread)
+  private
+    Fuser               : string;
+    Fsenha              : string;
+    FServer             : string;
+    FPorta              : integer;
+    FPOP                : TIdPop3;
+    FMsg                : TIdMessage;
+    FUID                : TstringList;
+    FConta              : Integer;
+    FCon                : TMyconnection;
+    queryGrava, queryLe : TMyquery;
+    ListaUid            : TListNuid;
+    MSGLog              : TStringList;
+    procedure onRun;
+  protected
+    Procedure Executa;
+    constructor Create(CreateSuspended: Boolean;server,senha,user:string;
+            porta,conta:integer;conexao:TMyConnection);
+    Procedure OnExecute();
+end;
+
+Const
+  tabela : String = 'messages_thread';
+
+
+{ TPop }
+
+constructor TPop.Create(CreateSuspended: Boolean;server,senha,user:string;
+            porta,conta:integer;conexao:TMyConnection);
+begin
+  self.RunOnCreate :=false;
+  Self.Manager := form1.JvMTManager1;
+  Fuser    := user;
+  Fsenha   := senha;
+  FServer  := server;
+  FPorta   := porta;
+  Fconta   := conta;
+  FPOP     := TIdPop3.Create(nil);
+  FMsg     := TidMessage.Create(nil);
+  FUid     := TstringList.Create;
+  MSGLog   := TstringList.Create;
+  ListaUid := TListNuid.Create;
+  Fmsg.NoEncode := false;
+  Fmsg.NoDecode := false;
+  Fpop.Username := Fuser;
+  Fpop.Password := Fsenha;
+  Fpop.Host     := Fserver;
+  Fpop.Port     := FPorta;
+
+
+
+
+
+FCon := conexao;
+
+queryGrava := Tmyquery.Create(nil);
+queryGrava.Connection := conexao;
+
+queryGrava.SQL.add('INSERT INTO '+ tabela);
+queryGrava.SQL.add('(ID,  DT,  Email,  Assunto,  Emitente,  Tama,');
+queryGrava.SQL.add(' Datamens,  Cabec,  Corpo,  `Status`,  Filtrada,');
+queryGrava.SQL.add(' ListaNegra,  Favoritos,  FiltroResult,');
+queryGrava.SQL.add(' ListaNegraResult,  NumeroMens,  Excluida,  Anexos,');
+queryGrava.SQL.add(' selecionada,  Conta,  MsgId,  IsBodyEmpty,  UID,');
+queryGrava.SQL.add(' IsMsgSinglePartMime,  AttachmentEncoding,');
+queryGrava.SQL.add(' `CharSet` ,  ContentType,  ContentTransferEncoding,');
+queryGrava.SQL.add(' ContentDisposition,  NoEncode,  NoDecode,');
+queryGrava.SQL.add(' Organization,  DataOrig,  Xmailer,  ReplayTO,');
+queryGrava.SQL.add(' ReturnPath,  FromOrig,  ToOrig,  CCOrig,  BCCOrig,');
+queryGrava.SQL.add(' ReceivedFrom,  FriendResult,  EmailFrom,  DominioFrom,');
+queryGrava.SQL.add(' IPSender,  ID_Conta,  AnexosFiles,  Country,  lida)');
+queryGrava.SQL.add('VALUES');
+queryGrava.SQL.add('(:ID, :DT, :Email, :Assunto, :Emitente, :Tama,');
+queryGrava.SQL.add(' :Datamens, :Cabec, :Corpo, :Status, :Filtrada,');
+queryGrava.SQL.add(' :ListaNegra, :Favoritos, :FiltroResult,');
+queryGrava.SQL.add(' :ListaNegraResult, :NumeroMens, :Excluida, :Anexos,');
+queryGrava.SQL.add(' :selecionada, :Conta, :MsgId, :IsBodyEmpty, :UID,');
+queryGrava.SQL.add(' :IsMsgSinglePartMime, :AttachmentEncoding,');
+queryGrava.SQL.add(' :CharSet , :ContentType, :ContentTransferEncoding,');
+queryGrava.SQL.add(' :ContentDisposition, :NoEncode, :NoDecode,');
+queryGrava.SQL.add(' :Organization, :DataOrig, :Xmailer, :ReplayTO,');
+queryGrava.SQL.add(' :ReturnPath, :FromOrig, :ToOrig, :CCOrig, :BCCOrig,');
+queryGrava.SQL.add(' :ReceivedFrom, :FriendResult, :EmailFrom, :DominioFrom,');
+queryGrava.SQL.add(' :IPSender, :ID_Conta, :AnexosFiles, :Country, :lida)');
+
+
+
+queryLe := Tmyquery.Create(nil);
+queryLe.Connection := conexao;
+queryLe.SQL.Add('Select * from '+tabela+' where UID = :UID');
+
+
+end;
+
+procedure TPop.Executa;
+begin
+  self.RunCopy;
+end;
+
+
+procedure TPop.OnExecute;
+var
+  i: Integer;
+begin
+  for i := 0 to 5 do
+  begin
+  form1.Memo1.Lines.Add('Olá: 'inttostr(i));
+  end;
+end;
+
+
+end.

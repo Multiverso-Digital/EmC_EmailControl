@@ -1,0 +1,54 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Martin Harvey">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (WinNT; I) [Netscape]">
+   <title>Source47</title>
+</head>
+<body>
+<PRE><TT><B>unit</B> InitForm;
+
+<B>interface</B>
+
+<B>uses</B>
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
+  StdCtrls;
+
+<B>type</B>
+  TInitFrm = <B>class</B>(TForm)
+    SpawnThrd: TButton;
+    <B>procedure</B> SpawnThrdClick(Sender: TObject);
+  <B>private</B>
+    <FONT COLOR=NAVY><I>{ Private declarations }</I></FONT>
+  <B>public</B>
+    <FONT COLOR=NAVY><I>{ Public declarations }</I></FONT>
+  <B>end</B>;
+
+<B>var</B>
+  InitFrm: TInitFrm;
+
+<B>implementation</B>
+
+<B>uses</B> DLLCaller;
+
+<FONT COLOR=NAVY><I>{$R *.DFM}</I></FONT>
+
+<B>procedure</B> TInitFrm.SpawnThrdClick(Sender: TObject);
+
+<B>var</B>
+  CallerThread:TDLLCaller;
+
+<B>begin</B>
+  CallerThread:=TDLLCaller.Create(true);
+  <B>with</B> CallerThread <B>do</B>
+  <B>begin</B>
+    FreeOnTerminate := true;
+    Resume;
+  <B>end</B>;
+<B>end</B>;
+
+<B>end.</B>
+</TT></PRE>
+</body>
+</html>

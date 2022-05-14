@@ -1,0 +1,152 @@
+Received: from servidor.cenpec.org.br ([200.230.152.130]) by abreuretto.com with MailEnable ESMTP; Fri, 06 Feb 2009 11:39:28 -0800
+Received: by servidor.cenpec.org.br (Postfix, from userid 502)
+	id BE9EB154071; Fri,  6 Feb 2009 11:41:02 -0200 (BRST)
+Received: from [10.10.0.162] (unknown [10.10.0.162])
+	by servidor.cenpec.org.br (Postfix) with ESMTP id D949115406D
+	for <abreu@abreuretto.com>; Fri,  6 Feb 2009 11:40:59 -0200 (BRST)
+Message-ID: <498C4A43.2090703@cenpec.org.br>
+Disposition-Notification-To: Evandro Braga Teodoro <evandro@cenpec.org.br>
+Date: Fri, 06 Feb 2009 11:33:39 -0300
+From: Evandro Braga Teodoro <evandro@cenpec.org.br>
+Organization: CENPEC
+User-Agent: Thunderbird 2.0.0.12 (Windows/20080213)
+MIME-Version: 1.0
+To: Abreu Retto <abreu@abreuretto.com>
+Subject: Re: Arquivos faltantes - Abreu
+References: <000001c9885e$35826090$a08721b0$@com>
+In-Reply-To: <000001c9885e$35826090$a08721b0$@com>
+Content-Type: multipart/mixed;
+ boundary="------------020400070108080209040302"
+X-Spam-Checker-Version: SpamAssassin 2.63-spambr_20030926 (2004-01-11) on 
+	servidor.cenpec.org.br
+X-Spam-Level: 
+X-Spam-Status: No, hits=0.6 required=7.7 tests=HTML_60_70,HTML_MESSAGE,
+	HTML_TITLE_EMPTY autolearn=no version=2.63-spambr_20030926
+Return-Path: <evandro@cenpec.org.br>
+
+This is a multi-part message in MIME format.
+--------------020400070108080209040302
+Content-Type: multipart/alternative;
+ boundary="------------050409070006040606090700"
+
+
+--------------050409070006040606090700
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: quoted-printable
+
+Abreu ele solicitou outro arquivo o vcl120.bpl
+
+Abreu Retto escreveu:
+>
+> Evandro
+>
+> =20
+>
+> Copie estes arquivos(em anexo) para a pasta Windows/system32
+>
+> =20
+>
+> Um abra=E7o
+>
+> =20
+>
+> Abreu
+>
+
+--------------050409070006040606090700
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html;charset=ISO-8859-1" http-equiv="Content-Type">
+  <title></title>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+Abreu ele solicitou outro arquivo o vcl120.bpl<br>
+<br>
+Abreu Retto escreveu:
+<blockquote cite="mid:000001c9885e$35826090$a08721b0$@com" type="cite">
+  <meta http-equiv="Content-Type" content="text/html; ">
+  <meta name="Generator" content="Microsoft Word 12 (filtered medium)">
+  <style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:purple;
+	text-decoration:underline;}
+span.EstiloDeEmail17
+	{mso-style-type:personal-compose;
+	font-family:"Calibri","sans-serif";
+	color:windowtext;}
+.MsoChpDefault
+	{mso-style-type:export-only;}
+@page Section1
+	{size:612.0pt 792.0pt;
+	margin:70.85pt 3.0cm 70.85pt 3.0cm;}
+div.Section1
+	{page:Section1;}
+-->
+  </style>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1" />
+ </o:shapelayout></xml><![endif]-->
+  <div class="Section1">
+  <p class="MsoNormal">Evandro<o:p></o:p></p>
+  <p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+  <p class="MsoNormal">Copie estes arquivos(em anexo) para a pasta
+Windows/system32<o:p></o:p></p>
+  <p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+  <p class="MsoNormal">Um abra&ccedil;o<o:p></o:p></p>
+  <p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+  <p class="MsoNormal">Abreu<o:p></o:p></p>
+  </div>
+</blockquote>
+</body>
+</html>
+
+--------------050409070006040606090700--
+
+--------------020400070108080209040302
+Content-Type: text/x-vcard; charset=utf-8;
+ name="evandro.vcf"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: attachment;
+ filename="evandro.vcf"
+
+begin:vcard
+fn:Evandro Braga Teodoro
+n:Braga Teodoro;Evandro
+org:CENPEC 
+adr;quoted-printable;quoted-printable:;;Rua Dante Carraro, 69;S=C3=A3o Paulo;S=C3=A3o Paulo;05422-060;Brasil
+email;internet:evandro@cenpec.org.br
+tel;work:(11) 2132-9016
+tel;cell:(11) 8272-6058
+url:www.cenpec.org.br
+version:2.1
+end:vcard
+
+
+--------------020400070108080209040302--
+

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<PersonalityInfo>
+		<Option>
+			<Option Name="Personality">W32ResourceDLL.Personality</Option>
+			<Option Name="ProjectType">ResourceDLL</Option>
+			<Option Name="Version">1.0</Option>
+			<Option Name="GUID">{6E6DE0A5-2FE6-42B5-B190-AD26856D5C11}</Option>
+		</Option>
+	</PersonalityInfo>
+	<W32ResourceDLL.Personality>
+		<Source>
+			<Source Name="MainSource">EmC.dpr</Source>
+		</Source>
+		<Options>
+			<Options Name="BaseLang">1046</Options>
+			<Options Name="TargetName">..\EmC.PTB</Options>
+			<Options Name="Company"></Options>
+			<Options Name="Configuration"></Options>
+			<Options Name="Copyright"></Options>
+			<Options Name="Description"></Options>
+			<Options Name="Trademark"></Options>
+			<Options Name="Product"></Options>
+			<Options Name="ProductVersion"></Options>
+			<Options Name="Title"></Options>
+			<Options Name="FileVersion"></Options>
+			<Options Name="Evidence"></Options>
+			<Options Name="KeyFile"></Options>
+			<Options Name="KeyName"></Options>
+		</Options>
+		<FileList><File FileName="UContas.dfm" ContainerId="W32Form" ModuleName="UContas.dfm"/><File FileName="UDMSERVER.dfm" ContainerId="W32Form" ModuleName="UDMSERVER.dfm"/><File FileName="UExportAccounts.dfm" ContainerId="W32Form" ModuleName="UExportAccounts.dfm"/><File FileName="UFavoritos.dfm" ContainerId="W32Form" ModuleName="UFavoritos.dfm"/><File FileName="UImportAccounts.dfm" ContainerId="W32Form" ModuleName="UImportAccounts.dfm"/><File FileName="Umain.dfm" ContainerId="W32Form" ModuleName="Umain.dfm"/><File FileName="Umens.dfm" ContainerId="W32Form" ModuleName="Umens.dfm"/><File FileName="UShowFilterFriends.dfm" ContainerId="W32Form" ModuleName="UShowFilterFriends.dfm"/><File FileName="vcl\DBLOGDLG.dfm" ContainerId="W32Form" ModuleName="DBLOGDLG.dfm"/><File FileName="vcl\DBPWDLG.dfm" ContainerId="W32Form" ModuleName="DBPWDLG.dfm"/><File FileName="EmC_DRC.rc" ContainerId="W32RC" ModuleName="EmC_DRC.rc"/></FileList></W32ResourceDLL.Personality>
+</BorlandProject>

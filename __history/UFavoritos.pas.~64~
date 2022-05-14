@@ -1,0 +1,832 @@
+unit UFavoritos;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs,  StdCtrls, Buttons, ComCtrls, JvExControls, JvgShadow, Grids,
+  Wwdbigrd, Wwdbgrid, DBGrids, JvExDBGrids, JvDBGrid, JvDBUltimGrid, Mask,
+  DBCtrls, JvDBDotNetControls, JvExStdCtrls, JvEdit, JvDBSearchEdit,
+  JvGridFilter, Wwkeycb, JvGradientCaption, ImgList, JvComponentBase,
+  JvFormAnimatedIcon, JvFormTransparent, Menus, funcoes, wwdbedit, Wwdotdot,
+  Wwdbcomb, Registry, wwcheckbox, db, JvExMask, JvToolEdit, JvMaskEdit,
+  JvDBFindEdit, CRGrid, memdata, dbclient, JvxCheckListBox, JvListBox;
+
+type
+  TFFavoritos = class(TForm)
+    GroupBox1: TGroupBox;
+    PageControl1: TPageControl;
+    TabSheet1: TTabSheet;
+    TabSheet2: TTabSheet;
+    TabSheet3: TTabSheet;
+    JvGridFilter1: TJvGridFilter;
+    GroupBox3: TGroupBox;
+    EEmail: TEdit;
+    GroupBox6: TGroupBox;
+    Button4: TButton;
+    Label2: TLabel;
+    Button3: TButton;
+    PopupMenu1: TPopupMenu;
+    DeleteselectedEmail1: TMenuItem;
+    Label9: TLabel;
+    Label10: TLabel;
+    Label11: TLabel;
+    GroupBox5: TGroupBox;
+    Label3: TLabel;
+    Label12: TLabel;
+    Label13: TLabel;
+    Label14: TLabel;
+    Edomain: TEdit;
+    Button2: TButton;
+    PopupMenu2: TPopupMenu;
+    MenuItem1: TMenuItem;
+    OpenDialog1: TOpenDialog;
+    PB: TProgressBar;
+    CBAdress: TRadioButton;
+    CBTexto: TRadioButton;
+    CBEmC: TRadioButton;
+    OpenDialog2: TOpenDialog;
+    wwDBGrid1: TwwDBGrid;
+    PopupMenu3: TPopupMenu;
+    ShowthisRule1: TMenuItem;
+    Edit1: TEdit;
+    Label1: TLabel;
+    Label4: TLabel;
+    Edit2: TEdit;
+    LBFav_Email: TJvxCheckListBox;
+    LBFav_Domain: TJvxCheckListBox;
+    Label5: TLabel;
+    Label6: TLabel;
+    JvListBox1: TJvListBox;
+    Label7: TLabel;
+    procedure PageControl1Change(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
+    procedure JvDBGrid1CellClick(Column: TColumn);
+    procedure FormShow(Sender: TObject);
+    procedure DeleteselectedEmail1Click(Sender: TObject);
+    procedure Label9Click(Sender: TObject);
+    procedure MenuItem1Click(Sender: TObject);
+    procedure JvDBGrid2CellClick(Column: TColumn);
+    procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+    procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+    procedure wwExpandButton1CheckVisibleButton(Sender: TwwExpandButton;
+      DataSet: TDataSet; var AShowExpand: Boolean);
+    procedure wwDBGrid1DblClick(Sender: TObject);
+    procedure Edit1KeyPress(Sender: TObject; var Key: Char);
+    procedure Edit2KeyPress(Sender: TObject; var Key: Char);
+    procedure LBFav_EmailStateChange(Sender: TObject; Index: Integer);
+    procedure LBFav_DomainStateChange(Sender: TObject; Index: Integer);
+  private
+
+
+
+
+
+    procedure ImportaEmC;
+    Procedure ImportaCatalogo;
+    Procedure ImportaTexto;
+
+
+
+    { Private declarations }
+  public
+
+   ListaBoxName : TstringList;
+   ListaBoxID : TstringList;
+
+
+    { Public declarations }
+  end;
+
+
+
+ Procedure ShowFavoritos;stdcall;external 'Favoritos.dll' name 'ShowFavoritos';
+
+
+
+ var
+  FFavoritos       : TFFavoritos;
+  cds_mostraFG     : TclientDataset;
+
+
+
+implementation
+
+uses udmserver, UTestaExpression, UShowFilterFriends, umain;
+
+{$R *.dfm}
+
+
+
+
+Procedure TFFavoritos.ImportaTexto;
+var
+ListaGeral : TstringList;
+I : integer;
+begin
+
+ListaGeral := TstringList.Create;
+
+If Opendialog2.Execute then
+begin
+
+ListaGeral.LoadFromFile(OpenDialog2.filename);
+
+pb.Visible := true;
+pb.position := 0;
+pb.Max := ListaGeral.count;
+
+For I:= 0 to ListaGeral.count - 1 do
+begin
+application.ProcessMessages;
+If trim(ListaGeral.Strings[i]) <> '' then
+   begin
+   If pos('@', ListaGeral.Strings[i]) > 0 then
+   begin
+   pb.position := I;
+
+
+    dm_server.Incluir('FAVEMAIL', trim(ListaGeral.strings[i]));
+
+  // if Fmain.Fav_Email.IndexOf(trim(ListaGeral.strings[i])) = -1 then
+  //    Fmain.Fav_Email.add(trim(ListaGeral.strings[i]));
+
+   //dm_server.GravaBoxes(dm_server.quem,1,0,'0','From:',4,trim(ListaGeral.strings[i]),0,'My Friend E-mail');
+
+   FFavoritos.Repaint;
+   end;
+   end;
+
+end;
+
+pb.position := 0;
+pb.Visible := false;
+ListaGeral.Free;
+//dm_server.MostraBoxes(dm_server.quem,1,0,4);
+//dm_server.qmostraBoxes.Refresh;
+
+
+end;
+
+end;
+
+
+Procedure TFFavoritos.ImportaCatalogo;
+var
+ListaGeral : TstringList;
+I : integer;
+begin
+
+
+    ShowFavoritos;
+
+
+    try
+
+    if fileexists(dm_server.dire+'@EmCFavoritos.ini') then
+       begin
+       ListaGeral := TstringList.Create;
+       FFavoritos.Repaint;
+       ListaGeral.LoadFromFile(dm_server.dire+'@EmCFavoritos.ini');
+       pb.Visible := true;
+       pb.Max :=  ListaGeral.Count;
+
+       for I:= 0 to ListaGeral.Count - 1 do
+           begin
+           application.ProcessMessages;
+           pb.Position := I+1;
+           FFavoritos.Repaint;
+
+          dm_server.Incluir('FAVEMAIL', trim(ListaGeral.strings[i]));
+
+
+
+      //     if Fmain.Fav_Email.IndexOf(trim(ListaGeral.strings[i])) = -1 then
+      //        Fmain.Fav_Email.add(trim(ListaGeral.strings[i]));
+
+          // dm_server.GravaBoxes(1,1,0,'0','From:',4,trim(ListaGeral.strings[i]),0,'My Friend E-mail')
+          end;
+       //dm_server.MostraBoxes(1,1,0,4);
+       //dm_server.qmostraBoxes.Refresh;
+       pb.Position := 0;
+       pb.Visible := false;
+       end;
+
+    except
+
+
+    end;
+
+
+end;
+
+
+
+procedure TFFavoritos.ImportaEmC;
+var
+I      : Integer;
+ListaF : TstringList;
+begin
+
+ListaF := TstringList.Create;
+
+
+if dm_server.Quem = 1  then
+   begin
+    OpenDialog1.FileName := 'EmCFavoritos.ini';
+    OpenDialog1.Filter   := 'My Friends|*.ini';
+   end;
+
+if dm_server.Quem = 2  then
+   begin
+    OpenDialog1.FileName := 'EmCMinhaLst.ini';
+    OpenDialog1.Filter   := 'BlackList|*.ini';
+   end;
+
+
+
+
+if OpenDialog1.Execute then
+   begin
+
+   ListaF.LoadFromFile(Opendialog1.FileName);
+
+   PB.Visible := true;
+   pb.Max := ListaF.Count;
+
+   for I:= 0 to ListaF.Count - 1 do
+       begin
+
+       pb.Position := I+1;
+
+       application.ProcessMessages;
+       FFavoritos.Repaint;
+
+
+
+       if dm_Server.Quem = 1 then
+       begin
+        if copy(ListaF.Strings[i],1,1) = 'A' then
+           begin
+              dm_server.GravaBoxes(1,1,-1,'OR','Subject:',2,copy(ListaF.Strings[i],4,length(ListaF.Strings[i])-3),0,'Subject old EmC version');
+           end;
+        if copy(ListaF.Strings[i],1,1) = 'E' then
+           begin
+             if copy(ListaF.Strings[i],4,5) = '*EmC*' then
+               begin
+
+                dm_server.Incluir('FAVDOMAIN', copy(ListaF.Strings[i],9,length(ListaF.Strings[i])-8));
+
+          //      if fmain.Fav_Domain.IndexOf(copy(ListaF.Strings[i],9,length(ListaF.Strings[i])-8))  = -1 then
+          //      fmain.Fav_Domain.add(copy(ListaF.Strings[i],9,length(ListaF.Strings[i])-8));
+
+                 // dm_server.GravaBoxes(1,1,0,'0','From:',5,copy(ListaF.Strings[i],9,length(ListaF.Strings[i])-8),0,'My Friend Domain');
+
+
+               end
+               else
+               begin
+
+               dm_server.Incluir('FAVEMAIL', copy(ListaF.Strings[i],4,length(ListaF.Strings[i])-3));
+
+
+        //          if fmain.Fav_Email.IndexOf(copy(ListaF.Strings[i],4,length(ListaF.Strings[i])-3))  = -1 then
+        //          fmain.Fav_Email.add(copy(ListaF.Strings[i],4,length(ListaF.Strings[i])-3));
+        //       dm_server.GravaBoxes(1,1,0,'0','From:',4,copy(ListaF.Strings[i],4,length(ListaF.Strings[i])-3),0,'My Friend E-mail');
+               end;
+            end;
+       end;
+
+
+       if dm_Server.Quem = 2 then
+       begin
+             if copy(ListaF.Strings[i],1,5) = '*EmC*' then
+               begin
+
+               dm_server.Incluir('BLACDOMAIN', copy(ListaF.Strings[i],6,length(ListaF.Strings[i])-5));
+
+
+          //        if fmain.Black_Domain.IndexOf(copy(ListaF.Strings[i],6,length(ListaF.Strings[i])-5))  = -1 then
+          //        fmain.Black_Domain.add(copy(ListaF.Strings[i],6,length(ListaF.Strings[i])-5));
+
+                 // dm_server.GravaBoxes(2,1,0,'0','From:',5,copy(ListaF.Strings[i],6,length(ListaF.Strings[i])-5),0,'BlackList Domain');
+               end
+               else
+               begin
+
+               dm_server.Incluir('BLACKEMAIL', copy(ListaF.Strings[i],1,length(ListaF.Strings[i])));
+
+
+
+         //         if fmain.Black_Email.IndexOf(copy(ListaF.Strings[i],1,length(ListaF.Strings[i])))  = -1 then
+         //         fmain.Black_Email.add(copy(ListaF.Strings[i],1,length(ListaF.Strings[i])));
+
+
+      //            dm_server.GravaBoxes(2,1,0,'0','From:',4,copy(ListaF.Strings[i],1,length(ListaF.Strings[i])),0,'BlackList E-mail');
+               end;
+
+       end;
+
+
+
+
+
+
+
+
+       end;
+
+
+   end;
+
+//dm_server.qmostraBoxes.Refresh;
+//dm_server.cds_Boxes.Refresh;
+pb.Position := 0;
+pb.Visible := false;
+ListaF.Free;
+
+
+end;
+
+
+
+procedure TFFavoritos.Button2Click(Sender: TObject);
+var
+Monta : string;
+Pega : integer;
+begin
+
+with dm_server do
+begin
+
+
+if quem = 1 then monta := 'My Friend Domain';
+if quem = 2 then monta := 'BlackList Domain';
+if quem = 3 then monta := 'Filter Domain';
+
+
+
+if trim(Edomain.text) <> '' then
+   begin
+
+   if pos('@',Edomain.text) = 1 then
+   begin
+
+
+     if buscaRegexp(dm_server.VerDomain,Edomain.text,3) then
+         begin
+
+
+          if dm_server.Quem = 1  then
+          begin
+          Incluir('FAVDOMAIN',(Edomain.text));
+          showmessage('Domain '+(Edomain.text)+' added into the List');
+          LBFav_Domain.Items.Assign(Fmain.Fav_Domain);
+          end;
+
+          if dm_server.Quem = 2  then
+          begin
+          Incluir('BLACKDOMAIN',(Edomain.text));
+          showmessage('Domain '+(Edomain.text)+' added into the List');
+          LBFav_Domain.Items.Assign(Fmain.Black_Domain);
+          end;
+
+
+           TemFiltroNovo := true;
+
+         end
+         else
+         begin
+           showmessage('Invalid Domain');
+         end;
+
+   end
+   else
+   begin
+      showmessage('Invalid Domain');
+   end;
+
+end;
+
+
+end;
+
+end;
+
+
+procedure TFFavoritos.Button3Click(Sender: TObject);
+
+begin
+
+if CBEmC.Checked then  ImportaEmC;
+if CBTexto.checked then ImportaTexto;
+if CBAdress.Checked  then ImportaCatalogo;
+dm_server.TemFiltroNovo := true;
+
+LBFav_Email.Assign(fmain.Fav_Email);
+LBFav_Domain.Assign(fmain.Fav_Domain);
+LBFav_EmailStateChange(self,0);
+LBFav_DomainStateChange(self,0);
+
+
+end;
+
+procedure TFFavoritos.Button4Click(Sender: TObject);
+var
+Monta : string;
+Pega : integer;
+begin
+
+
+
+
+with dm_server do
+begin
+
+if quem = 1  then monta := 'My Friend E-Mail';
+if quem = 2  then monta := 'BlackList E-Mail';
+if quem = 3  then monta := 'Filter E-Mail';
+
+
+
+if trim(EEmail.text) <> '' then
+   begin
+
+     if buscaRegexp(dm_server.EmailRegExp,limpaemail(EEmail.text),3) then
+          begin
+
+          if dm_server.Quem = 1  then
+          begin
+          Incluir('FAVEMAIL',limpaemail(EEmail.text));
+          showmessage('E-mail '+limpaemail(EEmail.text)+' added into the List');
+          LBFav_Email.Items.Assign(Fmain.Fav_Email);
+          end;
+
+          if dm_server.Quem = 2  then
+          begin
+          Incluir('BLACKEMAIL',limpaemail(EEmail.text));
+          showmessage('E-mail '+limpaemail(EEmail.text)+' added into the List');
+          LBFav_Email.Items.Assign(Fmain.Black_Email);
+          end;
+
+
+
+          Pega := LBFav_Email.Items.IndexOf(limpaemail(EEmail.text));
+          LBFav_Email.itemindex := pega;
+          LBFav_EmailStateChange(self,0);
+          TemFiltroNovo := true;
+
+          end
+          else
+          begin
+            showmessage('Invalid E-mail');
+          end;
+    end;
+
+
+
+end;
+
+end;
+
+procedure TFFavoritos.DeleteselectedEmail1Click(Sender: TObject);
+var
+I, Fim: integer;
+begin
+
+//if dm_server.qmostraBoxes.RecordCount = 0 then exit;
+
+
+ if Dialogs.MessageDlg('Are you sure?',
+    mtConfirmation, [mbYes, mbNo], 0, mbYes) = mrNo then
+  begin
+  exit;
+  end;
+
+
+for I:=0 to LBFav_Email.Items.Count - 1 do
+begin
+   if LBFav_Email.Checked[I] then
+ begin
+
+   if dm_Server.quem = 1 then
+   dm_server.Excluir('FAVEMAIL',LBFav_Email.items[i]);
+
+   if dm_Server.quem = 2 then
+    dm_server.Excluir('BLACKEMAIL',LBFav_Email.items[i]);
+
+ end;
+end;
+
+if dm_Server.quem = 1 then
+LBFav_Email.items.Assign(Fmain.Fav_Email);
+
+if dm_Server.quem = 2 then
+LBFav_Email.items.Assign(Fmain.Black_Email);
+
+
+
+LBFav_EmailStateChange(self,0);
+dm_server.TemFiltroNovo := True;
+
+
+end;
+
+procedure TFFavoritos.Edit1KeyPress(Sender: TObject; var Key: Char);
+begin
+
+LBFav_Email.Perform(LB_SELECTSTRING,0,LongInt(PChar(Edit1.Text)));
+
+
+
+
+
+{
+if key = #13 then
+begin
+
+
+
+  dm_server.qmostraBoxes.Locate('Expression',edit1.Text,[loPartialKey]);
+
+
+end;
+ }
+
+
+
+end;
+
+procedure TFFavoritos.Edit2KeyPress(Sender: TObject; var Key: Char);
+begin
+
+
+LBFav_Email.Perform(LB_SELECTSTRING,0,LongInt(PChar(Edit1.Text)));
+{
+
+if key = #13 then
+begin
+
+  dm_server.qmostraBoxes.Locate('Expression',edit2.Text,[loPartialKey]);
+
+
+end;
+}
+end;
+
+procedure TFFavoritos.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+
+begin
+cds_MostraFG.active := false;
+cds_MostraFG.Free;
+end;
+
+procedure TFFavoritos.FormShow(Sender: TObject);
+
+
+begin
+
+
+cds_MostraFG := TclientDataset.Create(nil);
+cds_MostraFG.CloneCursor(dm_server.cds_boxes,false,false);
+
+with cds_MostraFG.IndexDefs do
+      begin
+        Clear;
+        with AddIndexDef do
+          begin
+            Name   := 'IndexMostra'; // Nome do Index
+            Fields := 'TypeBox;NameRule;FilterID'; // Campo a ser odernado
+            Options := [ixCaseInsensitive]; // tipo ordernação.
+          end;
+      end;
+
+cds_MostraFG.IndexName   := 'IndexMostra';
+cds_MostraFG.filter      := 'Typebox = '+inttostr(dm_server.quem)+' and FilterID > 0 ';
+cds_MostraFG.filtered    := true;
+dm_server.ds_MostraFG.DataSet    :=  cds_MostraFG;
+
+
+cds_MostraFG.active := true;
+cds_MostraFG.first;
+
+ListaBoxName := TstringList.Create;
+ListaBoxID   := TstringList.Create;
+
+while not  cds_MostraFG.eof do
+begin
+
+if (ListaBoxName.IndexOf(cds_MostraFG.FieldByName('NameRule').asstring) = -1) and
+   (ListaBoxID.IndexOf(inttostr(cds_MostraFG.FieldByName('FilterID').asinteger)) = -1) then
+   begin
+    ListaBoxName.add(cds_MostraFG.FieldByName('NameRule').asstring);
+    ListaBoxID.add(inttostr(cds_MostraFG.FieldByName('FilterID').asinteger));
+   end;
+cds_MostraFG.next;
+end;
+
+
+JvListBox1.items.Assign(ListaBoxName);
+
+
+
+
+PageControl1.ActivePageIndex := 0;
+PageControl1Change(self);
+
+
+
+if dm_server.Quem = 1 then
+   begin
+    FFavoritos.caption :=   'mC-My Friends List';
+    CBAdress.Visible := true;
+    CBTexto.Visible  := true;
+    CBEmC.Visible    := True;
+    FFavoritos.color := clMoneyGreen;
+    LBfav_Email.Items.Assign(Fmain.Fav_Email);
+    LBfav_Email.Color := clMoneyGreen;
+    LBfav_Domain.Items.Assign(Fmain.Fav_Domain);
+    LBfav_Domain.Color := clMoneyGreen;
+     JvListBox1.Color := clMoneyGreen;
+   end;
+
+
+if dm_server.Quem = 2 then
+   begin
+    FFavoritos.caption :=   'mC-BlackList';
+    CBAdress.Visible := False;
+    CBTexto.Visible  := true;
+    CBEmC.Visible    := True;
+    FFavoritos.color := $00CECEFF;
+    LBfav_Email.Items.Assign(Fmain.Black_Email);
+    LBFav_Email.Color := $00CECEFF;
+    LBFav_Domain.Items.Assign(Fmain.Black_Domain);
+    LBFav_Domain.Color := $00CECEFF;
+    JvListBox1.Color :=  $00CECEFF;
+   end;
+
+if dm_server.Quem = 3 then
+   begin
+    FFavoritos.caption :=   'mC-Filters';
+    CBAdress.Visible := False;
+    CBTexto.Visible  := False;
+    CBEmC.Visible    := False;
+    FFavoritos.color := $00BFFFFF;
+   end;
+
+
+LBFav_DomainStateChange(self,0);
+LBFav_EmailStateChange(self,0);
+
+
+end;
+
+procedure TFFavoritos.JvDBGrid1CellClick(Column: TColumn);
+begin
+
+{
+with dm_server do
+begin
+
+if qmostraboxes.RecordCount > 0 then
+begin
+  eemail.Text := qmostraBoxes.fieldbyname('Expression').AsString;
+end;
+
+
+end;
+
+
+ }
+
+
+
+end;
+
+procedure TFFavoritos.JvDBGrid2CellClick(Column: TColumn);
+begin
+
+{
+
+with dm_server do
+begin
+
+if qmostraboxes.RecordCount > 0 then
+begin
+  edomain.Text := qmostraBoxes.FieldByName('Expression').AsString;
+end;
+end;
+ }
+end;
+
+
+procedure TFFavoritos.Label9Click(Sender: TObject);
+begin
+FtestaExpression := TFtestaExpression.create(self);
+FtestaExpression.showmodal;
+FtestaExpression.free;
+end;
+
+procedure TFFavoritos.LBFav_DomainStateChange(Sender: TObject; Index: Integer);
+begin
+Label6.Caption := inttostr(LBFav_Domain.Items.Count);
+end;
+
+procedure TFFavoritos.LBFav_EmailStateChange(Sender: TObject; Index: Integer);
+begin
+Label5.Caption := inttostr(LBFav_Email.Items.Count);
+end;
+
+procedure TFFavoritos.MenuItem1Click(Sender: TObject);
+var
+I, Fim : integer;
+begin
+
+ // if dm_server.qmostraBoxes.RecordCount = 0 then exit;
+
+
+ if Dialogs.MessageDlg('Are you sure?',
+    mtConfirmation, [mbYes, mbNo], 0, mbYes) = mrNo then
+  begin
+  exit;
+  end;
+
+
+for I:=0 to LBFav_Domain.Items.Count - 1 do
+begin
+   if LBFav_Domain.Checked[I] then
+ begin
+
+   if dm_Server.quem = 1 then
+    dm_server.Excluir('FAVDOMAIN',LBFav_Domain.items[i]);
+
+   if dm_Server.quem = 2 then
+    dm_server.Excluir('BLACKDOMAIN',LBFav_Domain.items[i]);
+
+ end;
+end;
+
+if dm_Server.quem = 1 then
+LBFav_Domain.items.Assign(Fmain.Fav_Domain);
+
+if dm_Server.quem = 2 then
+LBFav_Domain.items.Assign(Fmain.Black_Domain);
+
+
+LBFav_DomainStateChange(self,0);
+dm_server.TemFiltroNovo := True;
+
+
+
+end;
+
+
+
+
+
+
+procedure TFFavoritos.PageControl1Change(Sender: TObject);
+begin
+
+{
+if PageControl1.ActivePageIndex = 0 then
+dm_server.MostraBoxes(dm_server.quem,1,0,4);
+
+if PageControl1.ActivePageIndex = 1 then
+dm_server.MostraBoxes(dm_server.quem,1,0,5);
+ }
+{
+if (PageControl1.ActivePageIndex = 2) and  (dm_server.Quem = 1) then
+dm_server.MostraBoxes(dm_server.quem,1,0,5);
+
+if (PageControl1.ActivePageIndex = 2) and  (dm_server.Quem = 2) then
+dm_server.MostraBoxes(dm_server.quem,2,0,5);
+ }
+
+
+end;
+
+procedure TFFavoritos.wwDBGrid1DblClick(Sender: TObject);
+begin
+if cds_MostraFG.RecordCount > 0 then
+begin
+dm_Server.MensID  := cds_MostraFG.FieldByName('FilterID').AsInteger;
+dm_Server.TipoFil := 1;
+FShowFilterFriends := TFShowFilterFriends.create(self);
+FShowFilterFriends.showmodal;
+FShowFilterFriends.free;
+end;
+end;
+
+procedure TFFavoritos.wwExpandButton1CheckVisibleButton(Sender: TwwExpandButton;
+  DataSet: TDataSet; var AShowExpand: Boolean);
+begin
+
+dm_server.FiltraBoxes(dm_server.quem,1,cds_mostraFG.FieldByName('FilterID').asinteger);
+
+
+
+end;
+
+end.

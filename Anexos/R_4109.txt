@@ -1,0 +1,92 @@
+Received: from servidor.cenpec.org.br ([200.230.152.130]) by abreuretto.com with MailEnable ESMTP; Mon, 09 Feb 2009 17:30:12 -0800
+Received: by servidor.cenpec.org.br (Postfix, from userid 502)
+	id EEF6D154071; Mon,  9 Feb 2009 17:32:08 -0200 (BRST)
+Received: from localhost (unknown [10.10.0.9])
+	by servidor.cenpec.org.br (Postfix) with ESMTP id 6DD5D15406E
+	for <abreu@abreuretto.com>; Mon,  9 Feb 2009 17:32:03 -0200 (BRST)
+Received: from 10.10.0.8 ([10.10.0.8]) by 200.230.152.2 (Horde MIME
+	library) with HTTP; Mon, 09 Feb 2009 15:25:39 -0200
+Message-ID: <20090209152539.p0ra7qllccc8w0cw@200.230.152.2>
+Date: Mon, 09 Feb 2009 15:25:39 -0200
+From: liliane@cenpec.org.br
+To: Abreu Retto <abreu@abreuretto.com>
+Subject: =?iso-8859-1?b?cmVsYXTzcmlv?=
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="=_4iol8bdj06c3"
+Content-Transfer-Encoding: 7bit
+User-Agent: Internet Messaging Program (IMP) H3 (4.0.3)
+X-Spam-Checker-Version: SpamAssassin 2.63-spambr_20030926 (2004-01-11) on 
+	servidor.cenpec.org.br
+X-Spam-Level: 
+X-Spam-Status: No, hits=0.3 required=7.7 tests=HTML_MESSAGE,NO_REAL_NAME 
+	autolearn=no version=2.63-spambr_20030926
+Return-Path: <liliane@cenpec.org.br>
+
+This message is in MIME format.
+
+--=_4iol8bdj06c3
+Content-Type: text/plain;
+	charset=ISO-8859-1
+Content-Description: =?iso-8859-1?b?VmVyc8Ojbw==?= da Mensagem em Texto
+	Puro
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+
+
+  Abreu,
+
+  Ol=E1... Tudo bem?
+
+  Voc=EA faria um parecer t=E9cnico do sistema de monitoramento da
+Funda=E7=E3o Volkswagen? Quanto voc=EA cobraria por esse servi=E7o?=20
+
+  A Funda=E7=E3o vai abandonar o sistema e quer acionar juridicamente a
+T-Systems, por isso est=E1 querendo esse parecer t=E9cnico.
+
+  Obrigada!
+
+  Abra=E7os
+
+Liliane Petris
+CENPEC - Centro de Estudos e Pesquisas em Educa=E7=E3o, Cultura e A=E7=E3o
+Comunit=E1ria
+www.cenpec.org.br
+Rua Dante Carraro,68
+CEP 05422-060
+S=E3o Paulo - SP
++55 11 2132-9096
+
+---------------------------------------------------------------
+Mensagem enviada pelo Webmail do Cenpec=20
+
+
+--=_4iol8bdj06c3
+Content-Type: text/html;
+	charset=ISO-8859-1
+Content-Description: =?utf-8?b?VmVyc8Ojbw==?= HTML da Mensagem
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+<p>Abreu,</p><p>Ol=E1... Tudo bem?</p><p>Voc=EA faria um parecer t=E9cnico d=
+o
+sistema de monitoramento da Funda=E7=E3o Volkswagen? Quanto voc=EA cobraria =
+por
+esse servi=E7o? </p><p>A Funda=E7=E3o vai abandonar o sistema e quer acionar
+juridicamente a T-Systems, por isso est=E1 querendo esse parecer
+t=E9cnico.</p><p>Obrigada!</p><p>Abra=E7os</p><p><br />Liliane Petris<br />C=
+ENPEC
+- Centro de Estudos e Pesquisas em Educa=E7=E3o, Cultura e A=E7=E3o Comunit=
+=E1ria<br
+/>www.cenpec.org.br<br />Rua Dante Carraro,68<br />CEP 05422-060<br />S=E3o =
+Paulo
+- SP<br />+55 11 2132-9096</p><br />
+<br />
+---------------------------------------------------------------<br />
+Mensagem enviada pelo Webmail do Cenpec <br />
+<br />
+
+--=_4iol8bdj06c3--
+
+

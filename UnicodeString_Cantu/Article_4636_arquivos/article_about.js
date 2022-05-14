@@ -1,0 +1,1 @@
+document.write(" <tr bgcolor='#FFFFFF'><td>郑重声明:此文章由网友发布,仅供学习参考！如有侵权，请及时<a href='mailto:webmaster@delphifans.com'>告知我们</a>将之移除！</td></tr>");

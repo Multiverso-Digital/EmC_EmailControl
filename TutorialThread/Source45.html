@@ -1,0 +1,45 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Martin Harvey">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (WinNT; I) [Netscape]">
+   <title>Source45</title>
+</head>
+<body>
+<PRE><TT><B>library</B> InitDLL;
+
+<FONT COLOR=NAVY><I>{Martin Harvey 9/10/2000}</I></FONT>
+
+<B>uses</B>
+  SysUtils,
+  Windows,
+  Dialogs,
+  TestUnit <B>in</B> <FONT COLOR=BLUE>'TestUnit.pas'</FONT>;
+
+<B>procedure</B> FancyMessage;<B>stdcall</B>;
+<B>begin</B>
+  TestUnit.UnitProc;
+<B>end</B>;
+
+<B>procedure</B> EntryPointFunc(Reason:integer);
+<B>begin</B>
+  <B>case</B> reason <B>of</B>
+    DLL_PROCESS_ATTACH:ShowMessage(<FONT COLOR=BLUE>'EntryPoint. Process Attach.'</FONT>);
+    DLL_THREAD_ATTACH:ShowMessage(<FONT COLOR=BLUE>'EntryPoint. Thread Attach.'</FONT>);
+    DLL_PROCESS_DETACH:ShowMessage(<FONT COLOR=BLUE>'EntryPoint. Process Detach.'</FONT>);
+    DLL_THREAD_DETACH:ShowMessage(<FONT COLOR=BLUE>'EntryPoint. Thread Detach.'</FONT>);
+  <B>else</B>
+    ShowMessage(<FONT COLOR=BLUE>'EntryPoint. Unknown reason'</FONT>);
+  <B>end</B>;
+<B>end</B>;
+
+<B>exports</B> FancyMessage;
+
+<B>begin</B>
+  ShowMessage(<FONT COLOR=BLUE>'Main DLL Body.'</FONT>);
+  DLLProc := @EntryPointFunc;
+<B>end.</B>
+</TT></PRE>
+</body>
+</html>

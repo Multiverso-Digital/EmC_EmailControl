@@ -1,0 +1,10 @@
+unit UFiltro_Avancado;
+
+interface
+uses
+Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls,Dialogs,IdMessage,
+UCriaObjetos, UDmServer, DB;
+
+implementation
+
+end.

@@ -1,0 +1,230 @@
+unit UFiltro_Avancado;
+
+interface
+uses
+Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls,Dialogs,IdMessage,
+UCriaObjetos, UDmServer, DB, funcoes;
+
+
+Function Filtrar_Favoritos_Nao_Grupados(Mens:TMSG):TMSG;
+Function Filtrar_Favoritos_Grupados(Mens:TMSG):TMSG;
+
+implementation
+
+
+Function Filtrar_Favoritos_Nao_Grupados(Mens:TMSG):TMSG;
+var
+Monta : string;
+begin
+
+Result := Mens;
+
+With dm_server do
+begin
+
+
+FiltraBoxes(1,1,0); //Filtro não Grupado
+
+
+ while not cds_Boxes.Eof do
+   begin
+
+    Monta := Trim(PegaItensCabec(cds_BoxesItem.AsString, Mens.Headers.Text));
+
+
+    if (cds_BoxesKind.AsInteger = 1) and (Monta <> '') then
+       begin
+        Mens.FiltroResultado.Add(cds_BoxesNameRule.AsString+' '+cds_BoxesItem.asstring+' found in this header.');
+        Mens.Favorita    := 1;
+        Mens.Filtrada    := 144;
+        Mens.Selecionada := 0;
+        Result := Mens;
+        atualizaboxes(cds_BoxesID.AsLargeInt);
+       end;
+
+
+
+    if (cds_BoxesKind.AsInteger = 2) and (Monta <> '') then
+       begin
+        if buscaRegexp(cds_BoxesExpression.asstring,Monta,2) then
+           begin
+           Mens.FiltroResultado.Add(cds_BoxesNameRule.AsString+' '+cds_BoxesItem.asstring+' match to filter: '+cds_BoxesExpression.asstring);
+           Mens.Favorita    := 1;
+           Mens.Filtrada    := 144;
+           Mens.Selecionada := 0;
+           Result := Mens;
+           atualizaboxes(cds_BoxesID.AsLargeInt);
+           end;
+       end;
+
+
+
+    if (cds_BoxesKind.AsInteger = 3) and (Monta <> '') then
+       begin
+        if buscaRegexp(cds_BoxesExpression.asstring,Monta,3) then
+           begin
+           Mens.FiltroResultado.Add(cds_BoxesNameRule.AsString+' '+cds_BoxesItem.asstring+' match to filter: '+cds_BoxesExpression.asstring);
+           Mens.Favorita    := 1;
+           Mens.Filtrada    := 144;
+           Mens.Selecionada := 0;
+           Result := Mens;
+           atualizaboxes(cds_BoxesID.AsLargeInt);
+           end;
+       end;
+    cds_Boxes.Next;
+   end;
+end;
+end;
+
+
+
+
+
+Function Filtrar_Favoritos_Grupados(Mens:TMSG):TMSG;
+var
+Monta, Logica     : string;
+IDFilter, Registros  : integer;
+Total     : Integer;
+GuardaID  : LongInt;
+begin
+
+Result := Mens;
+//Filtros.Clear;
+
+With dm_server do
+begin
+
+
+FiltraBoxes(1,1,-1); //Filtro Grupado
+
+IDFilter := cds_BoxesFilterID.AsInteger;
+Logica   := cds_BoxesMatchType.AsString;
+Registros:= 0;
+Total    := 0;
+
+ while not cds_Boxes.Eof do
+   begin
+
+    Monta := Trim(PegaItensCabec(cds_BoxesItem.AsString,Mens.Headers.Text));
+
+
+    If IDFilter <> cds_BoxesFilterID.AsInteger then
+    begin
+
+      if Logica = 'AND' then
+      begin
+       if Total = Registros then
+           Begin
+           Mens.Filtrada    := 144;
+           Mens.Favorita    := 1;
+           Mens.Selecionada := 0;
+           Result := Mens;
+           atualizaboxes(cds_BoxesID.AsLargeInt);
+           Break;
+           End
+           else
+           begin
+           Registros := 0;
+           Total := 0;
+           IDFilter := cds_BoxesFilterID.AsInteger;
+           Logica   := cds_BoxesMatchType.AsString;
+           end;
+
+      end
+      else
+      begin
+          if Total > 0 then
+           Begin
+           Mens.Filtrada    := 144;
+           Mens.Favorita    := 1;
+           Mens.Selecionada := 0;
+           Result := Mens;
+           atualizaboxes(cds_BoxesID.AsLargeInt);
+           Break;
+           End
+           else
+           begin
+           Registros := 0;
+           Total := 0;
+           IDFilter := cds_BoxesFilterID.AsInteger;
+           Logica   := cds_BoxesMatchType.AsString;
+           end;
+
+
+     end;
+
+    end;
+
+    Registros := Registros + 1;
+
+    if (cds_BoxesKind.AsInteger = 1) and (Monta <> '') then
+       begin
+        Mens.FiltroResultado.Add(cds_BoxesNameRule.AsString+' '+cds_BoxesItem.asstring+' found in this header.');
+        Total := Total + 1;
+       end;
+
+    if (cds_BoxesKind.AsInteger = 2) and (Monta <> '') then
+       begin
+        if buscaRegexp(cds_BoxesExpression.asstring,Monta,2) then
+           begin
+           Mens.FiltroResultado(cds_BoxesNameRule.AsString+' '+cds_BoxesItem.asstring+' match to filter: '+cds_BoxesExpression.asstring+' '+cds_BoxesMatchType.AsString);
+           Total := Total + 1;
+           end;
+       end;
+
+    if (cds_BoxesKind.AsInteger = 3) and (Monta <> '') then
+       begin
+        if buscaRegexp(cds_BoxesExpression.asstring,Monta,3) then
+           begin
+           Mens.FiltroResultado(cds_BoxesNameRule.AsString+' '+cds_BoxesItem.asstring+' match to filter: '+cds_BoxesExpression.asstring+' '+cds_BoxesMatchType.AsString);
+           Total := Total + 1;
+           end;
+       end;
+
+    GuardaID :=  cds_BoxesID.AsLargeInt;
+    cds_Boxes.Next;
+   end;
+
+
+    if Logica = 'AND' then
+     begin
+       if Total = Registros then
+           Begin
+           Mens.Filtrada    := 144;
+           Mens.Favorita    := 1;
+           Mens.Selecionada := 0;
+           Result := Mens;
+           atualizaboxes(GuardaID);
+           End
+           else
+           begin
+           Registros := 0;
+           Total := 0;
+           end;
+
+     end
+     else
+     begin
+          if Total > 0 then
+           Begin
+           Mens.Filtrada    := 144;
+           Mens.Favorita    := 1;
+           Mens.Selecionada := 0;
+           Result := Mens;
+           atualizaboxes(GuardaID);
+           End
+           else
+           begin
+           Registros := 0;
+           Total := 0;
+           end;
+     end;
+end;
+
+end;
+
+
+
+
+
+end.

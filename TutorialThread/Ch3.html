@@ -1,0 +1,555 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Martin Harvey">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (WinNT; I) [Netscape]">
+   <title>Chapter 3. Basic synchronisation.</title>
+</head>
+<body>
+
+<h3>
+Chapter 3. Basic synchronization.</h3>
+
+<h4>
+In this chapter:</h4>
+
+<ul>
+<li>
+<a href="#What data is shared between threads">What data is shared between
+threads?</a></li>
+
+<li>
+<a href="#Atomicity when accessing shared data.">Atomicity when accessing
+shared data.</a></li>
+
+<li>
+<a href="#Additional VCL problems.">Additional VCL problems.</a></li>
+
+<li>
+<a href="#Fun with multiprocessor machines.">Fun with multiprocessor machines.</a></li>
+
+<li>
+<a href="#The Delphi solution: TThread.Synchronize.">The Delphi solution:
+TThread.Synchronize.</a></li>
+
+<li>
+<a href="#How does this work What does Synchronize do">How does this work?
+What does Synchronize do?</a></li>
+
+<li>
+<a href="#Synchronizing to non VCL threads.">Synchronizing to non-VCL threads.</a></li>
+</ul>
+
+<h4>
+<a NAME="What data is shared between threads"></a>What data is shared between
+threads?</h4>
+First of all, it is worth know exactly what state is stored on a per process
+and per thread basis. Each thread has its own program counter and processor
+state. This means that threads progress independently through the code.
+Each thread also has its own stack, so local variables are inherently local
+to each thread, and no synchronization issues exist for these variables.
+Global data in the program can be freely shared between threads, and thus
+synchronization problems may exist with these variables. Of course, if
+a variable is globally accessible, but only one thread uses it, then there
+is no problem. The same situation holds for memory allocated on the heap
+(normally objects): in principle, any thread could access a particular
+object, but if the program is written so that only one thread has a pointer
+to a particular object, then only one thread can access it, and no concurrency
+problem exists.
+<p>Delphi provides a <b>threadvar</b> keyword. This allows "global" variables
+to be declared where a copy of the variable is created for each thread.
+This feature is not used much because it is often more convenient to put
+such variables inside a TThread class, hence creating one variable instance
+for each TThread descendant created.
+<h4>
+<a NAME="Atomicity when accessing shared data."></a>Atomicity when accessing
+shared data.</h4>
+In order to understand how to make threads work together, it is necessary
+to understand the concept of <b>atomicity</b>. An action or sequence of
+actions is <b>atomic</b> if the action or sequence is indivisible. When
+a thread performs an atomic action, it means that all other threads view
+the action as either having not started, or as having completed. It is
+not possible for one thread to catch another "in the act". If no synchronization
+is performed between threads, then just about all operations are non-atomic.
+Let's take a simple example. Consider&nbsp;<a NAME="Code4"></a><a href="#Code4" onClick="window.open('Source4.html','Code4','height=400,width=600,resizable,scrollbars')">this
+fragment of code.</a> What could be simpler? Unfortunately, even this trivial
+piece of code can cause problems if two separate threads use it to increment
+the shared variable A. This single pascal statement breaks down into three
+operations at the assembler level.
+<p><tt>Read A from memory into a processor register.</tt>
+<br><tt>Add 1 to processor register.</tt>
+<br><tt>Write contents of processor register to A in memory.</tt>
+<p>Even on a single processor machine, the execution of this code by multiple
+threads may cause problems. The reason it does so is because of <b>scheduling</b>
+operations. When only one processor exists, only one thread <i>actually</i>
+executes at one time, but the Win32 scheduler switches between them at
+about 18 times per second. The scheduler may stop one thread running and
+start another thread at any time: the scheduling is pre-emptive. The operating
+system does not wait for permission before suspending one thread and starting
+another: the switch may happen at any time. Since the switch can occur
+between any two processor instructions, it may occur at an inconvenient
+point in the middle of a function, and even half way through the execution
+of one particular program statement. Let's imagine that two threads are
+executing the example code on a uniprocessor machine (X and Y). In a nice
+case, the program may be running, and the scheduling operations may miss
+this critical point, giving the expected results: A is incremented by two.
+<br>&nbsp;
+<table BORDER >
+<tr>
+<td>
+<center><b>Instructions executed by Thread X</b></center>
+</td>
+
+<td>
+<center><b>Instructions executed by Thread Y</b></center>
+</td>
+
+<td>
+<center><b>Value of variable A in memory</b></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><tt>&lt;Other Instructions></tt></center>
+</td>
+
+<td>
+<center><tt><font size=-1>Thread Suspended</font></tt></center>
+</td>
+
+<td>
+<center>1</center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><tt>Read A from memory into a processor register.</tt></center>
+</td>
+
+<td>
+<center><tt><font size=-1>Thread Suspended</font></tt></center>
+</td>
+
+<td>
+<center>1</center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><tt>Add 1 to processor register.</tt></center>
+</td>
+
+<td>
+<center><tt><font size=-1>Thread Suspended</font></tt></center>
+</td>
+
+<td>
+<center>1</center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><tt>Write contents of processor register (2) to A in memory.</tt></center>
+</td>
+
+<td>
+<center><tt><font size=-1>Thread Suspended</font></tt></center>
+</td>
+
+<td>
+<center>2</center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><tt>&lt;Other Instructions></tt></center>
+</td>
+
+<td>
+<center><tt><font size=-1>Thread Suspended</font></tt></center>
+</td>
+
+<td>
+<center>2</center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><b>THREAD SWITCH</b></center>
+</td>
+
+<td>
+<center><b>THREAD SWITCH</b></center>
+</td>
+
+<td>
+<center>2</center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><tt><font size=-1>Thread Suspended</font></tt></center>
+</td>
+
+<td>
+<center><tt>&lt;Other Instructions></tt></center>
+</td>
+
+<td>
+<center>2</center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><tt><font size=-1>Thread Suspended</font></tt></center>
+</td>
+
+<td>
+<center><tt>Read A from memory into a processor register.</tt></center>
+</td>
+
+<td>
+<center>2</center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><tt><font size=-1>Thread Suspended</font></tt></center>
+</td>
+
+<td>
+<center><tt>Add 1 to processor register.</tt></center>
+</td>
+
+<td>
+<center>2</center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><tt><font size=-1>Thread Suspended</font></tt></center>
+</td>
+
+<td>
+<center><tt>Write contents of processor register to A (3) in memory.</tt></center>
+</td>
+
+<td>
+<center>3</center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><tt><font size=-1>Thread Suspended</font></tt></center>
+</td>
+
+<td>
+<center><tt>&lt;Other Instructions></tt></center>
+</td>
+
+<td>
+<center>3</center>
+</td>
+</tr>
+</table>
+
+<p>However, this is by no means guaranteed, and is up to blind chance.
+Murphy's law being what it is, the following situation may occur:
+<br>&nbsp;
+<table BORDER >
+<tr>
+<td>
+<center><b>Instructions executed by Thread X</b></center>
+</td>
+
+<td>
+<center><b>Instructions executed by Thread Y</b></center>
+</td>
+
+<td>
+<center><b>Value of variable A in memory</b></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><tt>&lt;Other Instructions></tt></center>
+</td>
+
+<td>
+<center><tt><font size=-1>Thread Suspended</font></tt></center>
+</td>
+
+<td>
+<center>1</center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><tt>Read A from memory into a processor register.</tt></center>
+</td>
+
+<td>
+<center><tt><font size=-1>Thread Suspended</font></tt></center>
+</td>
+
+<td>
+<center>1</center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><tt>Add 1 to processor register.</tt></center>
+</td>
+
+<td>
+<center><tt><font size=-1>Thread Suspended</font></tt></center>
+</td>
+
+<td>
+<center>1</center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><b>THREAD SWITCH</b></center>
+</td>
+
+<td>
+<center><b>THREAD SWITCH</b></center>
+</td>
+
+<td>
+<center>1</center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><tt><font size=-1>Thread Suspended</font></tt></center>
+</td>
+
+<td>
+<center><tt>&lt;Other Instructions></tt></center>
+</td>
+
+<td>
+<center>1</center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><tt><font size=-1>Thread Suspended</font></tt></center>
+</td>
+
+<td>
+<center><tt>Read A from memory into a processor register.</tt></center>
+</td>
+
+<td>
+<center>1</center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><tt><font size=-1>Thread Suspended</font></tt></center>
+</td>
+
+<td>
+<center><tt>Add 1 to processor register.</tt></center>
+</td>
+
+<td>
+<center>1</center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><tt><font size=-1>Thread Suspended</font></tt></center>
+</td>
+
+<td>
+<center><tt>Write contents of processor register (2)to A in memory.</tt></center>
+</td>
+
+<td>
+<center>2</center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><b>THREAD SWITCH</b></center>
+</td>
+
+<td>
+<center><b>THREAD SWITCH</b></center>
+</td>
+
+<td>
+<center>2</center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><tt>Write contents of processor register (2) to A in memory.</tt></center>
+</td>
+
+<td>
+<center><tt><font size=-1>Thread Suspended</font></tt></center>
+</td>
+
+<td>
+<center>2</center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><tt>&lt;Other Instructions></tt></center>
+</td>
+
+<td>
+<center><tt><font size=-1>Thread Suspended</font></tt></center>
+</td>
+
+<td>
+<center>2</center>
+</td>
+</tr>
+</table>
+
+<p>In this case, A is not incremented by two but by only one. Oh dear!
+If A happens to be the position of a progress bar, then perhaps this isn't
+such a problem, but if it's anything more important, like a count of the
+number of items in a list, then one is likely to run into problems. If
+the shared variable happens to be a pointer then one can expect all sorts
+of unpleasant results. This is known as a <b>race condition</b>.
+<h4>
+<a NAME="Additional VCL problems."></a>Additional VCL problems.</h4>
+The VCL contains no protection against these conflicts. This means that
+thread switches may occur when one or more threads are executing VCL code.
+A lot of the VCL is sufficiently well contained that this is not a problem.
+Unfortunately, components, and in particular, children of TControl contain
+various mechanisms which do not take kindly to thread switches. A thread
+switch at the wrong time can wreak complete havoc, corrupting reference
+counts for shared handles, destroying not only data, but also links between
+components.
+<p>Even when threads are not executing VCL code, lack of synchronization
+can still cause further problems: It is not enough to ensure that the main
+VCL thread is dormant before another thread dives in and modifies something.
+Some code in the VCL may execute which (for instance) pops up a dialog
+box, or invokes a disk write, suspending the main thread. If another thread
+modifies shared data, it may appear to the main thread that some global
+data has magically changed as a result of the call to display a dialog
+or write to a file. This is obviously not acceptable and means that either
+only one thread can execute VCL code, or a mechanism must be found to ensure
+that separate threads do not interfere with each other.
+<h4>
+<a NAME="Fun with multiprocessor machines."></a>Fun with multiprocessor
+machines.</h4>
+Luckily for the application writer, the problem is not made any more complex
+for machines with more than one processor. The synchronization methods
+that Delphi and Windows provide work equally well whatever the number of
+processors. Implementors of the Windows operating systems have had to write
+extra code to cope with multiprocessing: Windows NT 4 informs the user
+at bootup whether it is using the uniprocessor or multiprocessor kernel.
+However, for the application writer, this is all hidden. You do not need
+to worry about how many processors the machine has any more than you have
+to worry about which chipset the motherboard uses.
+<h4>
+<a NAME="The Delphi solution: TThread.Synchronize."></a>The Delphi solution:
+TThread.Synchronize.</h4>
+Delphi provides a solution which is ideal for beginners to thread writing.
+It is simple and overcomes all the problems mentioned so far. TThread has
+a method called <b>Synchronize</b>. This method takes as a parameter another
+parameterless method which you want to be executed. You are then guaranteed
+that the code in the parameterless method will be executed as a result
+of the synchronize call, and will not conflict with the VCL thread. As
+far as the non-VCL thread that calls synchronize is concerned, it appears
+that all the code in the parameterless method happens at the moment synchronize
+is called.
+<p>Hmm. Sound confusing? Quite possibly. I'll illustrate this with an example.
+We will modify our prime number program, so that instead of showing a message
+box, it indicates whether a number is prime or not by adding some text
+to a memo in the main form. First of all, we'll add a new memo (ResultsMemo)
+to our main form,&nbsp;<a NAME="Code5"></a><a href="#Code5" onClick="window.open('Source5.html','Code5','height=400,width=600,resizable,scrollbars')">like
+this</a>. Now we can do the real work. We add another method (UpdateResults)
+to our thread which displays the results on the memo, and instead of calling
+ShowMessage, we call Synchronize, passing this method as a parameter. The
+declaration of the thread and the modified parts now look&nbsp;<a NAME="Code6"></a><a href="#Code6" onClick="window.open('Source6.html','Code6','height=400,width=600,resizable,scrollbars')">like
+this</a>. Note that UpdateResults accesses both the main form, and a result
+string. From the viewpoint of the main VCL thread, the main form appears
+to be modified in response to an event. From the viewpoint of the prime
+calculation thread, the result string is accessed during the call to Synchronize.
+<h4>
+<a NAME="How does this work What does Synchronize do"></a>How does this
+work? What does Synchronize do?</h4>
+Code which is invoked when synchronize is called can perform anything that
+the main VCL thread might do. In addition, it can also modify data associated
+with its own thread object, safe in the knowledge that the execution of
+its own thread is at a particular point (the call to synchronize). What
+actually happens is rather elegant, and best illustrated by another diagram.
+<center><img SRC="fig4.gif" height=443 width=386></center>
+When synchronize is called, the prime calculation thread is suspended.
+At this point, the main VCL thread may be suspended in the idle state,
+it may be suspended temporarily on I/O or other operations, or it may be
+executing. If it is not suspended in a totally idle state (main application
+message loop), then the prime calculation thread keeps waiting. Once the
+main thread becomes idle, <i>the parameterless function passed to synchronize
+executes in the context of the main VCL thread</i>. In our case, the parameterless
+function is called UpdateResults, and plays around with a memo. This ensures
+that no conflicts will occur with the main VCL thread, and in essence,
+the processing of this code is much like the processing of any Delphi code
+which occurs in response to the application being sent a message. No conflicts
+occur with the thread that called synchronize because it is suspended at
+a known safe point (somewhere in the code for TThread.Synchronise).
+<p>Once this "processing by proxy" completes, the main VCL thread is free
+to go about its normal work, and the thread that called synchronize is
+resumed, and returns from the function call. Thus a call to Synchronize
+appears to be another message to the main VCL thread, and a function call
+to the Prime calculation thread. The threads are at known locations, and
+do not execute concurrently. No race conditions occur. Problem solved.
+<h4>
+<a NAME="Synchronizing to non VCL threads."></a>Synchronizing to non-VCL
+threads.</h4>
+My previous example shows how a single thread can be made to interact with
+the main VCL thread. In effect it borrows time from the main VCL thread
+to do this. This doesn't work arbitrarily between threads. If you have
+two non-VCL threads, X and Y, you can't call synchronize in X alone and
+then modify data stored in Y. It is necessary to call synchronize from
+<i>both</i>
+threads when reading or writing the shared data. In effect, this means
+that the data is modified by the main VCL thread, and all the other threads
+synchronize to the main VCL thread every time they need to access this
+data. This is workable, but inefficient, especially if the main thread
+is busy: every time the two threads need to communicate, they have to wait
+for a third thread to become idle. Later on, we shall see how to control
+concurrency between the threads and have them communicate directly.
+<br>
+<hr WIDTH="100%">
+<p><a href="ToC.html">[Contents]</a> <a href="Ch2.html">[Previous]</a><a href="Ch4.html">[Next]</a>
+<p><i>&copy; <a href="mailto:martin@pergolesi.demon.co.uk">Martin Harvey</a>
+2000.</i>
+<br>&nbsp;
+</body>
+</html>

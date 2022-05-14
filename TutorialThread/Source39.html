@@ -1,0 +1,34 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Martin Harvey">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (WinNT; I) [Netscape]">
+   <title>Source39</title>
+</head>
+<body>
+<PRE><TT><B>type</B>
+  TEventCount = <B>class</B>
+  <B>private</B>
+  <B>protected</B>
+  <B>public</B>
+    <B>constructor</B> Create;
+    <B>destructor</B> Destroy; <B>override</B>;
+    <B>function</B> Advance: integer;
+    <B>function</B> Read: integer;
+    <B>procedure</B> Await(WaitCount: integer);
+  <B>published</B>
+  <B>end</B>;
+
+  TSequencer = <B>class</B>
+  <B>private</B>
+  <B>protected</B>
+  <B>public</B>
+    <B>constructor</B> Create;
+    <B>destructor</B> Destroy; <B>override</B>;
+    <B>function</B> Ticket: integer;
+  <B>published</B>
+  <B>end</B>;
+</TT></PRE>
+</body>
+</html>

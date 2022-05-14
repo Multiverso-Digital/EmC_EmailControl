@@ -1,0 +1,136 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Martin Harvey">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (WinNT; I) [Netscape]">
+   <title>Chapter 14. A real world problem, and its solution.</title>
+</head>
+<body>
+
+<h3>
+Chapter 14. A real world problem, and its solution.</h3>
+
+<h4>
+In this chapter:</h4>
+
+<ul>
+<li>
+<a href="#The problem.">The problem.</a></li>
+
+<li>
+<a href="#The solution.">The solution.</a></li>
+
+<li>
+<a href="#The pipe DLL and interface files.">The pipe DLL and interface
+files.</a></li>
+
+<li>
+<a href="#The reader and writer threads.">The reader and writer threads.</a></li>
+
+<li>
+<a href="#A socket based interface.">A socket based interface.</a></li>
+</ul>
+
+<h4>
+<a NAME="The problem."></a>The problem.</h4>
+Over the past couple of years I have been writing a distributed raytracer.
+This uses TCP/IP to send descriptions of scenes to be rendered across a
+network from a central server to a collection of clients. The clients render
+the image, and then return the data to the server. Some beta testers were
+interested in trying the program out, but mentioned that they did not have
+a TCP/IP stack loaded on their machine. I decided that it would be useful
+to write some code that emulated TCP sockets, allowing communication between
+two applications (both client and server) on the local machine.
+<p>Various potential solutions were investigated. The most promising at
+first seemed to be to use named pipes. Unfortunately a problem soon cropped
+up: The protocols I was using on top of TCP/IP assumed that connection
+semantics could be performed on a strictly peer to peer basis: either program
+could initiate a connection to the other, and either program could disconnect
+at any time. Both connection and disconnection were perfectly symmetrical:
+The protocols used on top of TCP performed a three way handshake over and
+above that performed at the TCP layer to negotiate whether a connection
+could be closed, and that having occured, either end could close the connection.
+Unfortunately, named pipes did not provide the correct disconnection semantics,
+and they did not cope well with various error situations.
+<h4>
+<a NAME="The solution."></a>The solution.</h4>
+I do not intend to explain the solution in detail, but more advanced readers
+may find the code interesting reading. In the end, I decided to use shared
+memory for data transfer, and to implement all synchronisation from the
+ground up. The solution was implemented in 3 stages.
+<ul>
+<li>
+A DLL was written which provided a bidirectional blocking pipe between
+two applications.</li>
+
+<li>
+A pair of reader and writer threads were written to allow asynchronous
+access to the blocking pipes.</li>
+
+<li>
+A wrapper around the threads was written to provide an asynchronous interface
+similar to nonblocking sockets.</li>
+</ul>
+
+<h4>
+<a NAME="The pipe DLL and interface files."></a>The pipe DLL and interface
+files.</h4>
+
+<ul>
+<li>
+<a href="MCHPipe.dpr">MCHPipe.dpr</a></li>
+
+<li>
+<a href="mchpipeinterface2.pas">MCHPipeInterface2.pas</a></li>
+
+<li>
+<a href="mchpipetypes.pas">MCHPipeTypes.pas</a></li>
+</ul>
+This DLL is similar to the bounded buffer example found in chapter 9. Looking
+back on this code, I can only presume that I'd written it after a couple
+of weeks frantic hacking in C at work, because it's far more convoluted
+than it needs to be. One point of interest is that the semaphores used
+for blocking operations do not assume that the bounded buffers are any
+particular size; instead state is kept on whether the reader or writer
+threads are blocked or not.
+<h4>
+<a NAME="The reader and writer threads."></a>The reader and writer threads.</h4>
+
+<ul>
+<li>
+<a href="mchpipethreads.pas">MCHPipeThreads.pas</a></li>
+
+<li>
+<a href="mchmemorystream.pas">MCHMemoryStream.pas</a></li>
+</ul>
+The pipe threads are exactly analogous to the reader and writer threads
+in the BAB in chapter 10. Notifications are not used for write operations,
+instead, the writer thread buffers the data internally. This was allowable
+given the semantics of higher layer protocols.
+<h4>
+<a NAME="A socket based interface."></a>A socket based interface.</h4>
+
+<ul>
+<li>
+<a href="mchpipesocket.pas">MCHPipeSocket.pas</a></li>
+
+<li>
+<a href="mchtransactions.pas">MCHTransactions.pas</a></li>
+
+<li>
+<a href="mchpipetransactions.pas">MCHPipeTransactions.pas</a></li>
+</ul>
+This is a not-quite-pure socket interface, and should be reasonably obvious
+to those familiar with TCP sockets programming. Since this implementation
+was designed to work specifically with some other protocols I wrote, it
+is worthwhile including the transaction layer of the overlying protocols
+so you can see how the socket fits into the scheme of things.
+<p>
+<hr WIDTH="100%">
+<p><a href="ToC.html">[Contents]</a> <a href="Ch13.html">[Previous]</a>
+<p><i>&copy; <a href="mailto:martin@pergolesi.demon.co.uk">Martin Harvey</a>
+2000.</i>
+<br>&nbsp;
+</body>
+</html>

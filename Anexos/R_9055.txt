@@ -1,0 +1,51 @@
+Received: from 007-jamesbond.com ([189.35.125.119]) by abreuretto.com with MailEnable ESMTP; Fri, 06 Feb 2009 12:47:29 -0800
+To: <postmaster@abreuretto.com>
+Subject: Email Handling Opinion Needed
+From: <postmaster@abreuretto.com>
+MIME-Version: 1.0
+Importance: High
+Content-Type: text/html
+Return-Path: <>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META http-equiv=Content-Type content="text/html; charset=Windows-1252">
+</HEAD>
+<BODY bgcolor="#B1B1B1"><div style="padding: 20px 20px 40px 20px; background-color:#B1B1B1;">
+<table width="450" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#ffffff">
+        <tr>
+<td style="padding:10px 10px 10px 10px; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; font-size:20px; color:#000000;" > 
+We ship Worldwide! To all countries! To all destinations!</td>
+        </tr>
+        <tr>            <td style="padding:10px 0px 30px 0px;">
+<div style="padding:10px 10px 10px 10px;">
+	<div style="border-top:5px solid #666666; padding-top:10px;  font-family:Verdana, Arial, Helvetica, sans-serif; font-size:10px; color:#666666;">
+<a href="http://bighumane.com/"><img src="http://bighumane.com/sdjbvsj.gif" alt="Cant see a picture? Click Here!" border="0" 
+class="featureImage" style="padding:100px 100px 100px 100px;" /></a>
+	</div> </td>
+        </tr>
+
+        <tr>
+                <td style="padding:20px 10px 10px 0px; background-color:#B1B1B1;">
+                        <p style="font-family:Verdana, Arial, Helvetica, sans-serif; font-size:9px; color:#666666;">
+                                To unsubscribe from this mailing list, please log in to www.bighumane.com, click on "My Account", 
+								click "Update" to edit your registration details and uncheck the "Receive Newsletter?" check box.<br>
+                                Or unsubscribe at
+                                <a href="http://bighumane.com/faq.php" style="font-weight:bold; color:#666666">http://bighumane.com/faq.php</a>
+                        </p>
+
+                        <p style="font-family:Verdana, Arial, Helvetica, sans-serif; font-size:9px; color:#666666;">
+                                <a href="http://bighumane.com/privacy_policy.php" style="font-weight:bold; color:#666666">Privacy Statement</a>  |
+                                <a href="http://bighumane.com/shipping_policy.php" style="font-weight:bold; color:#666666">Terms &amp; Conditions</a>  |
+                                <a href="http://bighumane.com/contacts.php" style="font-weight:bold; color:#666666">Contact</a>
+                        </p>
+
+                        <p style="font-family:Verdana, Arial, Helvetica, sans-serif; font-size:9px; color:#666666;">
+                                KEYWORD Ltd.<br>
+                                Tower Bridge Business Complex. Unit 1, B543. 543 Clements Road. London. SE98 4DG
+                        </p>
+
+                        <p style="font-family:Verdana, Arial, Helvetica, sans-serif; font-size:9px; color:#666666;">
+                                &copy; 2006-2008 KEYWORD, Ltd. All Rights Reserved
+                        </p></td> </tr></table></div></BODY></HTML>
+

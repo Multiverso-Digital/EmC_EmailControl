@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file original="\\Ar0\prgsbeli\@Projetos_em_andamento\EmC2010\UFavoritos.dfm" source-language="pt-BR" target-language="pt-BR" datatype="delphiform" tool="ETM v10.0" ts="\\Ar0\prgsbeli\@Projetos_em_andamento\EmC2010\UFavoritos.dfm">
+    <header>
+      <prop-group name="ITEHeaderProp">
+        <prop prop-type="Version">9.0</prop>
+        <prop prop-type="SelfDateTime">39807.4631712963</prop>
+        <prop prop-type="OrigDateTime">39799.472962963</prop>
+        <prop prop-type="XlatDateTime">39799.472962963</prop>
+        <prop prop-type="Translated">0</prop>
+        <prop prop-type="UnTranslated">67</prop>
+      </prop-group>
+    </header>
+    <body>
+      <trans-unit id="O:FFavoritos.Left" resname="O:FFavoritos.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">0</prop><prop prop-type="Type">TFFavoritos</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.Top" resname="O:FFavoritos.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1</prop><prop prop-type="Type">TFFavoritos</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.Caption" resname="O:FFavoritos.Caption">
+        <source>'EmC-Friends'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">2</prop><prop prop-type="Type">TFFavoritos</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.ClientHeight" resname="O:FFavoritos.ClientHeight">
+        <source>566</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">3</prop><prop prop-type="Type">TFFavoritos</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.ClientWidth" resname="O:FFavoritos.ClientWidth">
+        <source>792</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TFFavoritos</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.Color" resname="O:FFavoritos.Color">
+        <source>clMoneyGreen</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TFFavoritos</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.Font.Charset" resname="O:FFavoritos.Font.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">TFFavoritos</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.Font.Color" resname="O:FFavoritos.Font.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">7</prop><prop prop-type="Type">TFFavoritos</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.Font.Height" resname="O:FFavoritos.Font.Height">
+        <source>-11</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">8</prop><prop prop-type="Type">TFFavoritos</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.Font.Name" resname="O:FFavoritos.Font.Name">
+        <source>'Tahoma'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">9</prop><prop prop-type="Type">TFFavoritos</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.Font.Style" resname="O:FFavoritos.Font.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">10</prop><prop prop-type="Type">TFFavoritos</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.OldCreateOrder" resname="O:FFavoritos.OldCreateOrder">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">11</prop><prop prop-type="Type">TFFavoritos</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.Position" resname="O:FFavoritos.Position">
+        <source>poDesktopCenter</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">12</prop><prop prop-type="Type">TFFavoritos</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.PixelsPerInch" resname="O:FFavoritos.PixelsPerInch">
+        <source>96</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">13</prop><prop prop-type="Type">TFFavoritos</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.TextHeight" resname="O:FFavoritos.TextHeight">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">14</prop><prop prop-type="Type">TFFavoritos</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:GroupBox1.Left" resname="O:FFavoritos.O:GroupBox1.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:GroupBox1.Top" resname="O:FFavoritos.O:GroupBox1.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">16</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:GroupBox1.Width" resname="O:FFavoritos.O:GroupBox1.Width">
+        <source>792</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">17</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:GroupBox1.Height" resname="O:FFavoritos.O:GroupBox1.Height">
+        <source>377</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">18</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:GroupBox1.Align" resname="O:FFavoritos.O:GroupBox1.Align">
+        <source>alTop</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">19</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:GroupBox1.Caption" resname="O:FFavoritos.O:GroupBox1.Caption">
+        <source>'GroupBox1'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">20</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:GroupBox1.TabOrder" resname="O:FFavoritos.O:GroupBox1.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">21</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:GroupBox1.ExplicitLeft" resname="O:FFavoritos.O:GroupBox1.ExplicitLeft">
+        <source>32</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">22</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:GroupBox1.ExplicitTop" resname="O:FFavoritos.O:GroupBox1.ExplicitTop">
+        <source>8</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">23</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:GroupBox1.ExplicitWidth" resname="O:FFavoritos.O:GroupBox1.ExplicitWidth">
+        <source>657</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">24</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.Left" resname="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.Left">
+        <source>2</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.Top" resname="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.Top">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.Width" resname="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.Width">
+        <source>788</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">27</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.Height" resname="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.Height">
+        <source>360</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.Selected.Strings[0]" resname="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.Selected.Strings[0]">
+        <source>'ID'#9'10'#9'ID'#9#9</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.Selected.Strings[1]" resname="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.Selected.Strings[1]">
+        <source>'TypeBox'#9'10'#9'TypeBox'#9#9</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.Selected.Strings[2]" resname="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.Selected.Strings[2]">
+        <source>'Filter'#9'10'#9'Filter'#9#9</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.Selected.Strings[3]" resname="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.Selected.Strings[3]">
+        <source>'Kind'#9'10'#9'Kind'#9#9</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.Selected.Strings[4]" resname="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.Selected.Strings[4]">
+        <source>'Expression'#9'255'#9'Expression'#9#9</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">33</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.Selected.Strings[5]" resname="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.Selected.Strings[5]">
+        <source>'DT'#9'18'#9'DT'#9#9</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">34</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">)</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.IniAttributes.Delimiter" resname="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.IniAttributes.Delimiter">
+        <source>';;'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.TitleColor" resname="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.TitleColor">
+        <source>clBtnFace</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.FixedCols" resname="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.FixedCols">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.ShowHorzScrollBar" resname="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.ShowHorzScrollBar">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.Align" resname="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.Align">
+        <source>alClient</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.DataSource" resname="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.DataSource">
+        <source>DM_SERVER.DS_qBoxes</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.TabOrder" resname="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">41</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.TitleAlignment" resname="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.TitleAlignment">
+        <source>taLeftJustify</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">42</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.TitleFont.Charset" resname="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.TitleFont.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">43</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.TitleFont.Color" resname="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.TitleFont.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">44</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.TitleFont.Height" resname="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.TitleFont.Height">
+        <source>-11</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">45</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.TitleFont.Name" resname="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.TitleFont.Name">
+        <source>'Tahoma'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">46</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.TitleFont.Style" resname="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.TitleFont.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">47</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.TitleLines" resname="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.TitleLines">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">48</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.TitleButtons" resname="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.TitleButtons">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">49</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.ExplicitLeft" resname="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.ExplicitLeft">
+        <source>3</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">50</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.ExplicitTop" resname="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.ExplicitTop">
+        <source>16</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">51</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.ExplicitWidth" resname="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.ExplicitWidth">
+        <source>651</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">52</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.ExplicitHeight" resname="O:FFavoritos.O:GroupBox1.O:wwDBGrid1.ExplicitHeight">
+        <source>345</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">53</prop><prop prop-type="Type">TwwDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:wwRecordViewPanel1.Left" resname="O:FFavoritos.O:wwRecordViewPanel1.Left">
+        <source>35</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">54</prop><prop prop-type="Type">TwwRecordViewPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:wwRecordViewPanel1.Top" resname="O:FFavoritos.O:wwRecordViewPanel1.Top">
+        <source>391</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">55</prop><prop prop-type="Type">TwwRecordViewPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:wwRecordViewPanel1.Width" resname="O:FFavoritos.O:wwRecordViewPanel1.Width">
+        <source>651</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">56</prop><prop prop-type="Type">TwwRecordViewPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:wwRecordViewPanel1.Height" resname="O:FFavoritos.O:wwRecordViewPanel1.Height">
+        <source>130</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">57</prop><prop prop-type="Type">TwwRecordViewPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:wwRecordViewPanel1.TabOrder" resname="O:FFavoritos.O:wwRecordViewPanel1.TabOrder">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">58</prop><prop prop-type="Type">TwwRecordViewPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:wwRecordViewPanel1.ControlOptions" resname="O:FFavoritos.O:wwRecordViewPanel1.ControlOptions">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">59</prop><prop prop-type="Type">TwwRecordViewPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:wwRecordViewPanel1.LabelFont.Charset" resname="O:FFavoritos.O:wwRecordViewPanel1.LabelFont.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">60</prop><prop prop-type="Type">TwwRecordViewPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:wwRecordViewPanel1.LabelFont.Color" resname="O:FFavoritos.O:wwRecordViewPanel1.LabelFont.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">61</prop><prop prop-type="Type">TwwRecordViewPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:wwRecordViewPanel1.LabelFont.Height" resname="O:FFavoritos.O:wwRecordViewPanel1.LabelFont.Height">
+        <source>-11</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">62</prop><prop prop-type="Type">TwwRecordViewPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:wwRecordViewPanel1.LabelFont.Name" resname="O:FFavoritos.O:wwRecordViewPanel1.LabelFont.Name">
+        <source>'Tahoma'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">63</prop><prop prop-type="Type">TwwRecordViewPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:wwRecordViewPanel1.LabelFont.Style" resname="O:FFavoritos.O:wwRecordViewPanel1.LabelFont.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">64</prop><prop prop-type="Type">TwwRecordViewPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:wwController1.Left" resname="O:FFavoritos.O:wwController1.Left">
+        <source>688</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">65</prop><prop prop-type="Type">TwwController</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FFavoritos.O:wwController1.Top" resname="O:FFavoritos.O:wwController1.Top">
+        <source>64</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631788889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">66</prop><prop prop-type="Type">TwwController</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

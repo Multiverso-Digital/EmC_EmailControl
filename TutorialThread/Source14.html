@@ -1,0 +1,56 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Martin Harvey">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (WinNT; I) [Netscape]">
+   <title>Source14</title>
+</head>
+<body>
+<PRE><TT><B>function</B> Read(L: TList; Index: integer): integer;
+<B>begin</B>
+  <B>if</B> (Index &gt 0) <B>and</B> (L.Count &gt Index) <B>then</B>
+  <B>begin</B>
+    <B>with</B> L.Items[Index] <B>do</B>
+    <B>begin</B>
+      Lock;
+      Result := Value;
+      Unlock;
+    <B>end</B>;
+  <B>end</B>
+  <B>else</B>
+    <B>raise</B> ENotFound;
+<B>end</B>;
+
+<B>procedure</B> Write(L: TList; Index: integer; NewVal: integer);
+<B>begin</B>
+  <B>if</B> (Index &gt 0) <B>and</B> (L.Count &gt Index) <B>then</B>
+  <B>begin</B>
+    <B>with</B> L.Items[Index] <B>do</B>
+    <B>begin</B>
+      Lock;
+      Value := NewVal;
+      Unlock;
+    <B>end</B>;
+  <B>end</B>
+  <B>else</B>
+    <B>raise</B> ENotFound;
+<B>end</B>;
+
+<B>function</B> Compare(L: TList; Ind1, Ind2: integer): integer;
+<B>begin</B>
+  <B>if</B> (Ind1 &gt 0) <B>and</B> (Ind2 &gt 0) <B>and</B> (L.Count &gt Ind1) <B>and</B> (L.Count &gt Ind2) <B>then</B>
+  <B>begin</B>
+    L.Items[Ind1].Lock;
+    L.Items[Ind2}.Lock;
+    Result := L.Items[Ind2].Value - L.Items[Ind1].Value;
+    L.Items[Ind2].Unlock;
+    L.Items[Ind1].Unlock;
+  <B>end</B>
+  <B>else</B>
+    <B>raise</B> ENotFound;
+<B>end</B>;
+
+</TT></PRE>
+</body>
+</html>

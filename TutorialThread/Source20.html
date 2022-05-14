@@ -1,0 +1,44 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Martin Harvey">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (WinNT; I) [Netscape]">
+   <title>Source20</title>
+</head>
+<body>
+<PRE><TT><B>procedure</B> TBoundedBuffer.ResetState;
+
+<FONT COLOR=NAVY><I>{ Closes handles and deallocates memory.
+  Note that this must unblock threads in such a manner that they quit cleanly }</I></FONT>
+
+<B>var</B>
+  SemCount: integer;
+  LocalHandle: THandle;
+
+<B>begin</B>
+  <B>if</B> FBufInit <B>then</B>
+  <B>begin</B>
+    WaitForSingleObject(FCriticalMutex, DefaultWaitTime);
+    FBufInit := false;
+    FBufSize := 0;
+    FreeMem(FBuf);
+    LocalHandle := FEntriesFree;
+    FEntriesFree := 0;
+    <B>repeat</B>
+      ReleaseSemaphore(LocalHandle, 1, @SemCount);
+    <B>until</B> SemCount = 0;
+    CloseHandle(LocalHandle);
+    LocalHandle := FEntriesUsed;
+    FEntriesUsed := 0;
+    <B>repeat</B>
+      ReleaseSemaphore(LocalHandle, 1, @SemCount);
+    <B>until</B> SemCount = 0;
+    CloseHandle(LocalHandle);
+    CloseHandle(FCriticalMutex);
+  <B>end</B>;
+<B>end</B>;
+
+</TT></PRE>
+</body>
+</html>

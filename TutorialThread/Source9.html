@@ -1,0 +1,101 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Martin Harvey">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (WinNT; I) [Netscape]">
+   <title>Source9</title>
+</head>
+<body>
+<PRE><TT><B>unit</B> PrimeForm;
+
+<B>interface</B>
+
+<B>uses</B>
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
+  StdCtrls, PrimeThread;
+
+<B>const</B>
+  WM_THREAD_COMPLETE = WM_APP + 5437; <FONT COLOR=NAVY><I>{ Just a magic number }</I></FONT>
+
+<B>type</B>
+  TPrimeFrm = <B>class</B>(TForm)
+    NumEdit: TEdit;
+    SpawnButton: TButton;
+    ResultsMemo: TMemo;
+    <B>procedure</B> SpawnButtonClick(Sender: TObject);
+    <B>procedure</B> FormCloseQuery(Sender: TObject; <B>var</B> CanClose: Boolean);
+  <B>private</B>
+    <FONT COLOR=NAVY><I>{ Private declarations }</I></FONT>
+    FThread: TPrimeThrd;
+    <B>procedure</B> HandleThreadCompletion(<B>var</B> <B>Message</B>: TMessage); <B>message</B> WM_THREAD_COMPLETE;
+  <B>public</B>
+    <FONT COLOR=NAVY><I>{ Public declarations }</I></FONT>
+  <B>end</B>;
+
+<B>var</B>
+  PrimeFrm: TPrimeFrm;
+
+<B>implementation</B>
+
+<FONT COLOR=NAVY><I>{$R *.DFM}</I></FONT>
+
+<B>procedure</B> TPrimeFrm.HandleThreadCompletion(<B>var</B> <B>Message</B>: TMessage);
+<B>begin</B>
+  <B>if</B> Assigned(FThread) <B>then</B>
+  <B>begin</B>
+    FThread.WaitFor;
+    FThread.Free;
+    FThread := <B>nil</B>;
+  <B>end</B>;
+<B>end</B>;
+
+<B>procedure</B> TPrimeFrm.SpawnButtonClick(Sender: TObject);
+
+<B>begin</B>
+  <B>if</B> <B>not</B> Assigned(FThread) <B>then</B>
+  <B>begin</B>
+    FThread := TPrimeThrd.Create(True);
+    FThread.FreeOnTerminate := false;
+    <B>try</B>
+      <B>with</B> FThread <B>do</B>
+      <B>begin</B>
+        TestNumber := StrToInt(NumEdit.Text);
+        Resume;
+      <B>end</B>;
+    <B>except</B> <B>on</B> EConvertError <B>do</B>
+      <B>begin</B>
+        FThread.Free;
+        FThread := <B>nil</B>;
+        ShowMessage(<FONT COLOR=BLUE>'That is not a valid number!'</FONT>);
+      <B>end</B>;
+    <B>end</B>;
+  <B>end</B>;
+<B>end</B>;
+
+<B>procedure</B> TPrimeFrm.FormCloseQuery(Sender: TObject; <B>var</B> CanClose: Boolean);
+<B>begin</B>
+  CanClose := true;
+  <B>if</B> Assigned(FThread) <B>then</B>
+  <B>begin</B>
+    <B>if</B> MessageDlg(<FONT COLOR=BLUE>'Threads active. Do you still want to quit?'</FONT>,
+      mtWarning, [mbYes, mbNo], 0) = mrNo <B>then</B>
+      CanClose := false;
+  <B>end</B>;
+  <FONT COLOR=NAVY><I>{Sleep(50000);}</I></FONT><FONT COLOR=NAVY><I>{Line C}</I></FONT>
+  <B>if</B> CanClose <B>then</B>
+  <B>begin</B>
+    <B>if</B> Assigned(FThread) <B>then</B>
+    <B>begin</B>
+      FThread.Terminate;
+      FThread.WaitFor;
+      FThread.Free;
+      FThread := <B>nil</B>;
+    <B>end</B>;
+  <B>end</B>;
+<B>end</B>;
+
+<B>end.</B>
+</TT></PRE>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Martin Harvey">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (WinNT; I) [Netscape]">
+   <title>Source35</title>
+</head>
+<body>
+<PRE><TT><B>unit</B> SimulatedEvent;
+
+<FONT COLOR=NAVY><I>{ Martin Harvey 4/6/2000 }</I></FONT>
+
+<B>interface</B>
+
+<B>uses</B> Windows;
+
+<B>type</B>
+  TSimulatedEvent = <B>class</B>
+  <B>private</B>
+    FBlockCount: integer;
+    FSignalled: boolean;
+    FDataSection: TRTLCriticalSection;
+    FBlockSem: THandle;
+  <B>protected</B>
+  <B>public</B>
+    <B>constructor</B> Create(CreateSignalled: boolean);
+    <B>destructor</B> Destroy; <B>override</B>;
+    <B>procedure</B> SetEvent;
+    <B>procedure</B> ResetEvent;
+    <B>procedure</B> PulseEvent;
+    <B>procedure</B> WaitFor;
+  <B>published</B>
+  <B>end</B>;
+
+<B>implementation</B>
+
+<B>constructor</B> TSimulatedEvent.Create(CreateSignalled: boolean);
+<B>begin</B>
+  <B>inherited</B> Create;
+  FSignalled := CreateSignalled;
+  InitializeCriticalSection(FDataSection);
+  FBlockSem := CreateSemaphore(<B>nil</B>, 0, High(Integer), <B>nil</B>);
+<B>end</B>;
+
+<B>destructor</B> TSimulatedEvent.Destroy;
+<B>begin</B>
+  DeleteCriticalSection(FDataSection);
+  CloseHandle(FBlockSem);
+  <B>inherited</B> Destroy;
+<B>end</B>;
+
+<B>procedure</B> TSimulatedEvent.SetEvent;
+<B>begin</B>
+  EnterCriticalSection(FDataSection);
+  FSignalled := true;
+  <B>while</B> FBlockCount &gt 0 <B>do</B>
+  <B>begin</B>
+    ReleaseSemaphore(FBlockSem, 1, <B>nil</B>);
+    Dec(FBlockCount);
+  <B>end</B>;
+  LeaveCriticalSection(FDataSection);
+<B>end</B>;
+
+<B>procedure</B> TSimulatedEvent.ResetEvent;
+<B>begin</B>
+  EnterCriticalSection(FDataSection);
+  FSignalled := false;
+  LeaveCriticalSection(FDataSection);
+<B>end</B>;
+
+<B>procedure</B> TSimulatedEvent.PulseEvent;
+<B>begin</B>
+  EnterCriticalSection(FDataSection);
+  <B>while</B> FBlockCount &gt 0 <B>do</B>
+  <B>begin</B>
+    ReleaseSemaphore(FBlockSem, 1, <B>nil</B>);
+    Dec(FBlockCount);
+  <B>end</B>;
+  LeaveCriticalSection(FDataSection);
+<B>end</B>;
+
+<B>procedure</B> TSimulatedEvent.WaitFor;
+<B>begin</B>
+  EnterCriticalSection(FDataSection);
+  <B>if</B> FSignalled <B>then</B>
+  <B>begin</B>
+    Dec(FBlockCOunt);
+    ReleaseSemaphore(FBlockSem, 1, <B>nil</B>);
+  <B>end</B>;
+  Inc(FBlockCount);
+  LeaveCriticalSection(FDataSection);
+  WaitForSingleObject(FBlockSem, INFINITE);
+<B>end</B>;
+
+<B>end.</B>
+
+</TT></PRE>
+</body>
+</html>

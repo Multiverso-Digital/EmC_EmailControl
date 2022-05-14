@@ -1,0 +1,121 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Martin Harvey">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (WinNT; I) [Netscape]">
+   <title>Source27</title>
+</head>
+<body>
+<PRE><TT><B>unit</B> BiDirBuf;
+
+<FONT COLOR=NAVY><I>{Martin Harvey 7/5/2000}</I></FONT>
+
+<B>interface</B>
+
+<B>uses</B> BoundedBuf;
+
+<B>type</B>
+  TBufferSide = (bsSideA, bsSideB);
+  TBufferOp = (boWriting, boReading);
+
+  TBiDirBuf = <B>class</B>
+  <B>private</B>
+    FAtoBBuf, FBtoABuf: TBoundedBuffer;
+  <B>protected</B>
+    <B>function</B> GetBuf(Side: TBufferSide; Op: TBufferOp): TBoundedBuffer;
+    <B>function</B> GetSize: integer;
+    <B>procedure</B> SetSize(NewSize: integer);
+  <B>public</B>
+    <B>constructor</B> Create;
+    <B>destructor</B> Destroy; <B>override</B>;
+    <B>procedure</B> ResetState;
+    <B>function</B> PutItem(Side: TBufferSide; Item: pointer): boolean;
+    <B>function</B> GetItem(Side: TBufferSide): pointer;
+    <FONT COLOR=NAVY><I>{ Entries used function peeks buffer one is reading from, and
+      Entried free function peeks buffer one is writing to. It seems
+      a bit useless to allow the other two operations: why worry about
+      your neighbour when you have plenty else to worry about? }</I></FONT>
+    <B>function</B> GetEntriesUsed(Side: TBufferSide; <B>var</B> Used: integer): boolean;
+    <B>function</B> GetEntriesFree(Side: TBufferSide; <B>var</B> Free: integer): boolean;
+  <B>published</B>
+    <B>property</B> Size: integer <B>read</B> GetSize <B>write</B> SetSize;
+  <B>end</B>;
+
+<B>implementation</B>
+
+<FONT COLOR=NAVY><I>{ TBiDirBuf }</I></FONT>
+
+<B>constructor</B> TBiDirBuf.Create;
+<B>begin</B>
+  <B>inherited</B> Create;
+  FAToBBuf := TBoundedBuffer.Create;
+  FBToABuf := TBoundedBuffer.Create;
+<B>end</B>;
+
+<B>destructor</B> TBiDirBuf.Destroy;
+<B>begin</B>
+  FAToBBuf.Free;
+  FBToABuf.Free;
+  <B>inherited</B> Destroy;
+<B>end</B>;
+
+<B>procedure</B> TBiDirBuf.ResetState;
+<B>begin</B>
+  FAToBBuf.ResetState;
+  FBToABuf.ResetState;
+<B>end</B>;
+
+<B>function</B> TBiDirBuf.GetBuf(Side: TBufferSide; Op: TBufferOp): TBoundedBuffer;
+<B>begin</B>
+  <B>if</B> ((Side = bsSideA) <B>and</B> (Op = boWriting))
+    <B>or</B> ((Side = bsSideB) <B>and</B> (Op = boReading)) <B>then</B>
+    result := FAToBBuf
+  <B>else</B> <B>if</B> ((Side = bsSideA) <B>and</B> (Op = boReading))
+    <B>or</B> ((Side = bsSideB) <B>and</B> (Op = boWriting)) <B>then</B>
+    result := FBToABuf
+  <B>else</B>
+  <B>begin</B>
+    result := FAToBBuf;
+    Assert(false);
+  <B>end</B>;
+<B>end</B>;
+
+<B>function</B> TBidirBuf.GetSize: integer;
+<B>begin</B>
+  Assert(FAToBBuf.Size = FBToABuf.Size);
+  result := FAToBBuf.Size;
+<B>end</B>;
+
+<B>procedure</B> TBiDirBuf.SetSize(NewSize: integer);
+<B>begin</B>
+  FAToBBuf.Size := NewSize;
+  FBToABuf.Size := NewSize;
+  Assert(FAToBBuf.Size = FBToABuf.Size);
+<B>end</B>;
+
+<B>function</B> TBiDirBuf.PutItem(Side: TBufferSide; Item: Pointer): boolean;
+<B>begin</B>
+  result := GetBuf(Side, boWriting).PutItem(Item);
+<B>end</B>;
+
+<B>function</B> TBiDirBuf.GetItem(Side: TBufferSide): Pointer;
+<B>begin</B>
+  result := GetBuf(Side, boReading).GetItem;
+<B>end</B>;
+
+<B>function</B> TBiDirBuf.GetEntriesUsed(Side: TBufferSide; <B>var</B> Used: integer): boolean;
+<B>begin</B>
+  result := GetBuf(Side, boReading).GetEntriesUsed(Used);
+<B>end</B>;
+
+<B>function</B> TBiDirBuf.GetEntriesFree(Side: TBufferSide; <B>var</B> Free: integer): boolean;
+<B>begin</B>
+  result := GetBuf(Side, boWriting).GetEntriesFree(Free);
+<B>end</B>;
+
+<B>end.</B>
+
+</TT></PRE>
+</body>
+</html>

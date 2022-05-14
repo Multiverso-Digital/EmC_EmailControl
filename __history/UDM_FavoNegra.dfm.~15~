@@ -1,0 +1,44 @@
+object DM_FavoNegra: TDM_FavoNegra
+  OldCreateOrder = False
+  Height = 131
+  Width = 354
+  object VeriEmail: TABSQuery
+    CurrentVersion = '6.02 '
+    DatabaseName = 'Favo'
+    SessionName = 'SessaoFavo_7'
+    InMemory = False
+    ReadOnly = True
+    SQL.Strings = (
+      'SELECT '
+      
+        'allboxes.ID, allboxes.TypeBox, allboxes.Kind, allboxes.Expressio' +
+        'n'
+      'FROM  allboxes'
+      'where '
+      'allboxes.TypeBox    < 3 and'
+      'allboxes.Kind       > 3 and'
+      'allboxes.`Status`   = 0 and'
+      'allboxes.Expression = :exp')
+    Left = 160
+    Top = 8
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'exp'
+        ParamType = ptUnknown
+      end>
+    object VeriEmailID: TLargeintField
+      FieldName = 'ID'
+    end
+    object VeriEmailTypeBox: TIntegerField
+      FieldName = 'TypeBox'
+    end
+    object VeriEmailKind: TIntegerField
+      FieldName = 'Kind'
+    end
+    object VeriEmailExpression: TWideStringField
+      FieldName = 'Expression'
+      Size = 500
+    end
+  end
+end

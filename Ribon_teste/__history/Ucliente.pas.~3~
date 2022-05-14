@@ -1,0 +1,33 @@
+unit Ucliente;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, JvComponentBase, JvFormMagnet, JvFormAutoSize, JvEmbeddedForms,
+  StdCtrls, ExtCtrls, JvExExtCtrls, JvExtComponent, JvCaptionPanel,
+  JvComponentPanel, JvExControls, JvRuler, JvLookOut, JvPageList,
+  JvNavigationPane, JvButton, JvgHelpPanel, JvgTransparentMemo, JvExStdCtrls,
+  JvRichEdit, JvDotNetControls, JvWizard, JvWizardRouteMapSteps, Buttons, Grids,
+  Wwdbigrd, Wwdbgrid, wwDialog, wwrcdvw, wwSpeedButton, wwDBNavigator,
+  wwclearpanel, wwrcdpnl, Wwintl;
+
+type
+  TFCliente = class(TForm)
+
+    Label4: TLabel;
+
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FCliente: TFCliente;
+
+implementation
+
+{$R *.dfm}
+
+end.

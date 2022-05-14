@@ -1,0 +1,685 @@
+unit Ubayesian;
+
+interface
+
+uses Classes, StrUtils, SysUtils, DBClient, DB, MyAccess,MyScript ,Forms,
+     generics.collections, generics.defaults;
+
+
+type
+
+
+
+  TToken = class(TObject)
+    public
+      strToken:String;
+      qtd_bad:integer;
+      qtd_good:Integer;
+      fbad:double;
+      fGood:double;
+      PToken:Double;
+      PDecisao:Double;
+    private
+      procedure grava(TokenTable:TMyquery; campoStr,CampoBad,campoGood:String);
+      procedure calculaProb(totOk,totSpam:Integer);
+  end;
+
+
+  TTokenComparer = TComparer<TToken>;
+
+
+  TBayesian = class(TObject)
+    private
+      tab_Bayesian:TMytable;
+      TokenList:TMyquery;
+      qtd_mail_spam,qtd_mail_Ok:Integer;
+      pMailSpam,pMailOK,pSpam:Double;
+      Lista:TList<TToken>;
+      Con:TMyConnection;
+      campoStr,CampoBad,campoGood:String;
+      procedure buscaQtdmail();
+      procedure gravaQtdMail();
+      function buscaToken(str:String):TToken;
+      procedure addToken(Token:TToken);
+      procedure calcPmail();
+      function verificatabelas():Boolean;
+      function criaTabToken():Boolean;
+      function criatab_bayesian():Boolean;
+    Public
+      procedure learn(S: String;Tipo:Integer); overload;
+    Published
+      constructor create(Conexao:TMyConnection);
+      procedure learn(S: String;Prefix:array of string;Tipo:Integer); overload;
+      procedure reset();
+      function TesteMail(Cabec:String;Itens:array of string):Double;
+      function listaTokenTeste():TList<TToken>;
+      procedure Free();
+
+
+
+
+
+  end;
+  function  strToken(var S: String; Seperator: Char): String;
+  function CompareDecisao(Item1, Item2: Pointer): Integer;
+  function PegaItensCabec(Item, cabec:String):String;
+
+
+implementation
+
+
+function PegaItensCabec(Item, cabec:String):String;
+var
+I, J, achou : integer;
+Lista    : TstringList;
+Monta    : string;
+begin
+
+Lista      := TstringList.Create;
+Lista.Text := Cabec;
+Monta := '';
+
+for I:= 0 to Lista.Count - 1 do
+  begin
+
+    achou := pos(Item,Lista.Strings[i]);
+    if achou = 1 then
+       begin
+         Monta := Monta + Lista.Strings[i];
+         J := I+1;
+         if J <= Lista.Count-1 then
+         begin
+         Lista.Strings[J] := stringreplace(Lista.Strings[J],#9, ' ',[]);
+         while copy(Lista.Strings[J],1,1) = ' ' do
+            begin
+            Monta := Monta + Lista.Strings[J];
+            J := J+1;
+            end;
+         end;
+       end;
+
+  end;
+
+
+
+Result := monta;
+Lista.Free;
+
+
+
+end;
+
+
+function CompareDecisao(Item1, Item2: Pointer): Integer;
+begin
+  
+end;
+
+
+function strToken(var S: String; Seperator: Char): String;
+var
+  I               : Word;
+begin
+  I:=Pos(Seperator,S);
+  if I<>0 then
+  begin
+    Result:=System.Copy(S,1,I-1);
+    System.Delete(S,1,I);
+  end else
+  begin
+    Result:=S;
+    S:='';
+  end;
+end;
+
+{TBayesian}
+
+procedure TBayesian.addToken(Token: TToken);
+begin
+  Token.grava(self.TokenList, self.campoStr, self.CampoBad, self.campoGood);
+end;
+
+procedure TBayesian.buscaQtdmail();
+begin
+  if tab_Bayesian <> nil then
+  begin
+    if tab_Bayesian.active then tab_Bayesian.Close;
+    tab_Bayesian.open;
+    if tab_Bayesian.RecordCount > 0 then
+    begin
+      self.qtd_mail_spam:= tab_bayesian.FieldByName('qtd_mail_spam').asInteger;
+      self.qtd_mail_Ok:=tab_bayesian.FieldByName('qtd_mail_ok').asInteger;
+    end
+    else
+    begin
+      self.qtd_mail_spam:= 0;
+      self.qtd_mail_Ok:=0;
+    end;
+    //calcPmail();
+  end;
+end;
+
+
+
+function TBayesian.buscaToken(str: String): TToken;
+var
+  rToken:TToken;
+begin
+  if TokenList.active then
+  begin
+    if TokenList.Locate(Campostr, STR, [loCaseInsensitive]) then
+    begin
+      rtoken:= TToken.Create();
+      rtoken.strToken := self.TokenList.FieldByName(self.campoStr).asString;
+      rtoken.qtd_bad := self.TokenList.FieldByName(self.CampoBad).AsInteger;
+      rtoken.qtd_Good := self.TokenList.FieldByName(self.campoGood).asInteger;
+      result:= rtoken;
+    end
+    else
+    begin
+      rtoken:= TToken.Create();
+      rtoken.strToken := STR;
+      rtoken.qtd_bad := 0;
+      rtoken.qtd_Good := 0;
+      result:= rtoken;
+    end;
+  end;
+
+end;
+
+procedure TBayesian.calcPmail();
+var
+  Tot:Integer;
+  totbad,TotGood:Integer;
+  ftotbad,ftotgood:Double;
+begin
+  tot := tab_Bayesian.FieldByName('qtd_mail_spam').AsInteger+
+            tab_Bayesian.FieldByName('qtd_mail_ok').AsInteger;
+
+  if tot > 0 then
+  begin
+    self.pMailSpam := tab_Bayesian.FieldByName('qtd_mail_spam').AsInteger / tot;
+    self.pMailOK := tab_Bayesian.FieldByName('qtd_mail_ok').AsInteger / tot;
+    totbad:=0;
+    totGood:=0;
+    self.TokenList.first;
+    while not self.TokenList.eof do
+    begin
+      totbad := totbad+ self.TokenList.FieldByName('qtd_spam').AsInteger;
+      totGood := totGood+ self.TokenList.FieldByName('qtd_ok').AsInteger;
+      self.TokenList.Next;
+    end;
+
+    ftotbad:= totbad / (totbad+totgood);
+    ftotgood:= totbad / (totbad+totgood);
+
+    self.pSpam := (ftotbad * self.pMailSpam)/
+                    ((ftotbad * self.pMailSpam) + (ftotgood * self.pMailOK));
+  end
+  else
+  begin
+    self.pMailSpam := 0;
+    self.pMailOK := 0;
+    self.pSpam := 0;
+  end;
+
+
+
+
+
+end;
+
+{constructor TBayesian.create(arquivo:TstringList);
+begin
+
+end;}
+
+
+procedure TBayesian.gravaQtdMail();
+begin
+  if tab_Bayesian <> nil then
+  begin
+    tab_Bayesian.Open;
+    if tab_Bayesian.RecordCount > 0 then
+    begin
+      tab_Bayesian.First;
+      tab_Bayesian.Edit;
+    end
+    else
+    begin
+      tab_Bayesian.append;
+    end;
+    tab_Bayesian.FieldByName('qtd_mail_spam').AsInteger := self.qtd_mail_spam;
+    tab_Bayesian.FieldByName('qtd_mail_ok').AsInteger := self.qtd_mail_ok;
+    tab_Bayesian.Post;
+    tab_Bayesian.ApplyUpdates;
+    tab_Bayesian.refresh;
+  end;
+end;
+
+procedure TBayesian.learn(S: String;Tipo:Integer);
+{
+  1=spam;
+  2=ok;
+}
+var
+  token:TToken;
+  ws:String;
+begin
+  if tipo = 1 then
+    self.qtd_mail_spam := self.qtd_mail_spam+1
+  else if tipo = 2 then
+    self.qtd_mail_ok := self.qtd_mail_ok+1;
+
+  while Length(S)>0 do
+  begin
+    application.ProcessMessages;
+    ws := stringreplace(s, #13, ' ', []);
+    s := stringreplace(ws, #10, ' ', []);
+    Token := buscaToken(strToken(S, ' '));
+    if tipo = 1 then
+    begin
+      Token.qtd_bad := Token.qtd_bad + 1
+    end
+    else if tipo = 2 then
+    begin
+      Token.qtd_good := Token.qtd_Good + 1;
+
+    end;
+
+    if length(Token.strToken) > 3 then
+    begin
+      Token.grava(self.TokenList,self.campoStr,self.campoBad,self.campoGood);
+      self.gravaQtdMail();
+    end;
+
+
+    token.Free;
+
+  end;
+end;
+
+procedure TBayesian.learn(S: String;Prefix:array of string;Tipo:Integer);
+{
+  1=spam;
+  2=ok;
+}
+var
+  token:TToken;
+  ws,work:String;
+  i:Integer;
+begin
+  if tipo = 1 then
+    self.qtd_mail_spam := self.qtd_mail_spam+1
+  else if tipo = 2 then
+    self.qtd_mail_ok := self.qtd_mail_ok+1;
+  for i := 0 to length(Prefix) - 1 do
+  begin
+      ws := PegaItensCabec(Prefix[i]+':',S);
+      ws := stringreplace(ws, #13, ' ', []);
+      ws := stringreplace(ws, #10, ' ', []);
+    while Length(ws)>0 do
+    begin
+      application.ProcessMessages;
+      work := strToken(ws, ' ');
+      work:= stringreplace(work,Prefix[i]+':','', [rfIgnoreCase]);
+      Token := buscaToken(Prefix[i]+'@'+work);
+      if tipo = 1 then
+      begin
+        Token.qtd_bad := Token.qtd_bad + 1
+      end
+      else if tipo = 2 then
+      begin
+        Token.qtd_good := Token.qtd_Good + 1;
+
+      end;
+
+      if (length(trim(work)) > 4) then
+      begin
+        Token.grava(self.TokenList,self.campoStr,self.campoBad,self.campoGood);
+        self.gravaQtdMail();
+      end;
+
+
+      token.Free;
+
+    end;
+  end;
+end;
+
+
+
+function TBayesian.listaTokenTeste():TList<TToken>;
+var
+  i:Integer;
+  ListaRetorno:TList<TToken>;
+begin
+  ListaRetorno := TList<TToken>.create();
+  for I := 0 to self.lista.Count -1 do
+  begin
+    if self.Lista.Items[i].PDecisao > 0 then
+    begin
+      ListaRetorno.Add(self.Lista.Items[i]);
+    end;
+  end;
+  result:=ListaRetorno;
+end;
+
+procedure TBayesian.reset();
+var
+  query:TMyscript;
+begin
+  try
+    query := TMyscript.Create(nil);
+    query.Connection := self.Con;
+    query.SQL.add('delete from tab_token;');
+    query.SQL.add('alter table tab_token AUTO_INCREMENT = 1;');
+    query.SQL.add('update tab_bayesian set tab_bayesian.qtd_mail_ok = 0, tab_bayesian.qtd_mail_spam = 0;');
+    query.Execute;
+    query.Execute;
+    query.Free;
+  except
+
+  end;
+end;
+
+function TBayesian.TesteMail(Cabec:String;Itens:array of string):Double;
+var
+  token :Ttoken;
+  s,ws:String;
+  fatorDividendo,fatorDivisor,fatorDecisao:Double;
+  i,ate:Integer;
+  pSpammsg:Double;
+
+begin
+  self.Lista.Clear;
+  if length(Itens) > 0 then
+  begin
+    for I := 0 to length(Itens) - 1 do
+    begin
+      ws := PegaItensCabec(itens[i]+':',Cabec);
+      ws := stringreplace(ws, #13, ' ', []);
+      ws := stringreplace(ws, #10, ' ', []);
+      while Length(ws)>0 do
+      begin
+        token := TToken.Create;
+        Token := buscaToken(itens[i]+'@'+strToken(ws, ' '));
+        Token.calculaProb(self.qtd_mail_Ok,self.qtd_mail_spam);
+        lista.Add(token);
+      end;
+    end;
+  end
+  else
+  begin
+    s := Cabec;
+    ws := stringreplace(s, #13, ' ', []);
+    s := stringreplace(ws, #10, ' ', []);
+    while Length(S)>0 do
+    begin
+      token := TToken.Create;
+      Token := buscaToken(strToken(S, ' '));
+      Token.calculaProb(self.qtd_mail_Ok,self.qtd_mail_spam);
+      lista.Add(token);
+    end;
+  end;
+
+
+
+  Lista.Sort(TTokenComparer.Construct(
+      function (const L, R: TToken): TToken
+      begin
+        if L.PDecisao = R.PDecisao then
+          result:=0
+        else if L.PDecisao < R.PDecisao then
+          result := 1
+        else if L.PDecisao > R.PDecisao then
+          result:=-1;
+      end
+      )) ;
+
+
+  //Lista.Sort(CompareDecisao);
+  //Lista.Sort;
+
+  fatorDividendo := 1;
+  fatorDivisor := 1;
+  if lista.Count >= 15 then
+    ate := 15
+  else
+    ate := lista.Count;
+
+  for I := 0 to lista.Count -1 do
+  //for I := 0 to ate do
+  begin
+    if Lista.Items[i].PDecisao > 0 then
+    begin
+      fatorDividendo := fatorDividendo * Lista.items[i].PToken;
+      fatorDivisor := fatorDivisor * (1 - Lista.items[i].PToken);
+    end
+    else
+    begin
+      break;
+    end;
+  end;
+  pSpammsg:=fatorDividendo / (fatorDividendo + fatorDivisor);
+
+  {result :=0;
+  if pSpammsg >= self.pSpam  then
+  begin
+    result := 1;
+  end;}
+
+  result:= pSpammsg;
+
+end;
+
+function TBayesian.criaTabToken: Boolean;
+var query:TMyquery;
+begin
+  try
+    query.Create(nil);
+    query.Connection := self.Con;
+    query.SQL.add('CREATE TABLE `tab_token` ('+
+    '`id` int(11) NOT NULL auto_increment,'+
+    '`palavra` varchar(255) default NULL,'+
+    '`qtd_spam` int(11) default NULL,'+
+    '`qtd_ok` int(11) default NULL,'+
+    '`mail_spam` int(11) default NULL,'+
+    '`mail_ok` int(11) default NULL,'+
+    'PRIMARY KEY  (`id`),'+
+    'KEY `palavra` (`palavra`)'+
+    ') ENGINE=InnoDB AUTO_INCREMENT=6816 DEFAULT CHARSET=latin1 COMMENT='+QuotedStr('InnoDB free: 8803328 kB; InnoDB free: 8803328 kB')+';');
+    query.Execute;
+    query.Free;
+  Except
+    result:=false;
+    raise Exception.CreateFmt('Erro na criação da Tabela de Tokens',[]);
+  end;
+  Result:=true;
+end;
+
+function TBayesian.criatab_bayesian: Boolean;
+var query:TMyquery;
+begin
+  try
+    query.Create(nil);
+    query.Connection := self.Con;
+    query.SQL.add('CREATE TABLE `tab_bayesian` ('+
+    '`id` int(11) NOT NULL auto_increment,'+
+    '`qtd_mail_spam` int(11) default '+QuotedStr('0')+','+
+    '`qtd_mail_ok` int(11) default '+QuotedStr('0')+','+
+    'PRIMARY KEY  (`id`)'+
+    ') ENGINE=InnoDB AUTO_INCREMENT=6816 DEFAULT CHARSET=latin1 COMMENT='+QuotedStr('InnoDB free: 8803328 kB; InnoDB free: 8803328 kB')+';');
+    query.Execute;
+    query.Free;
+  Except
+    result:=false;
+    raise Exception.CreateFmt('Erro na criação da Tabela Bayesian',[]);
+  end;
+  Result:=true;
+
+end;
+
+procedure TBayesian.Free;
+begin
+  self.TokenList.Free;
+  self.tab_Bayesian.Free;
+  self.Lista.Free;
+  inherited free;
+
+end;
+
+function TBayesian.verificatabelas(): Boolean;
+var
+  Listatabelas : TStringList;
+begin
+  {Listatabelas := TStringList.Create;
+  Con.GetTableNames(Listatabelas);
+  if Listatabelas.IndexOf('tab_token') < 0 then
+  begin
+    if not criaTabToken() then
+    begin
+      result:=false;
+      exit;
+    end;
+  end; }
+  try
+    self.TokenList := TMyquery.Create(Nil);
+    self.TokenList.Connection := self.Con;
+    self.TokenList.SQL.text := 'Select * from tab_token where palavra = :palavra';
+    self.TokenList.SQLInsert.Text := '';
+    self.TokenList.SQLUpdate.Text := '';
+    self.TokenList.SQLRefresh.Text := '';
+    self.TokenList.SQLDelete.Text := '';
+    self.TokenList.CachedUpdates := true;
+    self.TokenList.IndexFieldNames := 'palavra';
+    self.TokenList.Open;
+  Except
+    result:=false;
+    exit;
+  end;
+
+  {if Listatabelas.IndexOf('tab_bayesian') < 0 then
+  begin
+    criatab_bayesian();
+  end;}
+  try
+    self.tab_Bayesian := TMyTable.Create(Nil);
+    self.tab_Bayesian.Connection := self.Con;
+    self.tab_Bayesian.TableName := 'tab_bayesian';
+    self.tab_Bayesian.CachedUpdates := true;
+    self.tab_Bayesian.open;
+  Except
+    result:=false;
+    exit;
+  end;
+  result:=true;
+
+end;
+
+constructor TBayesian.create(conexao:TMyconnection);
+var
+  Token:TToken;
+  Tabelas : TStringList;
+  I:Integer;
+begin
+
+  self.Lista := TList<TToken>.Create;
+  self.campoStr := 'palavra';
+  self.CampoBad := 'qtd_spam';
+  self.campoGood := 'qtd_ok';
+  self.Con := &Conexao;
+  if not self.verificatabelas() then
+  begin
+    self.Free;
+  end
+  else
+  begin
+    buscaQtdmail()
+  end;
+end;
+
+
+
+
+
+{ TToken }
+
+procedure TToken.calculaProb(totOk,totSpam:Integer);
+var
+  fatorOK,fatorSpam,probSpam,probOK:Double;
+
+begin
+  if (self.qtd_bad + self.qtd_good) >= 3 then
+  begin
+
+    if self.qtd_bad = 0 then
+    begin
+      self.PToken:= 0.1;
+    end
+    else if self.qtd_good = 0 then
+    begin
+      if qtd_bad < 10 then
+      begin
+        self.PToken:= 0.9;
+      end
+      else
+      begin
+        self.PToken:= 0.99;
+      end;
+    end
+    else
+    begin
+
+      self.fbad := self.qtd_bad / (self.qtd_bad + self.qtd_good);
+      self.fgood := self.qtd_good / (self.qtd_bad + self.qtd_good);
+      self.fgood := self.fgood*6;
+
+      probSpam := totSpam / (totSpam + totOk);
+      probOK := totOk / (totSpam + totOk);
+
+
+      self.fbad := self.fbad * probSpam;
+      self.fgood := self.fGood * probOK;
+
+
+      self.PToken:= self.fbad / (self.fGood + self.fbad);
+
+    end;
+    self.PDecisao := Abs( 0.5 - self.PToken );
+
+  end
+  else
+  begin
+    self.fbad :=0;
+    self.fgood := 0;
+    self.PToken := 0;
+    self.PDecisao := 0;
+  end;
+
+end;
+
+procedure TToken.grava(TokenTable: TMyquery; campoStr, CampoBad,
+  campoGood: String);
+begin
+  if not TokenTable.Active then TokenTable.Open;
+  if TokenTable.Locate(campoSTR,self.strToken,  [loCaseInsensitive]) then
+  begin
+    TokenTable.Edit;
+  end
+  else
+  begin
+    TokenTable.Append;
+  end;
+
+  TokenTable.FieldByName(campoSTR).AsString := self.strToken;
+  TokenTable.FieldByName(CampoBad).AsFloat := self.qtd_bad;
+  TokenTable.FieldByName(CampoGood).AsFloat := self.qtd_Good;
+
+  TokenTable.Post;
+  TokenTable.ApplyUpdates;
+  TokenTable.Refresh;
+end;
+
+
+end.

@@ -1,0 +1,64 @@
+Received: from yw-out-1718.google.com ([74.125.46.155]) by abreuretto.com with MailEnable ESMTP; Wed, 18 Feb 2009 09:26:00 -0800
+Received: by yw-out-1718.google.com with SMTP id 9so1421806ywk.80
+        for <abreu@abreuretto.com>; Wed, 18 Feb 2009 09:26:00 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=gamma;
+        h=domainkey-signature:mime-version:received:date:message-id:subject
+         :from:to:content-type;
+        bh=wlftCeweoLKcrh4nZXRjqjdESLRKcv8GHVAQw0r1z0U=;
+        b=IhPImAwYnMoXQnt7ryuXmIAUnWm6YHMgSwmt3KHiBhEpWZ4EVi/jWQ1BN/bg6yDsi0
+         WiXNBdIfahOOQB6q/ovhsnL2uEPpJWICH7BCLMTUxkglWF1UtQ1YIKSkhR9SdryRhTmj
+         BE8qK6gvk35YsW11UFTJnQURsqjltS/G5gQvo=
+DomainKey-Signature: a=rsa-sha1; c=nofws;
+        d=gmail.com; s=gamma;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        b=pydimAlZr+XbKrp1s4U0q2Cs46ktFD/NGMb91TB961N05oadBLMbJjfAONvvvPYRFv
+         SITRWK9PTa1E1u4N/W9Y1Dx6AHK1HukMBJ9hA+1Eg3KCg08maqind3u7ZfZpRMo//DKW
+         6stOZgi5y5n6wArS+37Dz4JpeeT+0YysEFVYs=
+MIME-Version: 1.0
+Received: by 10.220.75.136 with SMTP id y8mr1867210vcj.26.1234977960766; Wed, 
+	18 Feb 2009 09:26:00 -0800 (PST)
+Date: Wed, 18 Feb 2009 14:26:00 -0300
+Message-ID: <5ac2008e0902180926v5506a60ex11390237b5efc25e@mail.gmail.com>
+Subject: Ajax
+From: =?ISO-8859-1?Q?Nat=E1lia_Pacheco?= <procurandooque@gmail.com>
+To: Abreu Retto <abreu@abreuretto.com>
+Content-Type: multipart/alternative; boundary=0016e645a47ca82c8f046334b6e5
+Return-Path: <procurandooque@gmail.com>
+
+--0016e645a47ca82c8f046334b6e5
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Abreu,
+
+eu gostaria de aprender a fazer aqueles formul=E1rios que verificam se os
+dados foram preenchidos na hora do preenchimento, sabe? Com Ajax.
+
+Tem alguma dica?
+
+Obrigada, bjs,
+Nat
+
+--=20
+the only moment in our lives that ever really mattered fate is now
+
+--0016e645a47ca82c8f046334b6e5
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<div>Abreu,</div>
+<div>&nbsp;</div>
+<div>eu gostaria de aprender a fazer aqueles formul=E1rios que verificam se=
+ os dados foram preenchidos na hora do preenchimento, sabe? Com Ajax.</div>
+<div>&nbsp;</div>
+<div>Tem alguma dica?</div>
+<div>&nbsp;</div>
+<div>Obrigada, bjs,</div>
+<div>Nat</div>
+<div>&nbsp;</div>
+<div>-- <br>the only moment in our lives that ever really mattered fate is =
+now<br></div>
+
+--0016e645a47ca82c8f046334b6e5--
+

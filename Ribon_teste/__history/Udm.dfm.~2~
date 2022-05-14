@@ -1,0 +1,18 @@
+object DM: TDM
+  OldCreateOrder = False
+  Height = 395
+  Width = 488
+  object MC: TMyConnection
+    Left = 32
+    Top = 24
+  end
+  object MyQuery1: TMyQuery
+    Connection = MC
+    Left = 96
+    Top = 24
+  end
+  object MCPrj: TMyConnection
+    Left = 32
+    Top = 88
+  end
+end

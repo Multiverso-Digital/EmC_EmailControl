@@ -1,0 +1,2133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file original="\\Ar0\prgsbeli\@Projetos_em_andamento\EmC2010\UDMSERVER.dfm" source-language="pt-BR" target-language="pt-BR" datatype="delphiform" tool="ETM v10.0" ts="\\Ar0\prgsbeli\@Projetos_em_andamento\EmC2010\UDMSERVER.dfm">
+    <header>
+      <prop-group name="ITEHeaderProp">
+        <prop prop-type="Version">9.0</prop>
+        <prop prop-type="SelfDateTime">39807.4631481481</prop>
+        <prop prop-type="OrigDateTime">39807.4234722222</prop>
+        <prop prop-type="XlatDateTime">39807.4234722222</prop>
+        <prop prop-type="Translated">0</prop>
+        <prop prop-type="UnTranslated">423</prop>
+      </prop-group>
+    </header>
+    <body>
+      <trans-unit id="O:DM_SERVER.OldCreateOrder" resname="O:DM_SERVER.OldCreateOrder">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">0</prop><prop prop-type="Type">TDM_SERVER</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.Height" resname="O:DM_SERVER.Height">
+        <source>346</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1</prop><prop prop-type="Type">TDM_SERVER</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.Width" resname="O:DM_SERVER.Width">
+        <source>511</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">2</prop><prop prop-type="Type">TDM_SERVER</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:MC.Database" resname="O:DM_SERVER.O:MC.Database">
+        <source>'emc'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">3</prop><prop prop-type="Type">TMyConnection</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:MC.Username" resname="O:DM_SERVER.O:MC.Username">
+        <source>'root'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TMyConnection</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:MC.Password" resname="O:DM_SERVER.O:MC.Password">
+        <source>'aw1122'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TMyConnection</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:MC.Server" resname="O:DM_SERVER.O:MC.Server">
+        <source>'192.168.0.10'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">TMyConnection</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:MC.Connected" resname="O:DM_SERVER.O:MC.Connected">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">7</prop><prop prop-type="Type">TMyConnection</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:MC.LoginPrompt" resname="O:DM_SERVER.O:MC.LoginPrompt">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">8</prop><prop prop-type="Type">TMyConnection</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:MC.Left" resname="O:DM_SERVER.O:MC.Left">
+        <source>40</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">9</prop><prop prop-type="Type">TMyConnection</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:MC.Top" resname="O:DM_SERVER.O:MC.Top">
+        <source>24</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">10</prop><prop prop-type="Type">TMyConnection</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcontas.Connection" resname="O:DM_SERVER.O:qcontas.Connection">
+        <source>MC</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">11</prop><prop prop-type="Type">TMyQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcontas.SQL.Strings[0]" resname="O:DM_SERVER.O:qcontas.SQL.Strings[0]">
+        <source>'select * from accounts'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">12</prop><prop prop-type="Type">TMyQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop><prop prop-type="Close">)</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcontas.Left" resname="O:DM_SERVER.O:qcontas.Left">
+        <source>112</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">13</prop><prop prop-type="Type">TMyQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcontas.Top" resname="O:DM_SERVER.O:qcontas.Top">
+        <source>24</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">14</prop><prop prop-type="Type">TMyQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcontas.O:qcontasID.AutoGenerateValue" resname="O:DM_SERVER.O:qcontas.O:qcontasID.AutoGenerateValue">
+        <source>arAutoInc</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcontas.O:qcontasID.FieldName" resname="O:DM_SERVER.O:qcontas.O:qcontasID.FieldName">
+        <source>'ID'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">16</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcontas.O:qcontasID.Origin" resname="O:DM_SERVER.O:qcontas.O:qcontasID.Origin">
+        <source>'accounts.ID'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">17</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcontas.O:qcontasNome.FieldName" resname="O:DM_SERVER.O:qcontas.O:qcontasNome.FieldName">
+        <source>'Nome'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">18</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcontas.O:qcontasNome.Origin" resname="O:DM_SERVER.O:qcontas.O:qcontasNome.Origin">
+        <source>'accounts.Nome'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">19</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcontas.O:qcontasNome.Size" resname="O:DM_SERVER.O:qcontas.O:qcontasNome.Size">
+        <source>50</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">20</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcontas.O:qcontasPOP.FieldName" resname="O:DM_SERVER.O:qcontas.O:qcontasPOP.FieldName">
+        <source>'POP'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">21</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcontas.O:qcontasPOP.Origin" resname="O:DM_SERVER.O:qcontas.O:qcontasPOP.Origin">
+        <source>'accounts.POP'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">22</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcontas.O:qcontasPOP.Size" resname="O:DM_SERVER.O:qcontas.O:qcontasPOP.Size">
+        <source>200</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">23</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcontas.O:qcontasSMTP.FieldName" resname="O:DM_SERVER.O:qcontas.O:qcontasSMTP.FieldName">
+        <source>'SMTP'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">24</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcontas.O:qcontasSMTP.Origin" resname="O:DM_SERVER.O:qcontas.O:qcontasSMTP.Origin">
+        <source>'accounts.SMTP'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcontas.O:qcontasSMTP.Size" resname="O:DM_SERVER.O:qcontas.O:qcontasSMTP.Size">
+        <source>200</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcontas.O:qcontasPorta.FieldName" resname="O:DM_SERVER.O:qcontas.O:qcontasPorta.FieldName">
+        <source>'Porta'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">27</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcontas.O:qcontasPorta.Origin" resname="O:DM_SERVER.O:qcontas.O:qcontasPorta.Origin">
+        <source>'accounts.Porta'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcontas.O:qcontasUsuario.FieldName" resname="O:DM_SERVER.O:qcontas.O:qcontasUsuario.FieldName">
+        <source>'Usuario'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcontas.O:qcontasUsuario.Origin" resname="O:DM_SERVER.O:qcontas.O:qcontasUsuario.Origin">
+        <source>'accounts.Usuario'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcontas.O:qcontasUsuario.Size" resname="O:DM_SERVER.O:qcontas.O:qcontasUsuario.Size">
+        <source>200</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcontas.O:qcontasSenha.FieldName" resname="O:DM_SERVER.O:qcontas.O:qcontasSenha.FieldName">
+        <source>'Senha'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcontas.O:qcontasSenha.Origin" resname="O:DM_SERVER.O:qcontas.O:qcontasSenha.Origin">
+        <source>'accounts.Senha'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">33</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcontas.O:qcontasSenha.Size" resname="O:DM_SERVER.O:qcontas.O:qcontasSenha.Size">
+        <source>50</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">34</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcontas.O:qcontasEmail.FieldName" resname="O:DM_SERVER.O:qcontas.O:qcontasEmail.FieldName">
+        <source>'Email'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcontas.O:qcontasEmail.Origin" resname="O:DM_SERVER.O:qcontas.O:qcontasEmail.Origin">
+        <source>'accounts.Email'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcontas.O:qcontasEmail.Size" resname="O:DM_SERVER.O:qcontas.O:qcontasEmail.Size">
+        <source>200</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcontas.O:qcontasSMTPautentica.FieldName" resname="O:DM_SERVER.O:qcontas.O:qcontasSMTPautentica.FieldName">
+        <source>'SMTPautentica'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcontas.O:qcontasSMTPautentica.Origin" resname="O:DM_SERVER.O:qcontas.O:qcontasSMTPautentica.Origin">
+        <source>'accounts.SMTPautentica'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcontas.O:qcontasSMTPusuario.FieldName" resname="O:DM_SERVER.O:qcontas.O:qcontasSMTPusuario.FieldName">
+        <source>'SMTPusuario'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcontas.O:qcontasSMTPusuario.Origin" resname="O:DM_SERVER.O:qcontas.O:qcontasSMTPusuario.Origin">
+        <source>'accounts.SMTPusuario'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">41</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcontas.O:qcontasSMTPusuario.Size" resname="O:DM_SERVER.O:qcontas.O:qcontasSMTPusuario.Size">
+        <source>50</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">42</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcontas.O:qcontasSMTPSenha.FieldName" resname="O:DM_SERVER.O:qcontas.O:qcontasSMTPSenha.FieldName">
+        <source>'SMTPSenha'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">43</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcontas.O:qcontasSMTPSenha.Origin" resname="O:DM_SERVER.O:qcontas.O:qcontasSMTPSenha.Origin">
+        <source>'accounts.SMTPSenha'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">44</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcontas.O:qcontasSMTPSenha.Size" resname="O:DM_SERVER.O:qcontas.O:qcontasSMTPSenha.Size">
+        <source>50</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">45</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcontas.O:qcontasSMTPPorta.FieldName" resname="O:DM_SERVER.O:qcontas.O:qcontasSMTPPorta.FieldName">
+        <source>'SMTPPorta'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">46</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcontas.O:qcontasSMTPPorta.Origin" resname="O:DM_SERVER.O:qcontas.O:qcontasSMTPPorta.Origin">
+        <source>'accounts.SMTPPorta'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">47</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcontas.O:qcontasAtivada.FieldName" resname="O:DM_SERVER.O:qcontas.O:qcontasAtivada.FieldName">
+        <source>'Ativada'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">48</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcontas.O:qcontasAtivada.Origin" resname="O:DM_SERVER.O:qcontas.O:qcontasAtivada.Origin">
+        <source>'accounts.Ativada'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">49</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcontas.O:qcontasExcluida.FieldName" resname="O:DM_SERVER.O:qcontas.O:qcontasExcluida.FieldName">
+        <source>'Excluida'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">50</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcontas.O:qcontasExcluida.Origin" resname="O:DM_SERVER.O:qcontas.O:qcontasExcluida.Origin">
+        <source>'accounts.Excluida'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">51</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcontas.O:qcontasDTALT.FieldName" resname="O:DM_SERVER.O:qcontas.O:qcontasDTALT.FieldName">
+        <source>'DTALT'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">52</prop><prop prop-type="Type">TDateTimeField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcontas.O:qcontasDTALT.Origin" resname="O:DM_SERVER.O:qcontas.O:qcontasDTALT.Origin">
+        <source>'accounts.DTALT'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">53</prop><prop prop-type="Type">TDateTimeField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Prov_Contas.DataSet" resname="O:DM_SERVER.O:Prov_Contas.DataSet">
+        <source>qcontas</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">54</prop><prop prop-type="Type">TDataSetProvider</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Prov_Contas.Options" resname="O:DM_SERVER.O:Prov_Contas.Options">
+        <source>[poAllowCommandText, poUseQuoteChar]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">55</prop><prop prop-type="Type">TDataSetProvider</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Prov_Contas.Left" resname="O:DM_SERVER.O:Prov_Contas.Left">
+        <source>176</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">56</prop><prop prop-type="Type">TDataSetProvider</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Prov_Contas.Top" resname="O:DM_SERVER.O:Prov_Contas.Top">
+        <source>24</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">57</prop><prop prop-type="Type">TDataSetProvider</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.Aggregates" resname="O:DM_SERVER.O:Cds_Contas.Aggregates">
+        <source>&lt;&gt;</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">58</prop><prop prop-type="Type">TClientDataSet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.Params" resname="O:DM_SERVER.O:Cds_Contas.Params">
+        <source>&lt;&gt;</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">59</prop><prop prop-type="Type">TClientDataSet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.ProviderName" resname="O:DM_SERVER.O:Cds_Contas.ProviderName">
+        <source>'Prov_Contas'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">60</prop><prop prop-type="Type">TClientDataSet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.BeforePost" resname="O:DM_SERVER.O:Cds_Contas.BeforePost">
+        <source>Cds_ContasBeforePost</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">61</prop><prop prop-type="Type">TClientDataSet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.Left" resname="O:DM_SERVER.O:Cds_Contas.Left">
+        <source>248</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">62</prop><prop prop-type="Type">TClientDataSet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.Top" resname="O:DM_SERVER.O:Cds_Contas.Top">
+        <source>24</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">63</prop><prop prop-type="Type">TClientDataSet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasAtivada.DisplayWidth" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasAtivada.DisplayWidth">
+        <source>10</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">64</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasAtivada.FieldName" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasAtivada.FieldName">
+        <source>'Ativada'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">65</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasNome.DisplayWidth" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasNome.DisplayWidth">
+        <source>30</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">66</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasNome.FieldName" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasNome.FieldName">
+        <source>'Nome'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">67</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasNome.Size" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasNome.Size">
+        <source>50</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">68</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasEmail.DisplayWidth" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasEmail.DisplayWidth">
+        <source>30</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">69</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasEmail.FieldName" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasEmail.FieldName">
+        <source>'Email'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">70</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasEmail.Size" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasEmail.Size">
+        <source>200</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">71</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasID.DisplayWidth" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasID.DisplayWidth">
+        <source>10</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">72</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasID.FieldName" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasID.FieldName">
+        <source>'ID'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">73</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasID.ProviderFlags" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasID.ProviderFlags">
+        <source>[pfInUpdate, pfInWhere, pfInKey]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">74</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasID.Visible" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasID.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">75</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasPOP.DisplayWidth" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasPOP.DisplayWidth">
+        <source>37</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">76</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasPOP.FieldName" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasPOP.FieldName">
+        <source>'POP'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">77</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasPOP.Visible" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasPOP.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">78</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasPOP.Size" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasPOP.Size">
+        <source>200</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">79</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasSMTP.DisplayWidth" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasSMTP.DisplayWidth">
+        <source>200</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">80</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasSMTP.FieldName" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasSMTP.FieldName">
+        <source>'SMTP'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">81</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasSMTP.Visible" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasSMTP.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">82</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasSMTP.Size" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasSMTP.Size">
+        <source>200</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">83</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasPorta.DisplayWidth" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasPorta.DisplayWidth">
+        <source>10</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">84</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasPorta.FieldName" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasPorta.FieldName">
+        <source>'Porta'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">85</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasPorta.Visible" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasPorta.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">86</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasUsuario.DisplayWidth" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasUsuario.DisplayWidth">
+        <source>200</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">87</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasUsuario.FieldName" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasUsuario.FieldName">
+        <source>'Usuario'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">88</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasUsuario.Visible" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasUsuario.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">89</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasUsuario.Size" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasUsuario.Size">
+        <source>200</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">90</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasSenha.DisplayWidth" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasSenha.DisplayWidth">
+        <source>50</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">91</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasSenha.FieldName" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasSenha.FieldName">
+        <source>'Senha'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">92</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasSenha.Visible" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasSenha.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">93</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasSenha.Size" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasSenha.Size">
+        <source>50</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">94</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasSMTPautentica.DisplayWidth" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasSMTPautentica.DisplayWidth">
+        <source>10</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">95</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasSMTPautentica.FieldName" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasSMTPautentica.FieldName">
+        <source>'SMTPautentica'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">96</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasSMTPautentica.Visible" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasSMTPautentica.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">97</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasSMTPusuario.DisplayWidth" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasSMTPusuario.DisplayWidth">
+        <source>50</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">98</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasSMTPusuario.FieldName" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasSMTPusuario.FieldName">
+        <source>'SMTPusuario'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">99</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasSMTPusuario.Visible" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasSMTPusuario.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">100</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasSMTPusuario.Size" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasSMTPusuario.Size">
+        <source>50</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">101</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasSMTPSenha.DisplayWidth" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasSMTPSenha.DisplayWidth">
+        <source>50</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">102</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasSMTPSenha.FieldName" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasSMTPSenha.FieldName">
+        <source>'SMTPSenha'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">103</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasSMTPSenha.Visible" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasSMTPSenha.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">104</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasSMTPSenha.Size" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasSMTPSenha.Size">
+        <source>50</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">105</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasSMTPPorta.DisplayWidth" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasSMTPPorta.DisplayWidth">
+        <source>10</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">106</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasSMTPPorta.FieldName" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasSMTPPorta.FieldName">
+        <source>'SMTPPorta'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">107</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasSMTPPorta.Visible" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasSMTPPorta.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">108</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasExcluida.DisplayWidth" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasExcluida.DisplayWidth">
+        <source>10</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">109</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasExcluida.FieldName" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasExcluida.FieldName">
+        <source>'Excluida'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631703819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">110</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasExcluida.Visible" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasExcluida.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">111</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasDTALT.DisplayWidth" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasDTALT.DisplayWidth">
+        <source>18</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">112</prop><prop prop-type="Type">TDateTimeField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasDTALT.FieldName" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasDTALT.FieldName">
+        <source>'DTALT'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">113</prop><prop prop-type="Type">TDateTimeField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasDTALT.Visible" resname="O:DM_SERVER.O:Cds_Contas.O:Cds_ContasDTALT.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">114</prop><prop prop-type="Type">TDateTimeField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:DS_qContas.DataSet" resname="O:DM_SERVER.O:DS_qContas.DataSet">
+        <source>Cds_Contas</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">115</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:DS_qContas.Left" resname="O:DM_SERVER.O:DS_qContas.Left">
+        <source>316</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">116</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:DS_qContas.Top" resname="O:DM_SERVER.O:DS_qContas.Top">
+        <source>24</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">117</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qmens.Connection" resname="O:DM_SERVER.O:qmens.Connection">
+        <source>MC</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">118</prop><prop prop-type="Type">TMyQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qmens.SQL.Strings[0]" resname="O:DM_SERVER.O:qmens.SQL.Strings[0]">
+        <source>'select * from messages'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">119</prop><prop prop-type="Type">TMyQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qmens.SQL.Strings[1]" resname="O:DM_SERVER.O:qmens.SQL.Strings[1]">
+        <source>'where status = :status'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">120</prop><prop prop-type="Type">TMyQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">)</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qmens.Left" resname="O:DM_SERVER.O:qmens.Left">
+        <source>112</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">121</prop><prop prop-type="Type">TMyQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qmens.Top" resname="O:DM_SERVER.O:qmens.Top">
+        <source>72</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">122</prop><prop prop-type="Type">TMyQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qmens.ParamData[0].DataType" resname="O:DM_SERVER.O:qmens.ParamData[0].DataType">
+        <source>ftUnknown</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">123</prop><prop prop-type="Type">C:TMyQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qmens.ParamData[0].Name" resname="O:DM_SERVER.O:qmens.ParamData[0].Name">
+        <source>'STATUS'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">124</prop><prop prop-type="Type">C:TMyQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Prov_Mens.DataSet" resname="O:DM_SERVER.O:Prov_Mens.DataSet">
+        <source>qmens</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">125</prop><prop prop-type="Type">TDataSetProvider</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Prov_Mens.Options" resname="O:DM_SERVER.O:Prov_Mens.Options">
+        <source>[poAllowCommandText, poUseQuoteChar]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">126</prop><prop prop-type="Type">TDataSetProvider</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Prov_Mens.Left" resname="O:DM_SERVER.O:Prov_Mens.Left">
+        <source>176</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">127</prop><prop prop-type="Type">TDataSetProvider</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Prov_Mens.Top" resname="O:DM_SERVER.O:Prov_Mens.Top">
+        <source>72</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">128</prop><prop prop-type="Type">TDataSetProvider</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.Aggregates" resname="O:DM_SERVER.O:Cds_Mens.Aggregates">
+        <source>&lt;&gt;</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">129</prop><prop prop-type="Type">TClientDataSet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.Params[0].DataType" resname="O:DM_SERVER.O:Cds_Mens.Params[0].DataType">
+        <source>ftUnknown</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">130</prop><prop prop-type="Type">C:TClientDataSet</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.Params[0].Name" resname="O:DM_SERVER.O:Cds_Mens.Params[0].Name">
+        <source>'STATUS'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">131</prop><prop prop-type="Type">C:TClientDataSet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.Params[0].ParamType" resname="O:DM_SERVER.O:Cds_Mens.Params[0].ParamType">
+        <source>ptUnknown</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">132</prop><prop prop-type="Type">C:TClientDataSet</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.ProviderName" resname="O:DM_SERVER.O:Cds_Mens.ProviderName">
+        <source>'Prov_Mens'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">133</prop><prop prop-type="Type">TClientDataSet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.Left" resname="O:DM_SERVER.O:Cds_Mens.Left">
+        <source>248</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">134</prop><prop prop-type="Type">TClientDataSet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.Top" resname="O:DM_SERVER.O:Cds_Mens.Top">
+        <source>72</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">135</prop><prop prop-type="Type">TClientDataSet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_Mensselecionada.DisplayLabel" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_Mensselecionada.DisplayLabel">
+        <source>'SEL'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">136</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_Mensselecionada.DisplayWidth" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_Mensselecionada.DisplayWidth">
+        <source>4</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">137</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_Mensselecionada.FieldName" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_Mensselecionada.FieldName">
+        <source>'selecionada'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">138</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_Mensselecionada.Origin" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_Mensselecionada.Origin">
+        <source>'mensagens.selecionada'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">139</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensFiltrada.DisplayLabel" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensFiltrada.DisplayLabel">
+        <source>'Filter'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">140</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensFiltrada.DisplayWidth" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensFiltrada.DisplayWidth">
+        <source>5</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">141</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensFiltrada.FieldName" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensFiltrada.FieldName">
+        <source>'Filtrada'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">142</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensFiltrada.Origin" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensFiltrada.Origin">
+        <source>'mensagens.Filtrada'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">143</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensAnexos.DisplayLabel" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensAnexos.DisplayLabel">
+        <source>'Attachs'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">144</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensAnexos.DisplayWidth" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensAnexos.DisplayWidth">
+        <source>6</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">145</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensAnexos.FieldName" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensAnexos.FieldName">
+        <source>'Anexos'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">146</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensAnexos.Origin" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensAnexos.Origin">
+        <source>'mensagens.Anexos'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">147</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensEmitente.DisplayLabel" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensEmitente.DisplayLabel">
+        <source>'Sender'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">148</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensEmitente.DisplayWidth" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensEmitente.DisplayWidth">
+        <source>37</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">149</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensEmitente.FieldName" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensEmitente.FieldName">
+        <source>'Emitente'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">150</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensEmitente.Origin" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensEmitente.Origin">
+        <source>'mensagens.Emitente'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">151</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensEmitente.Size" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensEmitente.Size">
+        <source>255</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">152</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensAssunto.DisplayLabel" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensAssunto.DisplayLabel">
+        <source>'Subject'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">153</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensAssunto.DisplayWidth" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensAssunto.DisplayWidth">
+        <source>37</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">154</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensAssunto.FieldName" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensAssunto.FieldName">
+        <source>'Assunto'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">155</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensAssunto.Origin" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensAssunto.Origin">
+        <source>'mensagens.Assunto'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">156</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensAssunto.Size" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensAssunto.Size">
+        <source>255</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">157</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensTama.DisplayLabel" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensTama.DisplayLabel">
+        <source>'Bytes'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">158</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensTama.DisplayWidth" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensTama.DisplayWidth">
+        <source>10</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">159</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensTama.FieldName" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensTama.FieldName">
+        <source>'Tama'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">160</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensTama.Origin" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensTama.Origin">
+        <source>'mensagens.Tama'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">161</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensDataOrig.DisplayLabel" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensDataOrig.DisplayLabel">
+        <source>'Date'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">162</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensDataOrig.DisplayWidth" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensDataOrig.DisplayWidth">
+        <source>37</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">163</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensDataOrig.FieldName" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensDataOrig.FieldName">
+        <source>'DataOrig'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">164</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensDataOrig.Size" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensDataOrig.Size">
+        <source>255</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">165</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensCabec.DisplayLabel" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensCabec.DisplayLabel">
+        <source>'Header'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">166</prop><prop prop-type="Type">TMemoField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensCabec.DisplayWidth" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensCabec.DisplayWidth">
+        <source>37</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">167</prop><prop prop-type="Type">TMemoField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensCabec.FieldName" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensCabec.FieldName">
+        <source>'Cabec'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">168</prop><prop prop-type="Type">TMemoField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensCabec.Origin" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensCabec.Origin">
+        <source>'mensagens.Cabec'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">169</prop><prop prop-type="Type">TMemoField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensCabec.BlobType" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensCabec.BlobType">
+        <source>ftMemo</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">170</prop><prop prop-type="Type">TMemoField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensConta.DisplayLabel" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensConta.DisplayLabel">
+        <source>'Account'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">171</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensConta.DisplayWidth" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensConta.DisplayWidth">
+        <source>10</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">172</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensConta.FieldName" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensConta.FieldName">
+        <source>'Conta'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">173</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensConta.Origin" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensConta.Origin">
+        <source>'mensagens.Conta'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">174</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensConta.Size" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensConta.Size">
+        <source>50</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">175</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensNumeroMens.Alignment" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensNumeroMens.Alignment">
+        <source>taLeftJustify</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">176</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensNumeroMens.DisplayLabel" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensNumeroMens.DisplayLabel">
+        <source>'ID'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">177</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensNumeroMens.DisplayWidth" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensNumeroMens.DisplayWidth">
+        <source>10</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">178</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensNumeroMens.FieldName" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensNumeroMens.FieldName">
+        <source>'NumeroMens'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">179</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensNumeroMens.Origin" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensNumeroMens.Origin">
+        <source>'mensagens.NumeroMens'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">180</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensDT.Alignment" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensDT.Alignment">
+        <source>taRightJustify</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">181</prop><prop prop-type="Type">TDateTimeField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensDT.DisplayLabel" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensDT.DisplayLabel">
+        <source>'Date'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">182</prop><prop prop-type="Type">TDateTimeField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensDT.DisplayWidth" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensDT.DisplayWidth">
+        <source>9</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">183</prop><prop prop-type="Type">TDateTimeField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensDT.FieldName" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensDT.FieldName">
+        <source>'DT'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">184</prop><prop prop-type="Type">TDateTimeField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensDT.Origin" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensDT.Origin">
+        <source>'mensagens.DT'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">185</prop><prop prop-type="Type">TDateTimeField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensDT.Visible" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensDT.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">186</prop><prop prop-type="Type">TDateTimeField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensID.DisplayWidth" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensID.DisplayWidth">
+        <source>10</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">187</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensID.FieldName" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensID.FieldName">
+        <source>'ID'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">188</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensID.Origin" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensID.Origin">
+        <source>'mensagens.ID'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">189</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensID.ProviderFlags" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensID.ProviderFlags">
+        <source>[pfInUpdate, pfInWhere, pfInKey]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">190</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensID.Visible" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensID.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">191</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensEmail.DisplayWidth" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensEmail.DisplayWidth">
+        <source>38</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">192</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensEmail.FieldName" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensEmail.FieldName">
+        <source>'Email'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">193</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensEmail.Origin" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensEmail.Origin">
+        <source>'mensagens.Email'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">194</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensEmail.Visible" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensEmail.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">195</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensEmail.Size" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensEmail.Size">
+        <source>200</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">196</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensDatamens.DisplayWidth" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensDatamens.DisplayWidth">
+        <source>18</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">197</prop><prop prop-type="Type">TDateTimeField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensDatamens.FieldName" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensDatamens.FieldName">
+        <source>'Datamens'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">198</prop><prop prop-type="Type">TDateTimeField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensDatamens.Origin" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensDatamens.Origin">
+        <source>'mensagens.Datamens'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">199</prop><prop prop-type="Type">TDateTimeField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensDatamens.Visible" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensDatamens.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">200</prop><prop prop-type="Type">TDateTimeField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensCorpo.DisplayWidth" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensCorpo.DisplayWidth">
+        <source>10</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">201</prop><prop prop-type="Type">TMemoField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensCorpo.FieldName" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensCorpo.FieldName">
+        <source>'Corpo'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">202</prop><prop prop-type="Type">TMemoField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensCorpo.Origin" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensCorpo.Origin">
+        <source>'mensagens.Corpo'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">203</prop><prop prop-type="Type">TMemoField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensCorpo.Visible" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensCorpo.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">204</prop><prop prop-type="Type">TMemoField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensCorpo.BlobType" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensCorpo.BlobType">
+        <source>ftMemo</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">205</prop><prop prop-type="Type">TMemoField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensStatus.DisplayWidth" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensStatus.DisplayWidth">
+        <source>10</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">206</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensStatus.FieldName" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensStatus.FieldName">
+        <source>'Status'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">207</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensStatus.Origin" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensStatus.Origin">
+        <source>'mensagens.Status'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">208</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensStatus.Visible" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensStatus.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">209</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensListaNegra.DisplayWidth" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensListaNegra.DisplayWidth">
+        <source>10</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">210</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensListaNegra.FieldName" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensListaNegra.FieldName">
+        <source>'ListaNegra'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">211</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensListaNegra.Origin" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensListaNegra.Origin">
+        <source>'mensagens.ListaNegra'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">212</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensListaNegra.Visible" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensListaNegra.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">213</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensFavoritos.DisplayWidth" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensFavoritos.DisplayWidth">
+        <source>10</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">214</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensFavoritos.FieldName" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensFavoritos.FieldName">
+        <source>'Favoritos'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">215</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensFavoritos.Origin" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensFavoritos.Origin">
+        <source>'mensagens.Favoritos'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">216</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensFavoritos.Visible" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensFavoritos.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">217</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensFiltroResult.DisplayWidth" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensFiltroResult.DisplayWidth">
+        <source>10</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">218</prop><prop prop-type="Type">TMemoField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensFiltroResult.FieldName" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensFiltroResult.FieldName">
+        <source>'FiltroResult'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">219</prop><prop prop-type="Type">TMemoField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensFiltroResult.Origin" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensFiltroResult.Origin">
+        <source>'mensagens.FiltroResult'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">220</prop><prop prop-type="Type">TMemoField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensFiltroResult.Visible" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensFiltroResult.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">221</prop><prop prop-type="Type">TMemoField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensFiltroResult.BlobType" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensFiltroResult.BlobType">
+        <source>ftMemo</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">222</prop><prop prop-type="Type">TMemoField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensListaNegraResult.DisplayWidth" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensListaNegraResult.DisplayWidth">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">223</prop><prop prop-type="Type">TMemoField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensListaNegraResult.FieldName" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensListaNegraResult.FieldName">
+        <source>'ListaNegraResult'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">224</prop><prop prop-type="Type">TMemoField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensListaNegraResult.Origin" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensListaNegraResult.Origin">
+        <source>'mensagens.ListaNegraResult'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">225</prop><prop prop-type="Type">TMemoField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensListaNegraResult.Visible" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensListaNegraResult.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">226</prop><prop prop-type="Type">TMemoField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensListaNegraResult.BlobType" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensListaNegraResult.BlobType">
+        <source>ftMemo</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">227</prop><prop prop-type="Type">TMemoField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensExcluida.DisplayWidth" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensExcluida.DisplayWidth">
+        <source>10</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">228</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensExcluida.FieldName" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensExcluida.FieldName">
+        <source>'Excluida'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">229</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensExcluida.Origin" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensExcluida.Origin">
+        <source>'mensagens.Excluida'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">230</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensExcluida.Visible" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensExcluida.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">231</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensMsgId.FieldName" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensMsgId.FieldName">
+        <source>'MsgId'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">232</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensMsgId.Origin" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensMsgId.Origin">
+        <source>'mensagens.MsgId'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">233</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensMsgId.Visible" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensMsgId.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">234</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensMsgId.Size" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensMsgId.Size">
+        <source>255</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">235</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensIsBodyEmpty.DisplayWidth" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensIsBodyEmpty.DisplayWidth">
+        <source>5</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">236</prop><prop prop-type="Type">TBooleanField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensIsBodyEmpty.FieldName" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensIsBodyEmpty.FieldName">
+        <source>'IsBodyEmpty'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">237</prop><prop prop-type="Type">TBooleanField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensIsBodyEmpty.Visible" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensIsBodyEmpty.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">238</prop><prop prop-type="Type">TBooleanField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensUID.DisplayWidth" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensUID.DisplayWidth">
+        <source>255</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">239</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensUID.FieldName" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensUID.FieldName">
+        <source>'UID'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">240</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensUID.Visible" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensUID.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">241</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensUID.Size" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensUID.Size">
+        <source>255</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">242</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensIsMsgSinglePartMime.DisplayWidth" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensIsMsgSinglePartMime.DisplayWidth">
+        <source>5</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">243</prop><prop prop-type="Type">TBooleanField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensIsMsgSinglePartMime.FieldName" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensIsMsgSinglePartMime.FieldName">
+        <source>'IsMsgSinglePartMime'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">244</prop><prop prop-type="Type">TBooleanField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensIsMsgSinglePartMime.Visible" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensIsMsgSinglePartMime.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">245</prop><prop prop-type="Type">TBooleanField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensAttachmentEncoding.DisplayWidth" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensAttachmentEncoding.DisplayWidth">
+        <source>255</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">246</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensAttachmentEncoding.FieldName" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensAttachmentEncoding.FieldName">
+        <source>'AttachmentEncoding'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">247</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensAttachmentEncoding.Visible" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensAttachmentEncoding.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">248</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensAttachmentEncoding.Size" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensAttachmentEncoding.Size">
+        <source>255</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">249</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensCharSet.DisplayWidth" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensCharSet.DisplayWidth">
+        <source>255</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">250</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensCharSet.FieldName" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensCharSet.FieldName">
+        <source>'CharSet'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">251</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensCharSet.Visible" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensCharSet.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">252</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensCharSet.Size" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensCharSet.Size">
+        <source>255</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">253</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensContentType.DisplayWidth" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensContentType.DisplayWidth">
+        <source>255</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">254</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensContentType.FieldName" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensContentType.FieldName">
+        <source>'ContentType'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">255</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensContentType.Visible" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensContentType.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">256</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensContentType.Size" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensContentType.Size">
+        <source>255</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">257</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensContentTransferEncoding.DisplayWidth" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensContentTransferEncoding.DisplayWidth">
+        <source>255</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">258</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensContentTransferEncoding.FieldName" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensContentTransferEncoding.FieldName">
+        <source>'ContentTransferEncoding'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">259</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensContentTransferEncoding.Visible" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensContentTransferEncoding.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">260</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensContentTransferEncoding.Size" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensContentTransferEncoding.Size">
+        <source>255</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">261</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensContentDisposition.DisplayWidth" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensContentDisposition.DisplayWidth">
+        <source>255</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">262</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensContentDisposition.FieldName" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensContentDisposition.FieldName">
+        <source>'ContentDisposition'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">263</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensContentDisposition.Visible" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensContentDisposition.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">264</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensContentDisposition.Size" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensContentDisposition.Size">
+        <source>255</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">265</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensNoEncode.DisplayWidth" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensNoEncode.DisplayWidth">
+        <source>5</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">266</prop><prop prop-type="Type">TBooleanField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensNoEncode.FieldName" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensNoEncode.FieldName">
+        <source>'NoEncode'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">267</prop><prop prop-type="Type">TBooleanField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensNoEncode.Visible" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensNoEncode.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">268</prop><prop prop-type="Type">TBooleanField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensNoDecode.DisplayWidth" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensNoDecode.DisplayWidth">
+        <source>5</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">269</prop><prop prop-type="Type">TBooleanField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensNoDecode.FieldName" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensNoDecode.FieldName">
+        <source>'NoDecode'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">270</prop><prop prop-type="Type">TBooleanField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensNoDecode.Visible" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensNoDecode.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">271</prop><prop prop-type="Type">TBooleanField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensOrganization.DisplayWidth" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensOrganization.DisplayWidth">
+        <source>255</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">272</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensOrganization.FieldName" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensOrganization.FieldName">
+        <source>'Organization'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">273</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensOrganization.Visible" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensOrganization.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">274</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensOrganization.Size" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensOrganization.Size">
+        <source>255</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">275</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensXmailer.DisplayWidth" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensXmailer.DisplayWidth">
+        <source>255</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">276</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensXmailer.FieldName" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensXmailer.FieldName">
+        <source>'Xmailer'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">277</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensXmailer.Visible" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensXmailer.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">278</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensXmailer.Size" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensXmailer.Size">
+        <source>255</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">279</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensReplayTO.DisplayWidth" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensReplayTO.DisplayWidth">
+        <source>255</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">280</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensReplayTO.FieldName" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensReplayTO.FieldName">
+        <source>'ReplayTO'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">281</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensReplayTO.Visible" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensReplayTO.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">282</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensReplayTO.Size" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensReplayTO.Size">
+        <source>255</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">283</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensReturnPath.DisplayWidth" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensReturnPath.DisplayWidth">
+        <source>255</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">284</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensReturnPath.FieldName" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensReturnPath.FieldName">
+        <source>'ReturnPath'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">285</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensReturnPath.Visible" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensReturnPath.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">286</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensReturnPath.Size" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensReturnPath.Size">
+        <source>255</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">287</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensFromOrig.DisplayWidth" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensFromOrig.DisplayWidth">
+        <source>255</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">288</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensFromOrig.FieldName" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensFromOrig.FieldName">
+        <source>'FromOrig'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">289</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensFromOrig.Visible" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensFromOrig.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">290</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensFromOrig.Size" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensFromOrig.Size">
+        <source>255</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">291</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensToOrig.DisplayWidth" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensToOrig.DisplayWidth">
+        <source>255</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">292</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensToOrig.FieldName" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensToOrig.FieldName">
+        <source>'ToOrig'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">293</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensToOrig.Visible" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensToOrig.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">294</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensToOrig.Size" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensToOrig.Size">
+        <source>255</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">295</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensCCOrig.DisplayWidth" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensCCOrig.DisplayWidth">
+        <source>10</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">296</prop><prop prop-type="Type">TMemoField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensCCOrig.FieldName" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensCCOrig.FieldName">
+        <source>'CCOrig'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">297</prop><prop prop-type="Type">TMemoField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensCCOrig.Visible" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensCCOrig.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">298</prop><prop prop-type="Type">TMemoField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensCCOrig.BlobType" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensCCOrig.BlobType">
+        <source>ftMemo</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">299</prop><prop prop-type="Type">TMemoField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensBCCOrig.DisplayWidth" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensBCCOrig.DisplayWidth">
+        <source>10</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">300</prop><prop prop-type="Type">TMemoField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensBCCOrig.FieldName" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensBCCOrig.FieldName">
+        <source>'BCCOrig'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">301</prop><prop prop-type="Type">TMemoField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensBCCOrig.Visible" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensBCCOrig.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">302</prop><prop prop-type="Type">TMemoField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensBCCOrig.BlobType" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensBCCOrig.BlobType">
+        <source>ftMemo</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">303</prop><prop prop-type="Type">TMemoField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensReceivedFrom.DisplayWidth" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensReceivedFrom.DisplayWidth">
+        <source>255</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">304</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensReceivedFrom.FieldName" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensReceivedFrom.FieldName">
+        <source>'ReceivedFrom'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">305</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensReceivedFrom.Visible" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensReceivedFrom.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">306</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Cds_Mens.O:Cds_MensReceivedFrom.Size" resname="O:DM_SERVER.O:Cds_Mens.O:Cds_MensReceivedFrom.Size">
+        <source>255</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">307</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:DS_qMens.DataSet" resname="O:DM_SERVER.O:DS_qMens.DataSet">
+        <source>Cds_Mens</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">308</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:DS_qMens.Left" resname="O:DM_SERVER.O:DS_qMens.Left">
+        <source>316</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">309</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:DS_qMens.Top" resname="O:DM_SERVER.O:DS_qMens.Top">
+        <source>72</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">310</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:QupStatus.Connection" resname="O:DM_SERVER.O:QupStatus.Connection">
+        <source>MC</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">311</prop><prop prop-type="Type">TMyQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:QupStatus.SQL.Strings[0]" resname="O:DM_SERVER.O:QupStatus.SQL.Strings[0]">
+        <source>'update messages set status = 1'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">312</prop><prop prop-type="Type">TMyQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop><prop prop-type="Close">)</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:QupStatus.Left" resname="O:DM_SERVER.O:QupStatus.Left">
+        <source>112</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">313</prop><prop prop-type="Type">TMyQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:QupStatus.Top" resname="O:DM_SERVER.O:QupStatus.Top">
+        <source>128</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">314</prop><prop prop-type="Type">TMyQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:QBoxes.Connection" resname="O:DM_SERVER.O:QBoxes.Connection">
+        <source>MC</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">315</prop><prop prop-type="Type">TMyQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:QBoxes.SQL.Strings[0]" resname="O:DM_SERVER.O:QBoxes.SQL.Strings[0]">
+        <source>'select * from allboxes'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">316</prop><prop prop-type="Type">TMyQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:QBoxes.SQL.Strings[1]" resname="O:DM_SERVER.O:QBoxes.SQL.Strings[1]">
+        <source>'where TypeBox = :Box'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">317</prop><prop prop-type="Type">TMyQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">)</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:QBoxes.Left" resname="O:DM_SERVER.O:QBoxes.Left">
+        <source>112</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">318</prop><prop prop-type="Type">TMyQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:QBoxes.Top" resname="O:DM_SERVER.O:QBoxes.Top">
+        <source>184</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">319</prop><prop prop-type="Type">TMyQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:QBoxes.ParamData[0].DataType" resname="O:DM_SERVER.O:QBoxes.ParamData[0].DataType">
+        <source>ftUnknown</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">320</prop><prop prop-type="Type">C:TMyQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:QBoxes.ParamData[0].Name" resname="O:DM_SERVER.O:QBoxes.ParamData[0].Name">
+        <source>'Box'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">321</prop><prop prop-type="Type">C:TMyQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Prov_Boxes.DataSet" resname="O:DM_SERVER.O:Prov_Boxes.DataSet">
+        <source>QBoxes</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">322</prop><prop prop-type="Type">TDataSetProvider</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Prov_Boxes.Options" resname="O:DM_SERVER.O:Prov_Boxes.Options">
+        <source>[poAllowCommandText, poUseQuoteChar]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">323</prop><prop prop-type="Type">TDataSetProvider</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Prov_Boxes.Left" resname="O:DM_SERVER.O:Prov_Boxes.Left">
+        <source>176</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">324</prop><prop prop-type="Type">TDataSetProvider</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:Prov_Boxes.Top" resname="O:DM_SERVER.O:Prov_Boxes.Top">
+        <source>184</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">325</prop><prop prop-type="Type">TDataSetProvider</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_Boxes.Aggregates" resname="O:DM_SERVER.O:cds_Boxes.Aggregates">
+        <source>&lt;&gt;</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">326</prop><prop prop-type="Type">TClientDataSet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_Boxes.Params[0].DataType" resname="O:DM_SERVER.O:cds_Boxes.Params[0].DataType">
+        <source>ftUnknown</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">327</prop><prop prop-type="Type">C:TClientDataSet</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_Boxes.Params[0].Name" resname="O:DM_SERVER.O:cds_Boxes.Params[0].Name">
+        <source>'Box'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">328</prop><prop prop-type="Type">C:TClientDataSet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_Boxes.Params[0].ParamType" resname="O:DM_SERVER.O:cds_Boxes.Params[0].ParamType">
+        <source>ptUnknown</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">329</prop><prop prop-type="Type">C:TClientDataSet</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_Boxes.ProviderName" resname="O:DM_SERVER.O:cds_Boxes.ProviderName">
+        <source>'Prov_Boxes'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">330</prop><prop prop-type="Type">TClientDataSet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_Boxes.Left" resname="O:DM_SERVER.O:cds_Boxes.Left">
+        <source>248</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">331</prop><prop prop-type="Type">TClientDataSet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_Boxes.Top" resname="O:DM_SERVER.O:cds_Boxes.Top">
+        <source>184</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">332</prop><prop prop-type="Type">TClientDataSet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesItem.DisplayWidth" resname="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesItem.DisplayWidth">
+        <source>20</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">333</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesItem.FieldName" resname="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesItem.FieldName">
+        <source>'Item'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">334</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesItem.Size" resname="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesItem.Size">
+        <source>255</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">335</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesExpression.DisplayWidth" resname="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesExpression.DisplayWidth">
+        <source>30</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">336</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesExpression.FieldName" resname="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesExpression.FieldName">
+        <source>'Expression'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">337</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesExpression.Size" resname="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesExpression.Size">
+        <source>255</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">338</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesMatchType.DisplayWidth" resname="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesMatchType.DisplayWidth">
+        <source>3</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">339</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesMatchType.FieldName" resname="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesMatchType.FieldName">
+        <source>'MatchType'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">340</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesMatchType.Size" resname="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesMatchType.Size">
+        <source>3</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">341</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesID.DisplayWidth" resname="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesID.DisplayWidth">
+        <source>10</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">342</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesID.FieldName" resname="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesID.FieldName">
+        <source>'ID'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">343</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesID.Visible" resname="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesID.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">344</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesTypeBox.DisplayWidth" resname="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesTypeBox.DisplayWidth">
+        <source>10</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">345</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesTypeBox.FieldName" resname="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesTypeBox.FieldName">
+        <source>'TypeBox'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">346</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesTypeBox.Visible" resname="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesTypeBox.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">347</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesWhereFilter.DisplayWidth" resname="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesWhereFilter.DisplayWidth">
+        <source>10</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">348</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesWhereFilter.FieldName" resname="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesWhereFilter.FieldName">
+        <source>'WhereFilter'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">349</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesWhereFilter.Visible" resname="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesWhereFilter.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">350</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesFilterID.DisplayWidth" resname="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesFilterID.DisplayWidth">
+        <source>10</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">351</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesFilterID.FieldName" resname="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesFilterID.FieldName">
+        <source>'FilterID'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">352</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesFilterID.Visible" resname="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesFilterID.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">353</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesKind.DisplayWidth" resname="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesKind.DisplayWidth">
+        <source>10</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">354</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesKind.FieldName" resname="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesKind.FieldName">
+        <source>'Kind'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">355</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesKind.Visible" resname="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesKind.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">356</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesDT.DisplayWidth" resname="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesDT.DisplayWidth">
+        <source>18</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">357</prop><prop prop-type="Type">TDateTimeField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesDT.FieldName" resname="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesDT.FieldName">
+        <source>'DT'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">358</prop><prop prop-type="Type">TDateTimeField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesDT.Visible" resname="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesDT.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">359</prop><prop prop-type="Type">TDateTimeField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesStatus.DisplayWidth" resname="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesStatus.DisplayWidth">
+        <source>10</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">360</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesStatus.FieldName" resname="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesStatus.FieldName">
+        <source>'Status'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">361</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesStatus.Visible" resname="O:DM_SERVER.O:cds_Boxes.O:cds_BoxesStatus.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">362</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:DS_qBoxes.DataSet" resname="O:DM_SERVER.O:DS_qBoxes.DataSet">
+        <source>cds_Boxes</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">363</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:DS_qBoxes.Left" resname="O:DM_SERVER.O:DS_qBoxes.Left">
+        <source>316</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">364</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:DS_qBoxes.Top" resname="O:DM_SERVER.O:DS_qBoxes.Top">
+        <source>184</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">365</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qveconta.Connection" resname="O:DM_SERVER.O:qveconta.Connection">
+        <source>MC</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">366</prop><prop prop-type="Type">TMyQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qveconta.SQL.Strings[0]" resname="O:DM_SERVER.O:qveconta.SQL.Strings[0]">
+        <source>'SELECT '</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">367</prop><prop prop-type="Type">TMyQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qveconta.SQL.Strings[1]" resname="O:DM_SERVER.O:qveconta.SQL.Strings[1]">
+        <source>'  accounts.ID,'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">368</prop><prop prop-type="Type">TMyQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qveconta.SQL.Strings[2]" resname="O:DM_SERVER.O:qveconta.SQL.Strings[2]">
+        <source>'  accounts.Nome'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">369</prop><prop prop-type="Type">TMyQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qveconta.SQL.Strings[3]" resname="O:DM_SERVER.O:qveconta.SQL.Strings[3]">
+        <source>'FROM'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">370</prop><prop prop-type="Type">TMyQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qveconta.SQL.Strings[4]" resname="O:DM_SERVER.O:qveconta.SQL.Strings[4]">
+        <source>'  accounts '</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">371</prop><prop prop-type="Type">TMyQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qveconta.SQL.Strings[5]" resname="O:DM_SERVER.O:qveconta.SQL.Strings[5]">
+        <source>'  '</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">372</prop><prop prop-type="Type">TMyQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qveconta.SQL.Strings[6]" resname="O:DM_SERVER.O:qveconta.SQL.Strings[6]">
+        <source>'where ID &lt;&gt; :ID and Nome = :Nome'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">373</prop><prop prop-type="Type">TMyQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">)</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qveconta.Left" resname="O:DM_SERVER.O:qveconta.Left">
+        <source>392</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">374</prop><prop prop-type="Type">TMyQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qveconta.Top" resname="O:DM_SERVER.O:qveconta.Top">
+        <source>24</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">375</prop><prop prop-type="Type">TMyQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qveconta.ParamData[0].DataType" resname="O:DM_SERVER.O:qveconta.ParamData[0].DataType">
+        <source>ftUnknown</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">376</prop><prop prop-type="Type">C:TMyQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qveconta.ParamData[0].Name" resname="O:DM_SERVER.O:qveconta.ParamData[0].Name">
+        <source>'ID'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">377</prop><prop prop-type="Type">C:TMyQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qveconta.ParamData[1].DataType" resname="O:DM_SERVER.O:qveconta.ParamData[1].DataType">
+        <source>ftUnknown</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">378</prop><prop prop-type="Type">C:TMyQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qveconta.ParamData[1].Name" resname="O:DM_SERVER.O:qveconta.ParamData[1].Name">
+        <source>'Nome'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">379</prop><prop prop-type="Type">C:TMyQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qveconta.O:qvecontaID.FieldName" resname="O:DM_SERVER.O:qveconta.O:qvecontaID.FieldName">
+        <source>'ID'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">380</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qveconta.O:qvecontaNome.FieldName" resname="O:DM_SERVER.O:qveconta.O:qvecontaNome.FieldName">
+        <source>'Nome'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">381</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qveconta.O:qvecontaNome.Size" resname="O:DM_SERVER.O:qveconta.O:qvecontaNome.Size">
+        <source>50</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">382</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcabectmp.Connection" resname="O:DM_SERVER.O:qcabectmp.Connection">
+        <source>MC</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">383</prop><prop prop-type="Type">TMyQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcabectmp.SQL.Strings[0]" resname="O:DM_SERVER.O:qcabectmp.SQL.Strings[0]">
+        <source>'select * from tab_cabec_tmp'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">384</prop><prop prop-type="Type">TMyQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcabectmp.SQL.Strings[1]" resname="O:DM_SERVER.O:qcabectmp.SQL.Strings[1]">
+        <source>'where ID = :ID'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">385</prop><prop prop-type="Type">TMyQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">)</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcabectmp.Left" resname="O:DM_SERVER.O:qcabectmp.Left">
+        <source>104</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">386</prop><prop prop-type="Type">TMyQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcabectmp.Top" resname="O:DM_SERVER.O:qcabectmp.Top">
+        <source>248</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">387</prop><prop prop-type="Type">TMyQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcabectmp.ParamData[0].DataType" resname="O:DM_SERVER.O:qcabectmp.ParamData[0].DataType">
+        <source>ftUnknown</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">388</prop><prop prop-type="Type">C:TMyQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:qcabectmp.ParamData[0].Name" resname="O:DM_SERVER.O:qcabectmp.ParamData[0].Name">
+        <source>'ID'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">389</prop><prop prop-type="Type">C:TMyQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:prov_qcabectmp.DataSet" resname="O:DM_SERVER.O:prov_qcabectmp.DataSet">
+        <source>qcabectmp</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631705671</prop><prop prop-type="Status">0</prop><prop prop-type="Order">390</prop><prop prop-type="Type">TDataSetProvider</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:prov_qcabectmp.Options" resname="O:DM_SERVER.O:prov_qcabectmp.Options">
+        <source>[poAllowCommandText, poUseQuoteChar]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631707523</prop><prop prop-type="Status">0</prop><prop prop-type="Order">391</prop><prop prop-type="Type">TDataSetProvider</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:prov_qcabectmp.Left" resname="O:DM_SERVER.O:prov_qcabectmp.Left">
+        <source>168</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631707523</prop><prop prop-type="Status">0</prop><prop prop-type="Order">392</prop><prop prop-type="Type">TDataSetProvider</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:prov_qcabectmp.Top" resname="O:DM_SERVER.O:prov_qcabectmp.Top">
+        <source>248</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631707523</prop><prop prop-type="Status">0</prop><prop prop-type="Order">393</prop><prop prop-type="Type">TDataSetProvider</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_CabecTmp.Aggregates" resname="O:DM_SERVER.O:cds_CabecTmp.Aggregates">
+        <source>&lt;&gt;</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631707523</prop><prop prop-type="Status">0</prop><prop prop-type="Order">394</prop><prop prop-type="Type">TClientDataSet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_CabecTmp.Params[0].DataType" resname="O:DM_SERVER.O:cds_CabecTmp.Params[0].DataType">
+        <source>ftUnknown</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631707523</prop><prop prop-type="Status">0</prop><prop prop-type="Order">395</prop><prop prop-type="Type">C:TClientDataSet</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_CabecTmp.Params[0].Name" resname="O:DM_SERVER.O:cds_CabecTmp.Params[0].Name">
+        <source>'ID'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631707523</prop><prop prop-type="Status">0</prop><prop prop-type="Order">396</prop><prop prop-type="Type">C:TClientDataSet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_CabecTmp.Params[0].ParamType" resname="O:DM_SERVER.O:cds_CabecTmp.Params[0].ParamType">
+        <source>ptUnknown</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631707523</prop><prop prop-type="Status">0</prop><prop prop-type="Order">397</prop><prop prop-type="Type">C:TClientDataSet</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_CabecTmp.ProviderName" resname="O:DM_SERVER.O:cds_CabecTmp.ProviderName">
+        <source>'prov_qcabectmp'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631707523</prop><prop prop-type="Status">0</prop><prop prop-type="Order">398</prop><prop prop-type="Type">TClientDataSet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_CabecTmp.Left" resname="O:DM_SERVER.O:cds_CabecTmp.Left">
+        <source>240</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631707523</prop><prop prop-type="Status">0</prop><prop prop-type="Order">399</prop><prop prop-type="Type">TClientDataSet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_CabecTmp.Top" resname="O:DM_SERVER.O:cds_CabecTmp.Top">
+        <source>248</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631707523</prop><prop prop-type="Status">0</prop><prop prop-type="Order">400</prop><prop prop-type="Type">TClientDataSet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_CabecTmp.O:cds_CabecTmpFiltro.DisplayLabel" resname="O:DM_SERVER.O:cds_CabecTmp.O:cds_CabecTmpFiltro.DisplayLabel">
+        <source>'Make rule'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631707523</prop><prop prop-type="Status">0</prop><prop prop-type="Order">401</prop><prop prop-type="Type">TBooleanField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_CabecTmp.O:cds_CabecTmpFiltro.DisplayWidth" resname="O:DM_SERVER.O:cds_CabecTmp.O:cds_CabecTmpFiltro.DisplayWidth">
+        <source>5</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631707523</prop><prop prop-type="Status">0</prop><prop prop-type="Order">402</prop><prop prop-type="Type">TBooleanField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_CabecTmp.O:cds_CabecTmpFiltro.FieldName" resname="O:DM_SERVER.O:cds_CabecTmp.O:cds_CabecTmpFiltro.FieldName">
+        <source>'Filtro'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631707523</prop><prop prop-type="Status">0</prop><prop prop-type="Order">403</prop><prop prop-type="Type">TBooleanField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_CabecTmp.O:cds_CabecTmpFiltro.Origin" resname="O:DM_SERVER.O:cds_CabecTmp.O:cds_CabecTmpFiltro.Origin">
+        <source>'tab_cabec_tmp.Filtro'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631707523</prop><prop prop-type="Status">0</prop><prop prop-type="Order">404</prop><prop prop-type="Type">TBooleanField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_CabecTmp.O:cds_CabecTmpItem.DisplayWidth" resname="O:DM_SERVER.O:cds_CabecTmp.O:cds_CabecTmpItem.DisplayWidth">
+        <source>30</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631707523</prop><prop prop-type="Status">0</prop><prop prop-type="Order">405</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_CabecTmp.O:cds_CabecTmpItem.FieldName" resname="O:DM_SERVER.O:cds_CabecTmp.O:cds_CabecTmpItem.FieldName">
+        <source>'Item'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631707523</prop><prop prop-type="Status">0</prop><prop prop-type="Order">406</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_CabecTmp.O:cds_CabecTmpItem.Origin" resname="O:DM_SERVER.O:cds_CabecTmp.O:cds_CabecTmpItem.Origin">
+        <source>'tab_cabec_tmp.Item'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631707523</prop><prop prop-type="Status">0</prop><prop prop-type="Order">407</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_CabecTmp.O:cds_CabecTmpItem.ProviderFlags" resname="O:DM_SERVER.O:cds_CabecTmp.O:cds_CabecTmpItem.ProviderFlags">
+        <source>[pfInUpdate, pfInWhere, pfInKey]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631707523</prop><prop prop-type="Status">0</prop><prop prop-type="Order">408</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_CabecTmp.O:cds_CabecTmpItem.Size" resname="O:DM_SERVER.O:cds_CabecTmp.O:cds_CabecTmpItem.Size">
+        <source>80</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631707523</prop><prop prop-type="Status">0</prop><prop prop-type="Order">409</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_CabecTmp.O:cds_CabecTmpValor.DisplayLabel" resname="O:DM_SERVER.O:cds_CabecTmp.O:cds_CabecTmpValor.DisplayLabel">
+        <source>'Value'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631707523</prop><prop prop-type="Status">0</prop><prop prop-type="Order">410</prop><prop prop-type="Type">TMemoField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_CabecTmp.O:cds_CabecTmpValor.DisplayWidth" resname="O:DM_SERVER.O:cds_CabecTmp.O:cds_CabecTmpValor.DisplayWidth">
+        <source>80</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631707523</prop><prop prop-type="Status">0</prop><prop prop-type="Order">411</prop><prop prop-type="Type">TMemoField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_CabecTmp.O:cds_CabecTmpValor.FieldName" resname="O:DM_SERVER.O:cds_CabecTmp.O:cds_CabecTmpValor.FieldName">
+        <source>'Valor'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631707523</prop><prop prop-type="Status">0</prop><prop prop-type="Order">412</prop><prop prop-type="Type">TMemoField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_CabecTmp.O:cds_CabecTmpValor.Origin" resname="O:DM_SERVER.O:cds_CabecTmp.O:cds_CabecTmpValor.Origin">
+        <source>'tab_cabec_tmp.Valor'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631707523</prop><prop prop-type="Status">0</prop><prop prop-type="Order">413</prop><prop prop-type="Type">TMemoField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_CabecTmp.O:cds_CabecTmpValor.BlobType" resname="O:DM_SERVER.O:cds_CabecTmp.O:cds_CabecTmpValor.BlobType">
+        <source>ftMemo</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631707523</prop><prop prop-type="Status">0</prop><prop prop-type="Order">414</prop><prop prop-type="Type">TMemoField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_CabecTmp.O:cds_CabecTmpID.DisplayWidth" resname="O:DM_SERVER.O:cds_CabecTmp.O:cds_CabecTmpID.DisplayWidth">
+        <source>10</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631707523</prop><prop prop-type="Status">0</prop><prop prop-type="Order">415</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_CabecTmp.O:cds_CabecTmpID.FieldName" resname="O:DM_SERVER.O:cds_CabecTmp.O:cds_CabecTmpID.FieldName">
+        <source>'ID'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631707523</prop><prop prop-type="Status">0</prop><prop prop-type="Order">416</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_CabecTmp.O:cds_CabecTmpID.Origin" resname="O:DM_SERVER.O:cds_CabecTmp.O:cds_CabecTmpID.Origin">
+        <source>'tab_cabec_tmp.ID'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631707523</prop><prop prop-type="Status">0</prop><prop prop-type="Order">417</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_CabecTmp.O:cds_CabecTmpID.ProviderFlags" resname="O:DM_SERVER.O:cds_CabecTmp.O:cds_CabecTmpID.ProviderFlags">
+        <source>[pfInUpdate, pfInWhere, pfInKey]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631707523</prop><prop prop-type="Status">0</prop><prop prop-type="Order">418</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:cds_CabecTmp.O:cds_CabecTmpID.Visible" resname="O:DM_SERVER.O:cds_CabecTmp.O:cds_CabecTmpID.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631707523</prop><prop prop-type="Status">0</prop><prop prop-type="Order">419</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:ds_Cabectmp.DataSet" resname="O:DM_SERVER.O:ds_Cabectmp.DataSet">
+        <source>cds_CabecTmp</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631707523</prop><prop prop-type="Status">0</prop><prop prop-type="Order">420</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:ds_Cabectmp.Left" resname="O:DM_SERVER.O:ds_Cabectmp.Left">
+        <source>308</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631707523</prop><prop prop-type="Status">0</prop><prop prop-type="Order">421</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DM_SERVER.O:ds_Cabectmp.Top" resname="O:DM_SERVER.O:ds_Cabectmp.Top">
+        <source>248</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39807.4631707523</prop><prop prop-type="Status">0</prop><prop prop-type="Order">422</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

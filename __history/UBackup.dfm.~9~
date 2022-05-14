@@ -1,0 +1,77 @@
+object Fbackup: TFbackup
+  Left = 0
+  Top = 0
+  Caption = 'mC-Backup/Restore system files'
+  ClientHeight = 286
+  ClientWidth = 426
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object PageControl1: TPageControl
+    Left = 0
+    Top = 0
+    Width = 426
+    Height = 286
+    ActivePage = TabSheet1
+    Align = alClient
+    Style = tsButtons
+    TabOrder = 0
+    object TabSheet1: TTabSheet
+      Caption = 'Backup'
+      object GroupBox1: TGroupBox
+        Left = 3
+        Top = 3
+        Width = 412
+        Height = 241
+        Caption = 'Backup System Files - select the target directory'
+        TabOrder = 0
+        object JvDir: TJvDirectoryEdit
+          Left = 24
+          Top = 48
+          Width = 361
+          Height = 21
+          DialogKind = dkWin32
+          TabOrder = 0
+          Text = 'JvDir'
+        end
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'Restore'
+      ImageIndex = 1
+    end
+  end
+  object Button1: TButton
+    Left = 168
+    Top = 184
+    Width = 75
+    Height = 25
+    Cursor = crHandPoint
+    Caption = 'BackUp'
+    TabOrder = 1
+    OnClick = Button1Click
+  end
+  object Memo1: TMemo
+    Left = 31
+    Top = 105
+    Width = 361
+    Height = 57
+    Lines.Strings = (
+      'Memo1')
+    TabOrder = 2
+  end
+  object JvFile: TJvSearchFiles
+    FileParams.FileMasks.Strings = (
+      '*.cds'
+      '*.dat')
+    Left = 312
+    Top = 168
+  end
+end

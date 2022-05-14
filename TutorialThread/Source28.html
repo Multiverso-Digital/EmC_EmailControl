@@ -1,0 +1,294 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Martin Harvey">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (WinNT; I) [Netscape]">
+   <title>Source28</title>
+</head>
+<body>
+<PRE><TT><B>unit</B> BlockToAsyncBuf;
+
+<FONT COLOR=NAVY><I>{ Martin Harvey 10/5/2000 }</I></FONT>
+
+<B>interface</B>
+
+<B>uses</B> Classes, Forms, Messages, Windows, BiDirBuf;
+
+<B>const</B>
+  InternalBufferSize = 4;
+  WM_BLOCK_ASYNC = WM_USER + 2876;
+
+<B>type</B>
+
+  <FONT COLOR=NAVY><I>{ With this component, as with previous buffering schemes, one cannot read
+    or write nil pointers. }</I></FONT>
+
+  TThreadNotify = (tnReaderDataFlow, tnWriterDataFlow);
+
+  TBlockAsyncThread = <B>class</B>(TThread)
+  <B>private</B>
+    FDataSection: TRTLCriticalSection;
+    FIdleSemaphore: THandle;
+    FInterimBuf: Pointer;
+    FOnDataFlow: TNotifyEvent;
+    FBuffer: TBiDirBuf;
+  <B>protected</B>
+    <B>procedure</B> DataFlow; <B>virtual</B>;
+    <B>function</B> GetItemsInTransit: integer;
+  <B>public</B>
+    <B>constructor</B> Create(CreateSuspended: boolean);
+    <B>destructor</B> Destroy; <B>override</B>;
+  <B>published</B>
+    <B>property</B> OnDataFlow: TNotifyEvent <B>read</B> FOnDataFlow <B>write</B> FOnDataFlow;
+    <B>property</B> Buffer: TBiDirBuf <B>write</B> FBuffer;
+    <B>property</B> ItemsInTransit: integer <B>read</B> GetItemsInTransit;
+  <B>end</B>;
+
+  TBAWriterThread = <B>class</B>(TBlockAsyncThread)
+  <B>private</B>
+  <B>protected</B>
+    <B>procedure</B> Execute; <B>override</B>;
+  <B>public</B>
+    <B>function</B> WriteItem(Item: Pointer): boolean;
+  <B>published</B>
+  <B>end</B>;
+
+  TBAReaderThread = <B>class</B>(TBlockAsyncThread)
+  <B>private</B>
+  <B>protected</B>
+    <B>procedure</B> Execute; <B>override</B>;
+  <B>public</B>
+    <B>function</B> ReadItem: pointer;
+  <B>published</B>
+  <B>end</B>;
+
+  TBlockToAsyncBuf = <B>class</B>(TComponent)
+  <B>private</B>
+    FHWND: THandle;
+    FBuffer: TBiDirBuf;
+    FReaderThread: TBAReaderThread;
+    FWriterThread: TBAWriterThread;
+    FOnRead, FOnWrite: TNotifyEvent;
+  <B>protected</B>
+    <B>procedure</B> MessageHandler(<B>var</B> Msg: TMessage);
+    <B>procedure</B> ReaderDataFlow(Sender: TObject);
+    <B>procedure</B> WriterDataFlow(Sender: TObject);
+    <B>procedure</B> Read; <B>virtual</B>;
+    <B>procedure</B> Write; <B>virtual</B>;
+    <B>function</B> GetItemsInTransit: integer;
+  <B>public</B>
+    <B>constructor</B> Create(AOwner: TComponent); <B>override</B>;
+    <B>destructor</B> Destroy; <B>override</B>;
+    <B>function</B> BlockingRead: pointer;
+    <B>function</B> BlockingWrite(Item: pointer): boolean;
+    <B>function</B> AsyncRead: pointer;
+    <B>function</B> AsyncWrite(Item: pointer): boolean;
+    <B>procedure</B> ResetState;
+  <B>published</B>
+    <B>property</B> OnRead: TNotifyEvent <B>read</B> FOnRead <B>write</B> FOnRead;
+    <B>property</B> OnWrite: TNotifyEvent <B>read</B> FOnWrite <B>write</B> FOnWrite;
+    <B>property</B> ItemsInTransit: integer <B>read</B> GetItemsInTransit;
+  <B>end</B>;
+
+<B>implementation</B>
+
+<B>procedure</B> TBlockAsyncThread.DataFlow;
+<B>begin</B>
+  <B>if</B> Assigned(FOnDataFlow) <B>then</B> FOnDataFlow(Self);
+<B>end</B>;
+
+<B>constructor</B> TBlockAsyncThread.Create(CreateSuspended: boolean);
+<B>begin</B>
+  <B>inherited</B> Create(CreateSuspended);
+  InitializeCriticalSection(FDataSection);
+  FIdleSemaphore := CreateSemaphore(<B>nil</B>, 0, High(Integer), <B>nil</B>);
+<B>end</B>;
+
+<B>destructor</B> TBlockAsyncThread.Destroy;
+<B>begin</B>
+  ReleaseSemaphore(FIdleSemaphore, 1, <B>nil</B>);
+  WaitFor;
+  DeleteCriticalSection(FDataSection);
+  CloseHandle(FIdleSemaphore);
+<B>end</B>;
+
+<B>function</B> TBlockAsyncThread.GetItemsInTransit: integer;
+<B>begin</B>
+  EnterCriticalSection(FDataSection);
+  <B>if</B> Assigned(FInterimBuf) <B>then</B>
+    result := 1
+  <B>else</B>
+    result := 0;
+  LeaveCriticalSection(FDataSection);
+<B>end</B>;
+
+<FONT COLOR=NAVY><I>{ Buffer error handling needs to be discussed }</I></FONT>
+
+<B>procedure</B> TBAWriterThread.Execute;
+
+<B>var</B>
+  Temp: Pointer;
+
+<B>begin</B>
+  <B>while</B> <B>not</B> Terminated <B>do</B>
+  <B>begin</B>
+    DataFlow;
+    WaitForSingleObject(FIdleSemaphore, INFINITE);
+    EnterCriticalSection(FDataSection);
+    Temp := FInterimBuf;
+    FInterimBuf := <B>nil</B>;
+    LeaveCriticalSection(FDataSection);
+    <B>if</B> <B>not</B> FBuffer.PutItem(bsSideA, Temp) <B>then</B> Terminate;
+  <B>end</B>;
+<B>end</B>;
+
+<B>function</B> TBAWriterThread.WriteItem(Item: Pointer): boolean;
+<B>begin</B>
+  result := false;
+  EnterCriticalSection(FDataSection);
+  <B>if</B> <B>not</B> Assigned(FInterimBuf) <B>then</B>
+  <B>begin</B>
+    FInterimBuf := Item;
+    result := true;
+  <B>end</B>;
+  LeaveCriticalSection(FDataSection);
+  <B>if</B> Result <B>then</B> ReleaseSemaphore(FIdleSemaphore, 1, <B>nil</B>);
+<B>end</B>;
+
+<B>procedure</B> TBAReaderThread.Execute;
+
+<B>var</B>
+  Temp: Pointer;
+
+<B>begin</B>
+  <B>while</B> <B>not</B> Terminated <B>do</B>
+  <B>begin</B>
+    Temp := FBuffer.GetItem(bsSideA);
+    <B>if</B> Assigned(Temp) <B>then</B>
+    <B>begin</B>
+      EnterCriticalSection(FDataSection);
+      FInterimBuf := Temp;
+      LeaveCriticalSection(FDataSection);
+      DataFlow;
+      WaitForSingleObject(FIdleSemaphore, INFINITE);
+    <B>end</B>
+    <B>else</B> Terminate;
+  <B>end</B>;
+<B>end</B>;
+
+<B>function</B> TBAReaderThread.ReadItem: pointer;
+<B>begin</B>
+  EnterCriticalSection(FDataSection);
+  result := FInterimBuf;
+  LeaveCriticalSection(FDataSection);
+  <B>if</B> Assigned(Result) <B>then</B> ReleaseSemaphore(FIdleSemaphore, 1, <B>nil</B>);
+<B>end</B>;
+
+<B>procedure</B> TBlockToAsyncBuf.MessageHandler(<B>var</B> Msg: TMessage);
+<B>begin</B>
+  <B>if</B> (Msg.Msg = WM_BLOCK_ASYNC) <B>then</B>
+  <B>begin</B>
+    <B>case</B> TThreadNotify(Msg.LParam) <B>of</B>
+      tnReaderDataflow: Read;
+      tnWriterDataflow: Write;
+    <B>else</B>
+      Assert(false);
+    <B>end</B>;
+  <B>end</B>;
+<B>end</B>;
+
+<B>procedure</B> TBlockToAsyncBuf.ReaderDataFlow(Sender: TObject);
+<B>begin</B>
+  PostMessage(FHWND, WM_BLOCK_ASYNC, 0, Integer(tnReaderDataflow));
+<B>end</B>;
+
+<B>procedure</B> TBlockToAsyncBuf.WriterDataFlow(Sender: TObject);
+<B>begin</B>
+  PostMessage(FHWND, WM_BLOCK_ASYNC, 0, Integer(tnWriterDataflow));
+<B>end</B>;
+
+<B>procedure</B> TBlockToAsyncBuf.Read;
+<B>begin</B>
+  <B>if</B> Assigned(FOnRead) <B>then</B> FOnRead(Self);
+<B>end</B>;
+
+<B>procedure</B> TBlockToAsyncBuf.Write;
+<B>begin</B>
+  <B>if</B> Assigned(FOnWrite) <B>then</B> FOnWrite(Self);
+<B>end</B>;
+
+<B>constructor</B> TBlockToAsyncBuf.Create(AOwner: TComponent);
+<B>begin</B>
+  <B>inherited</B> Create(AOwner);
+  FHWND := AllocateHWnd(MessageHandler);
+  FBuffer := TBiDirBuf.Create;
+  FBuffer.Size := InternalBufferSize;
+  FReaderThread := TBAReaderThread.Create(true);
+  FReaderThread.Buffer := Self.FBuffer;
+  FReaderThread.OnDataFlow := ReaderDataFlow;
+  FWriterThread := TBAWriterThread.Create(true);
+  FWriterThread.Buffer := Self.FBuffer;
+  FWriterThread.OnDataFlow := WriterDataFlow;
+  FReaderThread.Resume;
+  FWriterThread.Resume;
+<B>end</B>;
+
+<B>procedure</B> TBlockToAsyncBuf.ResetState;
+<B>begin</B>
+  <B>if</B> Assigned(FReaderThread) <B>then</B> FReaderThread.Terminate;
+  <B>if</B> Assigned(FWriterThread) <B>then</B> FWriterThread.Terminate;
+  FBuffer.ResetState;
+  FReaderThread.Free;
+  FWriterThread.Free;
+  FReaderThread := <B>nil</B>;
+  FWriterThread := <B>nil</B>;
+<B>end</B>;
+
+<B>destructor</B> TBlockToAsyncBuf.Destroy;
+<B>begin</B>
+  <FONT COLOR=NAVY><I>{ A few destruction subtleties here }</I></FONT>
+  ResetState;
+  FBuffer.Free;
+  DeallocateHWnd(FHWND);
+  <B>inherited</B> Destroy;
+<B>end</B>;
+
+<B>function</B> TBlockToAsyncBuf.BlockingRead: pointer;
+<B>begin</B>
+  result := FBuffer.GetItem(bsSideB);
+<B>end</B>;
+
+<B>function</B> TBlockToAsyncBuf.BlockingWrite(Item: pointer): boolean;
+<B>begin</B>
+  result := FBuffer.PutItem(bsSideB, Item);
+<B>end</B>;
+
+<B>function</B> TBlockToAsyncBuf.AsyncRead: pointer;
+<B>begin</B>
+  result := FReaderThread.ReadItem;
+<B>end</B>;
+
+<B>function</B> TBlockToAsyncBuf.AsyncWrite(Item: pointer): boolean;
+<B>begin</B>
+  result := FWriterThread.WriteItem(Item);
+<B>end</B>;
+
+<B>function</B> TBlockToAsyncBuf.GetItemsInTransit: integer;
+
+<B>var</B>
+  Entries: integer;
+
+<B>begin</B>
+  result := FReaderThread.ItemsInTransit + FWriterThread.ItemsInTransit;
+  <B>if</B> FBuffer.GetEntriesUsed(bsSideA, Entries) <B>then</B>
+    Inc(result, Entries);
+  <B>if</B> FBuffer.GetEntriesUsed(bsSideB, Entries) <B>then</B>
+    Inc(result, Entries);
+<B>end</B>;
+
+<B>end.</B>
+
+</TT></PRE>
+</body>
+</html>

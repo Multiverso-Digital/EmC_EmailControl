@@ -1,0 +1,232 @@
+Received: from servidor.cenpec.org.br ([200.230.152.130]) by abreuretto.com with MailEnable ESMTP; Thu, 05 Feb 2009 10:23:49 -0800
+Received: by servidor.cenpec.org.br (Postfix, from userid 502)
+	id 33834154057; Thu,  5 Feb 2009 10:25:51 -0200 (BRST)
+Received: from localhost (unknown [10.10.0.9])
+	by servidor.cenpec.org.br (Postfix) with ESMTP id 947F6154055
+	for <abreu@abreuretto.com>; Thu,  5 Feb 2009 10:25:39 -0200 (BRST)
+Received: from 10.10.0.8 ([10.10.0.8]) by 200.230.152.2 (Horde MIME
+	library) with HTTP; Thu, 05 Feb 2009 08:19:18 -0200
+Message-ID: <20090205081918.xxf43jqlss0c400g@200.230.152.2>
+Date: Thu, 05 Feb 2009 08:19:18 -0200
+From: Evandro Braga Teodoro <evandro@cenpec.org.br>
+To: Abreu Retto <abreu@abreuretto.com>
+Subject: Re: RES: Sobre o Caderno 2
+References: <4989CE6B.2010505@cenpec.org.br>
+	<000001c9878a$31f05380$95d0fa80$@com>
+In-Reply-To: <000001c9878a$31f05380$95d0fa80$@com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="=_3m1idku43cbq"
+Content-Transfer-Encoding: 7bit
+User-Agent: Internet Messaging Program (IMP) H3 (4.0.3)
+X-Spam-Checker-Version: SpamAssassin 2.63-spambr_20030926 (2004-01-11) on 
+	servidor.cenpec.org.br
+X-Spam-Level: **
+X-Spam-Status: No, hits=2.6 required=7.7 tests=BR_LINK_UNSAFE,HTML_MESSAGE,
+	MAILTO_TO_SPAM_ADDR autolearn=no version=2.63-spambr_20030926
+Return-Path: <evandro@cenpec.org.br>
+
+This message is in MIME format.
+
+--=_3m1idku43cbq
+Content-Type: text/plain;
+	charset=ISO-8859-1;
+	format="flowed"
+Content-Description: =?iso-8859-1?b?VmVyc8Ojbw==?= da Mensagem em Texto
+	Puro
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+
+
+   Com rela=E7=E3o a estrutura eu n=E3o entendi, mas sobre a formata=E7=E3o =
+e
+cores dos textos isso ser=E1 feito pela ag=EAncia, assim que poss=EDvel
+encaminho para voc=EA.
+
+   Ainda hoje eu volto a entrar em contato, ok.
+
+   Quoting Abreu Retto <abreu@abreuretto.com>:
+
+> Evandro
+>
+> Analisei o que vc me mandou e verifiquei que a estrutura(em anexo)
+l=F3gica
+> dos itens ainda n=E3o est=E1 como hav=EDamos combinado. Pe=E7o que vc d=EA
+uma olhada
+> nesta estrutura e veja o que =E9 poss=EDvel fazer a respeito. Reparei
+tamb=E9m que
+> o texto n=E3o est=E1 formatado. Pra n=F3s =E9 fundamental que ele esteja
+formatado e
+> nas cores escolhidas por vcs.
+>
+> Qualquer d=FAvida me ligue.
+>
+> Um abra=E7o
+>
+> Abreu
+>
+>
+> -----Mensagem original-----
+> De: Evandro Braga Teodoro [mailto:evandro@cenpec.org.br]
+> Enviada em: quarta-feira, 4 de fevereiro de 2009 15:21
+> Para: abreu@abreuretto.com; vanda90@cenpec.org.br;
+meg_artacho@yahoo.com.br
+> Assunto: Sobre o Caderno 2
+>
+> Ol=E1 Abreu, tudo bem?
+>
+> Segue o Caderno 2 que j=E1 foi revisado at=E9 o item III, ainda falta
+concluir a
+> adpta=E7=E3o de algumas tabelas que est=E3o com o t=EDtulo em vermelho,
+isso ser=E1
+> feito at=E9 amanh=E3, mas a estrutura do caderno n=E3o ir=E1 mudar, o que
+nos
+> permitir=E1 iniciar o trabalho de formata=E7=E3o do Aplicativo.
+>
+> Com rela=E7=E3o a estrutura do caderno voc=EA vai notar que em todas as
+tabelas
+> existe a indica=E7=E3o da fonte. Portanto, quando a tabela for
+preenchida pelo
+> munic=EDpio ela estar=E1 com os dados preenchidos em azul e afonte=A0 =E9
+PM
+> (Prefeitura Municipal)=A0 seguido do nome do munic=EDpio que no caso =E9
+Abaporu
+> e que na vers=E3o eletr=F4nica dever=E1 ser preenchido de forma
+autom=E1tica. Quando
+> a tabela for preenchido pelo=A0 "Brasil Hoje" os dados est=E3o na cor
+cinza e a
+> fonte =E9 Brasil Hoje/Instituto de pesquisa.
+> Nesse caso voc=EA perceber=E1 que alguns dados n=E3o constam no
+Aplicativo "Brasil
+> Hoje" o que ser=E1 atualizado para compor este novo Programa.
+>
+> Qualquer d=FAvida por favor entrar em contato.
+>
+> Atenciosamente,
+>
+> Evandro Braga Teodoro.
+>
+> Nenhum v=EDrus encontrado nessa mensagem recebida.
+> Verificado por AVG - www.avgbrasil.com.br
+> Vers=E3o: 8.0.233 / Banco de dados de v=EDrus: 270.10.17/1934 - Data de
+> Lan=E7amento: 02/04/09 08:24:00
+>
+
+--=20
+Evandro Braga Teodoro
+CENPEC
+(011)2132-9016
+
+
+---------------------------------------------------------------
+Mensagem enviada pelo Webmail do Cenpec
+
+
+
+--=_3m1idku43cbq
+Content-Type: text/html;
+	charset=ISO-8859-1
+Content-Description: =?utf-8?b?VmVyc8Ojbw==?= HTML da Mensagem
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+<p>Com rela=E7=E3o a estrutura eu n=E3o entendi, mas sobre a formata=E7=E3o =
+e cores dos
+textos isso ser=E1 feito pela ag=EAncia, assim que poss=EDvel encaminho
+para voc=EA.</p><p>Ainda hoje eu volto a entrar em contato, ok.</p><p>Quotin=
+g
+Abreu Retto &lt;abreu@abreuretto.com&gt;:<br />
+<br />
+&gt; Evandro<br />
+&gt;<br />
+&gt; Analisei o que vc me mandou e verifiquei que a estrutura(em anexo)
+l=F3gica<br />
+&gt; dos itens ainda n=E3o est=E1 como hav=EDamos combinado. Pe=E7o que vc d=
+=EA uma
+olhada<br />
+&gt; nesta estrutura e veja o que =E9 poss=EDvel fazer a respeito. Reparei t=
+amb=E9m
+que<br />
+&gt; o texto n=E3o est=E1 formatado. Pra n=F3s =E9 fundamental que ele estej=
+a formatado
+e<br />
+&gt; nas cores escolhidas por vcs.<br />
+&gt;<br />
+&gt; Qualquer d=FAvida me ligue.<br />
+&gt;<br />
+&gt; Um abra=E7o<br />
+&gt;<br />
+&gt; Abreu<br />
+&gt;<br />
+&gt;<br />
+&gt; -----Mensagem original-----<br />
+&gt; De: Evandro Braga Teodoro [mailto:evandro@cenpec.org.br]<br />
+&gt; Enviada em: quarta-feira, 4 de fevereiro de 2009 15:21<br />
+&gt; Para: abreu@abreuretto.com; vanda90@cenpec.org.br;
+meg_artacho@yahoo.com.br<br />
+&gt; Assunto: Sobre o Caderno 2<br />
+&gt;<br />
+&gt; Ol=E1 Abreu, tudo bem?<br />
+&gt;<br />
+&gt; Segue o Caderno 2 que j=E1 foi revisado at=E9 o item III, ainda falta c=
+oncluir
+a<br />
+&gt; adpta=E7=E3o de algumas tabelas que est=E3o com o t=EDtulo em vermelho,=
+ isso
+ser=E1<br />
+&gt; feito at=E9 amanh=E3, mas a estrutura do caderno n=E3o ir=E1 mudar, o q=
+ue nos<br />
+&gt; permitir=E1 iniciar o trabalho de formata=E7=E3o do Aplicativo.<br />
+&gt;<br />
+&gt; Com rela=E7=E3o a estrutura do caderno voc=EA vai notar que em todas as
+tabelas<br />
+&gt; existe a indica=E7=E3o da fonte. Portanto, quando a tabela for preenchi=
+da
+pelo<br />
+&gt; munic=EDpio ela estar=E1 com os dados preenchidos em azul e afonte=A0 =
+=E9 PM<br />
+&gt; (Prefeitura Municipal)=A0 seguido do nome do munic=EDpio que no caso =
+=E9
+Abaporu<br />
+&gt; e que na vers=E3o eletr=F4nica dever=E1 ser preenchido de forma autom=
+=E1tica.
+Quando<br />
+&gt; a tabela for preenchido pelo=A0 &quot;Brasil Hoje&quot; os dados est=E3=
+o na cor
+cinza e a<br />
+&gt; fonte =E9 Brasil Hoje/Instituto de pesquisa.<br />
+&gt; Nesse caso voc=EA perceber=E1 que alguns dados n=E3o constam no Aplicat=
+ivo
+&quot;Brasil<br />
+&gt; Hoje&quot; o que ser=E1 atualizado para compor este novo Programa.<br /=
+>
+&gt;<br />
+&gt; Qualquer d=FAvida por favor entrar em contato.<br />
+&gt;<br />
+&gt; Atenciosamente,<br />
+&gt;<br />
+&gt; Evandro Braga Teodoro.<br />
+&gt;<br />
+&gt; Nenhum v=EDrus encontrado nessa mensagem recebida.<br />
+&gt; Verificado por AVG - www.avgbrasil.com.br<br />
+&gt; Vers=E3o: 8.0.233 / Banco de dados de v=EDrus: 270.10.17/1934 - Data de=
+<br />
+&gt; Lan=E7amento: 02/04/09 08:24:00<br />
+&gt;<br />
+<br />
+
+<br />
+-- <br />
+Evandro Braga Teodoro<br />
+CENPEC<br />
+(011)2132-9016<br />
+</p><br />
+<br />
+---------------------------------------------------------------<br />
+Mensagem enviada pelo Webmail do Cenpec <br />
+<br />
+
+--=_3m1idku43cbq--
+
+

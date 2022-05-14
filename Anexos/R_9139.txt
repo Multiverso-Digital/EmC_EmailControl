@@ -1,0 +1,105 @@
+Received: from yahoo.com.br ([189.38.211.50]) by abreuretto.com with MailEnable ESMTP; Fri, 06 Feb 2009 13:11:13 -0800
+From: "Event.o 2008" <t_event2008@yahoo.com.br>
+To: <abreu@abreuretto.com>
+Subject: Arbitragem na Justiga do Trabalho
+Sender: "Event.o 2008" <t_event2008@yahoo.com.br>
+Mime-Version: 1.0
+Content-Type: text/html; charset="us-ascii"
+Date: Fri, 6 Feb 2009 03:48:50 -0200
+Content-Transfer-Encoding: 8bit
+Return-Path: <t_event2008@yahoo.com.br>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+<style type="text/css">
+<!--
+.style1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 40px;
+	color: #FFFFFF;
+}
+.style2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	color: #FFFFFF;
+}
+.style3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 13px;
+	color: #000033;
+}
+.style4 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #000033;
+}
+.style111 {font-weight: bold; font-family: Arial, Helvetica, sans-serif;
+font-size: 24px; color: #000066; }
+.style91 {color: #3E0000}
+.style31 {font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #000000;
+}
+-->
+</style>
+</head>
+
+<body>
+<table width="720" border="1" align="center" cellpadding="0"
+cellspacing="0" bordercolor="#000066">
+  <tr>
+    <td><table width="720" border="0" align="center" cellpadding="0"
+cellspacing="0">
+      
+      <tr>
+        <td bgcolor="#000066"><div align="center"
+class="style1">Arbitragem  na Justi&ccedil;a do Trabalho</div></td>
+      </tr>
+      <tr>
+        <td bgcolor="#000066"><div align="center" class="style2">02 de
+Margo de 2009 - S&atilde;o Paulo,SP </div></td>
+      </tr>
+      <tr>
+        <td height="142" valign="middle"><p class="style3">Veja  alguns
+t&oacute;picos abordados:</p>
+            <ul>
+              <li class="style4">Formas de solu&ccedil;&atilde;o de
+conflitos na &aacute;rea trabalhista.</li>
+              <li class="style4">Vantagens e desvantagens dos
+procedimentos de solu&ccedil;&atilde;o de conflitos  fora da esfera
+judicial.</li>
+              <li class="style4">A arbitragem no contexto legal
+trabalhsita brasileiro.</li>
+              <li class="style4">A arbitragem e o  Minist&eacute;rio
+P&uacute;blico.</li>
+              <li class="style4">Entendimento  emanados pela
+Justi&ccedil;a do Trabalho.</li>
+              <li class="style4">Seguran&ccedil;a jur&iacute;dica das
+partes. Procedimento  arbitral.</li>
+            </ul></td>
+      </tr>
+      <tr>
+        <td height="70"><div align="center"><span class="style91"><span
+class="style111">Informe-se por <a
+href="mailto:divugacaoeventos@gmail.com?subject=Sobre: Arbitragem na
+Justi&ccedil;a do Trabalho">E-mail</a><br />
+          ou ligue 11 3031-6777</span></span></div></td>
+      </tr>
+      <tr>
+        <td><div align="center"><span class="style31">Se
+          deseja excluir seu email de nosso mailing, <a
+href="mailto:cancelamen@gmail.com?subject=desejo remover meu e-mail da
+lista: arbitragem -cancelar">CLIQUE
+          AQUI</a></span></div></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</body>
+</html>
+

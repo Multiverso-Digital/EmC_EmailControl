@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schemas.microsoft.com/Contact" xmlns:c="http://schemas.microsoft.com/Contact" xmlns:xdb="http://www.borland.com/schemas/delphi/10.0/XMLDataBinding">
+	<xs:element name="contact" type="c:contactType"/>
+	<xs:complexType name="contactType">
+		<xs:sequence>
+			<xs:element name="CreationDate" type="xs:string"/>
+			<xs:element name="Extended" type="c:ExtendedType"/>
+			<xs:element name="ContactIDCollection" type="c:ContactIDCollectionType"/>
+			<xs:element name="NameCollection" type="c:NameCollectionType"/>
+			<xs:element name="PhotoCollection" type="c:PhotoCollectionType"/>
+			<xs:element name="EmailAddressCollection" type="c:EmailAddressCollectionType"/>
+		</xs:sequence>
+		<xs:attribute name="Version" type="xs:integer"/>
+	</xs:complexType>
+	<xs:complexType name="ExtendedType">
+		<xs:attribute name="nil" type="xs:string"/>
+	</xs:complexType>
+	<xs:complexType name="ContactIDCollectionType">
+		<xs:sequence>
+			<xs:element name="ContactID" type="c:ContactIDType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ContactIDType">
+		<xs:sequence>
+			<xs:element name="Value" type="xs:string"/>
+		</xs:sequence>
+		<xs:attribute name="ElementID" type="xs:string"/>
+	</xs:complexType>
+	<xs:complexType name="NameCollectionType">
+		<xs:sequence>
+			<xs:element name="Name" type="c:NameType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="NameType">
+		<xs:sequence>
+			<xs:element name="GivenName" type="c:GivenNameType"/>
+			<xs:element name="FormattedName" type="xs:string"/>
+		</xs:sequence>
+		<xs:attribute name="ElementID" type="xs:string"/>
+	</xs:complexType>
+	<xs:complexType name="GivenNameType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="Version" type="xs:integer"/>
+				<xs:attribute name="ModificationDate" type="xs:string"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="PhotoCollectionType">
+		<xs:sequence>
+			<xs:element name="Photo" type="c:PhotoType"/>
+		</xs:sequence>
+		<xs:attribute name="Version" type="xs:integer"/>
+		<xs:attribute name="ModificationDate" type="xs:string"/>
+	</xs:complexType>
+	<xs:complexType name="PhotoType">
+		<xs:sequence>
+			<xs:element name="Value" type="c:ValueType"/>
+			<xs:element name="LabelCollection" type="c:LabelCollectionType"/>
+		</xs:sequence>
+		<xs:attribute name="ElementID" type="xs:string"/>
+		<xs:attribute name="Version" type="xs:integer"/>
+		<xs:attribute name="ModificationDate" type="xs:string"/>
+	</xs:complexType>
+	<xs:complexType name="ValueType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="ContentType" type="xs:string"/>
+				<xs:attribute name="Version" type="xs:integer"/>
+				<xs:attribute name="ModificationDate" type="xs:string"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="LabelCollectionType">
+		<xs:sequence>
+			<xs:element name="Label" type="c:LabelType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="LabelType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="Version" type="xs:integer"/>
+				<xs:attribute name="ModificationDate" type="xs:string"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="EmailAddressCollectionType">
+		<xs:sequence>
+			<xs:element name="EmailAddress" type="c:EmailAddressType" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="Version" type="xs:integer"/>
+		<xs:attribute name="ModificationDate" type="xs:string"/>
+	</xs:complexType>
+	<xs:complexType name="EmailAddressType">
+		<xs:sequence>
+			<xs:element name="Type" type="c:Type"/>
+			<xs:element name="Address" type="c:AddressType"/>
+			<xs:element name="LabelCollection" type="c:LabelCollectionType"/>
+		</xs:sequence>
+		<xs:attribute name="ElementID" type="xs:string"/>
+		<xs:attribute name="Version" type="xs:integer"/>
+		<xs:attribute name="ModificationDate" type="xs:string"/>
+	</xs:complexType>
+	<xs:complexType name="Type">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="Version" type="xs:integer"/>
+				<xs:attribute name="ModificationDate" type="xs:string"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="AddressType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="Version" type="xs:integer"/>
+				<xs:attribute name="ModificationDate" type="xs:string"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="EmailAddressType2">
+		<xs:attribute name="ElementID" type="xs:string"/>
+		<xs:attribute name="nil" type="xs:string"/>
+		<xs:attribute name="Version" type="xs:integer"/>
+		<xs:attribute name="ModificationDate" type="xs:string"/>
+	</xs:complexType>
+</xs:schema>

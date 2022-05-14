@@ -1,0 +1,38 @@
+Received: from mail.abreuretto.com ([127.0.0.1]) by abreuretto.com with MailEnable ESMTP; Thu, 12 Feb 2009 09:16:37 -0800
+From: "Delivery Subsystem" <POSTMASTER@abreuretto.com>
+To: <abreu@abreuretto.com>
+Subject: Message Delivery Delay
+Date: Thu, 12 Feb 2009 09:16:37 -0800
+Message-ID: <00AB51F79E7440EC97EDDCE89022AC6B.MAI@abreuretto.com>
+X-MEFilter: 1
+Precedence: bulk
+Return-Path: <>
+
+
+MailEnable: Message delivery has been delayed.
+
+Message is waiting at abreuretto.com for delivery to brvwbansx0004.volkswagen.com.br.
+
+The message will be retried for another 30 hours.
+
+Reason: Mail Server for volkswagen.com.br could not be contacted at this time. MailEnable will keep trying to deliver this message and will notify you of any progress.
+
+
+Message headers follow:
+	
+Received: from ar33 ([201.6.246.251]) by abreuretto.com with MailEnable ESMTP; Thu, 12 Feb 2009 09:05:51 -0800
+From: "Abreu Retto" <abreu@abreuretto.com>
+To: "'Frederico, Claudia Alves'" <extern.Claudia.Frederico@volkswagen.com.br>
+References: <000901c98c61$d53d71e0$7fb855a0$@com> <ADB780242616D04AB75E4A8E4A71E49863F388@VWBRANVX0027.sa.vwg>
+In-Reply-To: <ADB780242616D04AB75E4A8E4A71E49863F388@VWBRANVX0027.sa.vwg>
+Subject: =?iso-8859-1?Q?RES:_Or=E7amento_de_Manuten=E7=E3o_-_Abreu?=
+Date: Thu, 12 Feb 2009 15:09:28 -0200
+Message-ID: <001b01c98d34$aad6a7e0$0083f7a0$@com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_001C_01C98D23.E74DD7E0"
+X-Mailer: Microsoft Office Outlook 12.0
+Thread-Index: AcmMYOyaDg/2jFc7ShS2Wafyw6V9xQAt4ThAAAabeAA=
+Content-Language: pt-br
+
+

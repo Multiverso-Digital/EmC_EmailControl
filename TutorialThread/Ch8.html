@@ -1,0 +1,408 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Martin Harvey">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (WinNT; I) [Netscape]">
+   <title>Chapter 8. Delphi thread safe classes and Priorities.</title>
+</head>
+<body>
+
+<h3>
+Chapter 8. Delphi thread safe classes and Priorities.</h3>
+
+<h4>
+In this chapter:</h4>
+
+<ul>
+<li>
+<a href="#Why write thread safe classes">Why write thread safe classes?</a></li>
+
+<li>
+<a href="#Types of thread safe classes.">Types of thread safe classes.</a></li>
+
+<li>
+<a href="#Thread safe encapsulations or derivatives of">Thread safe encapsulations
+or derivatives of existing classes.</a></li>
+
+<li>
+<a href="#Data flow management classes.">Data flow management classes.</a></li>
+
+<li>
+<a href="#Monitors.">Monitors.</a></li>
+
+<li>
+<a href="#Interlock classes.">Interlock classes.</a></li>
+
+<li>
+<a href="#Thread support in the VCL.">Thread support in the VCL.</a></li>
+
+<li>
+<a href="#TThreadList">TThreadList</a></li>
+
+<li>
+<a href="#TSychroObject">TSychroObject</a></li>
+
+<li>
+<a href="#TCriticalSection">TCriticalSection</a></li>
+
+<li>
+<a href="#TEvent and TSimpleEvent">TEvent and TSimpleEvent</a></li>
+
+<li>
+<a href="#TMultiReadExclusiveWriteSynchroniser.">TMultiReadExclusiveWriteSynchroniser.</a></li>
+
+<li>
+<a href="#Guidelines for thread safe class writers.">Guidelines for thread
+safe class writers.</a></li>
+
+<li>
+<a href="#Priority management.">Priority management.</a></li>
+
+<li>
+<a href="#What's in a priority How Win32 does it.">What's in a priority?
+How Win32 does it.</a></li>
+
+<li>
+<a href="#What priority should I make my thread">What priority should I
+make my thread?</a></li>
+</ul>
+
+<h4>
+<a NAME="Why write thread safe classes"></a>Why write thread safe classes?</h4>
+Simple Delphi applications written by newcomers to thread writing tend
+to include their synchronization as part of the application logic.&nbsp;
+As the previous chapter has demonstrated, it is incredibly easy to make
+subtle errors in synchronization logic, and designing a separate synchronization
+scheme for each application is a lot of work. A relatively small number
+of synchronization mechanisms are used time and again: Almost all I/O bound
+threads communicate data via shared buffers, and the use of lists and queues
+with inbuilt synchronization in I/O situations is very common. These factors
+indicate that there is much to be gained by building a library of thread
+safe objects and data structures: the problems involved in thread communication
+are hard, but a small number of stock solutions covers almost all cases.
+<p>Sometimes it is necessary to write a thread safe class because no other
+approach is permissible. Code in DLL's which accesses system unique data
+must contain thread synchronization, even if the DLL contains no thread
+objects. Given that most Delphi programmers will use the facilities in
+the language (classes) to allow for modular development and re-use of code,
+these DLL's will contain classes, and these classes must be thread safe.
+Some may be fairly simple, perhaps instances of common buffer classes as
+described earlier. However, it is just as likely that some of these classes
+may implement resource locking or other synchronization mechanisms&nbsp;
+in a totally unique way to solve a particular problem.
+<h4>
+<a NAME="Types of thread safe classes."></a>Types of thread safe classes.</h4>
+Classes come in many different shapes and sizes, programmers with reasonable
+Delphi experience will be aware that the class concept is used in many
+different ways. Some classes are used primarily as data structures, others
+as wrappers to simplify a complex underlying structure. Sometimes families
+of co-operating classes are used to provide flexibility when achieving
+an overall goal, as is well demonstrated in the Delphi streaming mechanism.
+When it comes to thread safe classes, a similar diversity is present. In
+some cases the classifications can get a little blurred, but nonetheless,
+four distinct types of thread safe class can be discerned.
+<h4>
+<a NAME="Thread safe encapsulations or derivatives of"></a>Thread safe
+encapsulations or derivatives of existing classes.</h4>
+These are the simplest type of multithreaded class. Typically the class
+being enhanced has a fairly limited functionality and is self contained.
+In the simplest case, making the class thread safe may simply consist of
+adding a mutex, and two extra member functions, Lock and Unlock. Alternatively,
+the functions manipulating data in the class may perform the locking and
+unlocking operations automatically. Which approach is used depends to a
+large extent on the number of possible operations on the object, and the
+likelihood that the programmer is going to use manual locking functions
+to enforce atomicity of composite operations.
+<h4>
+<a NAME="Data flow management classes."></a>Data flow management classes.</h4>
+These are a slight enhancement to the above type, and tend to consist of
+buffer classes: lists, stacks and queues. In addition to maintaining atomicity,
+these classes may perform automatic flow control on the threads operating
+on the buffer. This often consists of suspending threads which try to read
+from an empty buffer, or write to a full one. Implementing these classes
+is discussed more fully in chapter 10. A range of operations may be supported
+by the one class: at one end of the scale, completely non-blocking operations
+will be provided, and on the other end, all operations may be blocking
+if they cannot successfully complete. A middle ground is often provided
+where operations are asynchronous, but provide call-back or messaging notifications
+when a previously failed operation is likely to succeed.&nbsp; The Win32
+sockets API is a good example of a data flow interface which implements
+all of the above options as far as thread flow control is concerned.
+<h4>
+<a NAME="Monitors."></a>Monitors.</h4>
+Monitors are a logical step onwards from data flow management classes.
+They typically allow concurrent access to data which requires more complex
+synchronization and locking than a simple thread safe encapsulation of
+an existing Delphi class. Database engines fall into the higher end of
+this category: typically a complicated locking and transaction management
+scheme is provided to allow a large degree of concurrency&nbsp; when accessing
+shared data, with a minimal performance loss due to thread conflicts. Database
+engines are a slightly special case in that they use transaction management
+to allow a fine degree of control over composite operations, and they also
+provide guarantees about the persistency of operations that run to completion.
+Another good example of a monitor is that of a filing system. The Win32
+filing systems allow multiple threads to access multiple files which may
+be opened by several different processes in several different modes at
+once. A large part of a good filing system consists of handle management
+and locking schemes which provide optimal performance, whilst ensuring
+that atomicity and persistence of operations is preserved. In layman's
+speak: "Everyone can have their fingers in the filing system, but it guarantees
+that no operations will conflict, and once an operation has completed,
+it is guaranteed to be persistently held on disk". In particular, the NTFS
+filing system is "log based", so it is guaranteed to be consistent, even
+in the event of a power failure or operating system crash.
+<h4>
+<a NAME="Interlock classes."></a>Interlock classes.</h4>
+Interlock classes are unique in this classification, because they do not
+contain any data. Some locking mechanisms are useful in that the code that
+comprises the locking system can be easily separated from the code that
+manipulates shared data. The best example of this is the Delphi "Multiple
+reader single writer interlock" class, which enables shared read and atomic
+write operations on a resource. The operation of this will be examined
+below, and the internal workings of the class will be examined in a later
+chapter.
+<h4>
+<a NAME="Thread support in the VCL."></a>Thread support in the VCL.</h4>
+In Delphi 2, no classes were provided to assist the multi-threaded programmer,
+all synchronization was done on a strictly "roll your own" basis. Since
+then, the state of the VCL has improved in this respect. I will discuss
+those classes found in Delphi 4, since that happens to be the version available
+to me. Delphi 3 and 2 users may find that some of these classes are not
+present, and Delphi 5(+) users may find various extensions to these classes.
+In this chapter I present a brief introduction to these classes and their
+usage. Note that on the whole, many of the inbuilt Delphi classes are not
+terribly useful: they offer very little added value over the mechanisms
+available in the Win32 API.
+<h4>
+<a NAME="TThreadList"></a>TThreadList</h4>
+As has been mentioned before, lists, stacks and queues are very common
+when implementing communication between threads. The TThreadList class
+performs the most basic sort of synchronization required between threads.
+In addition to all the methods presented in TList, two extra methods are
+provided: Lock and Unlock. The usage of these should be fairly obvious
+to readers who have managed to work through the previous couple of chapters:
+The list is locked before being manipulated, and unlocked afterwards. If
+a thread performs multiple operations on the list that are required to
+be atomic, then the list must remain locked. The list does not perform
+any implicit synchronization on objects which are owned by a particular
+list. The programmer may wish to devise extra locking mechanisms to provide
+this ability, or alternatively, use the lock on the list to cover all operations
+on data structures owned by the list.
+<h4>
+<a NAME="TSychroObject"></a>TSychroObject</h4>
+This class provides a couple of virtual methods, Acquire and Release which
+are used in all the basic Delphi synchronization classes, given the underlying
+reality that most simple synchronization objects have a concept of ownership
+as previously discussed. The critical section and event classes are derived
+from this class.
+<h4>
+<a NAME="TCriticalSection"></a>TCriticalSection</h4>
+This class needs no detailed explanation. I suspect its inclusion in Delphi
+is simply for the use of those Delphi programmers with a phobia of the
+Win32 API. It is worth noting that it provides four methods: Acquire, Release,
+Enter and Leave. The latter two do nothing but call the former two, just
+in case an application programmer prefers one set of nomenclature over
+another.
+<h4>
+<a NAME="TEvent and TSimpleEvent"></a>TEvent and TSimpleEvent</h4>
+Events are a slightly different way of looking at synchronization. Instead
+of enforcing mutual exclusion they are used to make a variable number of
+threads wait upon an occurrence, and then release one or all of those threads
+when that occurrence occurs. TSimpleEvent is a particular case of an event,
+which specifies various defaults most likely to be used in Delphi applications.
+Events are closely related to semaphores, and are discussed in a later
+chapter.
+<h4>
+<a NAME="TMultiReadExclusiveWriteSynchroniser."></a>TMultiReadExclusiveWriteSynchroniser.</h4>
+This synchronization object is useful in situations where a large number
+of threads may need to read a shared resource, but that resource is written
+to relatively infrequently. In these situations, it is often not necessary
+to completely lock a resource. In earlier chapters I stated that any unsychronized
+use of shared resources was likely to lead to thread conflicts. While this
+is true, it does not necessarily follow that a complete mutual exclusion
+is always required. A complete mutual exclusion insists that only one thread
+is performing any operation at any one time. We can relax this if we realize
+that there are two main types of thread conflict:
+<ul>
+<li>
+Write after Read</li>
+
+<li>
+Write after Write</li>
+</ul>
+Write after Read conflicts occur when one thread writes to a part of a
+resource after another thread has read that value, and assumed it to be
+valid. This is the type of conflict illustrated in chapter three. The other
+type of conflict occurs when two threads write to the shared resource,
+one after the other without the later thread being aware of the earlier
+write. This results in the first write being obliterated. Of course, some
+operations are perfectly legal: Read after Read, and Read after Write.
+These two operations occur all the time in singly threaded programs! This
+seems to indicate that we can slightly relax the criteria for data consistency.
+The minimum criteria in general are:
+<ul>
+<li>
+Several threads may read at once.</li>
+
+<li>
+Only one thread can be writing at once.</li>
+
+<li>
+If a thread is writing, then no threads can be reading.</li>
+</ul>
+The MREW synchronizer enforces these criteria by providing four functions:
+BeginRead, BeginWrite, EndRead and EndWrite. By calling these before and
+after writes, the appropriate synchronization is achieved. As far as the
+application programmer is concerned, he can view it as a much like a critical
+section, with the exception that threads acquire it for reading or writing.
+<h4>
+<a NAME="Guidelines for thread safe class writers."></a>Guidelines for
+thread safe class writers.</h4>
+Although later chapters cover the details of thread safe class writing,
+and the various benefits and pitfalls that can be made when designing thread
+safe classes, it seems worthwhile to include a few simple tips which go
+a long way.
+<ul>
+<li>
+Who does the locking?</li>
+
+<li>
+Be economical when locking resources.</li>
+
+<li>
+Allow for failure.</li>
+</ul>
+The responsibility for locking a thread safe class can either be given
+to the class writer, or the class user. If a class provides only simple
+functionality, it is normally best to give this responsibility to the class
+user. They are likely to use several instances of such classes, and by
+giving them responsibility for locking, one ensures that unexpected deadlocks
+do not occur, and one also gives them the choice concerning how much locking
+is performed, in order to maximize either simplicity or efficiency. For
+more complicated classes, such as monitors, it is normal for the class
+(or set of classes) to assume responsibility, thus hiding the complexities
+of object locking from the end user of the class.
+<p>On the whole, resources should be locked as little as reasonably possible,
+and resource locking should be fine grained. Although simplistic locking
+schemes reduce the chances of a subtle bug being inserted into the code,
+they can to a large extent negate the performance benefits of using threads
+in the first place. Of course, there is nothing wrong with starting simple,
+but if performance problems occur, then the locking scheme should be examined
+in more detail.
+<p>Nothing ever works perfectly all the time. If using Win32 API calls,
+allow for failure. If you are the sort of programmer who is happy checking
+myriad error codes, then this is a workable approach. Alternatively, you
+may wish to write a wrapper class, which encapsulates the Win32 synchronization
+object capability whilst raising exceptions when errors occur. In any case,
+always think carefully about the use of <tt><b>try</b> ... <b>finally</b></tt>
+blocks to ensure that in the event of failure, the synchronization objects
+are left in a sensible state.
+<h4>
+<a NAME="Priority management."></a>Priority management.</h4>
+All threads are created equal, but some are more equal than others. The
+scheduler has to divide CPU time between all the threads running on the
+machine at any moment. In order to do this, it needs to have some idea
+about how much CPU usage each thread is likely to use, and how important
+it is that a particular thread is executed when it is able to run. Most
+threads behave in one of two ways: their execution time is either CPU bound
+or I/O bound.
+<p>CPU bound threads tend to perform long number crunching operations in
+the background. They will soak up all the CPU resources available to them,
+and will rarely be suspended in order to wait for I/O or communications
+with other threads. Quite often, their execution time is not critical.
+For example, a thread in a computer graphics program may perform a long
+image manipulation operation (blurring or rotating the image), which might
+take a few seconds or even minutes. On the time scale of processor cycles,
+this thread never needs to be run urgently, since the user is not bothered
+whether the operation takes twelve or thirteen seconds to execute, and
+no other threads in the system are urgently waiting for a result from this
+thread.
+<p>At the other end of the time scale we have I/O bound threads. These
+normally do not take up large amounts of CPU, and may consist of relatively
+small amounts of processing. They are quite often suspended (blocked) on
+I/O, and when they receive input, they typically run for a short time to
+process that particular input, and are almost immediately suspended again
+when no more input is available. An example of this is the thread that
+processes mouse movement operations and updates the mouse cursor. Every
+time the mouse is moved, the thread spends a very small fraction of a second
+updating the cursor, and is then suspended. Threads of this sort tend to
+be much more time critical: they are not run for long periods of time,
+but when they are run, it is fairly critical that they are run immediately.
+In most GUI systems, it is unacceptable to make the mouse cursor unresponsive,
+even for fairly short periods of time, and hence the mouse update thread
+is fairly time critical. WinNT users will notice that even when the computer
+is working very hard on CPU intensive operations, the mouse cursor still
+reacts immediately. All pre-emptive multitasking operating systems, Win32
+included, provide support for these concepts by allowing the programmer
+to assign "priorities" to threads. Typically, threads with higher priorities
+tend to be I/O bound, and threads with lower priorities tend to be CPU
+bound. The Win32 implementation of thread priorities is slightly different
+from (for example) the UNIX implementation, so the details discussed here
+are specific to Win32 only.
+<h4>
+<a NAME="What's in a priority How Win32 does it."></a>What's in a priority?
+How Win32 does it.</h4>
+Most operating systems assign a priority to threads to determine which
+thread should receive how much CPU attention. In Win32, the actual priority
+of each thread is calculated on the fly, from a number of factors, some
+of which can be directly set by the programmer, and some of which can not.
+These factors are the process <b>Priority Class</b>, the thread <b>Priority
+Level</b>, which together are used to calculate the thread <b>Base Priority</b>,
+and the <b>Priority Boost</b> in effect for that thread. The process priority
+class is set on a per running process basis. For almost all Delphi applications,
+this will be the normal priority class, with the exception of screen savers,
+which can be set to the idle priority class. On the whole, the Delphi programmer
+will not need to modify the priority class of the running process. The
+priority level of each thread can then be set within the class assigned
+for the process. This tends to be much more useful, and the Delphi programmer
+can use the <b>SetThreadPriority</b> API call to change the priority level
+of a thread. The allowed values for this call are: <tt>THREAD_PRIORITY_HIGHEST,
+THREAD_PRIORITY_ABOVE_NORMAL, THREAD_PRIORITY_NORMAL, THREAD_PRIORITY_BELOW_NORMAL,
+THREAD_PRIORITY_LOWEST </tt>and<tt> THREAD_PRIORITY_IDLE</tt>. Since the
+actual thread base priority is calculated as a result of <i>both</i> thread
+priority level <i>and</i> process priority class, threads with priority
+level above normal in a process with normal priority class will have a
+greater base priority than threads with above normal priority level in
+a process with below normal priority class. Once the base priority for
+a thread has been calculated, this level stays fixed for the duration of
+the thread, or until its priority level (or the class of the owning process)
+is changed. However, the <i>actual</i> priority used from one second to
+the next in the scheduler varies slightly from this value, as a result
+of Priority Boost.
+<p>Priority Boost is a mechanism that the scheduler uses to try and take
+account of the behaviour of the threads at run time. Few threads will be
+totally CPU or I/O bound during their entire lifetime, and the scheduler
+will boost the priority of threads that block without using an entire time
+slice. In addition, threads that own window handles which are currently
+foreground windows are also given a slight boost to try and improve user
+responsiveness.
+<h4>
+<a NAME="What priority should I make my thread"></a>What priority should
+I make my thread?</h4>
+With a basic understanding of priorities, we can now attempt to assign
+useful priority levels to the threads in our application. Bear in mind
+that by default, the VCL thread executes at normal priority level. Generally,
+most Delphi applications are focussed on providing as much user responsiveness
+as possible, so one rarely needs to increase the priority of a thread above
+normal - doing so will delay operations such as window repainting whenever
+the thread is executing. Most threads that deal with I/O or data transfer
+in Delphi applications can be left at normal priority, since the scheduler
+will boost the thread if need be, and if the thread turns out to be a bit
+of a CPU hog, then it will not be boosted, thus resulting in reasonable
+speed operations in the main VCL thread. Conversely, lowering priorities
+can be very useful. If you lower the priority of a thread performing CPU
+intensive background processing, the machine appears to the user to be
+very much more responsive than it would if that thread were left at the
+normal priority. Typically, the user is then far more likely to tolerate
+a slight delay in the completion of the low priority thread: they can get
+on with other tasks, and the machine and application still remain as responsive
+as normal.
+<br>
+<hr WIDTH="100%">
+<p><a href="ToC.html">[Contents]</a> <a href="Ch7.html">[Previous]</a><a href="Ch9.html">[Next]</a>
+<p><i>&copy; <a href="mailto:martin@pergolesi.demon.co.uk">Martin Harvey</a>
+2000.</i>
+<br>&nbsp;
+</body>
+</html>

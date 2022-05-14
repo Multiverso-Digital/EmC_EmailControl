@@ -1,0 +1,38 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Martin Harvey">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (WinNT; I) [Netscape]">
+   <title>Source7</title>
+</head>
+<body>
+<PRE><TT><B>function</B> TPrimeThrd.IsPrime: boolean;
+
+<B>var</B>
+  iter: integer;
+
+<B>begin</B>
+  result := true;
+  <B>if</B> FTestNumber &lt; 0 <B>then</B>
+  <B>begin</B>
+    result := false;
+    exit;
+  <B>end</B>;
+  <B>if</B> FTestNumber &lt;= 2 <B>then</B>
+    exit;
+  iter := 2;
+  <B>while</B> (iter &lt FTestNumber) <B>and</B> (<B>not</B> terminated) <B>do</B>
+  <B>begin</B>
+    <B>if</B> (FTestNumber <B>mod</B> iter) = 0 <B>then</B>
+    <B>begin</B>
+      result := false;
+      <FONT COLOR=NAVY><I>{exit;}</I></FONT>
+    <B>end</B>;
+    Inc(iter);
+  <B>end</B>;
+<B>end</B>;
+
+</TT></PRE>
+</body>
+</html>

@@ -1,0 +1,141 @@
+unit UDM_FavoNegra;
+
+interface
+
+uses
+  SysUtils, Classes, DB, DBAccess, MyAccess, MemDS, IdMessage,
+UCriaObjetos,  ABSMain;
+
+type
+  TDM_FavoNegra = class(TDataModule)
+    VeriEmail: TABSQuery;
+    VeriEmailID: TLargeintField;
+    VeriEmailTypeBox: TIntegerField;
+    VeriEmailKind: TIntegerField;
+    VeriEmailExpression: TWideStringField;
+  private
+    { Private declarations }
+  public
+  Function Filtrar_Favoritos_ListaNegra(Mens:TMSG):TMSG;
+    { Public declarations }
+  end;
+
+var
+  DM_FavoNegra: TDM_FavoNegra;
+
+implementation
+
+uses UDMSERVER;
+
+{$R *.dfm}
+
+
+Function TDM_FavoNegra.Filtrar_Favoritos_ListaNegra(Mens:TMSG):TMSG;
+Var
+DM_Favo     : TDM_FavoNegra;
+VeriEmailT  : TABSQuery;
+begin
+
+
+VeriEmailT := TABSQuery.Create(nil);
+VeriEmailT.SQL.Text       := 'SELECT allboxes.ID, allboxes.TypeBox, allboxes.Kind, allboxes.Expression FROM  allboxes where allboxes.TypeBox    < 3 and allboxes.Kind       > 3 and allboxes.`Status`   = 0 and allboxes.Expression = :exp';
+VeriEmailT.InMemory       := true;
+VeriEmailT.Databasename   := 'MEMORY';
+
+{
+VeriEmailT.Databasename   := dm_server.Cone_Favo.DatabaseName;
+VeriEmailT.SessionName    := dm_server.SessaoSetup.SessionName;
+ }
+
+//DM_Favo := TDM_FavoNegra.Create(nil);
+
+Result := Mens;
+
+
+with dm_favo do
+begin
+
+if VeriEmailT.active then  VeriEmailT.active := false;
+VeriEmailT.params[0].AsString := Mens.EmailFrom;
+VeriEmailT.active := true;
+
+
+//if VeriEmail.Locate('Expression',Mens.EmailFrom,[loCaseInsensitive]) then
+//begin
+
+ if VeriEmailT.FieldByName('TypeBox').AsInteger = 1 then
+   begin
+   Mens.FiltroResultado.Add('Email found in My Friends:'+Mens.EmailFrom);
+   Mens.Filtrada     := 144;
+   Mens.Favorita     := 1;
+   Mens.Selecionada  := 0;
+   result := Mens;
+   VeriEmailT.close;
+   VeriEmailT.Free;
+   //DM_Favo.Free;
+
+   exit;
+   end;
+
+  if VeriEmailT.FieldByName('TypeBox').AsInteger = 2 then
+   begin
+   Mens.FiltroResultado.Add('Email found in BlackList: '+Mens.EmailFrom);
+   Mens.Filtrada     := 5;
+   Mens.ListaNegra   := 1;
+   Mens.Selecionada  := 1;
+   result := Mens;
+   VeriEmailT.close;
+   VeriEmailT.Free;
+   //DM_Favo.Free;
+   exit;
+   end;
+
+//end;
+
+
+if VeriEmailT.active then  VeriEmailT.active := false;
+VeriEmailT.params[0].AsString := Mens.DominioFrom;
+VeriEmailT.active := true;
+
+
+//if VeriEmail.Locate('Expression',Mens.DominioFrom,[loCaseInsensitive]) then
+//begin
+
+  if VeriEmailT.FieldByName('TypeBox').AsInteger = 1 then
+   begin
+   Mens.FiltroResultado.Add('Domain found in My Friends List: '+Mens.DominioFrom);
+   Mens.Filtrada     := 144;
+   Mens.Favorita     := 1;
+   Mens.Selecionada  := 0;
+   result := Mens;
+   VeriEmailT.close;
+   VeriEmailT.Free;
+   //DM_Favo.Free;
+   exit;
+   end;
+
+  if VeriEmailT.FieldByName('TypeBox').AsInteger = 2 then
+   begin
+   Mens.FiltroResultado.Add('Domain found in BlackList: '+Mens.DominioFrom);
+   Mens.Filtrada     := 5;
+   Mens.ListaNegra   := 1;
+   Mens.Selecionada  := 1;
+   result := Mens;
+   VeriEmailT.close;
+   VeriEmailT.Free;
+   //DM_Favo.Free;
+   exit;
+   end;
+
+//end;
+VeriEmailT.close;
+VeriEmailT.Free;
+
+end;
+
+
+end;
+
+
+
+end.

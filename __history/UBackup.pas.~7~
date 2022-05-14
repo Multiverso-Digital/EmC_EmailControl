@@ -1,0 +1,123 @@
+unit UBackup;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, ComCtrls, StdCtrls, JvExStdCtrls, JvListBox, JvDriveCtrls,
+  JvComponentBase, JvSearchFiles, Mask, JvExMask, JvToolEdit;
+
+type
+  TFbackup = class(TForm)
+    PageControl1: TPageControl;
+    TabSheet1: TTabSheet;
+    TabSheet2: TTabSheet;
+    GroupBox1: TGroupBox;
+    JvDir: TJvDirectoryEdit;
+    Button1: TButton;
+    JvFile: TJvSearchFiles;
+    ListBox1: TListBox;
+    Label1: TLabel;
+    procedure Button1Click(Sender: TObject);
+    procedure JvDirAfterDialog(Sender: TObject; var AName: string;
+      var AAction: Boolean);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Fbackup: TFbackup;
+  NovoDir : string;
+
+implementation
+
+uses UDMSERVER;
+
+{$R *.dfm}
+
+procedure TFbackup.Button1Click(Sender: TObject);
+Var
+I : Integer;
+begin
+
+
+
+if trim(JvDir.text) = '' then
+   begin
+   showmessage('Target folder missing.');
+   exit;
+   end;
+
+
+if (Novodir = dm_server.dire) or (NovoDir = dm_server.dire) then
+begin
+  showmessage('You cannot select this folder');
+  exit;
+
+end;
+
+
+
+
+
+
+try
+
+
+if not SysUtils.DirectoryExists(Novodir+'\conf') then
+    if not CreateDir(Novodir+'\conf') then
+      raise Exception.Create('Cannot create folder '+Novodir+'\conf');
+
+if not SysUtils.DirectoryExists(Novodir+'\dados') then
+    if not CreateDir(Novodir+'\dados') then
+      raise Exception.Create('Cannot create folder '+Novodir+'\dados');
+
+
+
+
+
+JvFile.RootDirectory := dm_server.dire+'conf\';
+JvFile.Search;
+Listbox1.items := JvFile.Files;
+
+for I:= 0 to ListBox1.Items.count - 1 do
+  begin
+  copyfile(Pchar(dm_server.dire+'conf\'+Listbox1.Items[i]), pchar(Novodir+'\conf\'+Listbox1.Items[i]),false)
+  end;
+
+
+JvFile.RootDirectory := dm_server.dire+'dados\';
+JvFile.Search;
+Listbox1.items := JvFile.Files;
+
+for I:= 0 to ListBox1.Items.count - 1 do
+  begin
+  copyfile(Pchar(dm_server.dire+'dados\'+Listbox1.Items[i]), pchar(Novodir+'\dados\'+Listbox1.Items[i]),false)
+  end;
+
+
+
+
+
+
+except
+showmessage('Backup failed');
+exit;
+end;
+
+Showmessage('Backup done.');
+
+
+
+
+end;
+
+procedure TFbackup.JvDirAfterDialog(Sender: TObject; var AName: string;
+  var AAction: Boolean);
+begin
+NovoDir := AName;
+end;
+
+end.

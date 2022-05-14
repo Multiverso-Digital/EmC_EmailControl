@@ -1,0 +1,34 @@
+Received: from yahoo.com.br ([201.1.96.98]) by abreuretto.com with MailEnable ESMTP; Fri, 06 Feb 2009 12:53:54 -0800
+From: "J ALVES SAZDE" <imaladireta@yahoo.com.br>
+To: <abreu@ABREURETTO.COM>
+Subject: PLANOS MIDICOS
+Sender: "J ALVES SAZDE" <imaladireta@yahoo.com.br>
+Mime-Version: 1.0
+Content-Type: text/html; charset="ISO-8859-1"
+Date: Fri, 6 Feb 2009 12:52:48 -0200
+Content-Transfer-Encoding: 8bit
+Return-Path: <imaladireta@yahoo.com.br>
+
+<div align="center">
+
+<a target="_blank"
+href="http://www.imaladiretaserver.com/app/link/?cliente=jalves">
+<img border="0" src="http://www.imaladireta.com/app/imagens/jalves.jpg">
+</a>
+
+<p style="font:10px verdana;line-height:160%;">
+<br><br>
+<a href="http://www.imaladiretaserver.com" target="_blank"
+style="color:#000; font-weight:bold;"><img border="0"
+src="http://www.imaladireta.com/app/imagens/logo_imaladireta.gif"></a>
+<br>
+Consulte-nos sobre campanha para sua empresa!
+<br>
+<a target="_blank" href="http://www.imaladiretaserver.com/remover"
+style="color:#000; font-weight:bold;">Clique aqui</a> se nco deseja
+receber mais nossos informativos.
+<br><br><br><br><br>
+</p>
+
+</div>
+

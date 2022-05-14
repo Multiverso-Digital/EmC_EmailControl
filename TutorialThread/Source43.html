@@ -1,0 +1,37 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Martin Harvey">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (WinNT; I) [Netscape]">
+   <title>Source43</title>
+</head>
+<body>
+<PRE><TT><B>library</B> NumberDLL;
+
+<FONT COLOR=NAVY><I>{ Martin Harvey 9/10/2000 }</I></FONT>
+
+<B>var</B>
+  ANumber:integer;
+
+<B>function</B> GetNumber:integer;<B>stdcall</B>;
+<B>begin</B>
+  Result := ANumber;
+<B>end</B>;
+
+
+<B>procedure</B> SetNumber(NewNumber:integer);<B>stdcall</B>;
+<B>begin</B>
+  ANumber := NewNumber;
+<B>end</B>;
+
+<B>exports</B>
+  GetNumber,
+  SetNumber;
+
+<B>begin</B>
+<B>end.</B>
+ 
+</TT></PRE>
+</body>
+</html>

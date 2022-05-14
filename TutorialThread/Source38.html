@@ -1,0 +1,50 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Martin Harvey">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (WinNT; I) [Netscape]">
+   <title>Source38</title>
+</head>
+<body>
+<PRE><TT><B>procedure</B> DoSomethingCritical(<B>var</B> Lock: integer);
+
+<B>var</B>
+  Temp: integer;
+
+<B>begin</B>
+<FONT COLOR=NAVY><I>{ Initialize lock }</I></FONT>
+  Lock := -1;
+<FONT COLOR=NAVY><I>{ Enter Lock }</I></FONT>
+  <B>repeat</B>
+    Inc(Lock);
+    Temp := Lock;
+    <B>if</B> Temp &gt 0 <B>then</B>
+      Dec(Lock);
+  <B>until</B> <B>not</B> (Temp &gt 0);
+<FONT COLOR=NAVY><I>{ Perform operations }</I></FONT>
+<FONT COLOR=NAVY><I>{ Leave Lock }</I></FONT>
+  Dec(Lock);
+<B>end</B>;
+
+<B>procedure</B> AsmDoSomethingCritical(<B>var</B> Lock: integer);
+<B>asm</B><FONT COLOR=GREEN>
+<FONT COLOR=NAVY><I>{ Initialize lock }</I></FONT>
+  lock mov dword ptr[eax],$FFFFFFFF
+<FONT COLOR=NAVY><I>{ Enter Lock }</I></FONT>
+@spin:
+  lock inc dword ptr[eax]
+  mov edx,[eax]
+  test edx,edx
+  jng @skipdec
+  lock dec dword ptr[eax]
+@skipdec:
+  test edx,edx
+  jg @spin
+<FONT COLOR=NAVY><I>{ Perform operations }</I></FONT>
+<FONT COLOR=NAVY><I>{ Leave Lock }</I></FONT>
+  lock dec dword ptr[eax]
+</FONT><B>end</B>;
+</TT></PRE>
+</body>
+</html>

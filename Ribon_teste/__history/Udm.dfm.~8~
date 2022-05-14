@@ -1,0 +1,59 @@
+object DM: TDM
+  OldCreateOrder = False
+  Height = 395
+  Width = 488
+  object MC: TMyConnection
+    Database = 'ar_projetos'
+    Username = 'root'
+    Password = 'aw1122'
+    Server = '192.168.0.1'
+    Connected = True
+    LoginPrompt = False
+    Left = 32
+    Top = 24
+  end
+  object qClientes: TMyQuery
+    Connection = MC
+    SQL.Strings = (
+      'SELECT '
+      '*'
+      'FROM'
+      '  tcliente')
+    Active = True
+    Left = 80
+    Top = 24
+    object qClientesID: TIntegerField
+      AutoGenerateValue = arAutoInc
+      DisplayWidth = 10
+      FieldName = 'ID'
+      Origin = 'tcliente.ID'
+    end
+    object qClientesCNPJ: TStringField
+      DisplayWidth = 14
+      FieldName = 'CNPJ'
+      Origin = 'tcliente.CNPJ'
+      Size = 14
+    end
+    object qClientesRazaoSocial: TStringField
+      DisplayWidth = 50
+      FieldName = 'RazaoSocial'
+      Origin = 'tcliente.RazaoSocial'
+      Size = 100
+    end
+    object qClientesApelido: TStringField
+      DisplayWidth = 20
+      FieldName = 'Apelido'
+      Origin = 'tcliente.Apelido'
+      Size = 50
+    end
+  end
+  object MCPrj: TMyConnection
+    Left = 32
+    Top = 88
+  end
+  object ds_qclientes: TwwDataSource
+    DataSet = qClientes
+    Left = 136
+    Top = 24
+  end
+end

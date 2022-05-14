@@ -1,0 +1,123 @@
+object DM_Avancado: TDM_Avancado
+  OldCreateOrder = False
+  OnDestroy = DataModuleDestroy
+  Height = 439
+  Width = 577
+  object Prov_Boxes: TDataSetProvider
+    DataSet = qboxes
+    Options = [poAllowCommandText, poUseQuoteChar]
+    Left = 200
+    Top = 40
+  end
+  object cds_Boxes: TClientDataSet
+    Aggregates = <>
+    Params = <
+      item
+        DataType = ftUnknown
+        Name = 'Box'
+        ParamType = ptUnknown
+      end>
+    ProviderName = 'Prov_Boxes'
+    Left = 264
+    Top = 40
+    object cds_BoxesID: TLargeintField
+      FieldName = 'ID'
+    end
+    object cds_BoxesTypeBox: TIntegerField
+      FieldName = 'TypeBox'
+    end
+    object cds_BoxesWhereFilter: TIntegerField
+      FieldName = 'WhereFilter'
+    end
+    object cds_BoxesFilterID: TIntegerField
+      FieldName = 'FilterID'
+    end
+    object cds_BoxesMatchType: TStringField
+      FieldName = 'MatchType'
+      Size = 3
+    end
+    object cds_BoxesItem: TWideStringField
+      FieldName = 'Item'
+      Size = 255
+    end
+    object cds_BoxesKind: TIntegerField
+      FieldName = 'Kind'
+    end
+    object cds_BoxesExpression: TWideStringField
+      FieldName = 'Expression'
+      Size = 500
+    end
+    object cds_BoxesDT: TDateTimeField
+      FieldName = 'DT'
+    end
+    object cds_BoxesStatus: TIntegerField
+      FieldName = 'Status'
+    end
+    object cds_BoxesNameRule: TWideStringField
+      FieldName = 'NameRule'
+      Size = 255
+    end
+    object cds_Boxescountmacths: TFloatField
+      FieldName = 'countmacths'
+    end
+  end
+  object ConBoxes: TABSDatabase
+    CurrentVersion = '6.02 '
+    DatabaseFileName = 
+      '\\Ar0\prgsbeli\@Projetos_em_andamento\EmC2011_Thread\Dados\boxes' +
+      '.abs'
+    DatabaseName = 'Boxes'
+    Exclusive = False
+    KeepConnection = False
+    MaxConnections = 500
+    MultiUser = True
+    SessionName = 'SessaoBoxes_2'
+    Left = 24
+    Top = 40
+  end
+  object qupBoxes: TABSQuery
+    CurrentVersion = '6.02 '
+    SessionName = 'SessaoBoxes_2'
+    InMemory = False
+    ReadOnly = False
+    SQL.Strings = (
+      'UPDATE'
+      '  allboxes'
+      'SET'
+      '  countmacths = countmacths + 1'
+      'WHERE'
+      '  (allboxes.ID = :ID)')
+    Left = 328
+    Top = 40
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'ID'
+        ParamType = ptUnknown
+      end>
+  end
+  object SessaoBoxes: TABSSession
+    Active = True
+    AutoSessionName = True
+    Left = 88
+    Top = 40
+  end
+  object qboxes: TABSQuery
+    CurrentVersion = '6.02 '
+    DatabaseName = 'Boxes'
+    SessionName = 'SessaoBoxes_2'
+    InMemory = False
+    ReadOnly = True
+    SQL.Strings = (
+      'select * from allboxes'
+      'where TypeBox = :Box')
+    Left = 152
+    Top = 40
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Box'
+        ParamType = ptUnknown
+      end>
+  end
+end

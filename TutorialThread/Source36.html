@@ -1,0 +1,111 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Martin Harvey">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (WinNT; I) [Netscape]">
+   <title>Source36</title>
+</head>
+<body>
+<PRE><TT><B>unit</B> EventSync;
+
+<FONT COLOR=NAVY><I>{ Martin Harvey 5/6/2000 }</I></FONT>
+
+<B>interface</B>
+
+<B>uses</B> Windows;
+
+<B>type</B>
+  TEventSynchronizer = <B>class</B>(TObject)
+  <B>private</B>
+    FDataLock, FWriteLock: TRTLCriticalSection;
+    FReaders, FWriters: integer;
+    FNoReaders, FNoWriters: THandle;
+  <B>protected</B>
+  <B>public</B>
+    <B>constructor</B> Create;
+    <B>destructor</B> Destroy; <B>override</B>;
+    <B>procedure</B> StartRead;
+    <B>procedure</B> StartWrite;
+    <B>procedure</B> EndRead;
+    <B>procedure</B> EndWrite;
+  <B>published</B>
+  <B>end</B>;
+
+<B>implementation</B>
+
+<B>constructor</B> TEventSynchronizer.Create;
+<B>begin</B>
+  <B>inherited</B> Create;
+  InitializeCriticalSection(FDataLock);
+  InitializeCriticalSection(FWriteLock);
+  FNoReaders := CreateEvent(<B>nil</B>, true, true, <B>nil</B>);
+  FNoWriters := CreateEvent(<B>nil</B>, true, true, <B>nil</B>);
+<B>end</B>;
+
+<B>destructor</B> TEventSynchronizer.Destroy;
+<B>begin</B>
+  DeleteCriticalSection(FDataLock);
+  DeleteCriticalSection(FWriteLock);
+  CloseHandle(FNoReaders);
+  CloseHandle(FNoWriters);
+  <B>inherited</B> Destroy;
+<B>end</B>;
+
+<B>procedure</B> TEventSynchronizer.StartRead;
+
+<B>var</B>
+  Block: boolean;
+
+<B>begin</B>
+  EnterCriticalSection(FDatalock);
+  <B>if</B> FReaders = 0 <B>then</B>
+    ResetEvent(FNoReaders);
+  Inc(FReaders);
+  Block := FWriters &gt 0;
+  LeaveCriticalSection(FDataLock);
+  <B>if</B> Block <B>then</B>
+    WaitForSingleObject(FNoWriters, INFINITE);
+<B>end</B>;
+
+<B>procedure</B> TEventSynchronizer.StartWrite;
+
+<B>var</B>
+  Block: boolean;
+
+<B>begin</B>
+  EnterCriticalSection(FDataLock);
+  <B>if</B> FWriters = 0 <B>then</B>
+    ResetEvent(FNoWriters);
+  Inc(FWriters);
+  Block := FReaders &gt 0;
+  LeaveCriticalSection(FDataLock);
+  <B>if</B> Block <B>then</B>
+    WaitForSingleObject(FNoReaders, INFINITE);
+  EnterCriticalSection(FWriteLock);
+<B>end</B>;
+
+<B>procedure</B> TEventSynchronizer.EndRead;
+<B>begin</B>
+  EnterCriticalSection(FDataLock);
+  Dec(FReaders);
+  <B>if</B> FReaders = 0 <B>then</B>
+    SetEvent(FNoReaders);
+  LeaveCriticalSection(FDataLock);
+<B>end</B>;
+
+<B>procedure</B> TEventSynchronizer.EndWrite;
+<B>begin</B>
+  LeaveCriticalSection(FWriteLock);
+  EnterCriticalSection(FDataLock);
+  Dec(FWriters);
+  <B>if</B> FWriters = 0 <B>then</B>
+    SetEvent(FNoWriters);
+  LeaveCriticalSection(FDataLock);
+<B>end</B>;
+
+<B>end.</B>
+
+</TT></PRE>
+</body>
+</html>

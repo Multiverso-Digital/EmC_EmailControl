@@ -1,0 +1,18 @@
+object DM_pais: TDM_pais
+  OldCreateOrder = False
+  Height = 505
+  Width = 626
+  object JvCSVBase1: TJvCSVBase
+    Left = 240
+    Top = 232
+  end
+  object CSoap: TSoapConnection
+    Agent = 'Borland SOAP 1.2'
+    Connected = True
+    URL = 'http://69.64.64.125/EmCService/EmCService.dll/soap/IDM'
+    SOAPServerIID = 'IAppServerSOAP - {C99F4735-D6D2-495C-8CA2-E53E5A439E61}'
+    UseSOAPAdapter = True
+    Left = 152
+    Top = 160
+  end
+end

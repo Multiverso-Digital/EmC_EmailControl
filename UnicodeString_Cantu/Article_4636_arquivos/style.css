@@ -1,0 +1,76 @@
+BODY {
+	SCROLLBAR-FACE-COLOR: #dee3e7; FONT-SIZE: 12px; SCROLLBAR-HIGHLIGHT-COLOR: #ffffff; SCROLLBAR-SHADOW-COLOR: #dee3e7; SCROLLBAR-3DLIGHT-COLOR: #d1d7dc; LINE-HEIGHT: 135%; SCROLLBAR-ARROW-COLOR: #006699; SCROLLBAR-TRACK-COLOR: #efefef; font-family: "Tahoma", "sans-serif"; SCROLLBAR-DARKSHADOW-COLOR: #98aab1; BACKGROUND-COLOR: #ffffff
+}
+TD {
+	FONT-SIZE: 9pt; LINE-HEIGHT: 135%; FONT-FAMILY: "宋体", "Verdana", "Arial", "Helvetica", "sans-serif"
+}
+A {
+	FONT-SIZE: 9pt; LINE-HEIGHT: 135%; FONT-FAMILY: "宋体", "Verdana", "Arial", "Helvetica", "sans-serif"
+}
+INPUT {
+	FONT-SIZE: 9pt; FONT-FAMILY: "宋体", "Verdana", "Arial", "Helvetica", "sans-serif"
+}
+SELECT {
+	FONT-SIZE: 9pt; FONT-FAMILY: "宋体", "Verdana", "Arial", "Helvetica", "sans-serif"
+}
+TEXTAREA {
+	FONT-SIZE: 9pt; FONT-FAMILY: "宋体", "Verdana", "Arial", "Helvetica", "sans-serif"
+}
+OPTION {
+	FONT-SIZE: 9pt; FONT-FAMILY: "宋体", "Verdana", "Arial", "Helvetica", "sans-serif"
+}
+INPUT {
+	BORDER-TOP-WIDTH: 1px; PADDING-RIGHT: 1px; PADDING-LEFT: 1px; BORDER-LEFT-WIDTH: 1px; FONT-SIZE: 9pt; BORDER-LEFT-COLOR: #cccccc; BORDER-BOTTOM-WIDTH: 1px; BORDER-BOTTOM-COLOR: #cccccc; PADDING-BOTTOM: 1px; BORDER-TOP-COLOR: #cccccc; PADDING-TOP: 1px; HEIGHT: 20px; BORDER-RIGHT-WIDTH: 1px; BORDER-RIGHT-COLOR: #cccccc
+}
+.bian1 {
+	BORDER-RIGHT: #888888 1px solid; BORDER-TOP: #888888 1px solid; BORDER-LEFT: #888888 1px solid; BORDER-BOTTOM: #888888 1px solid
+}
+A:link {
+	COLOR: #0033cc; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #0033cc; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #000000;TEXT-DECORATION: underline 
+}
+#TopMenu A:link {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+#TopMenu A:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+#TopMenu A:hover {
+	COLOR: #000000; TEXT-DECORATION: underline
+}
+#SoftMenu A:link {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+#SoftMenu A:visited {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+#SoftMenu A:hover {
+	COLOR: #ffffff; TEXT-DECORATION: underline
+}
+.tdbBig {
+	FONT-SIZE: 10.5pt; LINE-HEIGHT: 150%
+.bg_td { background-color:#f7f7f7; }
+}
+#TbSoftList TD {
+	FONT-SIZE: 9pt; COLOR: #000000
+}
+#hint {
+	BORDER-RIGHT: green 1px solid; PADDING-RIGHT: 4px; BORDER-TOP: green 1px solid; PADDING-LEFT: 4px; Z-INDEX: 9; BACKGROUND: #d1f9a2; FILTER: Alpha(Opacity=90, FinishOpacity=50, Style=0); PADDING-BOTTOM: 4px; BORDER-LEFT: green 1px solid; WIDTH: 200px; LINE-HEIGHT: 17px; PADDING-TOP: 4px; BORDER-BOTTOM: green 1px solid; POSITION: absolute
+}
+.finput {
+	BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid
+}
+.gzd {POSITION:relative;width:256;height:196;background-image:url(images/delphifansgz.gif);BORDER-top:rgb(177,208,251) 1px solid;BORDER-bottom:rgb(177,208,251) 1px solid;}  
+.aaa A:link {
+	COLOR: #0000FF; TEXT-DECORATION: underline
+}
+.aaa A:visited {
+	COLOR: #0000FF; TEXT-DECORATION: underline
+}
+.aaa A:hover {
+	COLOR: #0000FF;TEXT-DECORATION: underline 

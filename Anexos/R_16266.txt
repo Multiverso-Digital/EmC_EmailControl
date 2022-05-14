@@ -1,0 +1,85 @@
+Return-Path: <bbt1smnz@visitduluth.com>
+Received: from sinai1-1.uol.com.br (sinai1.srv.intranet [172.27.64.14])
+	 by sukhoi14-b with LMTPA;
+	 Tue, 17 Feb 2009 08:19:48 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by starfury15.uol.com.br (Postfix) with ESMTP id 6AB6033B
+	for <abreuretto@uol.com.br>; Tue, 17 Feb 2009 08:19:48 -0300 (BRT)
+Received: from barracuda.mailhosting.citon.com (mail.mailhosting.citon.com [75.100.97.110])
+	by starfury15.uol.com.br (Postfix) with ESMTP id C1E2233A
+	for <abreuretto@uol.com.br>; Tue, 17 Feb 2009 08:19:47 -0300 (BRT)
+X-ASG-Debug-ID: 1234868590-75aa00490001-bsZjyH
+X-Barracuda-URL: http://75.100.97.110:8000/cgi-bin/mark.cgi
+Received: from home (localhost [127.0.0.1])
+	by barracuda.mailhosting.citon.com (Spam Firewall) with SMTP
+	id 9CED13912BC; Tue, 17 Feb 2009 05:03:11 -0600 (CST)
+Received: from home (189-55-6-176-nd.cpe.vivax.com.br [189.55.6.176]) by barracuda.mailhosting.citon.com with SMTP id vjdd0dWqhqZQPINd; Tue, 17 Feb 2009 05:03:11 -0600 (CST)
+From: "GHR Propaganda - Marcelo" <bbt1smnz@visitduluth.com>
+X-ASG-Orig-Subj: Aumente suas Vendas com a Internet
+                                                                        diwtqsa
+Subject: Aumente suas Vendas com a Internet
+                                                                        diwtqsa
+To: abrchaib@uol.com.br
+Content-Type: text/html;
+Reply-To: marcelo@ghrmarketing.net
+Disposition-Notification-To: marcelo@ghrmarketing.net
+Message-ID: <20090215.F878C148-A989-48C6-ADBA-CB05F38000B1@ghrmktnews.com>
+Date: Tue, 17 Feb 2009 08:03:22 -0300
+X-Priority: 1
+X-Barracuda-Connect: 189-55-6-176-nd.cpe.vivax.com.br[189.55.6.176]
+X-Barracuda-Start-Time: 1234868597
+X-Barracuda-Virus-Scanned: by Barracuda Spam Firewall at mailhosting.citon.com
+X-SIG5: c5393ea9265ba19efffdb72998e8b40f
+
+<html>
+<head>
+<title>MODELONOVO</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<BODY bgColor=#ffffff leftMargin=0 topMargin=0 marginheight="0" marginwidth="0"><!-- Save for Web Slices (MODELONOVO.JPG) -->
+<DIV align=center>
+<TABLE id=Table_01 height=1724 cellSpacing=0 cellPadding=0 width=525 
+align=center border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <P align=center><MAP name=FPMap0><AREA shape=RECT coords=431,98,524,116 
+        href="http://www.ghrmktnews.com/index.htm"><AREA shape=RECT 
+        coords=130,177,309,200 
+      href="http://ghrmktnews.com/loja/cart.php"></MAP><IMG height=313 alt="" 
+      src="http://www.ghrmktnews.com/newsletter/MODELONOVO_01.jpg" width=525 
+      useMap=#FPMap0></P></TD></TR>
+  <TR>
+    <TD><MAP name=FPMap1><AREA shape=RECT coords=19,43,501,368 
+        href="http://ghrmktnews.com/index.htm"></MAP><IMG height=389 alt="" 
+      src="http://www.ghrmktnews.com/newsletter/MODELONOVO_02.jpg" width=525 
+      useMap=#FPMap1></TD></TR>
+  <TR>
+    <TD><IMG height=253 alt="" 
+      src="http://www.ghrmktnews.com/newsletter/MODELONOVO_03.jpg" 
+  width=525></TD></TR>
+  <TR>
+    <TD><MAP name=FPMap2><AREA shape=RECT coords=326,87,523,210 
+        href="http://ghrmktnews.com/loja/cart.php"><AREA shape=RECT 
+        coords=129,213,204,238 
+      href="http://ghrmktnews.com/loja/contact.php"></MAP><IMG height=243 alt="" 
+      src="http://www.ghrmktnews.com/newsletter/MODELONOVO_04.jpg" width=525 
+      useMap=#FPMap2></TD></TR>
+  <TR>
+    <TD><MAP name=FPMap3><AREA shape=RECT coords=313,55,492,80 
+        href="http://ghrmktnews.com/index.htm"></MAP><IMG height=180 alt="" 
+      src="http://www.ghrmktnews.com/newsletter/MODELONOVO_05.jpg" width=525 
+      useMap=#FPMap3></TD></TR>
+  <TR>
+    <TD><MAP name=FPMap4><AREA shape=RECT coords=45,181,231,216 
+        href="mailto:ghrpropaganda@hotmail.com?subject=CONTATO VIA MSN"><AREA 
+        shape=RECT coords=9,219,230,250 
+        href="http://ghrmktnews.com/loja/contact.php"><AREA shape=RECT 
+        coords=285,322,524,345 
+        href="mailto:removeremailghr@itelefonica.com.br?subject=REMOVER EMAIL DA LISTA"><AREA 
+        shape=RECT coords=16,18,352,131 
+        href="http://ghrmktnews.com/loja/contact.php"></MAP><IMG height=346 alt="" 
+      src="http://www.ghrmktnews.com/newsletter/MODELONOVO_06.jpg" width=525 
+      useMap=#FPMap4></TD></TR></TBODY></TABLE></DIV><!-- End Save for Web Slices -->
+</BODY>
+</html>

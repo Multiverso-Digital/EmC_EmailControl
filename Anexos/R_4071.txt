@@ -1,0 +1,38 @@
+Received: from servidor.cenpec.org.br ([200.230.152.130]) by abreuretto.com with MailEnable ESMTP; Mon, 09 Feb 2009 16:06:06 -0800
+Received: by servidor.cenpec.org.br (Postfix, from userid 502)
+	id 7BBA615405F; Mon,  9 Feb 2009 16:08:02 -0200 (BRST)
+Received: from [10.10.0.75] (unknown [10.10.0.75])
+	by servidor.cenpec.org.br (Postfix) with ESMTP id A565215405D
+	for <abreu@abreuretto.com>; Mon,  9 Feb 2009 16:07:59 -0200 (BRST)
+Message-ID: <49907D38.8040507@cenpec.org.br>
+Date: Mon, 09 Feb 2009 16:00:08 -0300
+From: Tathyane Tudda <tatiane@cenpec.org.br>
+User-Agent: Thunderbird 2.0.0.19 (Windows/20081209)
+MIME-Version: 1.0
+To: Abreu Retto <abreu@abreuretto.com>
+Subject: Estudo da FP
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+X-Spam-Checker-Version: SpamAssassin 2.63-spambr_20030926 (2004-01-11) on 
+	servidor.cenpec.org.br
+X-Spam-Level: 
+X-Spam-Status: No, hits=0.0 required=7.7 tests=none autolearn=no 
+	version=2.63-spambr_20030926
+Content-Transfer-Encoding: quoted-printable
+Return-Path: <tatiane@cenpec.org.br>
+
+Abreu,
+
+Estivemos analisando aquele estudo que voc=EA fez sobre a distribu=ED=E7=E3=
+o das=20
+vagas para a FP e acreditamos que as altera=E7=F5es que necessitaremos ne=
+le,=20
+podemos fazer em cima dos dados que vc j=E1 levantou.
+Sendo assim, gostariamos de saber o custo daquele estudo e se voc=EA pode=
+=20
+nos encaminhar as querys que utilizou para facilitar as altera=E7=F5es qu=
+e=20
+necessitaemos. Voc=EA pode enviar?
+
+Bjus,
+Tathy.
+

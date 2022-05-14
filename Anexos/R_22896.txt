@@ -1,0 +1,224 @@
+Received: from servidor.cenpec.org.br ([200.230.152.130]) by abreuretto.com with MailEnable ESMTP; Fri, 20 Feb 2009 05:38:48 -0800
+Received: by servidor.cenpec.org.br (Postfix, from userid 502)
+	id 4E16B15406B; Fri, 20 Feb 2009 10:36:43 -0300 (BRT)
+Received: from [10.10.0.187] (unknown [10.10.0.187])
+	by servidor.cenpec.org.br (Postfix) with ESMTP id 8AE5915405F;
+	Fri, 20 Feb 2009 10:36:39 -0300 (BRT)
+Message-ID: <499EB241.9020407@cenpec.org.br>
+Date: Fri, 20 Feb 2009 10:38:09 -0300
+From: Thais Lima <thaislima@cenpec.org.br>
+User-Agent: Thunderbird 2.0.0.19 (Windows/20081209)
+MIME-Version: 1.0
+To: Abreu Retto <abreu@abreuretto.com>
+Cc: Ana Regina Carrara <anacarrara@cenpec.org.br>
+Subject: Re: RES: Sobre a Petrobras - Abreu
+References: <000001c992b6$e732d060$b5987120$@com> <499DAB87.2050200@cenpec.org.br> <001e01c992d5$6b21db00$41659100$@com>
+In-Reply-To: <001e01c992d5$6b21db00$41659100$@com>
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+X-Spam-Checker-Version: SpamAssassin 2.63-spambr_20030926 (2004-01-11) on 
+	servidor.cenpec.org.br
+X-Spam-Level: 
+X-Spam-Status: No, hits=0.5 required=7.7 tests=BR_HOSPEDAGEM,HTML_70_80,
+	HTML_MESSAGE,MIME_HTML_ONLY autolearn=no version=2.63-spambr_20030926
+Return-Path: <thaislima@cenpec.org.br>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html;charset=ISO-8859-1" http-equiv="Content-Type">
+</head>
+<body bgcolor="#ffffff" text="#000000">
+Obrigada pelas informa&ccedil;&otilde;es, Abreu.<br>
+<br>
+Um abra&ccedil;o,<br>
+<br>
+<pre class="moz-signature" cols="72">Thais Lima
+Cenpec - Educa&ccedil;&atilde;o e Cultura
+<a class="moz-txt-link-abbreviated" href="http://www.cenpec.org.br">www.cenpec.org.br</a>
+(11) 2132.9087</pre>
+<br>
+<br>
+Abreu Retto escreveu:
+<blockquote cite="mid:001e01c992d5$6b21db00$41659100$@com" type="cite">
+  <meta http-equiv="Content-Type" content="text/html; ">
+  <meta name="Generator" content="Microsoft Word 12 (filtered medium)">
+  <style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:Consolas;
+	panose-1:2 11 6 9 2 2 4 3 2 4;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:black;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:purple;
+	text-decoration:underline;}
+p
+	{mso-style-priority:99;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	color:black;}
+pre
+	{mso-style-priority:99;
+	mso-style-link:"Pr&eacute;-formata&ccedil;&atilde;o HTML Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	color:black;}
+span.Pr-formataoHTMLChar
+	{mso-style-name:"Pr&eacute;-formata&ccedil;&atilde;o HTML Char";
+	mso-style-priority:99;
+	mso-style-link:"Pr&eacute;-formata&ccedil;&atilde;o HTML";
+	font-family:Consolas;
+	color:black;}
+span.EstiloDeEmail19
+	{mso-style-type:personal;
+	font-family:"Calibri","sans-serif";
+	color:windowtext;}
+span.EstiloDeEmail21
+	{mso-style-type:personal-reply;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-size:10.0pt;}
+@page Section1
+	{size:612.0pt 792.0pt;
+	margin:70.85pt 3.0cm 70.85pt 3.0cm;}
+div.Section1
+	{page:Section1;}
+-->
+  </style>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1" />
+ </o:shapelayout></xml><![endif]-->
+  <div class="Section1">
+  <p class="MsoNormal"><span style="color: rgb(31, 73, 125);">Thais<o:p></o:p></span></p>
+  <p class="MsoNormal"><span style="color: rgb(31, 73, 125);"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal">O endere&ccedil;o agora &eacute; <a moz-do-not-send="true"
+ href="http://www.ppcavaliadores.web.br.com/login.asp">http://www.ppcavaliadores.web.br.com/login.asp</a><o:p></o:p></p>
+  <p class="MsoNormal"><span style="color: rgb(31, 73, 125);"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal"><span style="color: rgb(31, 73, 125);">Usu&aacute;rio:</span><span
+ style="font-size: 7.5pt; font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"> Thais<o:p></o:p></span></p>
+  <p class="MsoNormal"><span style="color: rgb(31, 73, 125);">Senha: </span><span
+ style="font-size: 7.5pt; font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">Thais<o:p></o:p></span></p>
+  <p class="MsoNormal"><span
+ style="font-size: 7.5pt; font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal"><span
+ style="font-size: 7.5pt; font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal"><span
+ style="font-size: 7.5pt; font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">J&aacute;
+migrei o site para o provedor indicado pela Petrobr&aacute;s e agora &eacute; com
+eles. Repare
+que o endere&ccedil;o j&aacute; &eacute; o deles. N&atilde;o tenho mais nenhuma responsabilidade
+sobre este
+site. Se a Petrobr&aacute;s quiser alguma coisa ou suporte vou cobrar. J&aacute;
+avisei a
+Raquel.<o:p></o:p></span></p>
+  <p class="MsoNormal"><span
+ style="font-size: 7.5pt; font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal"><span
+ style="font-size: 7.5pt; font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal"><span
+ style="font-size: 7.5pt; font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">Um
+abra&ccedil;o<o:p></o:p></span></p>
+  <p class="MsoNormal"><span
+ style="font-size: 7.5pt; font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal"><span
+ style="font-size: 7.5pt; font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">Abreu</span><span
+ style="color: rgb(31, 73, 125);"><o:p></o:p></span></p>
+  <p class="MsoNormal"><span style="color: rgb(31, 73, 125);"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal"><span style="color: rgb(31, 73, 125);"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal"><span style="color: rgb(31, 73, 125);"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal"><span style="color: rgb(31, 73, 125);"><o:p>&nbsp;</o:p></span></p>
+  <div>
+  <div
+ style="border-style: solid none none; border-color: rgb(181, 196, 223) -moz-use-text-color -moz-use-text-color; border-width: 1pt medium medium; padding: 3pt 0cm 0cm;">
+  <p class="MsoNormal"><b><span
+ style="font-size: 10pt; font-family: &quot;Tahoma&quot;,&quot;sans-serif&quot;; color: windowtext;">De:</span></b><span
+ style="font-size: 10pt; font-family: &quot;Tahoma&quot;,&quot;sans-serif&quot;; color: windowtext;">
+Thais Lima [<a class="moz-txt-link-freetext" href="mailto:thaislima@cenpec.org.br">mailto:thaislima@cenpec.org.br</a>] <br>
+  <b>Enviada em:</b> quinta-feira, 19 de fevereiro de 2009 15:57<br>
+  <b>Para:</b> Abreu Retto<br>
+  <b>Assunto:</b> Re: Sobre a Petrobras - Abreu<o:p></o:p></span></p>
+  </div>
+  </div>
+  <p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+  <p class="MsoNormal">Abreu,<br>
+  <br>
+Tenho tentado entrar como o login <b>thaislima</b> e senha <b>lima</b>,
+mas o
+sistema diz que &eacute; inv&aacute;lido.<br>
+  <br>
+Vc pode confirmar meu usu&aacute;rio e senha?<br>
+  <br>
+Outra pergunta: a Petrobras decidiu por alocar o banco em uma empresa
+de
+hospedagem de sites? Isso aconteceu h&aacute; muito tempo?<br>
+  <br>
+Obrigada.<br>
+  <br>
+  <o:p></o:p></p>
+  <pre>Thais Lima<o:p></o:p></pre>
+  <pre>Cenpec - Educa&ccedil;&atilde;o e Cultura<o:p></o:p></pre>
+  <pre><a moz-do-not-send="true" href="http://www.cenpec.org.br">www.cenpec.org.br</a><o:p></o:p></pre>
+  <pre>(11) 2132.9087<o:p></o:p></pre>
+  <p class="MsoNormal"><br>
+  <br>
+Abreu Retto escreveu: <o:p></o:p></p>
+  <p class="MsoNormal">Tais<o:p></o:p></p>
+  <p class="MsoNormal">&nbsp;<o:p></o:p></p>
+  <p class="MsoNormal">O endere&ccedil;o agora &eacute; <a moz-do-not-send="true"
+ href="http://www.ppcavaliadores.web.br.com/login.asp">http://www.ppcavaliadores.web.br.com/login.asp</a><o:p></o:p></p>
+  <p class="MsoNormal">&nbsp;<o:p></o:p></p>
+  <p class="MsoNormal">J&aacute; migrei os dados para este novo site conforme
+instru&ccedil;&otilde;es
+da Petrobr&aacute;s. N&atilde;o acesse mais o site antigo pois ele est&aacute; fora do ar.<o:p></o:p></p>
+  <p class="MsoNormal">&nbsp;<o:p></o:p></p>
+  <p class="MsoNormal">&nbsp;<o:p></o:p></p>
+  <p class="MsoNormal">Um abra&ccedil;o<o:p></o:p></p>
+  <p class="MsoNormal">&nbsp;<o:p></o:p></p>
+  <p class="MsoNormal">Abreu<o:p></o:p></p>
+  <p><span
+ style="font-size: 10pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; color: windowtext;">Nenhum
+v&iacute;rus encontrado nessa mensagem recebida.<br>
+Verificado por AVG - <a class="moz-txt-link-abbreviated" href="http://www.avgbrasil.com.br">www.avgbrasil.com.br</a><br>
+Vers&atilde;o: 8.0.237 / Banco de dados de v&iacute;rus: 270.11.0/1959 - Data de
+Lan&ccedil;amento:
+02/18/09 20:55:00</span><span style="color: windowtext;"><o:p></o:p></span></p>
+  </div>
+</blockquote>
+</body>
+</html>
+

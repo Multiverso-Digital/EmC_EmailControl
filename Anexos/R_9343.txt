@@ -1,0 +1,139 @@
+Return-Path: <nobody@quad.vhserver.info>
+Received: from sinai7-1.uol.com.br (sinai7.srv.intranet [172.27.64.20])
+	 by samba12-b with LMTPA;
+	 Wed, 11 Feb 2009 22:04:39 -0200
+Received: from localhost (localhost [127.0.0.1])
+	by starfury14.uol.com.br (Postfix) with ESMTP id 68EB044D
+	for <abreuretto@uol.com.br>; Wed, 11 Feb 2009 22:04:39 -0200 (BRST)
+Received: from quad.vhserver.info (quad.vhserver.info [208.53.138.14])
+	by starfury14.uol.com.br (Postfix) with ESMTP id D296F200
+	for <abreuretto@uol.com.br>; Wed, 11 Feb 2009 22:04:38 -0200 (BRST)
+Received: from nobody by quad.vhserver.info with local (Exim 4.69)
+	(envelope-from <nobody@quad.vhserver.info>)
+	id 1LWQkz-0002Q3-J7
+	for abreuretto@uol.com.br; Mon, 09 Feb 2009 05:40:41 -0200
+To: abreuretto@uol.com.br
+Subject: Novos planos de STREAMING, HOSPEDAGEM e REVENDA.
+MIME-Version: 1.0
+Content-type: text/html; charset=iso-8859-1
+From: Telia.com.br <email@gmktbr.com>
+Reply-To: Telia.com.br <email@gmktbr.com>
+Message-Id: <E1LWQkz-0002Q3-J7@quad.vhserver.info>
+Date: Mon, 09 Feb 2009 05:40:41 -0200
+X-AntiAbuse: This header was added to track abuse, please include it with any abuse report
+X-AntiAbuse: Primary Hostname - quad.vhserver.info
+X-AntiAbuse: Original Domain - uol.com.br
+X-AntiAbuse: Originator/Caller UID/GID - [99 32002] / [47 12]
+X-AntiAbuse: Sender Address Domain - quad.vhserver.info
+X-Source: 
+X-Source-Args: 
+X-Source-Dir: 
+X-SIG5: 914e2814de85696bb21bd8cda7694b1a
+
+
+<html>
+
+<head>
+<title>Anuncios GMKTBR</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<meta name="generator" content="Namo WebEditor(Trial)">
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="purple" alink="red">
+<table width="675" height="325" align="center" cellpadding="0" cellspacing="0">
+  <tr> 
+    <td width="225" height="87"> <table width="225" cellpadding="0" cellspacing="0">
+        <tr>
+          <td><p><font color="blue" face="Arial" size="2"><b><a href="http://www.gmktbr.com/go/click.php?id=1" target="_blank">Novos planos de STREAMING! </a></b></font><b><font color="blue"><br>
+              </font></b><font 
+                        face=Arial,Helvetica,sans-serif size=2>Tenha sua Web R&aacute;dio! 
+                na Telia <br>
+                &eacute; f&aacute;cil! planos a partir de R$ 4,90</font><font face="Arial,Helvetica,sans-serif" size="2" color="green"><br>
+                  www.telia.com.br</font></p></td>
+        </tr>
+      </table></td>
+    <td width="225"> <table width="225" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td width="225"><p><font color="blue" size="2" face="Arial"><b><a href="http://www.gmktbr.com/go/click.php?id=2" target="_blank">Hospedagem 
+               Linux Ilimitada!!!</a></b></font><b><font color="blue"><br>
+              </font></b><font 
+                        face=Arial,Helvetica,sans-serif size=2>Hospedagem apartir 
+              de R$&nbsp;9,90 com<br>
+muito espa&ccedil;o e tr&aacute;fego ilimitado!!!.</font><font face="Arial,Helvetica,sans-serif" size="2" color="green"><br>
+www.telia.com.br</font></p></td>
+        </tr>
+      </table></td>
+    <td width="225"> <table width="225" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td width="225">
+<p><font color="blue" face="Arial" size="2"><b><a href="http://www.gmktbr.com/go/click.php?id=3" target="_blank">Novos planos de Revenda!!!</a></b></font><b><font color="blue"><br>
+              </font></b><font 
+                        face=Arial,Helvetica,sans-serif size=2>Tenha seu web host 
+              e ganhe dinheiro<br>
+              planos <font 
+                        face=Arial,Helvetica,sans-serif size=2>a partir</font><font color="#000000"> R$ 30,90 ao m&ecirc;s</font></font><font face="Arial,Helvetica,sans-serif" size="2" color="#000000">.</font><font face="Arial,Helvetica,sans-serif" size="2" color="green"><br>
+www.telia.com.br</font></p></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="12" colspan="3"> 
+      <div align="right">
+        <p><font size="1" face="Arial,Helvetica,sans-serif" color="blue"><a href="http://www.gmktbr.com/go/click.php?id=7" target="_blank">Anzncios 
+          GMKTBR</a></font></p>
+      </div></td>
+  </tr>
+  <tr>
+    <td height="87"><table width="225" cellpadding="0" cellspacing="0">
+        <tr>
+          <td><p><font color="blue" face="Arial" size="2"><b><a href="http://www.gmktbr.com/go/click.php?id=4" target="_blank">Streaming</a></b><a href="http://www.gmktbr.com/go/click.php?id=4" target="_blank"><b> com Auto DJ R$ 9,90</b></a></font><b><font color="blue" face="Arial" size="2"></font><font color="blue"><br>
+              </font></b><font 
+                        face=Arial,Helvetica,sans-serif size=2>Streaming com Auto DJ &eacute;
+                na Telia, <br>
+                planos a partir de R$ 9,90</font> <font face="Arial,Helvetica,sans-serif" size="2" color="#000000">Imperd&iacute;vel!</font><font face="Arial,Helvetica,sans-serif" size="2" color="green"><br>
+                  www.telia.com.br</font></p></td>
+        </tr>
+    </table></td>
+    <td><table width="225" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="225"><p><font color="blue" size="2" face="Arial"><b><a href="http://www.gmktbr.com/go/click.php?id=5" target="_blank">Registro de dom&iacute;nio internacional</a></b></font><b><font color="blue"><br>
+                          </font></b><font 
+                        face=Arial,Helvetica,sans-serif size=2>Tenha o seu .COM apenas R$ 39,90 Anuais. Ativa&ccedil;&atilde;o Rel&acirc;mpago!</font><font face="Arial,Helvetica,sans-serif" size="2" color="green"><br>
+                              www.telia.com.br</font></p></td>
+        </tr>
+    </table></td>
+    <td><table width="225" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="225"><p><b><font color="blue"><font color="blue" size="2" face="Arial"><b><a href="http://www.gmktbr.com/go/click.php?id=6" target="_blank">Registro de dom&iacute;nio nacional</a></b></font><br>
+                          </font></b><font 
+                        face=Arial,Helvetica,sans-serif size=2>Tenha o seu .COM.BR sem CNPJ<br>
+                          por apenas R$ 45,00 Anuais.</font><font face="Arial,Helvetica,sans-serif" size="2" color="green"><br>
+                              www.telia.com.br</font></p></td>
+        </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="12" colspan="3"><div align="right">
+        <p><font size="1" face="Arial,Helvetica,sans-serif" color="blue"><a href="http://www.gmktbr.com/go/click.php?id=7" target="_blank">An&uacute;ncios 
+        GMKTBR</a></font></p>
+    </div></td>
+  </tr>
+  <tr> 
+    <td width="720" height="59" colspan="3"> 
+      <div align="center"><font color="blue" size="2" face="Arial"><a href="http://www.gmktbr.com/go/click.php?id=8" target="_blank">Novos planos por tempo limitado!</a></font></div></td>
+  </tr>
+  <tr> 
+    <td height="66" colspan="3"><font color="#999999" size="1" face="Arial, Helvetica, sans-serif">Conforme 
+      nova legislagco sobre correio eletrtnico, segco 301, Paragrafo (a) (2)(c).Decreto 
+      S. 1618, tmtulo Terceiro aprovado pelo &quot;105 Congresso Base das Normativas 
+      Internacionais sobre o SPAM&quot;. Este e-mail nco podera ser considerado 
+      SPAM, pois inclui uma forma de ser removido. Caso nco queira receber novas 
+      mensagens de nossa empresa, simplesmente responda esse e-mail com o assunto REMOVER</font><font color="#999999" size="1" face="Arial,Helvetica">. 
+      </font><font size="1" face="Arial" color="#999999">Desculpe-nos caso tenhamos 
+      lhe importunado com nosso e-mail de divulgagco.</font></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+
+</html>

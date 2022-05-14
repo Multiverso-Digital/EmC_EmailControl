@@ -1,0 +1,146 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Martin Harvey">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (WinNT; I) [Netscape]">
+   <title>Source29</title>
+</head>
+<body>
+<PRE><TT><B>unit</B> BlockAsyncForm;
+
+<B>interface</B>
+
+<B>uses</B>
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
+  StdCtrls, BlockToAsyncBuf, PrimeRangeThread;
+
+<B>const</B>
+  MaxCount = 20;
+
+<B>type</B>
+  TBlockAsyncFrm = <B>class</B>(TForm)
+    Label1: TLabel;
+    StartRangeEdit: TEdit;
+    Label2: TLabel;
+    EndRangeEdit: TEdit;
+    SubmitBtn: TButton;
+    ResultsMemo: TMemo;
+    <B>procedure</B> FormCreate(Sender: TObject);
+    <B>procedure</B> SubmitBtnClick(Sender: TObject);
+    <B>procedure</B> FormCloseQuery(Sender: TObject; <B>var</B> CanClose: Boolean);
+    <B>procedure</B> FormDestroy(Sender: TObject);
+  <B>private</B>
+    <FONT COLOR=NAVY><I>{ Private declarations }</I></FONT>
+    FItemsInTransit: integer;
+    FBuf: TBlockToAsyncBuf;
+    FWorkerThread: TPrimeRangeThread;
+    <B>procedure</B> BufRead(Sender: TObject);
+    <B>procedure</B> BufWrite(Sender: TObject);
+  <B>public</B>
+    <FONT COLOR=NAVY><I>{ Public declarations }</I></FONT>
+  <B>end</B>;
+
+<B>var</B>
+  BlockAsyncFrm: TBlockAsyncFrm;
+
+<B>implementation</B>
+
+<FONT COLOR=NAVY><I>{$R *.DFM}</I></FONT>
+
+<B>procedure</B> TBlockAsyncFrm.FormCreate(Sender: TObject);
+<B>begin</B>
+  FWorkerThread := TPrimeRangeThread.Create(true);
+  FBuf := TBlockToAsyncBuf.Create(Self);
+  <B>with</B> FBuf <B>do</B>
+  <B>begin</B>
+    <FONT COLOR=NAVY><I>{ Note that these changes will take effect before
+      events from this component could possibly occur }</I></FONT>
+    OnRead := BufRead;
+    OnWrite := BufWrite;
+  <B>end</B>;
+  SetThreadPriority(FWorkerThread.Handle, THREAD_PRIORITY_BELOW_NORMAL);
+  <B>with</B> FWorkerThread <B>do</B>
+  <B>begin</B>
+    Buf := FBuf;
+    Resume;
+  <B>end</B>;
+<B>end</B>;
+
+<B>procedure</B> TBlockAsyncFrm.SubmitBtnClick(Sender: TObject);
+
+<B>var</B>
+  Request: PRangeRequestType;
+  Temp: integer;
+
+<B>begin</B>
+  New(Request);
+  <B>try</B>
+    Request.Low := StrToInt(StartRangeEdit.Text);
+    Request.High := StrToInt(EndRangeEdit.Text);
+    <B>if</B> Request.Low &gt Request.High <B>then</B>
+    <B>begin</B>
+      Temp := Request.Low;
+      Request.Low := Request.High;
+      Request.High := Temp;
+    <B>end</B>;
+    <B>if</B> FBuf.AsyncWrite(Request) <B>then</B>
+    <B>begin</B>
+      Request := <B>nil</B>;
+      SubmitBtn.Enabled := false;
+      Inc(FItemsInTransit);
+    <B>end</B>;
+  <B>finally</B>
+    <B>if</B> Assigned(Request) <B>then</B> Dispose(Request);
+  <B>end</B>;
+<B>end</B>;
+
+<B>procedure</B> TBlockAsyncFrm.BufWrite(Sender: TObject);
+<B>begin</B>
+  <FONT COLOR=NAVY><I>{ Buffer has indicated that there is space for us to write }</I></FONT>
+  SubmitBtn.Enabled := true;
+<B>end</B>;
+
+<B>procedure</B> TBlockAsyncFrm.BufRead(Sender: TObject);
+
+<B>var</B>
+  Reply: TStringList;
+
+<B>begin</B>
+  <FONT COLOR=NAVY><I>{ We have received a notification that we may read. }</I></FONT>
+  Reply := TStringList(FBuf.AsyncRead);
+  <B>if</B> Assigned(Reply) <B>then</B>
+  <B>begin</B>
+    Dec(FItemsInTransit);
+    ResultsMemo.Lines.BeginUpdate;
+    ResultsMemo.Lines.AddStrings(Reply);
+    <B>while</B> ResultsMemo.Lines.Count &gt MaxCount <B>do</B>
+      ResultsMemo.Lines.Delete(0);
+    ResultsMemo.Lines.EndUpdate;
+  <B>end</B>;
+<B>end</B>;
+
+<B>procedure</B> TBlockAsyncFrm.FormCloseQuery(Sender: TObject;
+  <B>var</B> CanClose: Boolean);
+<B>begin</B>
+  CanClose := true;
+  <B>if</B> FItemsInTransit &gt 0 <B>then</B>
+    <B>if</B> MessageDlg(<FONT COLOR=BLUE>'Some requests in transit, close anyway?'</FONT>, mtWarning,
+      mbOKCancel, 0) &lt;&gt mrOK <B>then</B>
+      CanClose := false;
+<B>end</B>;
+
+<B>procedure</B> TBlockAsyncFrm.FormDestroy(Sender: TObject);
+<B>begin</B>
+  FWorkerThread.Terminate;
+  FBuf.ResetState;
+  FWorkerThread.WaitFor;
+  FBuf.Free;
+  FWorkerThread.Free;
+<B>end</B>;
+
+<B>end.</B>
+
+</TT></PRE>
+</body>
+</html>

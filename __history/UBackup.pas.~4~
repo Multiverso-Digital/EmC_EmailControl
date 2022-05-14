@@ -1,0 +1,46 @@
+unit UBackup;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, ComCtrls, StdCtrls, JvExStdCtrls, JvListBox, JvDriveCtrls,
+  JvComponentBase, JvSearchFiles, Mask, JvExMask, JvToolEdit;
+
+type
+  TFbackup = class(TForm)
+    PageControl1: TPageControl;
+    TabSheet1: TTabSheet;
+    TabSheet2: TTabSheet;
+    GroupBox1: TGroupBox;
+    JvDir: TJvDirectoryEdit;
+    Button1: TButton;
+    JvFile: TJvSearchFiles;
+    Memo1: TMemo;
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Fbackup: TFbackup;
+
+implementation
+
+uses UDMSERVER;
+
+{$R *.dfm}
+
+procedure TFbackup.Button1Click(Sender: TObject);
+begin
+
+
+JvFile.RootDirectory := dm_server.dire+'dados\';
+memo1.lines := JvFile.Files;
+
+
+end;
+
+end.

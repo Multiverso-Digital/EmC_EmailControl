@@ -1,0 +1,209 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Martin Harvey">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (WinNT; I) [Netscape]">
+   <title>Source32</title>
+</head>
+<body>
+<PRE><TT><B>unit</B> ChecksumList;
+
+<FONT COLOR=NAVY><I>{ Martin Harvey 29/5/2000 }</I></FONT>
+
+<B>interface</B>
+
+<B>uses</B> SimpleSync, Classes, SysUtils;
+
+<B>type</B>
+  TChecksumList = <B>class</B>
+  <B>private</B>
+    FCheckList: TList;
+    FSync: TSimpleSynchronizer;
+  <B>protected</B>
+    <FONT COLOR=NAVY><I>{ Find function returns -1 if not found }</I></FONT>
+    <B>function</B> FindFileIndex(FileName: <B>string</B>): integer;
+    <B>function</B> NoLockGetFileList: TStringList;
+    <B>function</B> NoLockGetChecksum(FileName: <B>string</B>): integer;
+  <B>public</B>
+    <B>constructor</B> Create;
+    <B>destructor</B> Destroy; <B>override</B>;
+    <B>procedure</B> SetChecksum(FileName: <B>string</B>; Checksum: integer);
+    <B>procedure</B> RemoveChecksum(FileName: <B>string</B>);
+    <B>function</B> GetChecksum(FileName: <B>string</B>): integer;
+    <B>function</B> GetFileList: TStringList;
+    <B>function</B> GetChecksumList: TStringList;
+  <B>end</B>;
+
+<B>implementation</B>
+
+<B>type</B>
+  TCheckSum = <B>record</B>
+    FileName: <B>string</B>;
+    Checksum: integer;
+  <B>end</B>;
+
+  PCheckSum = ^TCheckSum;
+
+<B>constructor</B> TChecksumList.Create;
+<B>begin</B>
+  <B>inherited</B> Create;
+  FCheckList := TList.Create;
+  FSync := TSimpleSynchronizer.Create;
+<B>end</B>;
+
+<B>destructor</B> TCheckSumList.Destroy;
+
+<B>var</B>
+  iter: integer;
+  CurSum: PCheckSum;
+
+<B>begin</B>
+  <B>if</B> FCheckList.Count &gt 0 <B>then</B>
+  <B>begin</B>
+    <B>for</B> iter := 0 <B>to</B> FCheckList.Count - 1 <B>do</B>
+    <B>begin</B>
+      CurSum := PCheckSum(FCheckList.Items[iter]);
+      <B>if</B> Assigned(CurSum) <B>then</B> Dispose(CurSum);
+    <B>end</B>;
+  <B>end</B>;
+  FCheckList.Free;
+  FSync.Free;
+  <B>inherited</B> Destroy;
+<B>end</B>;
+
+<B>function</B> TCheckSumList.FindFileIndex(FileName: <B>string</B>): integer;
+
+<B>var</B>
+  iter: integer;
+  CurSum: PCheckSum;
+
+<B>begin</B>
+  result := -1;
+  <B>if</B> FCheckList.Count &gt 0 <B>then</B>
+  <B>begin</B>
+    <B>for</B> iter := 0 <B>to</B> FCheckList.Count - 1 <B>do</B>
+    <B>begin</B>
+      CurSum := PCheckSum(FCheckList.Items[iter]);
+      Assert(Assigned(CurSum));
+      <B>if</B> AnsiCompareText(FileName, CurSum.FileName) = 0 <B>then</B>
+      <B>begin</B>
+        result := iter;
+        exit;
+      <B>end</B>;
+    <B>end</B>;
+  <B>end</B>;
+<B>end</B>;
+
+<B>procedure</B> TCheckSumList.SetChecksum(FileName: <B>string</B>; Checksum: integer);
+
+<B>var</B>
+  CurSum: PCheckSum;
+  CurIndex: integer;
+
+<B>begin</B>
+  FSync.StartWrite;
+  CurIndex := FindFileIndex(FileName);
+  <B>if</B> CurIndex &gt;= 0 <B>then</B>
+    CurSum := PCheckSum(FCheckList.Items[CurIndex])
+  <B>else</B>
+  <B>begin</B>
+    New(CurSum);
+    FCheckList.Add(CurSum);
+  <B>end</B>;
+  CurSum.FileName := FileName;
+  CurSum.Checksum := Checksum;
+  FSync.EndWrite;
+<B>end</B>;
+
+<B>procedure</B> TCheckSumList.RemoveChecksum(FileName: <B>string</B>);
+
+<B>var</B>
+  CurIndex: integer;
+
+<B>begin</B>
+  FSync.StartWrite;
+  CurIndex := FindFileIndex(FileName);
+  <B>if</B> CurIndex &gt;= 0 <B>then</B>
+  <B>begin</B>
+    FCheckList.Delete(CurIndex);
+    FCheckList.Pack;
+  <B>end</B>;
+  FSync.EndWrite;
+<B>end</B>;
+
+<B>function</B> TCheckSumList.NoLockGetChecksum(FileName: <B>string</B>): integer;
+
+<B>var</B>
+  CurIndex: integer;
+  CurSum: PCheckSum;
+
+<B>begin</B>
+  result := 0;
+  CurIndex := FindFileIndex(FileName);
+  <B>if</B> CurIndex &gt;= 0 <B>then</B>
+  <B>begin</B>
+    CurSum := PCheckSum(FCheckList.Items[CurIndex]);
+    Assert(Assigned(CurSum));
+    result := CurSum.Checksum;
+  <B>end</B>;
+<B>end</B>;
+
+<B>function</B> TCheckSumList.GetChecksum(FileName: <B>string</B>): integer;
+<B>begin</B>
+  FSync.StartRead;
+  result := NoLockGetChecksum(FileName);
+  FSync.EndRead;
+<B>end</B>;
+
+<B>function</B> TCheckSumList.NoLockGetFileList: TStringList;
+
+<B>var</B>
+  iter: integer;
+  CurSum: PCheckSum;
+
+<B>begin</B>
+  result := TStringList.Create;
+  <B>if</B> FCheckList.Count &gt 0 <B>then</B>
+  <B>begin</B>
+    <B>for</B> iter := 0 <B>to</B> FCheckList.Count - 1 <B>do</B>
+    <B>begin</B>
+      CurSum := PCheckSum(FCheckList.Items[iter]);
+      Assert(Assigned(CurSum));
+      result.Add(CurSum.FileName);
+    <B>end</B>;
+  <B>end</B>;
+  result.Sort;
+<B>end</B>;
+
+<B>function</B> TCheckSumList.GetFileList: TStringList;
+<B>begin</B>
+  FSync.StartRead;
+  result := NoLockGetFileList;
+  FSync.EndRead;
+<B>end</B>;
+
+<B>function</B> TCheckSumList.GetChecksumList: TStringList;
+
+<B>var</B>
+  iter: integer;
+
+<B>begin</B>
+  FSync.StartRead;
+  result := NoLockGetFileList;
+  <B>if</B> result.Count &gt 0 <B>then</B>
+  <B>begin</B>
+    <B>for</B> iter := 0 <B>to</B> result.Count - 1 <B>do</B>
+    <B>begin</B>
+      result.strings[iter] := result.strings[iter]
+        + <FONT COLOR=BLUE>' '</FONT> + IntToStr(NoLockGetChecksum(result.strings[iter]));
+    <B>end</B>;
+  <B>end</B>;
+  FSync.EndRead;
+<B>end</B>;
+
+<B>end.</B>
+
+</TT></PRE>
+</body>
+</html>
