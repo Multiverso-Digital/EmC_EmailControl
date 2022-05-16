@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<BorlandProject>
-	<Transactions>
-    <Transaction>2008/10/12 10:38:34.109.pas,C:\Documents and Settings\Administrador\Meus documentos\RAD Studio\Projects\Unit2.pas=C:\Documents and Settings\Administrador\Meus documentos\RAD Studio\Projects\TesteBeli\Unit2.pas</Transaction>
-    <Transaction>2008/10/12 10:38:34.109.dfm,C:\Documents and Settings\Administrador\Meus documentos\RAD Studio\Projects\Unit2.dfm=C:\Documents and Settings\Administrador\Meus documentos\RAD Studio\Projects\TesteBeli\Unit2.dfm</Transaction>
-    <Transaction>2008/10/12 10:38:34.937.dproj,C:\Documents and Settings\Administrador\Meus documentos\RAD Studio\Projects\Project1.dproj=C:\Documents and Settings\Administrador\Meus documentos\RAD Studio\Projects\TesteBeli\Project1.dproj</Transaction>
-  </Transactions>
-</BorlandProject>
