@@ -1,1 +1,0 @@
-<?xml version="1.0" standalone="yes"?>  <DATAPACKET Version="2.0"><METADATA><FIELDS><FIELD attrname="id" fieldtype="string" WIDTH="1"/><FIELD attrname="qtd_mail_spam" fieldtype="string" WIDTH="5"/><FIELD attrname="qtd_mail_ok" fieldtype="string" WIDTH="3"/></FIELDS><PARAMS/></METADATA><ROWDATA><ROW id="2" qtd_mail_spam="11130" qtd_mail_ok="793"/></ROWDATA></DATAPACKET>
